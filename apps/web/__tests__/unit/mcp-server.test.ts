@@ -160,19 +160,19 @@ describe("hosted MCP transport", () => {
 				expect.objectContaining({
 					name: "caps_list",
 					annotations: expect.objectContaining({
-						title: "List Cap recordings",
+						title: "List usio recordings",
 					}),
 				}),
 				expect.objectContaining({
 					name: "caps_get",
 					annotations: expect.objectContaining({
-						title: "Get a Cap recording",
+						title: "Get a usio recording",
 					}),
 				}),
 				expect.objectContaining({
 					name: "caps_context",
 					annotations: expect.objectContaining({
-						title: "Read a Cap recording",
+						title: "Read a usio recording",
 					}),
 				}),
 			]),
