@@ -1,16 +1,16 @@
 ---
 title: "Analytics"
-summary: "Understand aggregate Cap and organization engagement"
+summary: "Understand aggregate usio and organization engagement"
 tags: "Sharing, Analytics"
 ---
 
-Cap records aggregate viewing and collaboration activity for shared recordings. The exact dashboard depends on whether you are looking at one Cap or an organization.
+usio records aggregate viewing and collaboration activity for shared recordings. The exact dashboard depends on whether you are looking at one video or an organization.
 
-## Per-Cap activity
+## Per-usio activity
 
-The recording owner and authorized organization members can see the Cap's view count alongside comments and reactions. The view count is based on distinct analytics session identifiers within the requested period rather than a promise that every refresh is a new person.
+The recording owner and authorized organization members can see the video's view count alongside comments and reactions. The view count is based on distinct analytics session identifiers within the requested period rather than a promise that every refresh is a new person.
 
-Cap does not identify every anonymous viewer by name. Treat the count as aggregate reach, not an attendance register.
+usio does not identify every anonymous viewer by name. Treat the count as aggregate reach, not an attendance register.
 
 ## Organization analytics
 
@@ -21,7 +21,7 @@ The organization analytics dashboard supports these ranges:
 - Last 30 days
 - Lifetime
 
-It includes totals for Caps, views, comments, and reactions, plus time-series and breakdown views for countries, cities, browsers, operating systems, devices, and top Caps. Results can be filtered to an individual space or Cap.
+It includes totals for videos, views, comments, and reactions, plus time-series and breakdown views for countries, cities, browsers, operating systems, devices, and top videos. Results can be filtered to an individual space or usio.
 
 ## Interpret the numbers carefully
 
@@ -29,13 +29,13 @@ It includes totals for Caps, views, comments, and reactions, plus time-series an
 - Anonymous and signed-in playback can both contribute to aggregate data.
 - A view count does not prove that the viewer watched the full recording.
 - Short windows can change as new telemetry arrives.
-- Organization, space, and Cap filters change the population being measured.
+- Organization, space, and usio filters change the population being measured.
 
 Use comments, reactions, and the recording's context alongside views when assessing engagement.
 
 ## Review analytics with an agent
 
-An agent can query a bounded organization range and then compare it with the context from relevant Caps.
+An agent can query a bounded organization range and then compare it with the context from relevant videos.
 
 ```sh
 cap guide --json

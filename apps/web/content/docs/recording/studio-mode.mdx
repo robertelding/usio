@@ -1,22 +1,22 @@
 ---
 title: "Studio Mode"
-summary: "Record locally, edit with Cap's full timeline and canvas tools, then export or share"
+summary: "Record locally, edit with usio's full timeline and canvas tools, then export or share"
 tags: "Recording, Editing"
 ---
 
-Studio Mode creates a local, editable Cap project. Use it when the recording needs polishing, privacy edits, branded presentation, captions, multiple clips, or a reviewed export before it is shared.
+Studio Mode creates a local, editable usio project. Use it when the recording needs polishing, privacy edits, branded presentation, captions, multiple clips, or a reviewed export before it is shared.
 
 Nothing is uploaded just because you record or edit in Studio Mode. The project stays local until you choose **Shareable Link** from the export screen.
 
 ## Record a Studio project
 
-1. Open Cap Desktop and select **Studio**.
+1. Open usio Desktop and select **Studio**.
 2. Choose a display, window, area, or camera-only target.
 3. Select the camera, microphone, and supported system-audio options you want to capture.
 4. Click **Record**.
 5. Pause, resume, restart, or stop from the recording controls.
 
-After you stop, Cap opens the local project in the editor and keeps it in the desktop recording library. The `.cap` project retains the source media and editable configuration; exporting creates a rendered output without replacing that project.
+After you stop, usio opens the local project in the editor and keeps it in the desktop recording library. The `.cap` project retains the source media and editable configuration; exporting creates a rendered output without replacing that project.
 
 ## Work with clips
 
@@ -24,7 +24,7 @@ The clip timeline is the foundation of a Studio project. You can:
 
 - Trim the beginning or end of a segment, split at the playhead, delete sections, and reorder clips.
 - Rename clips and add another Studio capture directly from the editor.
-- Import an existing Cap recording or an MP4 into the current project.
+- Import an existing usio recording or an MP4 into the current project.
 - Change an individual segment to 0.25x, 0.5x, 1x, 1.5x, 2x, 4x, or 8x speed.
 - Choose whether sped-up or slowed-down audio is muted, maintains natural voice pitch, or changes pitch with the playback speed.
 - Adjust microphone, system-audio, and camera offsets when a source needs manual synchronization.
@@ -38,7 +38,7 @@ The dedicated **Zoom** track supports both generated and hand-authored zoom segm
 
 ### Automatic zooms
 
-For Studio recordings that contain Cap's recorded cursor and click data, select **Click to generate zoom segments** to create zooms around recorded clicks. Each generated segment uses **Auto** mode so the focal point follows the recorded action.
+For Studio recordings that contain usio's recorded cursor and click data, select **Click to generate zoom segments** to create zooms around recorded clicks. Each generated segment uses **Auto** mode so the focal point follows the recorded action.
 
 Automatic generation is not available when the project does not contain the required cursor metadata. Imported MP4s, for example, do not gain click data during import.
 
@@ -107,7 +107,7 @@ Enabled captions are automatically rendered into exported videos. Deleting words
 
 ## Show recorded keyboard input
 
-The beta **Keyboard** track can generate on-screen keystroke segments from keyboard data recorded by Cap. It does not reconstruct keystrokes from an imported MP4.
+The beta **Keyboard** track can generate on-screen keystroke segments from keyboard data recorded by usio. It does not reconstruct keystrokes from an imported MP4.
 
 You can control the font, size, weight, text and background colors, background opacity, screen position, fade and linger timing, and how nearby key presses are grouped. You can also choose whether to show modifier keys, special keys, or uppercase labels, then override the text and timing of individual generated segments.
 
@@ -115,7 +115,7 @@ You can control the font, size, weight, text and background colors, background o
 
 Audio tracks are separate from the captured microphone and system audio. Add multiple audio lanes to layer music or other sounds over the edit.
 
-- Preview and add tracks from Cap's built-in audio library.
+- Preview and add tracks from usio's built-in audio library.
 - Import MP3, WAV, M4A, OGG, FLAC, or AAC files.
 - Move, trim, split, rename, replace, disable, or remove an audio segment.
 - Adjust a segment's volume and fade-in or fade-out.
@@ -135,15 +135,15 @@ This is where a single source capture can be adapted for landscape documentation
 
 ## Refine the cursor
 
-For recordings with Cap cursor data, the editor can:
+For recordings with usio cursor data, the editor can:
 
-- Show or hide the cursor, change its size and tilt, or render it as Cap's circular cursor.
+- Show or hide the cursor, change its size and tilt, or render it as usio's circular cursor.
 - Hide it after a configurable period of inactivity.
 - Use recorded raw movement or smooth it with Slow, Smooth, Mellow, Fast, or custom motion settings.
 - Fine-tune smooth motion with tension, friction, and mass controls.
 - Render supported cursors as higher-quality SVG artwork.
 
-Cursor-specific controls depend on cursor metadata captured by Cap; importing a finished video cannot recreate that data.
+Cursor-specific controls depend on cursor metadata captured by usio; importing a finished video cannot recreate that data.
 
 ## Refine the camera
 
@@ -171,7 +171,7 @@ Open **Export** when the edit is ready. The available choices depend on the form
 | **GIF** | 720p or 1080p; 10, 15, 20, 25, or 30 FPS |
 | **Cursor-only MOV** | Advanced transparent export containing the recorded cursor motion and clicks; file or clipboard only |
 
-The destination can be a local file, the clipboard, or a shareable Cap link. A shareable link requires sign-in, uses MP4, uploads the rendered video to the selected organization and its active storage provider, and does not support a transparent-background or cursor-only export.
+The destination can be a local file, the clipboard, or a shareable usio link. A shareable link requires sign-in, uses MP4, uploads the rendered video to the selected organization and its active storage provider, and does not support a transparent-background or cursor-only export.
 
 A transparent-background export can be saved to a file or clipboard, but MP4 and shareable-link destinations are disabled because they do not support that workflow.
 
@@ -179,7 +179,7 @@ A transparent-background export can be saved to a file or clipboard, but MP4 and
 
 | | Instant | Studio |
 |---|---|---|
-| Primary result | Shareable Cap | Local editable project |
+| Primary result | Shareable usio | Local editable project |
 | Upload | During and after recording | Only when you choose a shareable-link export |
 | Editor before sharing | No | Full timeline and canvas editor |
 | Local file export | Not the primary workflow | MP4, GIF, or specialized MOV export |

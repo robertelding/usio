@@ -51,10 +51,8 @@ const renderDemo = (video: SeoPageContent["video"], showVideo = true) => {
 };
 
 describe("landing page demo videos", () => {
-	it.each(repairedSlugs)("%s uses the public inline demo", (slug) => {
-		expect(seoPages[slug]?.content.video).toEqual({
-			iframe: { src: demoSource, title: "Cap screen recording demo" },
-		});
+	it.each(repairedSlugs)("%s shows no Cap demo video", (slug) => {
+		expect(seoPages[slug]?.content.video).toBeUndefined();
 	});
 
 	it("has no missing local video or poster files on landing pages", () => {

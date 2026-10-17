@@ -52,7 +52,7 @@ describe("docs ask", () => {
 		});
 		expect(prompt).toContain("- Cap for Agents: /docs/agents");
 		expect(prompt).toContain("Never invent features");
-		expect(prompt).toContain("hello@cap.so");
+		expect(prompt).toContain("hello@usio.co.uk");
 		expect(prompt).toContain("[Cap for Agents](/docs/agents)");
 	});
 });

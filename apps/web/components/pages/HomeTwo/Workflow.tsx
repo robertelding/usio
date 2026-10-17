@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import Link from "next/link";
 import type { ComponentType } from "react";
@@ -35,7 +36,7 @@ const MODES: Mode[] = [
 		name: "Instant Mode",
 		promise: "From recording to shared in one step",
 		steps: [
-			"Press record. Cap uploads while you talk, so there is nothing to wait for.",
+			"Press record. usio uploads while you talk, so there is nothing to wait for.",
 			"Press stop. The share link is already on your clipboard.",
 			"Paste it anywhere. Viewers watch in the browser, no account needed.",
 		],
@@ -49,7 +50,7 @@ const MODES: Mode[] = [
 		steps: [
 			"Record locally in 4K. Screen, camera, and mic each get their own track.",
 			"The editor opens when you stop: backgrounds, auto zoom, cursor effects, captions.",
-			"Export in 4K, or share it as a Cap link like everything else.",
+			"Export in 4K, or share it as a video link like everything else.",
 		],
 		bestFor: "Product demos, tutorials, launch videos",
 		Icon: StudioIcon,
@@ -95,7 +96,7 @@ export const Workflow = () => (
 	<section id="workflow" className="scroll-mt-10 px-5 py-20 lg:py-28">
 		<div className="mx-auto max-w-[1200px]">
 			<div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
-				<Eyebrow accent={MODE_THEME.instant.accent}>Cap has 3 modes</Eyebrow>
+				<Eyebrow accent={MODE_THEME.instant.accent}>usio has 3 modes</Eyebrow>
 				<h2
 					className={`${H_SECTION} mt-6 text-balance text-[clamp(38px,5vw,56px)]`}
 				>
@@ -107,9 +108,11 @@ export const Workflow = () => (
 					Record and share with Instant, edit your videos with Studio, or
 					capture and customize images with Screenshot.
 				</p>
-				<Link href="/download" className={classNames(BTN_PRIMARY, "mt-8")}>
-					Download Cap free
-				</Link>
+				{BRAND.desktopAppAvailable && (
+					<Link href="/download" className={classNames(BTN_PRIMARY, "mt-8")}>
+						Download usio free
+					</Link>
+				)}
 			</div>
 
 			<div className="mt-16 rounded-[20px] p-3 lg:p-4" style={grainBg(BAND)}>

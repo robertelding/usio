@@ -18,14 +18,6 @@ import {
 } from "./theme";
 import { useInView, usePageVisible, useReducedMotion } from "./visibility";
 
-const QUOTE = {
-	name: "Steven Tey",
-	handle: "Founder, Dub.co",
-	image: "/testimonials/steven_tey.jpg",
-	content:
-		"Cap is one of my favorite pieces of software I've used in the recent years. Best part is you get to own your data since they're fully open-source + via their S3 integration.",
-};
-
 type Destination = {
 	key: string;
 	name: string;
@@ -38,8 +30,8 @@ type Destination = {
 const DESTINATIONS: Destination[] = [
 	{
 		key: "cloud",
-		name: "Cap Cloud",
-		label: "Cap Cloud",
+		name: "usio Cloud",
+		label: "usio Cloud",
 		detail: "Zero setup. Encrypted, and shareable the second you stop.",
 		mode: "instant",
 		icon: <CapLogoMark className="size-6" />,
@@ -88,12 +80,12 @@ const PROOF = [
 		body: "Every line is on GitHub. Audit it, fork it, or contribute the feature you need.",
 	},
 	{
-		label: "SOC 2 Type II · ISO 27001",
-		body: "Independently audited controls behind Cap Cloud.",
+		label: "Self-hostable",
+		body: "Run the whole platform on your own servers with Docker Compose.",
 	},
 	{
-		label: "HIPAA compliant",
-		body: "Signed BAAs for organizations handling PHI.",
+		label: "Bring your own storage",
+		body: "Keep recordings in your own S3-compatible bucket.",
 	},
 	{
 		label: "No lock in",
@@ -314,8 +306,8 @@ export const Ownership = () => {
 					<p
 						className={`${BODY_TEXT} mt-6 max-w-[600px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}
 					>
-						Cap is open source, and every recording goes exactly where you say.
-						Use Cap Cloud, point it at your own bucket or Drive, or self host
+						usio is open source, and every recording goes exactly where you say.
+						Use usio Cloud, point it at your own bucket or Drive, or self host
 						the whole thing.
 					</p>
 				</div>
@@ -379,32 +371,7 @@ export const Ownership = () => {
 					</div>
 				</div>
 
-				<div className="mt-4 grid gap-4 lg:grid-cols-[1.3fr_1fr]">
-					<figure className="flex flex-col justify-center rounded-[20px] bg-white p-8 shadow-[0_0_0_1px_rgba(17,17,17,0.05)] lg:p-10">
-						<blockquote
-							className={`${BODY_TEXT} text-balance text-[clamp(19px,1.9vw,24px)] leading-[1.4] text-[#111111]`}
-						>
-							&ldquo;{QUOTE.content}&rdquo;
-						</blockquote>
-						<figcaption className="mt-7 flex flex-wrap items-center gap-2">
-							<span className="inline-flex items-center gap-2 rounded-full bg-[#EDF1F6] py-1.5 pl-1.5 pr-4">
-								<Image
-									src={QUOTE.image}
-									alt=""
-									width={28}
-									height={28}
-									className="size-7 rounded-full object-cover"
-								/>
-								<span className="text-[13.5px] font-medium text-[#111111]">
-									{QUOTE.name}
-								</span>
-							</span>
-							<span className="rounded-full bg-[#EDF1F6] px-4 py-2 text-[13.5px] text-[rgba(17,17,17,0.55)]">
-								{QUOTE.handle}
-							</span>
-						</figcaption>
-					</figure>
-
+				<div className="mt-4">
 					<ul
 						className="grid grid-cols-1 gap-px overflow-hidden rounded-[20px] sm:grid-cols-2"
 						style={grainBg(BAND)}

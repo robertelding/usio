@@ -31,7 +31,7 @@ const ProRiveArt = ({ onReady }: { onReady: (rive: Rive | null) => void }) => {
 };
 
 const UpgradeToPro = ({
-	text = "Upgrade to Cap Pro",
+	text = "Upgrade to usio Pro",
 	onClick,
 }: {
 	text?: string;

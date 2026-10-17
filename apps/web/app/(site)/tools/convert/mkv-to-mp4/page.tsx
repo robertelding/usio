@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { MediaFormatConverter } from "@/components/tools/MediaFormatConverter";
 import { ToolsPageTemplate } from "@/components/tools/ToolsPageTemplate";
@@ -11,7 +12,7 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "MKV to MP4 Converter | Free Online Video Converter | Cap",
+	title: `MKV to MP4 Converter | Free Online Video Converter | ${BRAND.name}`,
 	description:
 		"Convert MKV videos to widely supported MP4 format directly in your browser. Free online converter with no uploads needed for maximum privacy.",
 	openGraph: {
@@ -35,17 +36,17 @@ export const metadata: Metadata = {
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/tools/convert/mkv-to-mp4",
+		canonical: `${BRAND.url}/tools/convert/mkv-to-mp4`,
 	},
 };
 
 const breadcrumbSchema = createBreadcrumbSchema([
-	{ name: "Home", url: "https://cap.so" },
-	{ name: "Tools", url: "https://cap.so/tools" },
-	{ name: "Convert", url: "https://cap.so/tools/convert" },
+	{ name: "Home", url: BRAND.url },
+	{ name: "Tools", url: `${BRAND.url}/tools` },
+	{ name: "Convert", url: `${BRAND.url}/tools/convert` },
 	{
 		name: "MKV to MP4 Converter",
-		url: "https://cap.so/tools/convert/mkv-to-mp4",
+		url: `${BRAND.url}/tools/convert/mkv-to-mp4`,
 	},
 ]);
 
@@ -91,10 +92,10 @@ export default function MKVToMP4Page() {
 			},
 		],
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: `${BRAND.name} is the open source Loom alternative`,
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with usio. 100% open source and privacy focused.",
+			buttonText: "Download usio Free",
 		},
 	};
 

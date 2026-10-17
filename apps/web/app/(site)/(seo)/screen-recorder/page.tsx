@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	ScreenRecorderPage,
@@ -14,20 +15,20 @@ const ogImage = ogImageUrl({
 export const metadata: Metadata = {
 	title: "Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 	description:
-		"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits. Perfect for team collaboration, creating tutorials, or recording professional presentations.",
+		"usio is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits. Perfect for team collaboration, creating tutorials, or recording professional presentations.",
 	openGraph: {
 		title:
 			"Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 		description:
-			"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
-		url: "https://cap.so/screen-recorder",
-		siteName: "Cap",
+			"usio is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
+		url: `${BRAND.url}/screen-recorder`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Free Screen Recorder",
+				alt: "usio: Free Screen Recorder",
 			},
 		],
 		locale: "en_US",
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
 		title:
 			"Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 		description:
-			"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
+			"usio is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/screen-recorder",
+		canonical: `${BRAND.url}/screen-recorder`,
 	},
 };
 

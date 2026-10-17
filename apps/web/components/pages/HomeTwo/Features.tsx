@@ -32,7 +32,7 @@ type Feature = {
 const FEATURES: Feature[] = [
 	{
 		title: "Your storage, your rules",
-		body: "Connect your own Google Drive or S3 bucket, use Cap Cloud, or keep everything local. You are never locked into our infrastructure.",
+		body: "Connect your own Google Drive or S3 bucket, use usio Cloud, or keep everything local. You are never locked into our infrastructure.",
 		accent: "instant",
 		Icon: HardDrive,
 	},
@@ -62,12 +62,12 @@ const FEATURES: Feature[] = [
 	},
 	{
 		title: "Truly open source",
-		body: "See exactly how Cap works, contribute the feature you need, or self host the whole thing. No black boxes.",
+		body: "See exactly how usio works, contribute the feature you need, or self host the whole thing. No black boxes.",
 		accent: "instant",
 		Icon: Github,
 	},
 	{
-		title: "Cap AI does the busywork",
+		title: "usio AI does the busywork",
 		body: "Titles, summaries, clickable chapters, and transcripts write themselves for every recording, with no usage limits on Pro.",
 		accent: "share",
 		Icon: Captions,
@@ -84,7 +84,7 @@ export const Features = () => (
 	<section className="px-5 py-20 lg:py-28">
 		<div className="mx-auto max-w-[1200px]">
 			<div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
-				<Eyebrow accent={MODE_THEME.studio.accent}>Why Cap</Eyebrow>
+				<Eyebrow accent={MODE_THEME.studio.accent}>Why usio</Eyebrow>
 				<h2
 					className={`${H_SECTION} mt-6 text-balance text-[clamp(38px,5vw,56px)]`}
 				>

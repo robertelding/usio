@@ -3,11 +3,13 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 describe("createBreadcrumbSchema", () => {
 	it("produces valid BreadcrumbList schema structure", () => {
 		const schema = createBreadcrumbSchema([
-			{ name: "Home", url: "https://cap.so" },
-			{ name: "Tools", url: "https://cap.so/tools" },
+			{ name: "Home", url: "https://usio.co.uk" },
+			{ name: "Tools", url: "https://usio.co.uk/tools" },
 		]);
 
 		expect(schema["@context"]).toBe("https://schema.org");
@@ -18,22 +20,22 @@ describe("createBreadcrumbSchema", () => {
 
 	it("maps each item to a ListItem with correct position and name", () => {
 		const schema = createBreadcrumbSchema([
-			{ name: "Home", url: "https://cap.so" },
-			{ name: "Tools", url: "https://cap.so/tools" },
-			{ name: "Convert", url: "https://cap.so/tools/convert" },
+			{ name: "Home", url: "https://usio.co.uk" },
+			{ name: "Tools", url: "https://usio.co.uk/tools" },
+			{ name: "Convert", url: "https://usio.co.uk/tools/convert" },
 		]);
 
 		expect(schema.itemListElement[0]).toEqual({
 			"@type": "ListItem",
 			position: 1,
 			name: "Home",
-			item: "https://cap.so",
+			item: "https://usio.co.uk",
 		});
 		expect(schema.itemListElement[1]).toEqual({
 			"@type": "ListItem",
 			position: 2,
 			name: "Tools",
-			item: "https://cap.so/tools",
+			item: "https://usio.co.uk/tools",
 		});
 		expect(schema.itemListElement[2]?.position).toBe(3);
 		expect(schema.itemListElement[2]?.name).toBe("Convert");
@@ -41,19 +43,19 @@ describe("createBreadcrumbSchema", () => {
 
 	it("omits item field when no url is provided", () => {
 		const schema = createBreadcrumbSchema([
-			{ name: "Home", url: "https://cap.so" },
+			{ name: "Home", url: "https://usio.co.uk" },
 			{ name: "Current Page" },
 		]);
 		const currentPageItem = schema.itemListElement[1];
 
-		expect(schema.itemListElement[0]?.item).toBe("https://cap.so");
+		expect(schema.itemListElement[0]?.item).toBe("https://usio.co.uk");
 		expect(currentPageItem).toBeDefined();
 		expect(currentPageItem && "item" in currentPageItem).toBe(false);
 	});
 
 	it("handles single item breadcrumb", () => {
 		const schema = createBreadcrumbSchema([
-			{ name: "Home", url: "https://cap.so" },
+			{ name: "Home", url: "https://usio.co.uk" },
 		]);
 
 		expect(schema.itemListElement).toHaveLength(1);
@@ -69,11 +71,11 @@ describe("createBreadcrumbSchema", () => {
 
 	it("produces JSON-serializable output", () => {
 		const schema = createBreadcrumbSchema([
-			{ name: "Home", url: "https://cap.so" },
-			{ name: "Tools", url: "https://cap.so/tools" },
+			{ name: "Home", url: "https://usio.co.uk" },
+			{ name: "Tools", url: "https://usio.co.uk/tools" },
 			{
 				name: "Video Speed Controller",
-				url: "https://cap.so/tools/video-speed-controller",
+				url: "https://usio.co.uk/tools/video-speed-controller",
 			},
 		]);
 
@@ -95,51 +97,51 @@ function readPage(routePath: string): string {
 const toolPages: Array<{ file: string; breadcrumbItems: string[] }> = [
 	{
 		file: "(site)/tools/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools"],
+		breadcrumbItems: [`${BRAND_URL}/tools`],
 	},
 	{
 		file: "(site)/tools/convert/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools", "https://cap.so/tools/convert"],
+		breadcrumbItems: [`${BRAND_URL}/tools`, `${BRAND_URL}/tools/convert`],
 	},
 	{
 		file: "(site)/tools/convert/mov-to-mp4/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/mov-to-mp4"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/mov-to-mp4`],
 	},
 	{
 		file: "(site)/tools/convert/mp4-to-gif/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/mp4-to-gif"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/mp4-to-gif`],
 	},
 	{
 		file: "(site)/tools/convert/webm-to-mp4/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/webm-to-mp4"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/webm-to-mp4`],
 	},
 	{
 		file: "(site)/tools/convert/avi-to-mp4/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/avi-to-mp4"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/avi-to-mp4`],
 	},
 	{
 		file: "(site)/tools/convert/mkv-to-mp4/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/mkv-to-mp4"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/mkv-to-mp4`],
 	},
 	{
 		file: "(site)/tools/convert/mp4-to-mp3/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/mp4-to-mp3"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/mp4-to-mp3`],
 	},
 	{
 		file: "(site)/tools/convert/mp4-to-webm/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/convert/mp4-to-webm"],
+		breadcrumbItems: [`${BRAND_URL}/tools/convert/mp4-to-webm`],
 	},
 	{
 		file: "(site)/tools/video-speed-controller/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/video-speed-controller"],
+		breadcrumbItems: [`${BRAND_URL}/tools/video-speed-controller`],
 	},
 	{
 		file: "(site)/tools/loom-downloader/page.tsx",
-		breadcrumbItems: ["https://cap.so/tools/loom-downloader"],
+		breadcrumbItems: [`${BRAND_URL}/tools/loom-downloader`],
 	},
 	{
 		file: "(site)/tools/trim/layout.tsx",
-		breadcrumbItems: ["https://cap.so/tools/trim"],
+		breadcrumbItems: [`${BRAND_URL}/tools/trim`],
 	},
 ];
 
@@ -152,7 +154,7 @@ describe("Breadcrumb structured data in tools pages", () => {
 
 		it(`${file} contains Home breadcrumb`, () => {
 			const content = readPage(file);
-			expect(content).toContain("https://cap.so");
+			expect(content).toContain("BRAND.url");
 		});
 
 		for (const url of breadcrumbItems) {
@@ -167,7 +169,7 @@ describe("Breadcrumb structured data in tools pages", () => {
 		const content = readPage("(site)/tools/convert/[conversionPath]/page.tsx");
 		expect(content).toContain("createBreadcrumbSchema");
 		expect(content).toContain(
-			"`https://cap.so/tools/convert/$" + "{conversionPath}`",
+			`\`${BRAND_URL}/tools/convert/\${conversionPath}\``,
 		);
 	});
 });

@@ -36,7 +36,7 @@ export const Testimonials = ({ eyebrow = true }: { eyebrow?: boolean }) => (
 				<p
 					className={`${BODY_TEXT} mt-6 max-w-[440px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}
 				>
-					Join the thousands who made Cap their daily driver for showing work
+					Join the thousands who made usio their daily driver for showing work
 					instead of writing about it.
 				</p>
 			</div>

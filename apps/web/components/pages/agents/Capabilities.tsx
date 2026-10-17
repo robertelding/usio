@@ -40,7 +40,7 @@ export const Capabilities = () => {
 					<h2
 						className={`${H_SECTION} mt-6 text-balance text-[clamp(36px,4.6vw,56px)]`}
 					>
-						Everything Cap does, from your agent
+						Everything usio does, from your agent
 					</h2>
 					<p
 						className={`${BODY_TEXT} mt-6 max-w-[640px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}

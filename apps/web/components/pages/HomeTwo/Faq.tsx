@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { type FaqCopy, homepageCopy } from "@/data/homepage-copy";
 import { Eyebrow } from "./Eyebrow";
 import { BODY_TEXT, H_SECTION, MODE_THEME } from "./theme";
@@ -27,10 +28,10 @@ export const Faq = ({
 				>
 					Still stuck? Mail{" "}
 					<a
-						href="mailto:hello@cap.so"
+						href={`mailto:${BRAND.contactEmail}`}
 						className="underline decoration-[rgba(17,17,17,0.3)] underline-offset-[5px] transition-colors duration-200 hover:decoration-[#111111]"
 					>
-						hello@cap.so
+						{BRAND.contactEmail}
 					</a>{" "}
 					and a human answers.
 				</p>

@@ -6,27 +6,27 @@ import { SeoPageTemplate } from "../../seo/SeoPageTemplate";
 export const screenRecordMacContent = {
 	title: "Best Screen Recorder for Mac | High-Quality, Free & Easy (2026)",
 	description:
-		"Cap is the best free screen recorder for Mac, with HD quality, no time limit in Studio Mode, and easy export. Ideal for tutorials, presentations, and educational videos.",
+		"usio is the best free screen recorder for Mac, with HD quality, no time limit in Studio Mode, and easy export. Ideal for tutorials, presentations, and educational videos.",
 
-	featuresTitle: "Why Cap is the Best Screen Recorder for Mac",
+	featuresTitle: "Why usio is the Best Screen Recorder for Mac",
 	featuresDescription:
-		"Cap provides all the features Mac users need for stunning, high-quality screen recordings",
+		"usio provides all the features Mac users need for stunning, high-quality screen recordings",
 
 	features: [
 		{
 			title: "Optimized for macOS",
 			description:
-				"Cap is fully optimized for Mac, delivering smooth performance and seamless integration with macOS. Looking for a <a href='/free-screen-recorder'>free screen recorder for Mac</a>? Cap is your best choice!",
+				"usio is fully optimized for Mac, delivering smooth performance and seamless integration with macOS. Looking for a <a href='/free-screen-recorder'>free screen recorder for Mac</a>? usio is your best choice!",
 		},
 		{
 			title: "High-Quality Video Capture",
 			description:
-				"Record clear, high-definition video with synced audio, perfect for professional use. Experience why users rate Cap as the best screen recorder for Mac.",
+				"Record clear, high-definition video with synced audio, perfect for professional use. Experience why users rate usio as the best screen recorder for Mac.",
 		},
 		{
 			title: "User-Friendly Interface",
 			description:
-				"Designed for ease of use on Mac, Cap offers an intuitive setup and simple recording options. Follow our <a href='/how-to-screen-record'>step-by-step screen recording guide</a> to start capturing your screen in minutes.",
+				"Designed for ease of use on Mac, usio offers an intuitive setup and simple recording options. Follow our <a href='/how-to-screen-record'>step-by-step screen recording guide</a> to start capturing your screen in minutes.",
 		},
 		{
 			title: "No Time Limit in Studio Mode",
@@ -36,7 +36,7 @@ export const screenRecordMacContent = {
 		{
 			title: "Easy Export and Sharing",
 			description:
-				"Save and share your recordings effortlessly with Cap's built-in export options for Mac.",
+				"Save and share your recordings effortlessly with usio's built-in export options for Mac.",
 		},
 		{
 			title: "Professional Tools",
@@ -47,7 +47,7 @@ export const screenRecordMacContent = {
 
 	useCasesTitle: "Popular Uses for the Best Screen Recorder for Mac",
 	useCasesDescription:
-		"Explore how Cap's screen recorder enhances productivity on macOS",
+		"Explore how usio's screen recorder enhances productivity on macOS",
 
 	useCases: [
 		{
@@ -75,42 +75,35 @@ export const screenRecordMacContent = {
 	faqsTitle: "Frequently Asked Questions",
 	faqs: [
 		{
-			question: "Is Cap compatible with macOS?",
+			question: "Is usio compatible with macOS?",
 			answer:
-				"Yes, Cap is fully compatible with macOS and optimized to work seamlessly on Mac devices. If you're looking for a <a href='/free-screen-recorder'>free screen recorder</a>, Cap is perfect for Mac users.",
+				"Yes, usio is fully compatible with macOS and optimized to work seamlessly on Mac devices. If you're looking for a <a href='/free-screen-recorder'>free screen recorder</a>, usio is perfect for Mac users.",
 		},
 		{
 			question: "Can I record my screen with audio on Mac?",
 			answer:
-				"Yes. Cap records system audio and your microphone together on macOS natively — no BlackHole or extra drivers needed. See <a href='/mac-screen-recording-with-audio'>Mac screen recording with audio</a>, or follow our <a href='/blog/record-screen-mac-system-audio'>step-by-step guide</a>.",
+				"Yes. usio records system audio and your microphone together on macOS natively — no BlackHole or extra drivers needed. See <a href='/mac-screen-recording-with-audio'>Mac screen recording with audio</a>, or follow our <a href='/blog/record-screen-mac-system-audio'>step-by-step guide</a>.",
 		},
 		{
-			question: "How do I export recordings from Cap on my Mac?",
+			question: "How do I export recordings from usio on my Mac?",
 			answer:
-				"Cap offers easy export options, allowing you to save your recordings in various formats directly from your Mac.",
+				"usio offers easy export options, allowing you to save your recordings in various formats directly from your Mac.",
 		},
 		{
-			question: "Can I use Cap for free on Mac?",
+			question: "Can I use usio for free on Mac?",
 			answer:
-				"Yes. Cap is free for Mac, including Studio Mode recording with no time limit and high-quality capture. Free Instant Mode share links are capped at 5 minutes per recording.",
+				"Yes. usio is free for Mac, including Studio Mode recording with no time limit and high-quality capture. Free Instant Mode share links are capped at 5 minutes per recording.",
 		},
 		{
-			question: "What are the best uses for Cap on Mac?",
+			question: "What are the best uses for usio on Mac?",
 			answer:
-				"Cap is ideal for creating tutorials, recording presentations, producing educational content, and supporting remote collaboration.",
+				"usio is ideal for creating tutorials, recording presentations, producing educational content, and supporting remote collaboration.",
 		},
 	],
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title: "Cap screen recording demo",
-		},
-	},
-
 	cta: {
-		title: "Get Started with Cap – The Best Screen Recorder for Mac",
-		buttonText: "Download Cap Free for Mac",
+		title: "Get Started with usio – The Best Screen Recorder for Mac",
+		buttonText: "Download usio Free for Mac",
 	},
 };
 

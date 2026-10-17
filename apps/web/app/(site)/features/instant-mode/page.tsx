@@ -1,11 +1,12 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { InstantModePage } from "./InstantModePage";
 
 export const metadata: Metadata = buildMarketingMetadata({
-	title: "Instant Mode - Quick Screen Recording & Sharing | Cap",
+	title: `Instant Mode - Quick Screen Recording & Sharing | ${BRAND.name}`,
 	description:
-		"Record and share instantly with Cap's cloud-powered Instant Mode. Get automatic transcriptions, collaborative comments, shareable links, and team workspaces for fast feedback loops.",
+		"Record and share instantly with usio's cloud-powered Instant Mode. Get automatic transcriptions, collaborative comments, shareable links, and team workspaces for fast feedback loops.",
 	path: "/features/instant-mode",
 	ogTitle: "Instant Mode — record & share in seconds",
 	ogDescription:

@@ -74,7 +74,7 @@ export const ProCard = ({ collapsed, onToggle }: PlanToggle) => {
 				return;
 			}
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the usio Pro plan");
 			}
 			if (data.url) {
 				window.location.href = data.url;
@@ -112,7 +112,7 @@ export const ProCard = ({ collapsed, onToggle }: PlanToggle) => {
 			controls={
 				<>
 					<Segmented
-						ariaLabel="Billing cycle for Cap Pro"
+						ariaLabel="Billing cycle for usio Pro"
 						value={annual ? "annual" : "monthly"}
 						onChange={(value) => setAnnual(value === "annual")}
 						options={[
@@ -151,7 +151,7 @@ export const ProCard = ({ collapsed, onToggle }: PlanToggle) => {
 						"w-full disabled:cursor-not-allowed disabled:opacity-60",
 					)}
 				>
-					{loading ? "Opening checkout..." : "Get Cap Pro"}
+					{loading ? "Opening checkout..." : "Get usio Pro"}
 				</button>
 			}
 			ctaNote="Cancel anytime. Your recordings stay yours."

@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { MediaFormatConverter } from "@/components/tools/MediaFormatConverter";
 import { ToolsPageTemplate } from "@/components/tools/ToolsPageTemplate";
@@ -11,7 +12,7 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "MP4 to WebM Converter | Free Online Video Converter | Cap",
+	title: `MP4 to WebM Converter | Free Online Video Converter | ${BRAND.name}`,
 	description:
 		"Convert MP4 videos to WebM format for better web compatibility directly in your browser. Free online tool with no uploads required.",
 	openGraph: {
@@ -35,17 +36,17 @@ export const metadata: Metadata = {
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/tools/convert/mp4-to-webm",
+		canonical: `${BRAND.url}/tools/convert/mp4-to-webm`,
 	},
 };
 
 const breadcrumbSchema = createBreadcrumbSchema([
-	{ name: "Home", url: "https://cap.so" },
-	{ name: "Tools", url: "https://cap.so/tools" },
-	{ name: "Convert", url: "https://cap.so/tools/convert" },
+	{ name: "Home", url: BRAND.url },
+	{ name: "Tools", url: `${BRAND.url}/tools` },
+	{ name: "Convert", url: `${BRAND.url}/tools/convert` },
 	{
 		name: "MP4 to WebM Converter",
-		url: "https://cap.so/tools/convert/mp4-to-webm",
+		url: `${BRAND.url}/tools/convert/mp4-to-webm`,
 	},
 ]);
 
@@ -91,10 +92,10 @@ export default function MP4ToWebMPage() {
 			},
 		],
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: `${BRAND.name} is the open source Loom alternative`,
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with usio. 100% open source and privacy focused.",
+			buttonText: "Download usio Free",
 		},
 	};
 

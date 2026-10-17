@@ -21,9 +21,6 @@ const ADD_ONS = [
 ];
 
 const FEATURES = [
-	"SOC 2 Type II compliant",
-	"ISO 27001 compliant",
-	"HIPAA compliant",
 	"SCIM provisioning can be arranged",
 	"Custom S3 & Google Drive storage",
 	"Volume discounts available",
@@ -35,13 +32,13 @@ export const EnterpriseCard = ({ collapsed, onToggle }: PlanToggle) => {
 			name="Enterprise"
 			tag="Self-serve"
 			theme={theme}
-			summary="Cap Pro price + optional add-ons"
+			summary="usio Pro price + optional add-ons"
 			collapsed={collapsed}
 			onToggle={onToggle}
-			blurb="Cap Pro for organizations with thousands of members, with optional extras when you need them."
+			blurb="usio Pro for organizations with thousands of members, with optional extras when you need them."
 			lede={
 				<p className="text-[16px] leading-[1.4] tracking-[-0.01em] text-[#111111] lg:text-[17px]">
-					Everything in Cap Pro, at the Cap Pro price.
+					Everything in usio Pro, at the usio Pro price.
 					<span className="text-[rgba(17,17,17,0.55)]">
 						{" "}
 						Add SAML SSO for your whole organization, or a signed BAA, only if

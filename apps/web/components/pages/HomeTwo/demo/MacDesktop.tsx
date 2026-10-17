@@ -39,7 +39,7 @@ export const MenuBar = ({
 		>
 			<AppleGlyph className="size-[13px]" />
 		</OsSwitchButton>
-		<span className="-ml-2.5 font-semibold">Cap</span>
+		<span className="-ml-2.5 font-semibold">usio</span>
 		{["File", "Edit", "View", "Window", "Help"].map((item) => (
 			<span key={item} className="hidden opacity-90 lg:inline">
 				{item}

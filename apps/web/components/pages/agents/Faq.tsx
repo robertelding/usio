@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import Link from "next/link";
 import { Eyebrow } from "@/components/pages/HomeTwo/Eyebrow";
 import {
@@ -15,7 +16,7 @@ export const Faq = () => (
 				<h2
 					className={`${H_SECTION} mt-6 text-balance text-[clamp(34px,3.9vw,48px)]`}
 				>
-					Questions about Cap for agents
+					Questions about usio for agents
 				</h2>
 				<p
 					className={`${BODY_TEXT} mt-5 max-w-[320px] text-[16px] leading-[1.5] text-[rgba(17,17,17,0.72)]`}
@@ -29,10 +30,10 @@ export const Faq = () => (
 					</Link>
 					. Still stuck? Mail{" "}
 					<a
-						href="mailto:hello@cap.so"
+						href={`mailto:${BRAND.contactEmail}`}
 						className="underline decoration-[rgba(17,17,17,0.3)] underline-offset-[5px] transition-colors duration-200 hover:decoration-[#111111]"
 					>
-						hello@cap.so
+						{BRAND.contactEmail}
 					</a>{" "}
 					and a human answers.
 				</p>

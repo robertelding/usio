@@ -1,13 +1,10 @@
 "use client";
 
 import { Logo } from "@cap/ui/logo";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons/faXTwitter";
+import { BRAND } from "@cap/utils";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import type { ComponentProps, ReactNode } from "react";
 import { useState } from "react";
 
 type FooterLink = {
@@ -18,20 +15,15 @@ type FooterLink = {
 
 const footerLinks = {
 	product: [
-		{ label: "Blog", href: "/blog" },
-		{ label: "Changelog", href: "/changelog" },
 		{ label: "Docs", href: "/docs" },
-		{ label: "Cap for Agents", href: "/agents" },
+		{ label: "usio for Agents", href: "/agents" },
 		{ label: "Pricing", href: "/pricing" },
-		{ label: "Download", href: "/download" },
+		...(BRAND.desktopAppAvailable
+			? [{ label: "Download", href: "/download" }]
+			: []),
 		{
 			label: "Open Source",
-			href: "https://github.com/CapSoftware/Cap",
-			isExternal: true,
-		},
-		{
-			label: "Join the community",
-			href: "https://discord.gg/y8gdQ3WRN3",
+			href: BRAND.githubUrl,
 			isExternal: true,
 		},
 		{
@@ -40,23 +32,10 @@ const footerLinks = {
 		},
 	] as FooterLink[],
 	help: [
-		{ label: "About", href: "/about" },
-		{ label: "Testimonials", href: "/testimonials" },
 		{ label: "FAQs", href: "/faq" },
 		{ label: "Self-hosting", href: "/self-hosting" },
 		{ label: "Support", href: "/support" },
-		{ label: "Email Support", href: "mailto:hello@cap.so" },
-		{ label: "Trust Portal", href: "https://trust.cap.so" },
-		{
-			label: "Chat Support",
-			href: "https://discord.gg/y8gdQ3WRN3",
-			isExternal: true,
-		},
-		{
-			label: "System Status",
-			href: "https://status.cap.so",
-			isExternal: true,
-		},
+		{ label: "Email Support", href: `mailto:${BRAND.contactEmail}` },
 	] as FooterLink[],
 	tools: [
 		{ label: "WebM to MP4", href: "/tools/convert/webm-to-mp4" },
@@ -96,8 +75,6 @@ const footerLinks = {
 		{ label: "Loom Video Downloader", href: "/tools/loom-downloader" },
 		{ label: "Screen Recorder", href: "/screen-recorder" },
 		{ label: "Free Screen Recorder", href: "/free-screen-recorder" },
-		{ label: "Screen Recorder for Mac", href: "/screen-recorder-mac" },
-		{ label: "Screen Recorder for Windows", href: "/screen-recorder-windows" },
 		{ label: "Screen Recording Software", href: "/screen-recording-software" },
 		{
 			label: "Chrome Screen Recorder",
@@ -107,136 +84,10 @@ const footerLinks = {
 			label: "Google Drive Screen Recorder",
 			href: "/google-drive-screen-recorder",
 		},
-		{ label: "Cap vs Loom", href: "/loom-alternative" },
+		{ label: "usio vs Loom", href: "/loom-alternative" },
 		{ label: "Student Discount", href: "/student-discount" },
 	] as FooterLink[],
 };
-
-const socialLinks: {
-	label: string;
-	href: string;
-	icon: ComponentProps<typeof FontAwesomeIcon>["icon"];
-}[] = [
-	{ label: "X (@Cap)", href: "https://x.com/cap", icon: faXTwitter },
-	{
-		label: "Discord",
-		href: "https://discord.gg/y8gdQ3WRN3",
-		icon: faDiscord,
-	},
-	{
-		label: "LinkedIn",
-		href: "https://www.linkedin.com/company/caprecorder/",
-		icon: faLinkedinIn,
-	},
-];
-
-const complianceBadges: {
-	label: string;
-	status: "compliant" | "in progress";
-	content: ReactNode;
-}[] = [
-	{
-		label: "SOC 2",
-		status: "compliant",
-		content: (
-			<text
-				x="22"
-				y="25.5"
-				textAnchor="middle"
-				fontSize="8.5"
-				fontWeight="700"
-				letterSpacing="0.2"
-				className="fill-current"
-			>
-				SOC 2
-			</text>
-		),
-	},
-	{
-		label: "HIPAA",
-		status: "compliant",
-		content: (
-			<text
-				x="22"
-				y="25.5"
-				textAnchor="middle"
-				fontSize="8"
-				fontWeight="700"
-				letterSpacing="0.1"
-				className="fill-current"
-			>
-				HIPAA
-			</text>
-		),
-	},
-	{
-		label: "ISO 27001",
-		status: "compliant",
-		content: (
-			<>
-				<text
-					x="22"
-					y="21"
-					textAnchor="middle"
-					fontSize="8.5"
-					fontWeight="700"
-					className="fill-current"
-				>
-					ISO
-				</text>
-				<text
-					x="22"
-					y="29.5"
-					textAnchor="middle"
-					fontSize="6.5"
-					fontWeight="600"
-					letterSpacing="0.4"
-					className="fill-current"
-				>
-					27001
-				</text>
-			</>
-		),
-	},
-];
-
-const ComplianceBadges = () => (
-	<div>
-		<div className="flex flex-wrap gap-2.5 items-center text-gray-10">
-			{complianceBadges.map(({ label, status, content }) => (
-				<Link
-					key={label}
-					href="https://trust.cap.so"
-					target="_blank"
-					rel="noopener noreferrer"
-					title={`${label} — ${status}`}
-					aria-label={`${label} ${status}. View Cap's Trust Portal`}
-					className="transition-colors text-gray-9 hover:text-gray-12"
-				>
-					<svg
-						viewBox="0 0 44 44"
-						fill="none"
-						aria-hidden="true"
-						className="size-9"
-					>
-						<circle cx="22" cy="22" r="21" stroke="currentColor" />
-						<circle
-							cx="22"
-							cy="22"
-							r="17.5"
-							stroke="currentColor"
-							strokeDasharray="1 2.5"
-						/>
-						{content}
-					</svg>
-				</Link>
-			))}
-		</div>
-		<p className="mt-2 text-[11px] text-gray-9">
-			SOC 2 Type II, ISO 27001 & HIPAA compliant
-		</p>
-	</div>
-);
 
 const FooterColumn = ({
 	title,
@@ -324,23 +175,8 @@ export const Footer = () => {
 						<div className="xl:w-[260px] xl:shrink-0">
 							<Logo className="w-[104px] h-auto" />
 							<p className="mt-5 max-w-sm text-sm leading-6 text-gray-11">
-								The open source alternative to Loom. Lightweight, powerful, and
-								cross-platform — record and share in seconds.
+								{BRAND.description}
 							</p>
-							<div className="flex gap-2.5 items-center mt-6">
-								{socialLinks.map((social) => (
-									<a
-										key={social.href}
-										href={social.href}
-										target="_blank"
-										rel="noopener noreferrer"
-										aria-label={social.label}
-										className="flex justify-center items-center rounded-full border transition-colors size-9 border-gray-4 text-gray-10 hover:text-gray-12 hover:border-gray-6 hover:bg-gray-3"
-									>
-										<FontAwesomeIcon icon={social.icon} className="size-4" />
-									</a>
-								))}
-							</div>
 						</div>
 
 						<div className="grid flex-1 grid-cols-1 border-t border-gray-4 lg:grid-cols-5 lg:gap-x-8 lg:gap-y-10 lg:border-none">
@@ -349,7 +185,7 @@ export const Footer = () => {
 								title="Additional Links"
 								links={footerLinks.additional}
 							/>
-							<FooterColumn title="Cap" links={footerLinks.help} />
+							<FooterColumn title="usio" links={footerLinks.help} />
 							<FooterColumn title="Use Cases" links={footerLinks.useCases} />
 							<FooterColumn
 								title="Tools"
@@ -360,12 +196,7 @@ export const Footer = () => {
 					</div>
 
 					<div className="flex flex-col gap-6 pt-8 mt-20 border-t sm:flex-row sm:justify-between sm:items-end border-gray-4">
-						<div className="flex flex-col gap-4">
-							<ComplianceBadges />
-							<p className="text-sm text-gray-9">
-								© Cap Software, Inc. {new Date().getFullYear()}.
-							</p>
-						</div>
+						<div />
 						<div className="flex flex-wrap gap-x-8 gap-y-2">
 							<a
 								className="text-sm transition-colors text-gray-9 hover:text-gray-12"

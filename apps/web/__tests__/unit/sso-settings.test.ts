@@ -459,7 +459,7 @@ describe("organization SSO settings authorization", () => {
 				},
 			}),
 		);
-		expect(markup).toContain('href="mailto:hello@cap.so"');
+		expect(markup).toContain('href="mailto:hello@usio.co.uk"');
 		expect(markup).toContain("purchase it again");
 		expect(markup).not.toMatch(/Manage (SSO )?subscription/);
 		expect(markup).toContain("View invoices");
@@ -731,7 +731,7 @@ describe("organization security page SSO failure isolation", () => {
 		["WorkOS", "getOrganization", 503],
 		["Stripe", "syncSsoSubscription", 503],
 	] as const)(
-		"preserves compliance settings when %s %s fails with %s",
+		"isolates the SSO failure and hides compliance claims when %s %s fails with %s",
 		async (provider, method, status) => {
 			makeFixture();
 			const error = Object.assign(new Error(`${provider} private detail`), {
@@ -743,8 +743,8 @@ describe("organization security page SSO failure isolation", () => {
 			);
 			expect(markup).toContain("Unable to load SAML SSO settings.");
 			expect(markup).toContain("Reload this page to try again.");
-			expect(markup).toContain('href="mailto:hello@cap.so"');
-			expect(markup).toContain('aria-label="Compliance settings"');
+			expect(markup).toContain('href="mailto:hello@usio.co.uk"');
+			expect(markup).not.toContain('aria-label="Compliance settings"');
 			expect(markup).not.toContain('aria-label="SSO settings"');
 			expect(markup).not.toContain(error.message);
 		},
@@ -773,7 +773,7 @@ describe("organization security page SSO failure isolation", () => {
 				}),
 			}),
 		);
-		expect(markup).toContain('aria-label="Compliance settings"');
+		expect(markup).not.toContain('aria-label="Compliance settings"');
 		expect(markup).toContain('aria-label="SSO settings"');
 		expect(markup).toContain(`data-organization-id="${ORGANIZATION_ID}"`);
 		expect(markup).toContain('data-checkout-session-id="cs_verified"');

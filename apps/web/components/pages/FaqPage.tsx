@@ -14,56 +14,38 @@ interface FaqItem {
 
 const faqContent: FaqItem[] = [
 	{
-		title: "Who is Cap for?",
+		title: "Who is usio for?",
 		answer:
-			"Cap is for anyone who wants to record, edit, and share videos. It's a lightweight, powerful tool for creators, educators, marketers, developers, and remote teams who want to communicate more effectively through screen recordings.",
+			"usio is for anyone who wants to record, edit, and share videos. It's a lightweight, powerful tool for creators, educators, marketers, developers, and remote teams who want to communicate more effectively through screen recordings.",
 	},
 	{
 		title: "How much does it cost?",
-		answer: `Cap offers a free version for personal use. You can upgrade to Cap Pro for just $${PRICING.pro.annualPerMonth}/month (when billed annually) to unlock unlimited cloud storage, unlimited recording length, custom domain support, advanced team features, password-protected videos, analytics, and priority support. We also offer commercial licenses and self-hosted options for businesses.`,
+		answer: `usio offers a free version for personal use. You can upgrade to usio Pro for just $${PRICING.pro.annualPerMonth}/month (when billed annually) to unlock unlimited cloud storage, unlimited recording length, custom domain support, advanced team features, password-protected videos, analytics, and priority support. We also offer commercial licenses and self-hosted options for businesses.`,
 	},
 	{
-		title: "Which platforms does Cap support?",
+		title: "Which platforms does usio support?",
 		answer:
-			"Cap is cross-platform and works on macOS (both Apple Silicon and Intel) and Windows. For macOS, we recommend version 13.1 or newer. For Windows, we recommend Windows 10 or newer.",
+			"usio is cross-platform and works on macOS (both Apple Silicon and Intel) and Windows. For macOS, we recommend version 13.1 or newer. For Windows, we recommend Windows 10 or newer.",
 	},
 	{
-		title: "What makes Cap different from Loom?",
+		title: "What makes usio different from Loom?",
 		answer:
-			"Cap is open source, privacy-focused, and lets you own your data. You can connect your own Google Drive or custom S3 storage buckets, self-host the entire platform, and get a lightweight, faster experience. We focus strongly on design, user experience, and building with our community at the center of everything we do. Plus, our built-in Loom video importer makes switching effortless.",
+			"usio is open source, privacy-focused, and lets you own your data. You can connect your own Google Drive or custom S3 storage buckets, self-host the entire platform, and get a lightweight, faster experience. We focus strongly on design, user experience, and building with our community at the center of everything we do. Plus, our built-in Loom video importer makes switching effortless.",
 	},
 	{
-		title: "Can I import my Loom videos to Cap?",
+		title: "Can I import my Loom videos to usio?",
 		answer:
-			"Yes! Cap Pro includes a built-in Loom video importer that lets you seamlessly transfer your existing Loom recordings into Cap. Just paste your Loom video links and Cap handles the rest — keeping all your content organized in one place.",
+			"Yes! usio Pro includes a built-in Loom video importer that lets you seamlessly transfer your existing Loom recordings into usio. Just paste your Loom video links and usio handles the rest — keeping all your content organized in one place.",
 	},
 	{
-		title: "Can I self-host Cap?",
+		title: "Can I self-host usio?",
 		answer:
-			"Yes! Cap can be self-hosted on your own infrastructure, giving you full control over your data.",
-	},
-	{
-		title: "Is Cap SOC 2 compliant?",
-		answer:
-			"Yes. Cap is SOC 2 Type II, ISO 27001, and HIPAA compliant. You can request our reports and view our security practices in Cap's Trust Portal.",
-		link: {
-			text: "Visit the Trust Portal",
-			href: "https://trust.cap.so",
-		},
-	},
-	{
-		title: "Is Cap HIPAA compliant?",
-		answer:
-			"Yes. Cap is fully HIPAA compliant. We sign Business Associate Agreements (BAAs) with organizations handling protected health information, and every vendor in Cap's production infrastructure is covered by a BAA. For even more control, you can bring your own storage or self-host Cap entirely.",
-		link: {
-			text: "Learn about HIPAA-compliant recording",
-			href: "/hipaa-compliant-screen-recording",
-		},
+			"Yes! usio can be self-hosted on your own infrastructure, giving you full control over your data.",
 	},
 	{
 		title: "Is there a commercial license available?",
 		answer:
-			"Yes, we offer commercial licenses for businesses that want to use the Cap desktop app. The commercial license includes the Cap Recorder + Editor with local-only features. Our Pro plan also includes a commercial license for the desktop app.",
+			"Yes, we offer commercial licenses for businesses that want to use the usio desktop app. The commercial license includes the usio Recorder + Editor with local-only features. Our Pro plan also includes a commercial license for the desktop app.",
 		link: {
 			text: "Deactivate your license",
 			href: "/deactivate-license",

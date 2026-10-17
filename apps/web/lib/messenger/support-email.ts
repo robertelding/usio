@@ -5,11 +5,12 @@ import { sendEmail } from "@cap/database/emails/config";
 import { MessengerSupportEmail } from "@cap/database/emails/messenger-support-email";
 import { nanoId } from "@cap/database/helpers";
 import { messengerSupportEmails, users } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import type { User } from "@cap/web-domain";
 import { and, count, eq, gte } from "drizzle-orm";
 
-const SUPPORT_EMAIL_TO = "hello@cap.so";
-const SUPPORT_EMAIL_FROM = "Cap Support <richie@send.cap.so>";
+const SUPPORT_EMAIL_TO = BRAND.contactEmail;
+const SUPPORT_EMAIL_FROM = `${BRAND.emailFromName} Support <no-reply@${BRAND.domain}>`;
 export const MESSENGER_SUPPORT_EMAIL_DAILY_LIMIT = 2;
 
 type MessengerSupportUser = {

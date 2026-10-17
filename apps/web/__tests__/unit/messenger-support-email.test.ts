@@ -91,10 +91,10 @@ describe("sendMessengerSupportEmail", () => {
 		});
 		expect(sendEmailMock).toHaveBeenCalledWith(
 			expect.objectContaining({
-				email: "hello@cap.so",
+				email: "hello@usio.co.uk",
 				subject: "Messenger support: Upload issue",
 				replyTo: "user@example.com",
-				fromOverride: "Cap Support <richie@send.cap.so>",
+				fromOverride: "usio Support <no-reply@usio.co.uk>",
 			}),
 		);
 		expect(valuesMock).toHaveBeenCalledWith(

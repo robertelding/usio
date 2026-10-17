@@ -22,14 +22,14 @@ export const FinalCta = () => (
 			<h2
 				className={`${H_HERO} mt-6 text-balance text-[clamp(44px,6.4vw,78px)]`}
 			>
-				Point your agent at Cap.
+				Point your agent at usio.
 			</h2>
 			<p
 				className={`${BODY_TEXT} mt-7 max-w-[560px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[18px]`}
 			>
 				One paste and your agent has an open source screen recorder it can run
-				end to end: record, share, and manage everything in Cap on Mac, Windows,
-				and Linux.
+				end to end: record, share, and manage everything in usio on Mac,
+				Windows, and Linux.
 			</p>
 			<div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
 				<CopyLabelButton
@@ -54,7 +54,7 @@ export const FinalCta = () => (
 				<span>Or point your agent here</span>
 				<span className="inline-flex items-center gap-0.5 rounded-full bg-white py-0.5 pl-3 pr-0.5 shadow-[0_0_0_1px_rgba(17,17,17,0.08)]">
 					<span className={`${MONO} text-[13px] text-[#111111]`}>
-						cap.so/agents
+						usio.co.uk/agents
 					</span>
 					<CopyIconButton
 						text={POINTER_URL}

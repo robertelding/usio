@@ -55,7 +55,7 @@ const STEPS: Step[] = [
 		key: "instant",
 		label: "Instant Mode",
 		heading: "Share your screen in seconds",
-		body: "Hit record and Cap uploads as you go. The moment you stop, a share link is on your clipboard, ready to paste anywhere.",
+		body: "Hit record and usio uploads as you go. The moment you stop, a share link is on your clipboard, ready to paste anywhere.",
 		href: "/features",
 		Icon: InstantIcon,
 	},
@@ -79,7 +79,7 @@ const STEPS: Step[] = [
 		key: "share",
 		label: "Share",
 		heading: "One link does the rest",
-		body: "Every capture gets a Cap page with comments, reactions, transcript, and chapters. Viewers watch in the browser. No download, no account.",
+		body: "Every capture gets a usio page with comments, reactions, transcript, and chapters. Viewers watch in the browser. No download, no account.",
 		href: "/features",
 		extraChip: "Every mode",
 		Icon: Link2,
@@ -204,7 +204,7 @@ export const ModeWalkthrough = () => {
 			/>
 			{/* biome-ignore lint/correctness/useUniqueElementIds: paired with the section's aria-labelledby above */}
 			<h2 id="modes-heading" className="sr-only">
-				How Cap works: Instant Mode, Studio Mode, and the editor
+				How usio works: Instant Mode, Studio Mode, and the editor
 			</h2>
 
 			<div className={forceStacked ? "hidden" : "hidden md:block"}>

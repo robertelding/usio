@@ -1,9 +1,9 @@
 import { getCurrentUser } from "@cap/database/auth/session";
 import { Card, CardDescription, CardHeader, CardTitle } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { getOrganizationSsoSettings } from "@/actions/organization/sso";
-import { ComplianceCard } from "../components/ComplianceCard";
 import { SsoCard } from "../components/SsoCard";
 
 export const metadata: Metadata = {
@@ -34,11 +34,10 @@ export default async function OrganizationSecurityPage({
 							Choose the organization you were setting up from the organization
 							switcher, then reload this page to refresh its payment and SSO
 							status. If you are already in the correct organization, contact
-							Cap support.
+							usio support.
 						</CardDescription>
 					</CardHeader>
 				</Card>
-				<ComplianceCard />
 			</div>
 		);
 	}
@@ -55,14 +54,13 @@ export default async function OrganizationSecurityPage({
 						<CardDescription>
 							Unable to load SAML SSO settings. Reload this page to try again.
 							If the problem continues, contact{" "}
-							<a className="underline" href="mailto:hello@cap.so">
-								hello@cap.so
+							<a className="underline" href={`mailto:${BRAND.contactEmail}`}>
+								{BRAND.contactEmail}
 							</a>{" "}
 							for help.
 						</CardDescription>
 					</CardHeader>
 				</Card>
-				<ComplianceCard />
 			</div>
 		);
 	}
@@ -78,7 +76,6 @@ export default async function OrganizationSecurityPage({
 						: undefined
 				}
 			/>
-			<ComplianceCard />
 		</div>
 	);
 }

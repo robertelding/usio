@@ -35,7 +35,7 @@ const TERMINAL = [
 	{ prompt: true, text: "cap record start --mode studio --duration 30" },
 	{ prompt: true, text: "cap export ./recording.cap --quality 4k" },
 	{ prompt: true, text: "cap upload ./recording.mp4 --json" },
-	{ prompt: false, text: '{ "url": "https://cap.so/s/x7f2k9" }' },
+	{ prompt: false, text: '{ "url": "https://usio.co.uk/s/x7f2k9" }' },
 ];
 
 const Tile = ({

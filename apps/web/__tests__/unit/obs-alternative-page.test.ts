@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/(seo)/obs-alternative/page.tsx"),
 	"utf-8",
@@ -15,15 +17,15 @@ const componentSource = readFileSync(
 
 describe("ObsAlternativePage metadata", () => {
 	it("contains canonical URL", () => {
-		expect(pageSource).toContain('canonical: "https://cap.so/obs-alternative"');
+		expect(pageSource).toContain(`canonical: \`${BRAND_URL}/obs-alternative\``);
 	});
 
 	it("contains OG url field", () => {
-		expect(pageSource).toContain('url: "https://cap.so/obs-alternative"');
+		expect(pageSource).toContain(`url: \`${BRAND_URL}/obs-alternative\``);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {
@@ -32,7 +34,7 @@ describe("ObsAlternativePage metadata", () => {
 
 	it("uses the dynamic OG image", () => {
 		expect(pageSource).toContain("ogImageUrl(");
-		expect(pageSource).not.toContain("https://cap.so/og.png");
+		expect(pageSource).not.toContain("https://usio.co.uk/og.png");
 	});
 
 	it("title targets obs-alternative keyword", () => {

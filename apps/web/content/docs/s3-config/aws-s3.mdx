@@ -1,17 +1,17 @@
 ---
 title: "AWS S3"
-summary: "Use an Amazon S3 bucket for new Cap uploads"
+summary: "Use an Amazon S3 bucket for new usio uploads"
 tags: "Storage, AWS S3"
 image: "/docs/s3-config/aws-s3.jpg"
 ---
 
-Cap Pro can use a private Amazon S3 bucket for new shareable-link uploads. Existing Caps remain on their current storage provider.
+usio Pro can use a private Amazon S3 bucket for new shareable-link uploads. Existing videos remain on their current storage provider.
 
 ## Create the bucket and credentials
 
-Create a private S3 bucket in the region you plan to enter in Cap. Keep public access blocked; Cap reads objects through its storage layer and normal access checks.
+Create a private S3 bucket in the region you plan to enter in usio. Keep public access blocked; usio reads objects through its storage layer and normal access checks.
 
-Create a dedicated IAM identity with access only to that bucket. Cap currently needs to test the bucket, read and write objects, delete objects, and complete or abort multipart uploads. A starting policy is:
+Create a dedicated IAM identity with access only to that bucket. usio currently needs to test the bucket, read and write objects, delete objects, and complete or abort multipart uploads. A starting policy is:
 
 ```json
 {
@@ -41,23 +41,23 @@ Replace `BUCKET_NAME` before saving. Apply narrower prefixes if your organizatio
 
 ## Configure CORS
 
-Browser uploads use presigned requests and need the `ETag` response header. Add every web origin that will upload through Cap, including your custom or self-hosted domain if applicable:
+Browser uploads use presigned requests and need the `ETag` response header. Add every web origin that will upload through usio, including your custom or self-hosted domain if applicable:
 
 ```json
 [
   {
     "AllowedHeaders": ["*"],
     "AllowedMethods": ["GET", "HEAD", "PUT"],
-    "AllowedOrigins": ["https://cap.so"],
+    "AllowedOrigins": ["https://usio.co.uk"],
     "ExposeHeaders": ["ETag"],
     "MaxAgeSeconds": 3000
   }
 ]
 ```
 
-Do not copy origins you do not use. Add the exact scheme and host for each trusted Cap deployment.
+Do not copy origins you do not use. Add the exact scheme and host for each trusted usio deployment.
 
-## Connect Cap Desktop
+## Connect usio Desktop
 
 1. Open **Settings > Integrations > S3 Config**.
 2. Select **AWS S3**.
@@ -71,16 +71,16 @@ The connection test performs a bucket-head request. A successful test confirms t
 
 ## Organization-managed storage
 
-Owners and admins can manage S3 at the organization level. When organization storage is active, members see that the integration is managed by the organization and cannot replace the configuration in Cap Desktop.
+Owners and admins can manage S3 at the organization level. When organization storage is active, members see that the integration is managed by the organization and cannot replace the configuration in usio Desktop.
 
-Changing the active provider affects future uploads. It does not bulk-move existing Cap, Google Drive, or S3 objects.
+Changing the active provider affects future uploads. It does not bulk-move existing usio, Google Drive, or S3 objects.
 
 ## Verify before rollout
 
-1. Upload one non-sensitive sample Cap.
+1. Upload one non-sensitive sample usio.
 2. Confirm the object appears in the intended bucket and prefix.
-3. Open the Cap link as an allowed viewer.
+3. Open the video link as an allowed viewer.
 4. Confirm playback and any download behavior you intend to support.
-5. Delete the sample in Cap and confirm your retention expectations.
+5. Delete the sample in usio and confirm your retention expectations.
 
-Store credentials in Cap's configuration flow, not in chat, tickets, or source control.
+Store credentials in usio's configuration flow, not in chat, tickets, or source control.

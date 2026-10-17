@@ -115,12 +115,6 @@ const sections: FeatureSection[] = [
 	{
 		title: "Security, support & licensing",
 		rows: [
-			{
-				label: "SOC 2 Type II, ISO 27001 & HIPAA compliance",
-				free: false,
-				desktop: false,
-				pro: true,
-			},
 			{ label: "Community support", free: true, desktop: true, pro: true },
 			{
 				label: "Priority support & early features",
@@ -194,7 +188,7 @@ export const ComparePlans = () => {
 			},
 			{
 				key: "pro",
-				name: "Cap Pro",
+				name: "usio Pro",
 				short: "Pro",
 				price: `${symbol}${PRICING.pro.annualPerMonth}/user/mo`,
 			},
@@ -267,7 +261,7 @@ export const ComparePlans = () => {
 			}
 
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the usio Pro plan");
 				return;
 			}
 
@@ -337,7 +331,7 @@ export const ComparePlans = () => {
 				Compare plans
 			</h2>
 			<p className="mx-auto mb-12 max-w-md text-center text-gray-10">
-				Everything you get with Free, Desktop License, and Cap Pro.
+				Everything you get with Free, Desktop License, and usio Pro.
 			</p>
 
 			<div className="hidden p-4 rounded-2xl border shadow-sm md:block bg-gray-1 border-gray-5">

@@ -1,5 +1,5 @@
+import { BRAND } from "@cap/utils";
 import { PRICING } from "@/data/pricing";
-import { testimonials } from "@/data/testimonials";
 import {
 	createBreadcrumbSchema,
 	createFAQSchema,
@@ -11,33 +11,33 @@ import {
 
 const homePageFAQs = [
 	{
-		question: "What is Cap?",
+		question: "What is usio?",
 		answer:
-			"Cap is an open-source screen recording software that offers beautiful, lightweight recordings with instant sharing capabilities. It's the privacy-focused alternative to Loom.",
+			"usio is an open-source screen recording software that offers beautiful, lightweight recordings with instant sharing capabilities. It's the privacy-focused alternative to Loom.",
 	},
 	{
-		question: "How much does Cap cost?",
-		answer: `Cap offers a generous free plan with Studio mode for personal use and 5-minute shareable links. The Pro plan starts at just $${PRICING.pro.annualPerMonth}/month per user, which is less than half the price of Loom.`,
+		question: "How much does usio cost?",
+		answer: `usio offers a generous free plan with Studio mode for personal use and 5-minute shareable links. The Pro plan starts at just $${PRICING.pro.annualPerMonth}/month per user, which is less than half the price of Loom.`,
 	},
 	{
-		question: "Is Cap available for Windows and Mac?",
+		question: "Is usio available for Windows and Mac?",
 		answer:
-			"Yes, Cap is available for both macOS and Windows, providing consistent performance and features across both platforms.",
+			"Yes, usio is available for both macOS and Windows, providing consistent performance and features across both platforms.",
 	},
 	{
-		question: "Can I use my own storage with Cap?",
+		question: "Can I use my own storage with usio?",
 		answer:
-			"Yes, Cap allows you to connect your own Google Drive or S3 storage and a custom domain, giving you 100% ownership and control over your content.",
+			"Yes, usio allows you to connect your own Google Drive or S3 storage and a custom domain, giving you 100% ownership and control over your content.",
 	},
 	{
-		question: "What makes Cap different from other screen recorders?",
+		question: "What makes usio different from other screen recorders?",
 		answer:
-			"Cap is fully open-source, privacy-focused, and offers unique features like Studio mode (free for personal use), 4K recording at 60fps, built-in thread commenting, and the ability to use your own storage and domain.",
+			"usio is fully open-source, privacy-focused, and offers unique features like Studio mode (free for personal use), 4K recording at 60fps, built-in thread commenting, and the ability to use your own storage and domain.",
 	},
 	{
-		question: "Does Cap support team collaboration?",
+		question: "Does usio support team collaboration?",
 		answer:
-			"Yes, Cap includes built-in thread commenting on shareable links, making it easy to collaborate with teammates and collect feedback directly on your recordings.",
+			"Yes, usio includes built-in thread commenting on shareable links, making it easy to collaborate with teammates and collect feedback directly on your recordings.",
 	},
 ];
 
@@ -45,9 +45,9 @@ const createHomePageSchema = () => {
 	const schemas = [
 		createOrganizationSchema(),
 		createWebSiteSchema(),
-		createSoftwareApplicationSchema(testimonials),
+		createSoftwareApplicationSchema(),
 		createProductSchema(),
-		createBreadcrumbSchema([{ name: "Home", url: "https://cap.so" }]),
+		createBreadcrumbSchema([{ name: "Home", url: BRAND.url }]),
 		createFAQSchema(homePageFAQs),
 	];
 

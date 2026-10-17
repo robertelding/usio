@@ -26,8 +26,8 @@ const DARK = {
 } as const;
 
 const BENEFITS = [
-	"Installs the Cap CLI",
-	"Adds the Cap skill",
+	"Installs the usio CLI",
+	"Adds the usio skill",
 	"Connects local MCP",
 	"Verifies access",
 ];
@@ -46,13 +46,13 @@ export const SetupPrompt = () => {
 					<h2
 						className={`${H_SECTION} mt-6 text-balance text-[clamp(36px,4.6vw,56px)]`}
 					>
-						Set up Cap with one paste
+						Set up usio with one paste
 					</h2>
 					<p
 						className={`${BODY_TEXT} mt-6 max-w-[640px] text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}
 					>
 						Copy the prompt, paste it into your agent, and let it do the rest.
-						It installs the Cap CLI, adds the Cap skill and a local MCP server
+						It installs the usio CLI, adds the usio skill and a local MCP server
 						for the agent you are using, signs you in with the least privilege
 						it needs, and verifies everything before it starts. If you would
 						rather not paste anything, just point your agent at this page.
@@ -71,7 +71,7 @@ export const SetupPrompt = () => {
 									"text-[11px] uppercase leading-none tracking-[0.05em] text-[rgba(17,17,17,0.5)]",
 								)}
 							>
-								Cap agent setup prompt
+								usio agent setup prompt
 							</span>
 							<CopyLabelButton
 								text={CAP_AGENT_PROMPT}
@@ -225,7 +225,7 @@ export const SetupPrompt = () => {
 								)}
 							>
 								Agents reading this page: the setup prompt above is your
-								operating instruction set. Continue at cap.so/docs/agents.
+								operating instruction set. Continue at usio.co.uk/docs/agents.
 							</p>
 						</div>
 					</div>

@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	AsyncVideoCodeReviewsPage,
@@ -12,24 +13,24 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "Async Video Code Reviews — Ship Faster Without the Meetings | Cap",
+	title: `Async Video Code Reviews — Ship Faster Without the Meetings | ${BRAND.name}`,
 	description:
-		"Record screen walkthroughs of pull requests and share a timestamped link your team watches on their schedule. Cap makes async code reviews faster and calendar-free.",
+		"Record screen walkthroughs of pull requests and share a timestamped link your team watches on their schedule. usio makes async code reviews faster and calendar-free.",
 	alternates: {
-		canonical: "https://cap.so/async-video-code-reviews",
+		canonical: `${BRAND.url}/async-video-code-reviews`,
 	},
 	openGraph: {
-		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Cap",
+		title: `Async Video Code Reviews — Ship Faster Without the Meetings | ${BRAND.name}`,
 		description:
-			"Record screen walkthroughs of pull requests and share a timestamped link your team watches on their schedule. Cap makes async code reviews faster and calendar-free.",
-		url: "https://cap.so/async-video-code-reviews",
-		siteName: "Cap",
+			"Record screen walkthroughs of pull requests and share a timestamped link your team watches on their schedule. usio makes async code reviews faster and calendar-free.",
+		url: `${BRAND.url}/async-video-code-reviews`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Async Video Code Reviews",
+				alt: "usio: Async Video Code Reviews",
 			},
 		],
 		locale: "en_US",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Cap",
+		title: `Async Video Code Reviews — Ship Faster Without the Meetings | ${BRAND.name}`,
 		description:
 			"Record PR walkthroughs and share instant links with timestamped comments. No meetings, no scheduling. Just faster code reviews.",
 		images: [ogImage],

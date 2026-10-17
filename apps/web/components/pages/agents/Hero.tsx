@@ -49,7 +49,7 @@ export const Hero = () => {
 		<section className="relative px-5 pb-6 pt-12 sm:pt-14 lg:pb-8 lg:pt-[56px]">
 			<div className="mx-auto max-w-[1200px]">
 				<div className="relative mx-auto flex max-w-[900px] flex-col items-center text-center">
-					<Eyebrow accent={MODE_THEME.studio.accent}>Cap for Agents</Eyebrow>
+					<Eyebrow accent={MODE_THEME.studio.accent}>usio for Agents</Eyebrow>
 					<h1
 						className={`${H_HERO} mt-6 text-balance text-[clamp(42px,6.4vw,84px)]`}
 					>
@@ -58,7 +58,7 @@ export const Hero = () => {
 					<p
 						className={`${BODY_TEXT} mt-8 max-w-[700px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[19px]`}
 					>
-						Cap is the open source screen recorder built for AI agents. A CLI
+						usio is the open source screen recorder built for AI agents. A CLI
 						and a local MCP server let Claude Code, Codex, Cursor, OpenCode, or
 						any agent that can run a shell record your screen, upload the
 						result, read the transcript, and manage your whole library. No app
@@ -95,7 +95,7 @@ export const Hero = () => {
 						<span>Or point your agent here</span>
 						<span className="inline-flex items-center gap-0.5 rounded-full bg-white py-0.5 pl-3 pr-0.5 shadow-[0_0_0_1px_rgba(17,17,17,0.08)]">
 							<span className={`${MONO} text-[13px] text-[#111111]`}>
-								cap.so/agents
+								usio.co.uk/agents
 							</span>
 							<CopyIconButton
 								text={POINTER_URL}

@@ -1,6 +1,7 @@
 "use client";
 
 import { navigationMenuTriggerStyle } from "@cap/ui/navigation-menu";
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { ChevronDown, Clapperboard, Zap } from "lucide-react";
 import Link from "next/link";
@@ -14,6 +15,7 @@ import {
 	useState,
 } from "react";
 import { LoomMark } from "@/components/icons/LoomMark";
+import { isHiddenMarketingPath } from "@/lib/hidden-marketing-pages";
 
 interface NavDropdownItem {
 	label: string;
@@ -29,7 +31,7 @@ interface NavItem {
 	dropdown?: NavDropdownItem[];
 }
 
-const Links: NavItem[] = [
+const AllLinks: NavItem[] = [
 	{
 		label: "Product",
 		width: 600,
@@ -52,31 +54,30 @@ const Links: NavItem[] = [
 					/>
 				),
 			},
-			{
-				label: "Download App",
-				sub: "Downloads for macOS, Windows & Linux",
-				href: "/download",
-			},
+			...(BRAND.desktopAppAvailable
+				? [
+						{
+							label: "Download App",
+							sub: "Downloads for macOS, Windows & Linux",
+							href: "/download",
+						},
+					]
+				: []),
 			{
 				label: "Migrate from Loom",
-				sub: "Bring your Loom library into Cap",
+				sub: "Bring your Loom library into usio",
 				href: "/migrate-from-loom",
 				icon: <LoomMark size={16} />,
 			},
 			{
 				label: "Open Source",
-				sub: "Cap is open source and available on GitHub",
-				href: "https://github.com/CapSoftware/Cap",
+				sub: "usio is open source and available on GitHub",
+				href: BRAND.githubUrl,
 			},
 			{
-				label: "Self-host Cap",
-				sub: "Self-host Cap on your own infrastructure",
+				label: "Self-host usio",
+				sub: "Self-host usio on your own infrastructure",
 				href: "/self-hosting",
-			},
-			{
-				label: "Join the community",
-				sub: "Join the Cap community on Discord",
-				href: "https://cap.link/discord",
 			},
 			{
 				label: "Free tools",
@@ -85,10 +86,14 @@ const Links: NavItem[] = [
 			},
 		],
 	},
-	{
-		label: "Download",
-		href: "/download",
-	},
+	...(BRAND.desktopAppAvailable
+		? [
+				{
+					label: "Download",
+					href: "/download",
+				},
+			]
+		: []),
 	{
 		label: "Agents",
 		href: "/agents",
@@ -103,17 +108,17 @@ const Links: NavItem[] = [
 		dropdown: [
 			{
 				label: "Support",
-				sub: "Get help via Discord, email, and more",
+				sub: "Get help by email and more",
 				href: "/support",
 			},
 			{
 				label: "Documentation",
-				sub: "Documentation for using Cap",
+				sub: "Documentation for using usio",
 				href: "/docs",
 			},
 			{
 				label: "FAQs",
-				sub: "Frequently asked questions about Cap",
+				sub: "Frequently asked questions about usio",
 				href: "/faq",
 			},
 			{
@@ -136,6 +141,19 @@ const Links: NavItem[] = [
 		href: "/pricing",
 	},
 ];
+
+const Links: NavItem[] = AllLinks.filter(
+	(link) => !link.href || !isHiddenMarketingPath(link.href),
+).map((link) =>
+	link.dropdown
+		? {
+				...link,
+				dropdown: link.dropdown.filter(
+					(item) => !isHiddenMarketingPath(item.href),
+				),
+			}
+		: link,
+);
 
 const dropdownStyle = (width: number | undefined): CSSProperties => ({
 	width: width ?? 460,

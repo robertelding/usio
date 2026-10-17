@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	SelfHostedScreenRecordingPage,
@@ -12,26 +13,24 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title:
-		"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Cap",
+	title: `Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | ${BRAND.name}`,
 	description:
-		"Cap lets you self-host screen recordings on your own S3-compatible storage. Connect AWS S3, Cloudflare R2, or MinIO — recordings go directly to your infrastructure. Open source, MIT-licensed, free to use.",
+		"usio lets you self-host screen recordings on your own S3-compatible storage. Connect AWS S3, Cloudflare R2, or MinIO — recordings go directly to your infrastructure. Open source, AGPLv3-licensed, free to use.",
 	alternates: {
-		canonical: "https://cap.so/self-hosted-screen-recording",
+		canonical: `${BRAND.url}/self-hosted-screen-recording`,
 	},
 	openGraph: {
-		title:
-			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Cap",
+		title: `Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | ${BRAND.name}`,
 		description:
-			"Cap lets you self-host screen recordings on your own S3-compatible storage. Connect AWS S3, Cloudflare R2, or MinIO — recordings go directly to your infrastructure. Open source and free.",
-		url: "https://cap.so/self-hosted-screen-recording",
-		siteName: "Cap",
+			"usio lets you self-host screen recordings on your own S3-compatible storage. Connect AWS S3, Cloudflare R2, or MinIO — recordings go directly to your infrastructure. Open source and free.",
+		url: `${BRAND.url}/self-hosted-screen-recording`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Self-Hosted Screen Recording",
+				alt: "usio: Self-Hosted Screen Recording",
 			},
 		],
 		locale: "en_US",
@@ -39,10 +38,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title:
-			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Cap",
+		title: `Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | ${BRAND.name}`,
 		description:
-			"Cap lets you self-host screen recordings on your own S3-compatible storage. AWS S3, Cloudflare R2, MinIO — your infrastructure, instant shareable links.",
+			"usio lets you self-host screen recordings on your own S3-compatible storage. AWS S3, Cloudflare R2, MinIO — your infrastructure, instant shareable links.",
 		images: [ogImage],
 	},
 };

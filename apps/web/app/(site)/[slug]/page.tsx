@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMetadataBySlug } from "@/lib/seo-metadata";
@@ -13,9 +14,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
 	if (!metadata) {
 		return {
-			title: "Cap — Beautiful screen recordings, owned by you.",
+			title: `${BRAND.name} — Beautiful screen recordings, owned by you.`,
 			description:
-				"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+				"usio is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
 		};
 	}
 
@@ -24,12 +25,12 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 		description: metadata.description,
 		keywords: metadata.keywords,
 		alternates: {
-			canonical: `https://cap.so/${params.slug}`,
+			canonical: `${BRAND.url}/${params.slug}`,
 		},
 		openGraph: {
 			title: metadata.title,
 			description: metadata.description,
-			url: `https://cap.so/${params.slug}`,
+			url: `${BRAND.url}/${params.slug}`,
 			images: [metadata.ogImage],
 		},
 	};

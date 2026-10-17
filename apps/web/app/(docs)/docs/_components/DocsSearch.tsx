@@ -44,9 +44,9 @@ interface AskTurn {
 }
 
 const EXAMPLE_QUESTIONS = [
-	"How do I set up Cap in Claude Code?",
+	"How do I set up usio in Claude Code?",
 	"Can my agent record my screen and share a link?",
-	"How do I self-host Cap with my own S3 bucket?",
+	"How do I self-host usio with my own S3 bucket?",
 ];
 
 const QUICK_LINK_SLUGS = [
@@ -440,13 +440,13 @@ export function DocsSearch({ searchIndex }: DocsSearchProps) {
 							mode === "ask"
 								? turns.length > 0
 									? "Ask a follow-up..."
-									: "Ask a question about Cap..."
+									: "Ask a question about usio..."
 								: "Search docs or ask a question..."
 						}
 						className="h-[52px] flex-1 bg-transparent text-[15px] text-gray-12 outline-none placeholder:text-gray-9"
 						aria-label={
 							mode === "ask"
-								? "Ask a question about Cap"
+								? "Ask a question about usio"
 								: "Search documentation"
 						}
 						aria-autocomplete="list"
@@ -554,7 +554,7 @@ export function DocsSearch({ searchIndex }: DocsSearchProps) {
 						{showAskIntro ? (
 							<div className="py-2">
 								<p className="text-sm font-medium text-gray-12">
-									Ask anything about Cap
+									Ask anything about usio
 								</p>
 								<p className="mt-1 text-[13px] leading-5 text-gray-10">
 									Get instant answers from the documentation, with links to the

@@ -1,17 +1,22 @@
+import { BRAND } from "@cap/utils";
+
 interface GitHubRepoResponse {
 	stargazers_count: number;
 }
 
 export async function getGitHubStars(): Promise<number> {
-	const response = await fetch("https://api.github.com/repos/CapSoftware/Cap", {
-		headers: {
-			Accept: "application/vnd.github.v3+json",
-			"User-Agent": "Cap-Web",
+	const response = await fetch(
+		`https://api.github.com/repos/${BRAND.githubRepo}`,
+		{
+			headers: {
+				Accept: "application/vnd.github.v3+json",
+				"User-Agent": `${BRAND.name}-web`,
+			},
+			next: {
+				revalidate: 172800,
+			},
 		},
-		next: {
-			revalidate: 172800,
-		},
-	});
+	);
 
 	if (!response.ok) {
 		return 0;

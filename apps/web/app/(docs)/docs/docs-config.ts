@@ -19,7 +19,7 @@ export const docsConfig = {
 			],
 		},
 		{
-			title: "Cap for Agents",
+			title: "usio for Agents",
 			items: [
 				{ title: "Overview", slug: "agents" },
 				{ title: "Set Up Your Agent", slug: "agents/setup" },
@@ -32,7 +32,7 @@ export const docsConfig = {
 			items: [
 				{ title: "Working With Your Team", slug: "teams" },
 				{ title: "Google Drive", slug: "teams/google-drive" },
-				{ title: "Migrating to Cap", slug: "migrating-to-cap" },
+				{ title: "Migrating to usio", slug: "migrating-to-cap" },
 			],
 		},
 		{
@@ -50,7 +50,7 @@ export const docsConfig = {
 		{
 			title: "Sharing & Playback",
 			items: [
-				{ title: "Share a Cap", slug: "sharing/share-a-cap" },
+				{ title: "Share a video", slug: "sharing/share-a-cap" },
 				{ title: "Embeds", slug: "sharing/embeds" },
 				{ title: "Comments", slug: "sharing/comments" },
 				{ title: "Analytics", slug: "sharing/analytics" },

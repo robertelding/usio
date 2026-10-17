@@ -1,4 +1,5 @@
 import { Logo } from "@cap/ui/logo";
+import { BRAND } from "@cap/utils";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "@/components/ui/MobileMenu";
@@ -31,7 +32,7 @@ export const Navbar = ({ stars }: NavbarProps) => {
 				</div>
 				<div className="hidden gap-2.5 items-center lg:flex">
 					<a
-						href="https://github.com/CapSoftware/Cap"
+						href={BRAND.githubUrl}
 						target="_blank"
 						rel="noreferrer"
 						className="group relative flex gap-2 items-center px-2.5 py-2 whitespace-nowrap rounded-[8px] text-[14.5px] font-medium text-[rgba(17,17,17,0.85)] transition-colors duration-200 hover:text-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-12 xl:px-3 xl:text-[15.5px]"

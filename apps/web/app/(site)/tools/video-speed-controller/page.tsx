@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { SpeedController } from "@/components/tools/SpeedController";
 import { ToolsPageTemplate } from "@/components/tools/ToolsPageTemplate";
@@ -11,8 +12,7 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title:
-		"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+	title: `Video Speed Controller Online – Speed Up or Slow Down Videos Free | ${BRAND.name}`,
 	description:
 		"Free online video speed controller. Adjust playback from 0.25× to 3× without quality loss — processed locally in your browser for complete privacy. No uploads required.",
 	keywords: [
@@ -25,12 +25,11 @@ export const metadata: Metadata = {
 		"online video speed controller",
 	],
 	openGraph: {
-		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+		title: `Video Speed Controller Online – Speed Up or Slow Down Videos Free | ${BRAND.name}`,
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads — works with MP4, WebM, MOV, AVI and MKV.",
-		url: "https://cap.so/tools/video-speed-controller",
-		siteName: "Cap",
+		url: `${BRAND.url}/tools/video-speed-controller`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
@@ -44,14 +43,13 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+		title: `Video Speed Controller Online – Speed Up or Slow Down Videos Free | ${BRAND.name}`,
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads required.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/tools/video-speed-controller",
+		canonical: `${BRAND.url}/tools/video-speed-controller`,
 	},
 };
 
@@ -59,7 +57,7 @@ const faqs = [
 	{
 		question: "How do I change the speed of a video online?",
 		answer:
-			"Open Cap's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
+			"Open usio's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
 	},
 	{
 		question: "What video formats does the speed controller support?",
@@ -101,7 +99,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your video file",
-		text: "Open Cap's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
+		text: "Open usio's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
 	},
 	{
 		name: "Select your target speed",
@@ -131,7 +129,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Change Video Speed Online",
 	description:
-		"Adjust the playback speed of any video for free using Cap's browser-based speed controller. No upload required.",
+		"Adjust the playback speed of any video for free using usio's browser-based speed controller. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -145,11 +143,11 @@ const howToStructuredData = {
 };
 
 const breadcrumbSchema = createBreadcrumbSchema([
-	{ name: "Home", url: "https://cap.so" },
-	{ name: "Tools", url: "https://cap.so/tools" },
+	{ name: "Home", url: BRAND.url },
+	{ name: "Tools", url: `${BRAND.url}/tools` },
 	{
 		name: "Video Speed Controller",
-		url: "https://cap.so/tools/video-speed-controller",
+		url: `${BRAND.url}/tools/video-speed-controller`,
 	},
 ]);
 
@@ -195,10 +193,10 @@ export default function SpeedControllerPage() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: `${BRAND.name} is the open source Loom alternative`,
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with usio. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
+			buttonText: "Download usio Free",
 		},
 	};
 

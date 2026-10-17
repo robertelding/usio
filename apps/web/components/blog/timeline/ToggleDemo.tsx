@@ -82,7 +82,7 @@ export function ToggleDemo() {
 	return (
 		<DemoPanel
 			title="One player, two views"
-			hint="Flip between them. With your pointer over this demo you can also just press T, the way you would on a Cap link."
+			hint="Flip between them. With your pointer over this demo you can also just press T, the way you would on a video link."
 			caption="The blue markers are recorded replies: a screen recording, a voice note and a camera clip. The video element never reloads, so the position, the volume and a running playback survive the switch."
 		>
 			<div

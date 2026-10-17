@@ -65,7 +65,7 @@ export const DesktopLicenseCard = ({ collapsed, onToggle }: PlanToggle) => {
 			summary={`${symbol}${copy.pricing.yearly} per license, per year`}
 			collapsed={collapsed}
 			onToggle={onToggle}
-			blurb="A commercial license for the Cap desktop app. Unlimited local recording and editing, no cloud subscription required."
+			blurb="A commercial license for the usio desktop app. Unlimited local recording and editing, no cloud subscription required."
 			price={
 				<>
 					{symbol}

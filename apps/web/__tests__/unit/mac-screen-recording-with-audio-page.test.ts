@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(
 		process.cwd(),
@@ -22,18 +24,18 @@ const componentSource = readFileSync(
 describe("MacScreenRecordingWithAudioPage metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/mac-screen-recording-with-audio"',
+			`canonical: \`${BRAND_URL}/mac-screen-recording-with-audio\``,
 		);
 	});
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/mac-screen-recording-with-audio"',
+			`url: \`${BRAND_URL}/mac-screen-recording-with-audio\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {
@@ -42,7 +44,7 @@ describe("MacScreenRecordingWithAudioPage metadata", () => {
 
 	it("uses the dynamic OG image", () => {
 		expect(pageSource).toContain("ogImageUrl(");
-		expect(pageSource).not.toContain("https://cap.so/og.png");
+		expect(pageSource).not.toContain("https://usio.co.uk/og.png");
 	});
 
 	it("title targets mac-screen-recording-with-audio keyword", () => {

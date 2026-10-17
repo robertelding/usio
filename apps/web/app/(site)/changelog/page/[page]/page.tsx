@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { getChangelogPageCount } from "@/utils/changelog";
 import { ChangelogView } from "../../_components/ChangelogView";
@@ -33,6 +34,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 }
 
 export default async function Page(props: PageProps) {
+	hideMarketingPage("/changelog");
 	const params = await props.params;
 	const page = Number(params.page);
 	if (page === 1) permanentRedirect("/changelog");

@@ -5,7 +5,7 @@ import type { SeoPageContent } from "../../seo/types";
 export const howToScreenRecordContent: SeoPageContent = {
 	title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide)",
 	description:
-		"Learn how to screen record on any device with this step-by-step guide. Whether you need to screen record on Mac, Windows, or directly in your browser, this comprehensive guide covers every method with and without audio. Get started in minutes with Cap, the free open-source screen recorder.",
+		"Learn how to screen record on any device with this step-by-step guide. Whether you need to screen record on Mac, Windows, or directly in your browser, this comprehensive guide covers every method with and without audio. Get started in minutes with usio, the free open-source screen recorder.",
 
 	featuresTitle: "How to Screen Record: Complete Platform Guides",
 	featuresDescription:
@@ -13,40 +13,40 @@ export const howToScreenRecordContent: SeoPageContent = {
 
 	features: [
 		{
-			title: "How to Screen Record on Mac with Cap",
+			title: "How to Screen Record on Mac with usio",
 			description:
-				"Getting started with screen recording on Mac is simple with Cap. Here is how to do a screen recording on Mac in just a few steps: First, download Cap from <a href='/download'>cap.so/download</a> and install it on your Mac. Once installed, open Cap and grant the necessary screen recording and microphone permissions when prompted. Click the record button to start capturing your entire screen or select a specific window. Cap records in high definition at up to 60fps, ensuring your Mac screen recordings look crisp and professional. When you are finished, click stop to end the recording. Cap will process your video and give you a shareable link instantly, or you can export the file locally. For Mac users who want a quick alternative, macOS includes a built-in screenshot toolbar. Press Cmd+Shift+5 to access it and select either Record Entire Screen or Record Selected Portion. However, the built-in tool lacks audio recording, webcam overlay, and instant sharing features that Cap provides.",
+				"Getting started with screen recording on Mac is simple with usio. Here is how to do a screen recording on Mac in just a few steps: First, download usio from <a href='/download'>usio.co.uk/download</a> and install it on your Mac. Once installed, open usio and grant the necessary screen recording and microphone permissions when prompted. Click the record button to start capturing your entire screen or select a specific window. usio records in high definition at up to 60fps, ensuring your Mac screen recordings look crisp and professional. When you are finished, click stop to end the recording. usio will process your video and give you a shareable link instantly, or you can export the file locally. For Mac users who want a quick alternative, macOS includes a built-in screenshot toolbar. Press Cmd+Shift+5 to access it and select either Record Entire Screen or Record Selected Portion. However, the built-in tool lacks audio recording, webcam overlay, and instant sharing features that usio provides.",
 		},
 		{
 			title: "How to Screen Record with Audio on Mac",
 			description:
-				"One of the most common questions is how to screen record with audio on Mac. By default, the macOS built-in screen recorder does not capture internal system audio, which frustrates many users. Cap solves this problem completely. When you record with Cap on Mac, it captures both your microphone audio and system audio simultaneously without any extra configuration. Simply toggle the audio sources you want in Cap before you start recording. This makes Cap ideal for recording presentations with narration, capturing video calls, creating software tutorials with sound effects, or recording gameplay audio. If you need to screen record on Mac with internal audio using the built-in tool, you would need to install a third-party audio routing extension, which adds complexity. Cap eliminates this hassle entirely by handling audio capture natively on macOS. For a step-by-step walkthrough, see our <a href='/blog/record-screen-mac-system-audio'>guide to recording a Mac screen with audio</a>.",
+				"One of the most common questions is how to screen record with audio on Mac. By default, the macOS built-in screen recorder does not capture internal system audio, which frustrates many users. usio solves this problem completely. When you record with usio on Mac, it captures both your microphone audio and system audio simultaneously without any extra configuration. Simply toggle the audio sources you want in usio before you start recording. This makes usio ideal for recording presentations with narration, capturing video calls, creating software tutorials with sound effects, or recording gameplay audio. If you need to screen record on Mac with internal audio using the built-in tool, you would need to install a third-party audio routing extension, which adds complexity. usio eliminates this hassle entirely by handling audio capture natively on macOS. For a step-by-step walkthrough, see our <a href='/blog/record-screen-mac-system-audio'>guide to recording a Mac screen with audio</a>.",
 		},
 		{
-			title: "How to Screen Record on Windows with Cap",
+			title: "How to Screen Record on Windows with usio",
 			description:
-				"Screen recording on Windows is straightforward with Cap. Download Cap from <a href='/download'>cap.so/download</a> and install it on your Windows PC. Launch Cap and grant the required permissions for screen and audio capture. Select whether you want to record your full screen, a specific window, or a custom region. Click record to begin capturing. Cap is optimized for Windows performance, delivering smooth recordings without impacting your system. Once finished, stop the recording and share it instantly via link or export it to your preferred format. Windows also includes a built-in option called the Xbox Game Bar. Press Win+G to open it and click the record button. However, Game Bar only records the active window, does not support full-screen desktop recording, and has limited export options compared to Cap.",
+				"Screen recording on Windows is straightforward with usio. Download usio from <a href='/download'>usio.co.uk/download</a> and install it on your Windows PC. Launch usio and grant the required permissions for screen and audio capture. Select whether you want to record your full screen, a specific window, or a custom region. Click record to begin capturing. usio is optimized for Windows performance, delivering smooth recordings without impacting your system. Once finished, stop the recording and share it instantly via link or export it to your preferred format. Windows also includes a built-in option called the Xbox Game Bar. Press Win+G to open it and click the record button. However, Game Bar only records the active window, does not support full-screen desktop recording, and has limited export options compared to usio.",
 		},
 		{
 			title: "How to Screen Record on Windows 10 and 11 with Audio",
 			description:
-				"Recording your screen with audio on Windows 10 and Windows 11 is effortless with Cap. Cap automatically detects your audio devices and lets you record system audio, microphone audio, or both simultaneously. Before starting your recording, select your preferred audio input from the Cap interface. This works identically on Windows 10 and Windows 11 without any additional setup. If you are using the Xbox Game Bar on Windows, it does capture audio by default but only from the active application. It cannot capture audio from multiple sources or give you fine-grained control over audio levels. For full audio control and the best screen recording experience on Windows 10 or Windows 11, <a href='/screen-recorder-windows'>Cap is the recommended solution</a>.",
+				"Recording your screen with audio on Windows 10 and Windows 11 is effortless with usio. usio automatically detects your audio devices and lets you record system audio, microphone audio, or both simultaneously. Before starting your recording, select your preferred audio input from the usio interface. This works identically on Windows 10 and Windows 11 without any additional setup. If you are using the Xbox Game Bar on Windows, it does capture audio by default but only from the active application. It cannot capture audio from multiple sources or give you fine-grained control over audio levels. For full audio control and the best screen recording experience on Windows 10 or Windows 11, <a href='/screen-recorder-windows'>usio is the recommended solution</a>.",
 		},
 		{
 			title: "How to Screen Record in Your Browser",
 			description:
-				"Sometimes you need to record your screen without installing any software. Cap offers an Instant Mode that works directly in your browser. Visit <a href='https://cap.so'>cap.so</a> and click Record to start a browser-based recording session. Your browser will ask for permission to access your screen and microphone. Choose which screen, window, or browser tab to share, and Cap begins recording immediately. Instant Mode supports recordings up to 5 minutes on the free plan, with a shareable link generated automatically when you stop recording. This is perfect for quick demos, bug reports, or feedback videos when you do not have the desktop app installed. No downloads, no extensions, and no complicated setup. Just open your browser and start recording.",
+				"Sometimes you need to record your screen without installing any software. usio offers an Instant Mode that works directly in your browser. Visit <a href='https://usio.co.uk'>usio.co.uk</a> and click Record to start a browser-based recording session. Your browser will ask for permission to access your screen and microphone. Choose which screen, window, or browser tab to share, and usio begins recording immediately. Instant Mode supports recordings up to 5 minutes on the free plan, with a shareable link generated automatically when you stop recording. This is perfect for quick demos, bug reports, or feedback videos when you do not have the desktop app installed. No downloads, no extensions, and no complicated setup. Just open your browser and start recording.",
 		},
 		{
 			title: "How to Record a Specific Window or Region",
 			description:
-				"Whether you are on Mac or Windows, Cap lets you choose exactly what to capture. You can record your entire screen for full-context demos, select a specific application window to focus on one app, or draw a custom region to capture just the area you need. This flexibility is essential for creating clean, focused recordings. When recording a specific window with Cap, the recording automatically follows that window even if it moves or resizes. On macOS, you can also use Cmd+Shift+5 to select a portion of your screen, though this lacks the window-tracking feature that Cap provides.",
+				"Whether you are on Mac or Windows, usio lets you choose exactly what to capture. You can record your entire screen for full-context demos, select a specific application window to focus on one app, or draw a custom region to capture just the area you need. This flexibility is essential for creating clean, focused recordings. When recording a specific window with usio, the recording automatically follows that window even if it moves or resizes. On macOS, you can also use Cmd+Shift+5 to select a portion of your screen, though this lacks the window-tracking feature that usio provides.",
 		},
 	],
 
 	comparisonTable: {
 		title: "Best Screen Recording Software Comparison",
-		headers: ["Feature", "Cap", "OBS Studio", "Loom", "Built-in Tools"],
+		headers: ["Feature", "usio", "OBS Studio", "Loom", "Built-in Tools"],
 		rows: [
 			[
 				"Price",
@@ -132,7 +132,7 @@ export const howToScreenRecordContent: SeoPageContent = {
 		{
 			title: "Software Tutorials and Walkthroughs",
 			description:
-				"Create clear, step-by-step guides showing exactly how to use an application. Screen recording with audio narration helps viewers follow along and learn at their own pace. <a href='/how-to-screen-record'>Learn how to screen record</a> with Cap to start creating professional tutorials today.",
+				"Create clear, step-by-step guides showing exactly how to use an application. Screen recording with audio narration helps viewers follow along and learn at their own pace. <a href='/how-to-screen-record'>Learn how to screen record</a> with usio to start creating professional tutorials today.",
 		},
 		{
 			title: "Bug Reports and Technical Support",
@@ -152,12 +152,12 @@ export const howToScreenRecordContent: SeoPageContent = {
 	],
 
 	migrationGuide: {
-		title: "Quick Start: How to Screen Record with Cap in 4 Steps",
+		title: "Quick Start: How to Screen Record with usio in 4 Steps",
 		steps: [
-			"Download Cap for free from cap.so/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
-			"Open Cap and select your recording source. Choose between full screen, specific window, or custom region capture. Toggle microphone and system audio on or off based on your needs.",
-			"Click the record button to begin capturing your screen. Cap records in high definition with minimal system impact so you can present, demo, or teach without lag.",
-			"Stop the recording when finished. Cap generates an instant shareable link, or you can export the video locally in your preferred format. Share your recording with anyone in seconds.",
+			"Download usio for free from usio.co.uk/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
+			"Open usio and select your recording source. Choose between full screen, specific window, or custom region capture. Toggle microphone and system audio on or off based on your needs.",
+			"Click the record button to begin capturing your screen. usio records in high definition with minimal system impact so you can present, demo, or teach without lag.",
+			"Stop the recording when finished. usio generates an instant shareable link, or you can export the video locally in your preferred format. Share your recording with anyone in seconds.",
 		],
 	},
 
@@ -166,65 +166,58 @@ export const howToScreenRecordContent: SeoPageContent = {
 		{
 			question: "How do I screen record on my computer?",
 			answer:
-				"To screen record on your computer, download a screen recording app like <a href='/download'>Cap</a> for Mac or Windows. Open the app, select what you want to record (full screen, a window, or a custom area), and click record. Cap also offers browser-based recording through Instant Mode if you prefer not to install anything. On Mac, you can also press Cmd+Shift+5 for a basic built-in recorder. On Windows, press Win+G to open Xbox Game Bar. However, these built-in tools have limited features compared to dedicated <a href='/screen-recording-software'>screen recording software</a>.",
+				"To screen record on your computer, download a screen recording app like <a href='/download'>usio</a> for Mac or Windows. Open the app, select what you want to record (full screen, a window, or a custom area), and click record. usio also offers browser-based recording through Instant Mode if you prefer not to install anything. On Mac, you can also press Cmd+Shift+5 for a basic built-in recorder. On Windows, press Win+G to open Xbox Game Bar. However, these built-in tools have limited features compared to dedicated <a href='/screen-recording-software'>screen recording software</a>.",
 		},
 		{
 			question: "How to screen record with audio?",
 			answer:
-				"To screen record with audio, use a tool like Cap that supports both microphone and system audio capture. Before starting your recording, make sure the audio source toggle is enabled in Cap. You can record your microphone for narration, system audio for capturing sounds from applications, or both simultaneously. This is especially useful for creating tutorials, recording video calls, or capturing gameplay. Unlike many built-in screen recorders, Cap handles audio capture natively on both <a href='/screen-recorder-mac'>Mac</a> and <a href='/screen-recorder-windows'>Windows</a> without any extra plugins.",
+				"To screen record with audio, use a tool like usio that supports both microphone and system audio capture. Before starting your recording, make sure the audio source toggle is enabled in usio. You can record your microphone for narration, system audio for capturing sounds from applications, or both simultaneously. This is especially useful for creating tutorials, recording video calls, or capturing gameplay. Unlike many built-in screen recorders, usio handles audio capture natively on both <a href='/screen-recorder-mac'>Mac</a> and <a href='/screen-recorder-windows'>Windows</a> without any extra plugins.",
 		},
 		{
 			question: "Can I screen record for free?",
 			answer:
-				"Yes, you can screen record for free with Cap. Cap offers a generous <a href='/free-screen-recorder'>free screen recorder</a> plan that includes Studio Mode for personal use with unlimited local recording time and up to 4K resolution. Instant Mode lets you create shareable recordings up to 5 minutes for free, directly from your browser. Other free options include OBS Studio (open-source but complex), the built-in macOS screenshot toolbar, and Windows Xbox Game Bar. Cap provides the best balance of free features, ease of use, and recording quality.",
+				"Yes, you can screen record for free with usio. usio offers a generous <a href='/free-screen-recorder'>free screen recorder</a> plan that includes Studio Mode for personal use with unlimited local recording time and up to 4K resolution. Instant Mode lets you create shareable recordings up to 5 minutes for free, directly from your browser. Other free options include OBS Studio (open-source but complex), the built-in macOS screenshot toolbar, and Windows Xbox Game Bar. usio provides the best balance of free features, ease of use, and recording quality.",
 		},
 		{
 			question: "How to screen record on Mac with internal audio?",
 			answer:
-				"Recording screen with internal audio on Mac is one of the most frequently asked questions because macOS does not capture system audio by default. With Cap, internal audio recording on Mac works out of the box. Simply enable system audio in Cap before you start recording, and it will capture all sounds playing on your Mac alongside your screen recording. If you want to use the built-in macOS recorder (Cmd+Shift+5), you will need to install a third-party audio routing tool like BlackHole or Loopback, which adds significant complexity. Cap is the simplest way to <a href='/screen-recorder-mac'>screen record on Mac</a> with internal audio.",
+				"Recording screen with internal audio on Mac is one of the most frequently asked questions because macOS does not capture system audio by default. With usio, internal audio recording on Mac works out of the box. Simply enable system audio in usio before you start recording, and it will capture all sounds playing on your Mac alongside your screen recording. If you want to use the built-in macOS recorder (Cmd+Shift+5), you will need to install a third-party audio routing tool like BlackHole or Loopback, which adds significant complexity. usio is the simplest way to <a href='/screen-recorder-mac'>screen record on Mac</a> with internal audio.",
 		},
 		{
 			question: "How to turn on screen recording?",
 			answer:
-				"On Mac, go to System Settings, then Privacy and Security, then Screen Recording, and enable access for your recording app (like Cap). You may need to restart the app after granting permission. On Windows, no special permission is usually required for third-party apps like Cap. For Xbox Game Bar, make sure it is enabled in Settings under Gaming. On both platforms, when you first open Cap, it will prompt you to grant the necessary screen recording permissions automatically, making the setup process simple and quick.",
+				"On Mac, go to System Settings, then Privacy and Security, then Screen Recording, and enable access for your recording app (like usio). You may need to restart the app after granting permission. On Windows, no special permission is usually required for third-party apps like usio. For Xbox Game Bar, make sure it is enabled in Settings under Gaming. On both platforms, when you first open usio, it will prompt you to grant the necessary screen recording permissions automatically, making the setup process simple and quick.",
 		},
 		{
 			question: "What is the best free screen recorder?",
 			answer:
-				"Cap is the best <a href='/free-screen-recorder'>free screen recorder</a> for most users. It offers HD quality recording, instant sharing, and works on both Mac and Windows. Unlike OBS, Cap is simple to use with no complex configuration needed. Unlike Loom, Cap is open-source and offers a more generous free plan. Cap's free tier includes Studio Mode for personal use with unlimited recording time, 4K resolution support, and Instant Mode for quick shareable recordings. For power users who need extreme customization, OBS Studio is another excellent free option, though it has a steeper learning curve.",
+				"usio is the best <a href='/free-screen-recorder'>free screen recorder</a> for most users. It offers HD quality recording, instant sharing, and works on both Mac and Windows. Unlike OBS, usio is simple to use with no complex configuration needed. Unlike Loom, usio is open-source and offers a more generous free plan. usio's free tier includes Studio Mode for personal use with unlimited recording time, 4K resolution support, and Instant Mode for quick shareable recordings. For power users who need extreme customization, OBS Studio is another excellent free option, though it has a steeper learning curve.",
 		},
 		{
 			question: "How to screen record on Windows without Game Bar?",
 			answer:
-				"To screen record on Windows without using Xbox Game Bar, download <a href='/download'>Cap</a> or another third-party screen recorder. Cap offers several advantages over Game Bar: it can record your full desktop (not just the active window), capture system and microphone audio simultaneously, record in up to 4K at 60fps, and generate instant shareable links. Simply install Cap, open it, select your recording area, and click record. It is a much more capable <a href='/screen-recorder-windows'>screen recorder for Windows</a> than the built-in Game Bar.",
+				"To screen record on Windows without using Xbox Game Bar, download <a href='/download'>usio</a> or another third-party screen recorder. usio offers several advantages over Game Bar: it can record your full desktop (not just the active window), capture system and microphone audio simultaneously, record in up to 4K at 60fps, and generate instant shareable links. Simply install usio, open it, select your recording area, and click record. It is a much more capable <a href='/screen-recorder-windows'>screen recorder for Windows</a> than the built-in Game Bar.",
 		},
 		{
 			question: "Can I screen record a specific window?",
 			answer:
-				"Yes, Cap lets you screen record a specific window on both Mac and Windows. When you start a recording in Cap, you can choose to capture a single application window instead of your entire screen. This is ideal for focused tutorials, app demos, or recording specific workflows without showing your desktop or other private windows. Cap's window recording mode automatically follows the window even if it is moved or resized during the recording, ensuring a clean and professional result every time.",
+				"Yes, usio lets you screen record a specific window on both Mac and Windows. When you start a recording in usio, you can choose to capture a single application window instead of your entire screen. This is ideal for focused tutorials, app demos, or recording specific workflows without showing your desktop or other private windows. usio's window recording mode automatically follows the window even if it is moved or resized during the recording, ensuring a clean and professional result every time.",
 		},
 		{
 			question: "How long can I screen record?",
 			answer:
-				"Cap's Studio Mode records locally with no time limit, so you can capture anything from a 30-second demo to a 2-hour training session. On the free plan, Instant Mode — the instantly shareable links — is capped at 5 minutes per recording, and Cap Pro lifts that cap. The macOS built-in recorder and Windows Game Bar have no strict time limits either, though they lack the sharing and editing features that Cap provides.",
+				"usio's Studio Mode records locally with no time limit, so you can capture anything from a 30-second demo to a 2-hour training session. On the free plan, Instant Mode — the instantly shareable links — is capped at 5 minutes per recording, and usio Pro lifts that cap. The macOS built-in recorder and Windows Game Bar have no strict time limits either, though they lack the sharing and editing features that usio provides.",
 		},
 		{
 			question: "What format do screen recordings save in?",
 			answer:
-				"Cap saves screen recordings in widely compatible formats that work across all devices and platforms. You can export your recordings as MP4 files, which are supported everywhere. When sharing via Cap's instant link feature, videos are automatically optimized for web playback. Cap also supports exporting to other formats based on your needs. If you need to <a href='/tools/mp4-to-gif-converter'>convert your recording to GIF</a>, Cap has tools for that as well.",
+				"usio saves screen recordings in widely compatible formats that work across all devices and platforms. You can export your recordings as MP4 files, which are supported everywhere. When sharing via usio's instant link feature, videos are automatically optimized for web playback. usio also supports exporting to other formats based on your needs. If you need to <a href='/tools/mp4-to-gif-converter'>convert your recording to GIF</a>, usio has tools for that as well.",
 		},
 	],
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title: "How to screen record with Cap on Mac and Windows",
-		},
-	},
-
 	cta: {
-		title: "Start Screen Recording for Free with Cap",
-		buttonText: "Download Cap Free",
+		title: "Start Screen Recording for Free with usio",
+		buttonText: "Download usio Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

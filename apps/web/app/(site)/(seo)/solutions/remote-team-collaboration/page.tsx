@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { RemoteTeamCollaborationPage } from "@/components/pages/seo/RemoteTeamCollaborationPage";
 import { ogImageUrl } from "@/lib/og/url";
@@ -11,20 +12,20 @@ export const metadata: Metadata = {
 	title:
 		"Remote Team Collaboration Software: Asynchronous Screen Recording for Distributed Teams",
 	description:
-		"Enhance your remote team collaboration with Cap's secure, open-source screen recording platform. Save time, improve clarity, and boost productivity across time zones.",
+		"Enhance your remote team collaboration with usio's secure, open-source screen recording platform. Save time, improve clarity, and boost productivity across time zones.",
 	openGraph: {
 		title:
 			"Remote Team Collaboration Software: Async Screen Recording for Distributed Teams",
 		description:
-			"Enhance your remote team collaboration with Cap's secure, open-source screen recording platform. Save time and boost productivity across time zones.",
-		url: "https://cap.so/solutions/remote-team-collaboration",
-		siteName: "Cap",
+			"Enhance your remote team collaboration with usio's secure, open-source screen recording platform. Save time and boost productivity across time zones.",
+		url: `${BRAND.url}/solutions/remote-team-collaboration`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Remote Team Collaboration Software",
+				alt: "usio: Remote Team Collaboration Software",
 			},
 		],
 		locale: "en_US",
@@ -32,13 +33,13 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Remote Team Collaboration Software | Cap Screen Recorder",
+		title: `Remote Team Collaboration Software | ${BRAND.name} Screen Recorder`,
 		description:
-			"Enhance your remote team collaboration with Cap's secure, open-source screen recording platform. Save time and boost productivity.",
+			"Enhance your remote team collaboration with usio's secure, open-source screen recording platform. Save time and boost productivity.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/solutions/remote-team-collaboration",
+		canonical: `${BRAND.url}/solutions/remote-team-collaboration`,
 	},
 };
 

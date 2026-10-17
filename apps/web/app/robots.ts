@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { MetadataRoute } from "next";
 
 export default async function robots(): Promise<MetadataRoute.Robots> {
@@ -9,6 +10,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
 				disallow: ["/dashboard", "/login", "/invite", "/onboarding", "/record"],
 			},
 		],
-		sitemap: "https://cap.so/sitemap.xml",
+		sitemap: `${BRAND.url}/sitemap.xml`,
 	};
 }

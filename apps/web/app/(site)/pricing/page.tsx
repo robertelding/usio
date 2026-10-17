@@ -1,11 +1,11 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { PricingPage } from "@/components/pages/pricing/PricingPage";
 import { buildMarketingMetadata } from "@/lib/og/url";
 
 export const metadata: Metadata = buildMarketingMetadata({
-	title: "Pricing — Cap",
-	description:
-		"Self-serve Cap Pro for organizations with thousands of members, with SOC 2 Type II, ISO 27001 & HIPAA compliance. Add SAML SSO ($199/mo) or a signed BAA ($99/mo) from your dashboard. SCIM can be arranged.",
+	title: `Pricing — ${BRAND.name}`,
+	description: `Simple pricing for ${BRAND.name}: record, share and collaborate on async video, with ${BRAND.proPlanName} for teams that need more.`,
 	path: "/pricing",
 	ogTitle: "Simple, honest pricing",
 	ogDescription:

@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	VideoRecordingSoftwarePage,
@@ -12,24 +13,24 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "Video Recording Software — Free HD Capture, Instant Sharing | Cap",
+	title: `Video Recording Software — Free HD Capture, Instant Sharing | ${BRAND.name}`,
 	description:
-		"Cap is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
+		"usio is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
 	alternates: {
-		canonical: "https://cap.so/video-recording-software",
+		canonical: `${BRAND.url}/video-recording-software`,
 	},
 	openGraph: {
-		title: "Video Recording Software — Free HD Capture, Instant Sharing | Cap",
+		title: `Video Recording Software — Free HD Capture, Instant Sharing | ${BRAND.name}`,
 		description:
-			"Cap is free video recording software for Mac and Windows. Record in HD with audio and webcam, then share with a link instantly. Open-source, no watermarks.",
-		url: "https://cap.so/video-recording-software",
-		siteName: "Cap",
+			"usio is free video recording software for Mac and Windows. Record in HD with audio and webcam, then share with a link instantly. Open-source, no watermarks.",
+		url: `${BRAND.url}/video-recording-software`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Video Recording Software",
+				alt: "usio: Video Recording Software",
 			},
 		],
 		locale: "en_US",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Video Recording Software — Free HD Capture, Instant Sharing | Cap",
+		title: `Video Recording Software — Free HD Capture, Instant Sharing | ${BRAND.name}`,
 		description:
-			"Cap is free video recording software for Mac and Windows. Record in HD with audio and webcam, then share with a link instantly. Open-source, no watermarks.",
+			"usio is free video recording software for Mac and Windows. Record in HD with audio and webcam, then share with a link instantly. Open-source, no watermarks.",
 		images: [ogImage],
 	},
 };

@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -24,7 +25,7 @@ export async function generateMetadata(
 
 	if (!CONVERSION_CONFIGS[conversionPath]) {
 		return {
-			title: "Conversion Not Supported | Cap",
+			title: `Conversion Not Supported | ${BRAND.name}`,
 			description:
 				"This conversion type is not supported by our free online tools.",
 		};
@@ -40,7 +41,7 @@ export async function generateMetadata(
 	});
 
 	return {
-		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | Cap`,
+		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | usio`,
 		description: `${config.description(
 			sourceFormat,
 			targetFormat,
@@ -58,7 +59,7 @@ export async function generateMetadata(
 			],
 		},
 		alternates: {
-			canonical: `https://cap.so/tools/convert/${conversionPath}`,
+			canonical: `${BRAND.url}/tools/convert/${conversionPath}`,
 		},
 	};
 }
@@ -120,20 +121,20 @@ export default async function ConversionPage(props: ConversionPageProps) {
 			},
 		],
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: `${BRAND.name} is the open source Loom alternative`,
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with usio. 100% open source and privacy focused.",
+			buttonText: "Download usio Free",
 		},
 	};
 
 	const breadcrumbSchema = createBreadcrumbSchema([
-		{ name: "Home", url: "https://cap.so" },
-		{ name: "Tools", url: "https://cap.so/tools" },
-		{ name: "Convert", url: "https://cap.so/tools/convert" },
+		{ name: "Home", url: BRAND.url },
+		{ name: "Tools", url: `${BRAND.url}/tools` },
+		{ name: "Convert", url: `${BRAND.url}/tools/convert` },
 		{
 			name: config.title(sourceFormat, targetFormat),
-			url: `https://cap.so/tools/convert/${conversionPath}`,
+			url: `${BRAND.url}/tools/convert/${conversionPath}`,
 		},
 	]);
 

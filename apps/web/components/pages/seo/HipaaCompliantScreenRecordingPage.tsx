@@ -287,14 +287,6 @@ export const hipaaCompliantScreenRecordingContent: SeoPageContent = {
 		},
 	],
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title:
-				"Cap HIPAA-compliant screen recording demo showing self-hosted storage configuration and secure sharing",
-		},
-	},
-
 	cta: {
 		title: "Start HIPAA-Compliant Screen Recording with Cap",
 		buttonText: "Download Cap Free",

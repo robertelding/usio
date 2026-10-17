@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { useCurrency } from "hooks/useCurrency";
 import { Check } from "lucide-react";
@@ -15,6 +16,7 @@ import {
 	MONO,
 } from "@/components/pages/HomeTwo/theme";
 import { PRICING } from "@/data/pricing";
+import { SIGNUP_CTA } from "@/lib/download-cta";
 
 type PlanKey = "free" | "desktop" | "pro";
 
@@ -119,12 +121,6 @@ const sections: FeatureSection[] = [
 	{
 		title: "Security, support & licensing",
 		rows: [
-			{
-				label: "SOC 2 Type II, ISO 27001 & HIPAA compliance",
-				free: false,
-				desktop: false,
-				pro: true,
-			},
 			{ label: "Community support", free: true, desktop: true, pro: true },
 			{
 				label: "Priority support & early features",
@@ -143,9 +139,9 @@ const sections: FeatureSection[] = [
 ];
 
 const BUTTON_TEXT: Record<PlanKey, string> = {
-	free: "Download",
+	free: BRAND.desktopAppAvailable ? "Download" : SIGNUP_CTA.text,
 	desktop: "Get license",
-	pro: "Get Cap Pro",
+	pro: "Get usio Pro",
 };
 
 const BTN_BASE =
@@ -245,7 +241,7 @@ export const ComparePlans = () => {
 			},
 			{
 				key: "pro",
-				name: "Cap Pro",
+				name: "usio Pro",
 				short: "Pro",
 				price: `${symbol}${PRICING.pro.monthly} per user / mo`,
 				compactPrice: `${symbol}${PRICING.pro.monthly}/user/mo`,
@@ -290,7 +286,7 @@ export const ComparePlans = () => {
 			return;
 		}
 		if (data.subscription === true) {
-			toast.success("You are already on the Cap Pro plan");
+			toast.success("You are already on the usio Pro plan");
 			return;
 		}
 		if (data.url) {
@@ -306,7 +302,9 @@ export const ComparePlans = () => {
 			is_pro: Boolean(user?.isPro),
 			cta_action:
 				key === "free"
-					? "download"
+					? BRAND.desktopAppAvailable
+						? "download"
+						: "signup"
 					: key === "desktop"
 						? "commercial_checkout"
 						: user?.email
@@ -316,7 +314,9 @@ export const ComparePlans = () => {
 		});
 
 		if (key === "free") {
-			window.location.href = "/download";
+			window.location.href = BRAND.desktopAppAvailable
+				? "/download"
+				: SIGNUP_CTA.href;
 			return;
 		}
 
@@ -356,7 +356,7 @@ export const ComparePlans = () => {
 						className={`${BODY_TEXT} mt-6 max-w-[520px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}
 					>
 						Free covers personal use with no time limit on local recordings.
-						Paid plans add commercial rights, and Cap Pro adds the cloud.
+						Paid plans add commercial rights, and usio Pro adds the cloud.
 					</p>
 				</div>
 

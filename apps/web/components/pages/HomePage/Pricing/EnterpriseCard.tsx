@@ -7,9 +7,6 @@ import { EnterpriseArt, type EnterpriseArtRef } from "./EnterpriseArt";
 import { PlanFeature } from "./PlanFeature";
 
 const enterpriseFeatures = [
-	"SOC 2 Type II compliant",
-	"ISO 27001 compliant",
-	"HIPAA compliant",
 	"SCIM provisioning can be arranged",
 	"Custom S3 & Google Drive storage",
 	"Volume discounts available",
@@ -36,7 +33,7 @@ export const EnterpriseCard = () => {
 
 			<div className="flex gap-1.5 items-baseline mt-6">
 				<span className="text-4xl font-semibold tracking-tight text-gray-12">
-					Cap Pro
+					usio Pro
 				</span>
 			</div>
 			<p className="mt-1 text-sm text-gray-10">with optional add-ons</p>

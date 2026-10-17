@@ -1,6 +1,7 @@
 import "server-only";
 
 import type { MessengerMessageRole } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import { generateText, stepCountIs, tool } from "ai";
 import { z } from "zod";
 import { runWithAiProviders } from "@/lib/ai/run";
@@ -93,15 +94,15 @@ Critical rules:
 - Keep responses focused, usually 1-2 short paragraphs max and under 120 words unless the user asks for detailed steps.
 - Be genuinely helpful, personable, and respectful. You represent Cap and should leave the user feeling good about the interaction.
 - ONLY discuss Cap and topics directly related to Cap (screen recording, sharing, account, billing, technical issues with Cap, etc.). If a user asks about other apps, competitors, or unrelated topics, politely steer the conversation back to Cap. Never recommend, compare, or discuss competing products or unrelated software.
-- If you notice the conversation is going in circles, the user seems frustrated, or their issue isn't getting resolved after a few back-and-forth messages, offer to send it to the team if the support email tool is available. If the tool is unavailable, gently suggest emailing hello@cap.so for more hands-on help.`,
+- If you notice the conversation is going in circles, the user seems frustrated, or their issue isn't getting resolved after a few back-and-forth messages, offer to send it to the team if the support email tool is available. If the tool is unavailable, gently suggest emailing ${BRAND.contactEmail} for more hands-on help.`,
 		supportEmailAvailable
 			? `Support email tool:
-- You can send one support email to hello@cap.so by using send_support_email, but only after the user explicitly asks you to send it or agrees to your offer.
+- You can send one support email to ${BRAND.contactEmail} by using send_support_email, but only after the user explicitly asks you to send it or agrees to your offer.
 - Never ask for, accept, or invent a sender or recipient email address. The server uses the signed-in account email automatically.
 - Keep the email subject short and the body factual. Include the user's issue, useful details already shared, and what they need from the team.
-- After the tool result, tell the user briefly whether it was sent. If the tool says rate_limited, say they can still email hello@cap.so directly.`
+- After the tool result, tell the user briefly whether it was sent. If the tool says rate_limited, say they can still email ${BRAND.contactEmail} directly.`
 			: `Support email:
-- You cannot send support email for this user in the current chat. If a hands-on review is needed, ask them to email hello@cap.so directly.`,
+- You cannot send support email for this user in the current chat. If a hands-on review is needed, ask them to email ${BRAND.contactEmail} directly.`,
 		CAP_REFERENCE_GUIDE,
 		`The person you're talking to: ${userIdentity}`,
 		context
@@ -137,7 +138,7 @@ const readSupportEmailInput = (input: unknown) => {
 
 const formatSupportEmailToolResult = (result: SupportEmailToolResult) => {
 	if (result.status === "sent") {
-		return `Support email sent to hello@cap.so from the user's account email. Remaining sends today: ${result.remainingToday}.`;
+		return `Support email sent to ${BRAND.contactEmail} from the user's account email. Remaining sends today: ${result.remainingToday}.`;
 	}
 	return "Support email was not sent because this user has reached the 2 emails per day limit.";
 };
@@ -150,9 +151,9 @@ const fallbackReplyFromSupportEmailToolResults = (
 		return "Done, I sent that to the team from your account email. We'll follow up with you there.";
 	}
 	if (firstToolResult?.isError) {
-		return "I couldn't send that to the team right now. Please email hello@cap.so directly.";
+		return `I couldn't send that to the team right now. Please email ${BRAND.contactEmail} directly.`;
 	}
-	return "I couldn't send another support email from your account today. You're limited to 2 per day, but you can still email hello@cap.so directly.";
+	return `I couldn't send another support email from your account today. You're limited to 2 per day, but you can still email ${BRAND.contactEmail} directly.`;
 };
 
 const executeSupportEmailTool = async ({

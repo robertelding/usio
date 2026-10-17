@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema, createHowToSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/tools/convert/mov-to-mp4/page.tsx"),
 	"utf-8",
@@ -11,7 +13,7 @@ const pageSource = readFileSync(
 describe("MOV to MP4 page metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/tools/convert/mov-to-mp4"',
+			`canonical: \`${BRAND_URL}/tools/convert/mov-to-mp4\``,
 		);
 	});
 
@@ -22,12 +24,12 @@ describe("MOV to MP4 page metadata", () => {
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/tools/convert/mov-to-mp4"',
+			`url: \`${BRAND_URL}/tools/convert/mov-to-mp4\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {

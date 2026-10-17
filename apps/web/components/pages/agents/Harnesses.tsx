@@ -115,8 +115,8 @@ export const Harnesses = () => {
 
 				<div className="mt-12 rounded-[20px] p-5 lg:p-8" style={grainBg(BAND)}>
 					<div className="grid gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-10">
-						<StepLabel step="Step 1" title="Install the Cap CLI">
-							Adds cap to your PATH and brings Cap Desktop with it. Open a new
+						<StepLabel step="Step 1" title="Install the usio CLI">
+							Adds cap to your PATH and brings usio Desktop with it. Open a new
 							terminal afterwards.
 						</StepLabel>
 						<div>
@@ -152,7 +152,7 @@ export const Harnesses = () => {
 
 					<div className="grid gap-5 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-10">
 						<StepLabel step="Step 2" title="Connect your agent">
-							A skill that routes Cap tasks through the CLI and MCP, plus a
+							A skill that routes usio tasks through the CLI and MCP, plus a
 							local MCP server entry. Nothing else in your config is touched.
 						</StepLabel>
 						<div>

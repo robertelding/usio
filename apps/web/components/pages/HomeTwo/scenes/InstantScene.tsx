@@ -126,7 +126,7 @@ const SharePopover = ({
 					className="min-w-0 flex-1 truncate text-[12px]"
 					style={{ color: "#0d74ce" }}
 				>
-					cap.link/dashboard-walkthrough
+					usio.co.uk/s/dashboard-walkthrough
 				</span>
 				<span
 					data-scene-anchor="share-copy"

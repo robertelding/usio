@@ -1,3 +1,5 @@
+import { BRAND } from "@cap/utils";
+
 export default function NotFound() {
 	return (
 		<div className="wrapper flex flex-col items-center justify-center h-screen text-center">
@@ -6,12 +8,12 @@ export default function NotFound() {
 				Oops, we couldn't find this page
 			</p>
 			<p className="text-gray-400 text-lg md:text-xl">
-				Please contact the Cap team if this seems like a mistake:{" "}
+				Please contact the {BRAND.name} team if this seems like a mistake:{" "}
 				<a
-					href="mailto:hello@cap.so"
+					href={`mailto:${BRAND.contactEmail}`}
 					className="font-medium text-gray-500 text-lg md:text-xl hover:underline"
 				>
-					hello@cap.so
+					{BRAND.contactEmail}
 				</a>
 			</p>
 		</div>

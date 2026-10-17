@@ -15,7 +15,7 @@ export const CapShareWindow = ({
 	commentVisible,
 	videoRef,
 	title = "Dashboard walkthrough",
-	url = "cap.link/dashboard-walkthrough",
+	url = "usio.co.uk/s/dashboard-walkthrough",
 	duration = "0:32",
 }: {
 	visible: boolean;
