@@ -54,7 +54,7 @@ describe("share video metadata", () => {
 		expect(metadata.openGraph).toMatchObject({
 			type: "video.other",
 			url: "https://cap.so/s/video123",
-			siteName: "Cap",
+			siteName: "usio",
 		});
 		const videos =
 			metadata.openGraph && "videos" in metadata.openGraph

@@ -21,6 +21,7 @@ vi.mock("@cap/database/auth/session", () => ({
 }));
 
 vi.mock("@cap/utils", () => ({
+	BRAND: { name: "usio", proPlanName: "usio Pro" },
 	userIsPro: (user?: { isPro?: boolean } | null) => Boolean(user?.isPro),
 }));
 
@@ -147,7 +148,7 @@ describe("saveVideoEdits", () => {
 		expect(insertMock).not.toHaveBeenCalled();
 	});
 
-	it("requires Cap Pro before saving edits", async () => {
+	it("requires usio Pro before saving edits", async () => {
 		getCurrentUserMock.mockResolvedValueOnce({ id: "user-1", isPro: false });
 		const { saveVideoEdits } = await import("@/actions/videos/save-edits");
 
@@ -157,7 +158,7 @@ describe("saveVideoEdits", () => {
 				sourceDuration: 10,
 				keepRanges: [{ start: 0, end: 10 }],
 			}),
-		).rejects.toThrow("Cap Pro is required to edit videos");
+		).rejects.toThrow("usio Pro is required to edit videos");
 
 		expect(selectMock).not.toHaveBeenCalled();
 	});

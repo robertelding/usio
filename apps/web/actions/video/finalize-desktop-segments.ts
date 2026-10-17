@@ -1,6 +1,7 @@
 "use server";
 
 import { getCurrentUser } from "@cap/database/auth/session";
+import { BRAND } from "@cap/utils";
 import type { Video } from "@cap/web-domain";
 import { completeDesktopSegmentsManifestAndQueue } from "@/lib/desktop-segments-recovery";
 
@@ -35,7 +36,7 @@ export async function finalizeDesktopSegmentsRecording({
 	}
 	if (result.status === "source-incomplete") {
 		throw new Error(
-			"This recording has not finished uploading. Keep Cap open on the recording device to complete the upload. Uploaded files are retained.",
+			`This recording has not finished uploading. Keep ${BRAND.name} open on the recording device to complete the upload. Uploaded files are retained.`,
 		);
 	}
 

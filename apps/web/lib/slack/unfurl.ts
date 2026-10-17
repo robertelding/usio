@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { Video } from "@cap/web-domain";
 import { parseCapShareUrl } from "@/lib/oembed";
 import {
@@ -40,11 +41,12 @@ const truncate = (value: string, maxLength: number) =>
 	Array.from(value).slice(0, maxLength).join("");
 
 const formatDuration = (duration: number | null) => {
-	if (!duration || duration <= 0) return "Watch this recording on Cap";
+	if (!duration || duration <= 0)
+		return `Watch this recording on ${BRAND.name}`;
 	const seconds = Math.round(duration);
 	const minutes = Math.floor(seconds / 60);
 	const remainder = seconds % 60;
-	return `Watch this ${minutes}:${remainder.toString().padStart(2, "0")} recording on Cap`;
+	return `Watch this ${minutes}:${remainder.toString().padStart(2, "0")} recording on ${BRAND.name}`;
 };
 
 export const buildSlackVideoBlock = ({
@@ -56,7 +58,7 @@ export const buildSlackVideoBlock = ({
 	shareUrl: string;
 	webUrl: string;
 }) => {
-	const title = truncate(video.name.trim() || "Cap recording", 199);
+	const title = truncate(video.name.trim() || `${BRAND.name} recording`, 199);
 	const embedUrl = new URL(`/embed/${video.id}`, webUrl);
 	embedUrl.searchParams.set("autoplay", "true");
 	embedUrl.searchParams.set("slack", "true");
@@ -79,7 +81,7 @@ export const buildSlackVideoBlock = ({
 		video_url: embedUrl.toString(),
 		alt_text: truncate(`Watch ${video.name}`, 200),
 		thumbnail_url: thumbnailUrl.toString(),
-		provider_name: "Cap",
+		provider_name: BRAND.name,
 		...(video.ownerName ? { author_name: truncate(video.ownerName, 49) } : {}),
 	};
 };

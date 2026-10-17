@@ -1,5 +1,6 @@
 import { getCurrentUser } from "@cap/database/auth/session";
 import { Logo } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { redirect } from "next/navigation";
 import { validateMcpAuthorizationRequest } from "@/lib/mcp-auth";
 import { authorizeMcpClient } from "./actions";
@@ -26,7 +27,7 @@ export default async function McpAuthorizePage(props: {
 						Invalid connection request
 					</h1>
 					<p className="mt-3 text-sm leading-6 text-gray-10">
-						Return to your agent and try connecting Cap again.
+						Return to your agent and try connecting {BRAND.name} again.
 					</p>
 				</section>
 			</main>
@@ -42,7 +43,7 @@ export default async function McpAuthorizePage(props: {
 			<section className="w-full max-w-md rounded-2xl border border-gray-4 bg-white p-8 shadow-sm">
 				<Logo className="mb-8 h-8 w-auto" />
 				<h1 className="text-xl font-semibold text-gray-12">
-					Connect {request.clientName} to Cap
+					Connect {request.clientName} to {BRAND.name}
 				</h1>
 				<p className="mt-3 text-sm leading-6 text-gray-10">
 					This app will be able to read your recordings, summaries, and

@@ -3,6 +3,7 @@
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { spaces } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import { PublicCollection, Space } from "@cap/web-domain";
 import { eq, type SQL, sql } from "drizzle-orm";
 import { Either, Schema } from "effect";
@@ -77,7 +78,7 @@ export async function setSpaceCollectionVisibility(input: {
 	) {
 		return {
 			success: false,
-			error: "Upgrade to Cap Pro to create a public collection link",
+			error: `Upgrade to ${BRAND.proPlanName} to create a public collection link`,
 		};
 	}
 

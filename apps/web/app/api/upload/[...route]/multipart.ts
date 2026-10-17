@@ -1,7 +1,7 @@
 import { updateIfDefined } from "@cap/database";
 import * as Db from "@cap/database/schema";
 import { serverEnv } from "@cap/env";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import {
 	Database,
 	makeCurrentUserLayer,
@@ -566,7 +566,7 @@ app.post(
 					return c.text(
 						reportedDuration === null
 							? "Recording duration is required to complete a free plan upload."
-							: "Recording exceeds the free plan duration limit. Upgrade to Cap Pro to upload longer recordings.",
+							: `Recording exceeds the free plan duration limit. Upgrade to ${BRAND.proPlanName} to upload longer recordings.`,
 					);
 				}
 			}

@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { PublicCollection } from "@cap/web-domain";
 
 /**
@@ -45,7 +46,7 @@ export const PUBLIC_LOGO_OPTIONS: {
 	value: PublicCollection.PublicCollectionLogoMode;
 	label: string;
 }[] = [
-	{ value: "cap", label: "Cap logo" },
+	{ value: "cap", label: `${BRAND.name} logo` },
 	{ value: "organization", label: "Organization logo" },
 	{ value: "custom", label: "Custom logo" },
 	{ value: "none", label: "No logo" },

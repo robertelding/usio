@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { videoEdits, videos } from "@cap/database/schema";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import { Storage } from "@cap/web-backend";
 import type { Video } from "@cap/web-domain";
 import { and, eq, sql } from "drizzle-orm";
@@ -32,7 +32,7 @@ type EditTranscriptResponse =
 const BACKFILL_STALE_AFTER_MS = 60 * 60 * 1000;
 const PUBLIC_ERROR_MESSAGES = new Set([
 	"Unauthorized",
-	"Cap Pro is required",
+	`${BRAND.proPlanName} is required`,
 	"Video not found",
 	"Transcript editing is not available for this video",
 	"Transcript is not ready",
@@ -62,7 +62,7 @@ function isPublicError(error: unknown): error is Error {
 async function loadEditableTranscriptVideo(videoId: Video.VideoId) {
 	const user = await getCurrentUser();
 	if (!user) throw new Error("Unauthorized");
-	if (!userIsPro(user)) throw new Error("Cap Pro is required");
+	if (!userIsPro(user)) throw new Error(`${BRAND.proPlanName} is required`);
 
 	const [video] = await db()
 		.select()

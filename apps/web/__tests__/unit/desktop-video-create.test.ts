@@ -77,6 +77,7 @@ vi.mock("@cap/env", () => ({
 }));
 
 vi.mock("@cap/utils", () => ({
+	BRAND: { name: "usio", proPlanName: "usio Pro" },
 	userIsPro: vi.fn(() => true),
 }));
 

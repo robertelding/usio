@@ -7,7 +7,7 @@ import { getOrganizationSsoSettings } from "@/actions/organization/sso";
 import { SsoCard } from "../components/SsoCard";
 
 export const metadata: Metadata = {
-	title: "Security & Compliance — Cap",
+	title: `Security & Compliance — ${BRAND.name}`,
 };
 
 export default async function OrganizationSecurityPage({

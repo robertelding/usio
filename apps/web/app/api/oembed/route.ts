@@ -1,4 +1,5 @@
 import { buildEnv } from "@cap/env";
+import { BRAND } from "@cap/utils";
 import { Video } from "@cap/web-domain";
 import {
 	HttpApi,
@@ -52,7 +53,10 @@ const ApiLive = HttpApiBuilder.api(Api).pipe(
 					}
 					const videoId = parseCapShareUrl(urlParams.url);
 					if (!videoId) {
-						return jsonResponse({ error: "Invalid Cap share URL" }, 400);
+						return jsonResponse(
+							{ error: `Invalid ${BRAND.name} share URL` },
+							400,
+						);
 					}
 					const video = yield* Effect.tryPromise(() =>
 						getPublicShareVideo(Video.VideoId.make(videoId)),

@@ -3,6 +3,7 @@
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { videos } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import type { Video } from "@cap/web-domain";
 import { and, eq, sql } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
@@ -46,7 +47,7 @@ export async function editAiContent(
 	if (!isAiGenerationEnabledForUser(user)) {
 		return {
 			success: false,
-			message: "Cap Pro is required to edit AI content.",
+			message: `${BRAND.proPlanName} is required to edit AI content.`,
 		};
 	}
 	const parsed = editAiContentSchema.safeParse(input);

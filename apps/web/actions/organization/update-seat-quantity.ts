@@ -7,7 +7,7 @@ import {
 	organizations,
 	users,
 } from "@cap/database/schema";
-import { isProSubscription, stripe } from "@cap/utils";
+import { BRAND, isProSubscription, stripe } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
@@ -54,7 +54,7 @@ async function getOwnerSubscription(
 		!isProSubscription(subscription) ||
 		customerId !== owner.stripeCustomerId
 	) {
-		throw new Error("No matching Cap Pro subscription found");
+		throw new Error(`No matching ${BRAND.proPlanName} subscription found`);
 	}
 
 	const subscriptionItem = subscription.items.data[0];
@@ -217,7 +217,7 @@ export async function updateSeatQuantity(
 			});
 		} catch (restoreError) {
 			console.error(
-				"Failed to restore scheduled Cap Pro cancellation",
+				`Failed to restore scheduled ${BRAND.proPlanName} cancellation`,
 				subscription.id,
 				restoreError,
 			);

@@ -1,4 +1,5 @@
 import type { VideoCallToAction } from "@cap/database/types";
+import { BRAND } from "@cap/utils";
 
 export const CTA_LABEL_MAX_LENGTH = 40;
 export const CTA_HEADLINE_MAX_LENGTH = 80;
@@ -122,7 +123,8 @@ export function validateCallToAction(
 	const url = (input.url ?? "").trim();
 	const normalizedUrl = url ? normalizeCallToActionUrl(url) : null;
 	if (!url) errors.url = "Add where the button should go";
-	else if (!normalizedUrl) errors.url = "Enter a valid link, like cap.so/demo";
+	else if (!normalizedUrl)
+		errors.url = `Enter a valid link, like ${BRAND.domain}/demo`;
 
 	const headline = collapseWhitespace(input.headline ?? "");
 	if (headline.length > CTA_HEADLINE_MAX_LENGTH)

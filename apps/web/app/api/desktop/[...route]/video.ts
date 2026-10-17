@@ -12,7 +12,7 @@ import {
 import type { VideoMetadata } from "@cap/database/types";
 import { getNewVideoPublic } from "@cap/database/video-sharing-default";
 import { serverEnv } from "@cap/env";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import { makeCurrentUserLayer, Storage, Videos } from "@cap/web-backend";
 import { Organisation, Video } from "@cap/web-domain";
 import { zValidator } from "@hono/zod-validator";
@@ -276,7 +276,7 @@ app.get(
 
 			const videoName =
 				name ??
-				`Cap ${isScreenshot ? "Screenshot" : "Recording"} - ${formattedDate}`;
+				`${BRAND.name} ${isScreenshot ? "Screenshot" : "Recording"} - ${formattedDate}`;
 			const metadata: VideoMetadata | undefined = name
 				? { sourceName: name }
 				: undefined;
