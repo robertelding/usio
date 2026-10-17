@@ -36,7 +36,7 @@ export function DashboardBackLink({
 		compact
 			? "flex size-8 shrink-0 items-center justify-center rounded-full border border-gray-5 bg-gray-2 text-gray-11 hover:bg-gray-4"
 			: "group inline-flex h-8 min-w-0 max-w-full items-center gap-1.5 rounded-full py-1 pl-1.5 pr-3 text-[13px] text-gray-11 hover:bg-gray-3",
-		"transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 disabled:cursor-wait disabled:opacity-70",
+		"transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens disabled:cursor-wait disabled:opacity-70",
 		className,
 	);
 

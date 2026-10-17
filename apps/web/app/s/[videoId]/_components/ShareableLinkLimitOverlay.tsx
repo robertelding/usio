@@ -47,7 +47,7 @@ export function ShareableLinkLimitOverlay({
 				<div className="hidden flex-col gap-2 items-start mt-5 sm:flex">
 					{PRO_BENEFITS.map(({ icon: Icon, label }) => (
 						<div key={label} className="flex gap-2.5 items-center">
-							<Icon className="size-4 shrink-0 text-blue-400" />
+							<Icon className="size-4 shrink-0 text-lens" />
 							<span className="text-sm text-white/80">{label}</span>
 						</div>
 					))}

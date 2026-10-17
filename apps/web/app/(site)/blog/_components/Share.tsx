@@ -26,7 +26,7 @@ export function Share({ post, url }: ShareProps) {
 					)}&url=${encodeURIComponent(url)}`}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-lg text-gray-600 hover:text-blue-500 hover:underline"
+					className="text-lg text-gray-600 hover:text-lens hover:underline"
 				>
 					Twitter
 				</a>
@@ -36,7 +36,7 @@ export function Share({ post, url }: ShareProps) {
 					)}`}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-lg text-gray-600 hover:text-blue-700 hover:underline"
+					className="text-lg text-gray-600 hover:text-lens hover:underline"
 				>
 					LinkedIn
 				</a>

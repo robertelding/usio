@@ -45,7 +45,7 @@ export function ShareViewToggle({
 						onFocus={prefetch}
 						className={classNames(
 							"relative px-3 py-1 rounded-full text-xs font-medium transition-colors duration-150",
-							"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9",
+							"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens",
 							disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
 							active ? "text-gray-12" : "text-gray-11 hover:text-gray-12",
 						)}

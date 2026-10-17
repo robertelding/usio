@@ -176,7 +176,7 @@ function ConversationList({
 								type="button"
 								onClick={() => onSelect(conv.id)}
 								className={`flex w-full flex-col gap-1 border-b border-gray-100 px-4 py-3 text-left transition-colors last:border-b-0 ${
-									selected ? "bg-blue-50" : "hover:bg-gray-50"
+									selected ? "bg-lens-tint" : "hover:bg-gray-50"
 								}`}
 							>
 								<div className="flex items-center justify-between gap-2">

@@ -274,7 +274,7 @@ export function MoveItemsDialog({
 											: "hover:bg-gray-3",
 										selectedFolderId === null &&
 											(!sameLocation || currentDestinationId !== null) &&
-											"bg-blue-3",
+											"bg-lens-tint",
 									)}
 								>
 									<FolderRoot className="shrink-0 size-4 text-gray-10" />
@@ -283,7 +283,7 @@ export function MoveItemsDialog({
 									</span>
 									{selectedFolderId === null &&
 										(!sameLocation || currentDestinationId !== null) && (
-											<Check className="shrink-0 size-4 text-blue-10" />
+											<Check className="shrink-0 size-4 text-lens" />
 										)}
 								</button>
 
@@ -305,7 +305,7 @@ export function MoveItemsDialog({
 												isDisabled
 													? "cursor-not-allowed opacity-50"
 													: "hover:bg-gray-3",
-												isSelected && "bg-blue-3",
+												isSelected && "bg-lens-tint",
 											)}
 											style={{
 												paddingLeft: `${12 + Math.min(row.depth, 8) * 16}px`,
@@ -323,7 +323,7 @@ export function MoveItemsDialog({
 												)}
 											</span>
 											{isSelected && (
-												<Check className="shrink-0 size-4 text-blue-10" />
+												<Check className="shrink-0 size-4 text-lens" />
 											)}
 										</button>
 									);

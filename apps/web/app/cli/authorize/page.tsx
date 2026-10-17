@@ -155,7 +155,7 @@ export default async function CliAuthorizePage(props: {
 					/>
 					<input name="scope" type="hidden" value={request.scopes.join(" ")} />
 					<button
-						className="w-full rounded-lg bg-blue-9 px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-10"
+						className="w-full rounded-lg bg-signal-strong px-4 py-3 text-sm font-medium text-on-signal transition-colors hover:bg-signal-hover"
 						type="submit"
 					>
 						Authorize

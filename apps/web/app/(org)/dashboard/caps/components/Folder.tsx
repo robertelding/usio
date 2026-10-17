@@ -347,7 +347,7 @@ const FolderCard = ({
 			className={clsx(
 				"flex relative justify-between items-center w-full h-auto min-w-0 rounded-lg border transition-all duration-200 bg-gray-3 hover:bg-gray-4 hover:border-gray-6",
 				isList ? "gap-3 px-3 py-2" : "px-4 py-4",
-				isDragOver ? "border-blue-10 bg-gray-4" : "border-gray-5",
+				isDragOver ? "border-lens bg-gray-4" : "border-gray-5",
 				isMovingVideo && "opacity-70",
 			)}
 		>
@@ -356,7 +356,7 @@ const FolderCard = ({
 					href={folderHref}
 					prefetch={false}
 					aria-label={`Open folder ${updateName}`}
-					className="absolute inset-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 focus-visible:ring-offset-1"
+					className="absolute inset-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens focus-visible:ring-offset-1"
 				/>
 			)}
 			{moveEnabled && (
@@ -445,7 +445,7 @@ const FolderCard = ({
 						)}
 					>
 						{publicEnabled && isList && (
-							<span className="inline-flex gap-1 items-center text-[11px] font-medium text-blue-9">
+							<span className="inline-flex gap-1 items-center text-[11px] font-medium text-lens">
 								<FontAwesomeIcon icon={faGlobe} className="size-2.5" />
 								Public
 							</span>
@@ -457,7 +457,7 @@ const FolderCard = ({
 							)}
 						>{`${videoCount} ${videoCount === 1 ? "video" : "videos"}`}</p>
 						{publicEnabled && !isList && (
-							<span className="inline-flex gap-1 items-center text-[11px] font-medium text-blue-9">
+							<span className="inline-flex gap-1 items-center text-[11px] font-medium text-lens">
 								<FontAwesomeIcon icon={faGlobe} className="size-2.5" />
 								Public
 							</span>

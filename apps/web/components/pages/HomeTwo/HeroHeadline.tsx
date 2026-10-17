@@ -9,7 +9,7 @@ import {
 	StudioIcon,
 } from "@/components/pages/HomePage/modeIcons";
 import { MacCursor, WindowsCursor } from "./cursors";
-import { H_HERO, INK, MODE_THEME, type ModeKey } from "./theme";
+import { H_HERO, INK, MODE_THEME, type ModeKey, SIGNAL } from "./theme";
 
 type SlideKey = ModeKey | "all";
 
@@ -211,7 +211,7 @@ const BrowserHeadline = () => (
 						key={word}
 						style={{
 							lineHeight: 0.98,
-							color: i === 2 ? MODE_THEME.instant.glyph : INK,
+							color: i === 2 ? SIGNAL : INK,
 						}}
 					>
 						{word}

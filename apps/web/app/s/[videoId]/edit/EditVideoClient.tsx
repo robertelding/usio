@@ -1772,7 +1772,7 @@ export function EditVideoClient({
 													!hasMultipleClips
 														? ""
 														: isActive
-															? "bg-white/[0.10] ring-2 ring-inset ring-blue-400"
+															? "bg-white/[0.10] ring-2 ring-inset ring-lens"
 															: "bg-black/35 ring-1 ring-inset ring-white/15",
 												].join(" ")}
 												style={{
@@ -1797,7 +1797,7 @@ export function EditVideoClient({
 														? "w-6 rounded-l-lg shadow-[0_1px_2px_rgba(0,0,0,0.3),0_2px_8px_-1px_rgba(59,130,246,0.55)]"
 														: "rounded-l-md shadow-[0_1px_2px_rgba(0,0,0,0.35)]",
 													activeHandle === "start" && isFirst
-														? "ring-2 ring-blue-300 ring-inset"
+														? "ring-2 ring-lens ring-inset"
 														: "",
 												].join(" ")}
 												style={
@@ -1836,7 +1836,7 @@ export function EditVideoClient({
 														? "w-6 rounded-r-lg shadow-[0_1px_2px_rgba(0,0,0,0.3),0_2px_8px_-1px_rgba(59,130,246,0.55)]"
 														: "rounded-r-md shadow-[0_1px_2px_rgba(0,0,0,0.35)]",
 													activeHandle === "end" && isLast
-														? "ring-2 ring-blue-300 ring-inset"
+														? "ring-2 ring-lens ring-inset"
 														: "",
 												].join(" ")}
 												style={
@@ -1882,7 +1882,7 @@ export function EditVideoClient({
 												event.stopPropagation();
 												removeSplitAtIndex(index);
 											}}
-											className="absolute -top-9 left-0 z-[50] flex size-4 -translate-x-1/2 items-center justify-center rounded-full bg-gray-12 text-white opacity-0 shadow-[0_2px_6px_rgba(0,0,0,0.45)] ring-1 ring-black/30 transition-all hover:scale-110 hover:!opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 group-hover:opacity-80 [@media(hover:none)]:opacity-70"
+											className="absolute -top-9 left-0 z-[50] flex size-4 -translate-x-1/2 items-center justify-center rounded-full bg-gray-12 text-white opacity-0 shadow-[0_2px_6px_rgba(0,0,0,0.45)] ring-1 ring-black/30 transition-all hover:scale-110 hover:!opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens group-hover:opacity-80 [@media(hover:none)]:opacity-70"
 											style={{ left: `${positionPercent}%` }}
 										>
 											<X className="size-2.5" strokeWidth={3} aria-hidden />
@@ -1931,7 +1931,7 @@ export function EditVideoClient({
 							<span
 								className={
 									outputDuration < video.duration - 0.05
-										? "font-semibold text-blue-600"
+										? "font-semibold text-lens"
 										: "text-gray-10"
 								}
 							>

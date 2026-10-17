@@ -31,11 +31,8 @@ export const NotificationHeader = () => {
 					mutation.isPending ? "opacity-50 cursor-not-allowed" : "",
 				)}
 			>
-				<FontAwesomeIcon
-					icon={faCheckDouble}
-					className="text-blue-9 size-2.5"
-				/>
-				<p className="text-[13px] text-blue-9">Mark all as read</p>
+				<FontAwesomeIcon icon={faCheckDouble} className="text-lens size-2.5" />
+				<p className="text-[13px] text-lens">Mark all as read</p>
 			</div>
 		</div>
 	);

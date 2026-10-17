@@ -245,7 +245,7 @@ const ConnectionDemo = () => (
 						<p className="text-xs text-gray-10">Active for new uploads</p>
 					</div>
 				</div>
-				<span className="inline-flex gap-2 items-center self-start px-3 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full border border-blue-200 sm:self-auto">
+				<span className="inline-flex gap-2 items-center self-start px-3 py-1 text-xs font-medium text-lens bg-lens-tint rounded-full border border-blue-200 sm:self-auto">
 					<span className="rounded-full size-1.5 bg-blue-500" />
 					Connected
 				</span>
@@ -460,14 +460,14 @@ export const GoogleDriveScreenRecorderPage = () => {
 					Prefer object storage instead? usio also lets you{" "}
 					<a
 						href="/self-hosted-screen-recording"
-						className="font-semibold text-blue-500 transition-colors hover:text-blue-600"
+						className="font-semibold text-lens transition-colors hover:text-lens"
 					>
 						connect your own S3-compatible bucket
 					</a>{" "}
 					, or see how usio compares as a{" "}
 					<a
 						href="/loom-alternative"
-						className="font-semibold text-blue-500 transition-colors hover:text-blue-600"
+						className="font-semibold text-lens transition-colors hover:text-lens"
 					>
 						Loom alternative
 					</a>

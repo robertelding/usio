@@ -344,7 +344,7 @@ const MockSharePage = () => {
 								type="button"
 								className={`flex-1 px-3 py-2 text-[10px] font-medium cursor-pointer transition-colors ${
 									activeTab === key
-										? "text-gray-12 border-b-2 border-blue-500"
+										? "text-gray-12 border-b-2 border-lens"
 										: "text-gray-9 hover:text-gray-11"
 								}`}
 								onClick={() => handleTabClick(key)}
@@ -427,7 +427,7 @@ const MockSharePage = () => {
 									transition={{ duration: 0.15 }}
 								>
 									<div className="flex gap-2">
-										<span className="text-[9px] text-blue-500 shrink-0 w-6">
+										<span className="text-[9px] text-lens shrink-0 w-6">
 											0:00
 										</span>
 										<span className="text-[9px] text-gray-11">
@@ -436,7 +436,7 @@ const MockSharePage = () => {
 										</span>
 									</div>
 									<div className="flex gap-2">
-										<span className="text-[9px] text-blue-500 shrink-0 w-6">
+										<span className="text-[9px] text-lens shrink-0 w-6">
 											0:12
 										</span>
 										<span className="text-[9px] text-gray-11">
@@ -445,7 +445,7 @@ const MockSharePage = () => {
 										</span>
 									</div>
 									<div className="flex gap-2">
-										<span className="text-[9px] text-blue-500 shrink-0 w-6">
+										<span className="text-[9px] text-lens shrink-0 w-6">
 											0:28
 										</span>
 										<span className="text-[9px] text-gray-11">
@@ -581,7 +581,7 @@ const MockSharePage = () => {
 								key={chapter.time}
 								type="button"
 								className={`flex items-center w-full py-1.5 md:py-2 px-1.5 md:px-2 rounded cursor-pointer transition-colors ${
-									activeChapter === i ? "bg-blue-50" : "hover:bg-gray-2"
+									activeChapter === i ? "bg-lens-tint" : "hover:bg-gray-2"
 								}`}
 								onClick={() => setActiveChapter(activeChapter === i ? null : i)}
 								whileTap={{ scale: 0.98 }}
@@ -589,7 +589,7 @@ const MockSharePage = () => {
 								<span
 									className={`w-10 md:w-14 text-[9px] md:text-xs shrink-0 text-left ${
 										activeChapter === i
-											? "text-blue-500 font-medium"
+											? "text-lens font-medium"
 											: "text-gray-9"
 									}`}
 								>
@@ -598,7 +598,7 @@ const MockSharePage = () => {
 								<span
 									className={`text-[10px] md:text-xs ${
 										activeChapter === i
-											? "text-blue-600 font-medium"
+											? "text-lens font-medium"
 											: "text-gray-12"
 									}`}
 								>

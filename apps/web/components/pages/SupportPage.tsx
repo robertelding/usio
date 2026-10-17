@@ -86,7 +86,7 @@ export const SupportPage = () => {
 									<p className="flex-1 text-[0.9375rem] leading-relaxed text-gray-10">
 										{channel.description}
 									</p>
-									<span className="inline-flex gap-1 items-center mt-5 text-[0.9375rem] font-medium text-gray-12 transition-colors duration-200 group-hover:text-blue-9">
+									<span className="inline-flex gap-1 items-center mt-5 text-[0.9375rem] font-medium text-gray-12 transition-colors duration-200 group-hover:text-lens">
 										{channel.cta}
 										<ArrowUpRight className="size-4" />
 									</span>

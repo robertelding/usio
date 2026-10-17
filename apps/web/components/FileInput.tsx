@@ -279,7 +279,7 @@ export const FileInput: React.FC<FileInputProps> = ({
 						className={clsx(
 							"flex gap-3 justify-center items-center px-4 w-full h-full rounded-xl border border-dashed transition-all duration-300 cursor-pointer",
 							isDragging
-								? "border-blue-500 bg-gray-5"
+								? "border-lens bg-gray-5"
 								: `border-gray-5 hover:bg-gray-2 ${notDraggingClassName}`,
 							isLoading || disabled ? "pointer-events-none opacity-50" : "",
 						)}

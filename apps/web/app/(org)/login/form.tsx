@@ -444,7 +444,7 @@ export function LoginForm() {
 							<Link
 								href="/terms"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Terms of Service
 							</Link>{" "}
@@ -452,7 +452,7 @@ export function LoginForm() {
 							<Link
 								href="/privacy"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Privacy Policy
 							</Link>
@@ -510,7 +510,7 @@ const LoginWithSSO = ({
 			<div>
 				<Button
 					type="submit"
-					variant="dark"
+					variant="primary"
 					className="w-full max-w-full"
 					disabled={loading}
 					spinner={loading}
@@ -560,7 +560,7 @@ const NormalLogin = ({
 					}}
 				/>
 				<MotionButton
-					variant="dark"
+					variant="primary"
 					type="submit"
 					disabled={loading || emailSent}
 					spinner={loading}
@@ -590,7 +590,7 @@ const NormalLogin = ({
 				Don't have an account?{" "}
 				<Link
 					href="/signup"
-					className="text-xs font-semibold text-blue-9 hover:text-blue-8"
+					className="text-xs font-semibold text-lens hover:text-blue-8"
 				>
 					Sign up here
 				</Link>

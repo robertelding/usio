@@ -156,7 +156,7 @@ const TranscriptGroupRow = memo(function TranscriptGroupRow({
 				type="button"
 				onClick={() => onSeek(group.startIndex)}
 				title={`Play from ${formatTimestamp(group.startMs)}`}
-				className="w-9 shrink-0 text-left font-mono text-[10px] leading-none tabular-nums text-gray-8 transition-colors hover:text-blue-500"
+				className="w-9 shrink-0 text-left font-mono text-[10px] leading-none tabular-nums text-gray-8 transition-colors hover:text-lens"
 			>
 				{formatTimestamp(group.startMs)}
 			</button>
@@ -539,7 +539,7 @@ export function TranscriptSidebar({
 								Preparing word-level timings
 							</p>
 						</div>
-						<span className="inline-flex h-6 shrink-0 items-center gap-1.5 rounded-full bg-blue-500/10 px-2.5 text-[10px] font-semibold text-blue-600">
+						<span className="inline-flex h-6 shrink-0 items-center gap-1.5 rounded-full bg-blue-500/10 px-2.5 text-[10px] font-semibold text-lens">
 							<LoaderCircle className="size-3 animate-spin" />
 							Preparing
 						</span>

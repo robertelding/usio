@@ -5,7 +5,7 @@ import * as React from "react";
 import { LoadingSpinner } from "./LoadingSpinner";
 
 const buttonVariants = cva(
-	"flex items-center justify-center transition-colors duration-200 rounded-full disabled:cursor-not-allowed cursor-pointer font-medium px-5 ring-offset-transparent relative gap-1",
+	"flex items-center justify-center transition-colors duration-200 rounded-[10px] disabled:cursor-not-allowed cursor-pointer font-medium px-5 ring-offset-transparent relative gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens focus-visible:ring-offset-2",
 	{
 		defaultVariants: {
 			variant: "primary",
@@ -14,17 +14,17 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				primary:
-					"bg-gray-12 dark-button-shadow text-gray-1 disabled:bg-gray-6 disabled:text-gray-9",
-				blue: "bg-blue-600 text-white disabled:border-gray-8 border border-blue-800 shadow-[0_1.50px_0_0_rgba(255,255,255,0.20)_inset] hover:bg-blue-700  disabled:bg-gray-7 disabled:text-gray-10",
+					"bg-signal-strong text-on-signal hover:bg-signal-hover disabled:bg-gray-6 disabled:text-gray-10",
+				blue: "bg-signal-strong text-on-signal border border-transparent hover:bg-signal-hover disabled:bg-gray-6 disabled:text-gray-10",
 				destructive:
-					"bg-red-500 text-white border-transparent hover:bg-red-600 disabled:bg-gray-7 disabled:border-gray-8 border disabled:text-gray-10",
+					"bg-danger text-on-signal border border-transparent hover:bg-signal-hover disabled:bg-gray-6 disabled:text-gray-10",
 				outline:
-					"border border-gray-4 hover:border-gray-5 hover:bg-gray-3 text-gray-12 disabled:bg-gray-8",
+					"border border-line-strong hover:bg-gray-3 text-ink disabled:bg-gray-6 disabled:text-gray-10",
 				white:
-					"bg-gray-3 border border-gray-5 hover:border-gray-6 text-gray-12 hover:bg-gray-6 disabled:bg-gray-8",
+					"bg-surface border border-line-strong text-ink hover:bg-gray-3 disabled:bg-gray-6 disabled:text-gray-10",
 				ghost: "hover:bg-white/20 hover:text-white",
-				gray: "bg-gray-5 hover:bg-gray-7 border gray-button-border gray-button-shadow text-gray-12 disabled:border-gray-7 disabled:bg-gray-8 disabled:text-gray-11",
-				dark: "bg-gray-12 dark-button-shadow hover:bg-gray-11 border dark-button-border text-gray-1 disabled:cursor-not-allowed disabled:text-gray-10 disabled:bg-gray-7 disabled:border-gray-8",
+				gray: "bg-surface-sunken hover:bg-gray-4 border border-line-strong text-ink disabled:border-gray-7 disabled:bg-gray-6 disabled:text-gray-10",
+				dark: "bg-ink text-paper border border-transparent hover:bg-gray-11 disabled:cursor-not-allowed disabled:text-gray-10 disabled:bg-gray-6",
 				darkgradient:
 					"bg-linear-to-t button-gradient-border from-[#0f0f0f] to-[#404040] shadow-[0_0_0_1px] hover:brightness-110 shadow-[#383838] text-gray-50 hover:bg-[#383838] disabled:bg-[#383838] border-transparent",
 				radialblue:

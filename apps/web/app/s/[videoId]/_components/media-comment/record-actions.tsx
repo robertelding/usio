@@ -59,7 +59,7 @@ export function RecordActionButtons({
 					title={option.label}
 					disabled={disabled}
 					onClick={() => onSelect(option.kind)}
-					className="flex size-8 items-center justify-center rounded-lg text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 disabled:opacity-50"
+					className="flex size-8 items-center justify-center rounded-lg text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens disabled:opacity-50"
 				>
 					<RecordIcon kind={option.kind} />
 				</button>

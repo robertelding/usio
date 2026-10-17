@@ -86,7 +86,7 @@ export default function ConvertToolsPage() {
 					<div className="mb-8">
 						<Link
 							href="/tools"
-							className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800"
+							className="inline-flex items-center text-sm text-lens hover:text-lens"
 						>
 							<svg
 								className="mr-1 w-5 h-5"
@@ -121,12 +121,12 @@ export default function ConvertToolsPage() {
 							<Link
 								key={tool.href}
 								href={tool.href}
-								className="block p-6 rounded-lg border border-gray-200 transition-colors group hover:border-blue-500"
+								className="block p-6 rounded-lg border border-gray-200 transition-colors group hover:border-lens"
 							>
 								<div className="flex items-center mb-4">
-									<div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg">
+									<div className="flex-shrink-0 p-2 bg-lens-tint rounded-lg">
 										<svg
-											className="w-6 h-6 text-blue-600"
+											className="w-6 h-6 text-lens"
 											fill="none"
 											viewBox="0 0 24 24"
 											stroke="currentColor"
@@ -139,7 +139,7 @@ export default function ConvertToolsPage() {
 											/>
 										</svg>
 									</div>
-									<h2 className="ml-3 text-xl font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+									<h2 className="ml-3 text-xl font-semibold text-gray-900 transition-colors group-hover:text-lens">
 										{tool.title}
 									</h2>
 								</div>

@@ -36,7 +36,7 @@ export const PublicCollectionField = ({
 		<div
 			className={clsx(
 				"rounded-xl border transition-colors",
-				enabled ? "border-blue-9 bg-gray-1" : "border-gray-4 bg-gray-1",
+				enabled ? "border-lens bg-gray-1" : "border-gray-4 bg-gray-1",
 			)}
 		>
 			<div className="flex gap-3 justify-between items-center p-3.5">
@@ -44,7 +44,7 @@ export const PublicCollectionField = ({
 					<div
 						className={clsx(
 							"flex justify-center items-center rounded-full transition-colors size-9 shrink-0",
-							enabled ? "text-blue-9 bg-blue-3" : "text-gray-11 bg-gray-3",
+							enabled ? "text-lens bg-lens-tint" : "text-gray-11 bg-gray-3",
 						)}
 					>
 						<FontAwesomeIcon
@@ -91,7 +91,7 @@ export const PublicCollectionField = ({
 					>
 						<FontAwesomeIcon
 							icon={copied ? faCheck : faCopy}
-							className={copied ? "size-3 text-blue-11" : "size-3"}
+							className={copied ? "size-3 text-lens" : "size-3"}
 						/>
 						{copied ? "Copied" : "Copy public link"}
 					</Button>

@@ -13,7 +13,7 @@ const Switch = React.forwardRef<
 			"peer inline-flex shrink-0 cursor-pointer items-center rounded-full border-transparent transition-colors",
 			"w-11 h-6 p-0.5",
 			"bg-gray-5 data-[state=checked]:bg-blue-500",
-			"focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500",
+			"focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lens",
 			"disabled:cursor-not-allowed disabled:opacity-40 disabled:bg-gray-4",
 			className,
 		)}

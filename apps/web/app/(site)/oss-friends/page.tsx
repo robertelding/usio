@@ -71,10 +71,10 @@ export default async function OSSFriends() {
 								}}
 							>
 								<div className="flex items-start justify-between mb-3">
-									<h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+									<h3 className="text-lg font-semibold text-gray-900 group-hover:text-lens transition-colors">
 										{friend.name}
 									</h3>
-									<ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0 ml-2" />
+									<ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-lens transition-colors flex-shrink-0 ml-2" />
 								</div>
 								<p className="text-gray-600 text-sm leading-relaxed">
 									{friend.description}

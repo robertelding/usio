@@ -587,7 +587,7 @@ export function DocsSearch({ searchIndex }: DocsSearchProps) {
 													<button
 														type="button"
 														onClick={retryLastTurn}
-														className="text-sm font-medium text-blue-11 underline-offset-[3px] hover:underline"
+														className="text-sm font-medium text-lens underline-offset-[3px] hover:underline"
 													>
 														Try again
 													</button>

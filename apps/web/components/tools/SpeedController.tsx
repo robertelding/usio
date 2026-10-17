@@ -514,8 +514,8 @@ export const SpeedController = () => {
 			<div
 				className={`border-2 border-dashed rounded-lg p-8 mb-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${
 					isDragging
-						? "border-blue-500 bg-blue-50"
-						: "border-gray-300 hover:border-blue-400"
+						? "border-lens bg-lens-tint"
+						: "border-gray-300 hover:border-lens"
 				}`}
 				onDragOver={handleDragOver}
 				onDragLeave={handleDragLeave}

@@ -1,35 +1,25 @@
-import {
-	DM_Mono,
-	Geist,
-	Instrument_Sans,
-	Source_Serif_4,
-} from "next/font/google";
+import { Figtree, JetBrains_Mono } from "next/font/google";
 
-export const htSans = Instrument_Sans({
+export const htSans = Figtree({
 	subsets: ["latin"],
-	weight: ["400", "500"],
 	display: "swap",
 	variable: "--font-ht-sans",
 });
 
-export const htSerif = Source_Serif_4({
+export const htSerif = Figtree({
 	subsets: ["latin"],
-	weight: ["300", "400"],
-	style: ["normal"],
 	display: "swap",
 	variable: "--font-ht-serif",
 });
 
-export const htGeist = Geist({
+export const htGeist = Figtree({
 	subsets: ["latin"],
-	weight: ["400", "500", "600"],
 	display: "swap",
 	variable: "--font-ht-geist",
 });
 
-export const htMono = DM_Mono({
+export const htMono = JetBrains_Mono({
 	subsets: ["latin"],
-	weight: ["400"],
 	display: "swap",
 	variable: "--font-ht-mono",
 });

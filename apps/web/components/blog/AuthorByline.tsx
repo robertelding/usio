@@ -31,7 +31,7 @@ export function AuthorByline({ authors }: AuthorBylineProps) {
 								href={`https://x.com/${author.handle}`}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-sm text-blue-600 hover:text-blue-700 transition-colors"
+								className="text-sm text-lens hover:text-lens transition-colors"
 							>
 								@{author.handle}
 							</Link>

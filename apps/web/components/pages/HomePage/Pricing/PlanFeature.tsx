@@ -15,7 +15,7 @@ export const PlanFeature = ({ children, strong }: PlanFeatureProps) => {
 		<li className="flex gap-3 items-start">
 			<FontAwesomeIcon
 				icon={faCheck}
-				className="mt-1 text-blue-500 shrink-0 size-3.5"
+				className="mt-1 text-lens shrink-0 size-3.5"
 			/>
 			<span
 				className={classNames(

@@ -74,7 +74,7 @@ export function DocsTableOfContents({ headings }: DocsTableOfContentsProps) {
 								heading.level === 3 ? "pl-3.5" : ""
 							} ${
 								activeSlug === heading.slug
-									? "font-medium text-blue-11"
+									? "font-medium text-lens"
 									: "text-gray-10 hover:text-gray-12"
 							}`}
 						>

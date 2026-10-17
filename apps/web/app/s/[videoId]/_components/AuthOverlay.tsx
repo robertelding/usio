@@ -93,7 +93,7 @@ export const AuthOverlay: React.FC<AuthOverlayProps> = ({
 							<Link
 								href="/terms"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Terms of Service
 							</Link>{" "}
@@ -101,7 +101,7 @@ export const AuthOverlay: React.FC<AuthOverlayProps> = ({
 							<Link
 								href="/privacy"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Privacy Policy
 							</Link>

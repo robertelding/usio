@@ -9,7 +9,7 @@ import { isHiddenDownloadHref, resolveDownloadCta } from "@/lib/download-cta";
 const renderHTML = (content: string) => {
 	const styledContent = content.replace(
 		/<a\s/g,
-		'<a class="font-semibold text-blue-500 transition-colors hover:text-blue-600" ',
+		'<a class="font-semibold text-lens transition-colors hover:text-lens" ',
 	);
 
 	return <span dangerouslySetInnerHTML={{ __html: styledContent }} />;
@@ -173,8 +173,8 @@ export const ToolsPageTemplate = ({
 										key={index}
 										className="p-5 bg-white rounded-xl border border-gray-100 shadow-sm transition-all duration-300 sm:p-6 hover:shadow-md hover:border-blue-100"
 									>
-										<div className="flex justify-center items-center mb-4 w-10 h-10 bg-blue-50 rounded-full">
-											<span className="text-lg font-medium text-blue-500">
+										<div className="flex justify-center items-center mb-4 w-10 h-10 bg-lens-tint rounded-full">
+											<span className="text-lg font-medium text-lens">
 												{index + 1}
 											</span>
 										</div>

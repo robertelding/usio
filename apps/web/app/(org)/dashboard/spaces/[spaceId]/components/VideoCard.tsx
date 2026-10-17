@@ -63,7 +63,7 @@ const VideoCard: React.FC<VideoCardProps> = memo(
 					"flex relative flex-col p-3 w-full h-full rounded-xl border text-left transition-all duration-200 group",
 					className,
 					isAlreadyInEntity && isSelected && "border-red-500",
-					isAlreadyInEntity && !isSelected && "border-blue-500",
+					isAlreadyInEntity && !isSelected && "border-lens",
 					!isAlreadyInEntity && isSelected && "border-green-500",
 					!isAlreadyInEntity && !isSelected && "border-gray-4",
 					isAlreadyInEntity

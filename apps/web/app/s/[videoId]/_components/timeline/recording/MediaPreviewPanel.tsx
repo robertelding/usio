@@ -89,7 +89,7 @@ export function MediaPreviewPanel({
 				<button
 					type="button"
 					onClick={onSend}
-					className="h-7 rounded-lg bg-blue-9 px-3.5 text-xs font-medium text-white transition-opacity hover:opacity-90"
+					className="h-7 rounded-lg bg-signal-strong px-3.5 text-xs font-medium text-on-signal transition-opacity hover:opacity-90"
 				>
 					Send
 				</button>

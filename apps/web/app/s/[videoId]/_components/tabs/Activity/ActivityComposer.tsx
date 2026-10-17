@@ -82,9 +82,7 @@ export function ActivityComposer({
 				<span className="flex-1 text-sm truncate text-gray-8">
 					{ownerName ? `Respond to ${ownerName}...` : "Leave a comment"}
 				</span>
-				<span className="text-xs font-medium shrink-0 text-blue-9">
-					Sign in
-				</span>
+				<span className="text-xs font-medium shrink-0 text-lens">Sign in</span>
 			</button>
 		);
 	}

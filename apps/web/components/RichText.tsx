@@ -105,7 +105,7 @@ const renderPart = (part: RichTextPart): ReactNode => {
 					href={href}
 					target={isExternal ? "_blank" : undefined}
 					rel={isExternal ? "noreferrer" : undefined}
-					className="font-semibold text-blue-500 transition-colors hover:text-blue-600"
+					className="font-semibold text-lens transition-colors hover:text-lens"
 				>
 					{children}
 				</a>

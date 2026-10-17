@@ -178,9 +178,9 @@ export const ShareLinkDialog = ({
 									onClick={() => setTab(id)}
 									className={clsx(
 										"flex items-center gap-2 rounded-lg border px-3 py-1.5 text-[15px] font-medium transition-colors",
-										"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 focus-visible:ring-offset-1",
+										"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens focus-visible:ring-offset-1",
 										active
-											? "border-blue-8 bg-blue-2 text-blue-11"
+											? "border-blue-8 bg-lens-tint text-lens"
 											: "border-transparent text-gray-11 hover:bg-gray-3",
 									)}
 								>
@@ -194,7 +194,7 @@ export const ShareLinkDialog = ({
 						type="button"
 						onClick={() => onOpenChange(false)}
 						aria-label="Close"
-						className="rounded-lg p-1 text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+						className="rounded-lg p-1 text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 					>
 						<X className="size-5" aria-hidden />
 					</button>
@@ -234,7 +234,7 @@ export const ShareLinkDialog = ({
 									})}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="flex items-center gap-4 rounded-xl border border-gray-4 bg-gray-1 px-4 py-3.5 transition-colors hover:border-gray-6 hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+									className="flex items-center gap-4 rounded-xl border border-gray-4 bg-gray-1 px-4 py-3.5 transition-colors hover:border-gray-6 hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 								>
 									<span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gray-3">
 										<Icon className={iconClassName} />
@@ -264,7 +264,7 @@ export const ShareLinkDialog = ({
 					<button
 						type="button"
 						onClick={handleCopy}
-						className="flex items-center gap-2.5 rounded-lg text-[15px] font-medium text-gray-12 transition-colors hover:text-gray-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+						className="flex items-center gap-2.5 rounded-lg text-[15px] font-medium text-gray-12 transition-colors hover:text-gray-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 					>
 						{copied ? (
 							<Check className="size-5 text-green-500" aria-hidden />
@@ -291,9 +291,9 @@ export const ShareLinkDialog = ({
 							aria-hidden
 							className={clsx(
 								"flex size-6 shrink-0 items-center justify-center rounded-md border-2 transition-colors",
-								"peer-focus-visible:ring-2 peer-focus-visible:ring-blue-9 peer-focus-visible:ring-offset-1",
+								"peer-focus-visible:ring-2 peer-focus-visible:ring-lens peer-focus-visible:ring-offset-1",
 								withTimestamp
-									? "border-blue-9 bg-blue-9 text-white"
+									? "border-lens bg-blue-9 text-white"
 									: "border-gray-12 bg-transparent",
 							)}
 						>

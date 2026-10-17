@@ -133,7 +133,7 @@ export const VideoDroppable = React.forwardRef<
 				isDragging && !isOver && !droppedValue
 					? "bg-gray-5 border-solid border-gray-11"
 					: isOver && isDragging
-						? "bg-gray-4 border-blue-500 border-solid"
+						? "bg-gray-4 border-lens border-solid"
 						: !droppedValue
 							? "border-dashed border-gray-6 bg-gray-3"
 							: "border-solid border-gray-5 bg-gray-3",

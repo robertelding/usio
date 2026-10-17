@@ -754,8 +754,8 @@ export const TrimmingTool = () => {
 				<div
 					className={`border-2 border-dashed rounded-lg p-8 mb-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${
 						isDragging
-							? "border-blue-500 bg-blue-50"
-							: "border-gray-300 hover:border-blue-400"
+							? "border-lens bg-lens-tint"
+							: "border-gray-300 hover:border-lens"
 					}`}
 					onDragOver={handleDragOver}
 					onDragLeave={handleDragLeave}
@@ -795,7 +795,7 @@ export const TrimmingTool = () => {
 						<p className="text-sm text-gray-500 mt-1">
 							or click to browse (max 500MB)
 						</p>
-						<p className="text-xs text-blue-600 mt-2">
+						<p className="text-xs text-lens mt-2">
 							Supported formats: {SUPPORTED_VIDEO_FORMATS.join(", ")}
 						</p>
 					</div>
@@ -804,7 +804,7 @@ export const TrimmingTool = () => {
 
 			{fileState.isLoading && (
 				<div className="mb-6 text-center p-4">
-					<div className="animate-spin inline-block w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mb-2"></div>
+					<div className="animate-spin inline-block w-8 h-8 border-4 border-lens border-t-transparent rounded-full mb-2"></div>
 					<p className="text-gray-600">Loading video...</p>
 				</div>
 			)}

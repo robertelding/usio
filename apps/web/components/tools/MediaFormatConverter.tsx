@@ -802,7 +802,7 @@ export const MediaFormatConverter = ({
 				<p>Unsupported conversion: {conversionPath}</p>
 				<Link
 					href="/tools/convert"
-					className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800"
+					className="mt-4 inline-flex items-center text-lens hover:text-lens"
 				>
 					← Back to Conversion Tools
 				</Link>
@@ -968,8 +968,8 @@ export const MediaFormatConverter = ({
 			<div
 				className={`border-2 border-dashed rounded-lg p-8 mb-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${
 					isDragging
-						? "border-blue-500 bg-blue-50"
-						: "border-gray-300 hover:border-blue-400"
+						? "border-lens bg-lens-tint"
+						: "border-gray-300 hover:border-lens"
 				}`}
 				onDragOver={handleDragOver}
 				onDragLeave={handleDragLeave}
@@ -1142,7 +1142,7 @@ export const MediaFormatConverter = ({
 						</div>
 					)}
 				{currentTargetFormat === "gif" && (
-					<div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-md text-blue-700">
+					<div className="mt-3 p-3 bg-lens-tint border border-blue-200 rounded-md text-lens">
 						<p>
 							<strong>GIF Conversion:</strong> Converting to GIF format may take
 							some time and result in larger file sizes. For high-quality

@@ -71,12 +71,12 @@ export function PageContent() {
 						<Link
 							key={category.href}
 							href={category.href}
-							className="group block p-6 sm:p-8 border border-gray-200 bg-gray-1 rounded-xl hover:border-blue-500 hover:shadow-md transition-all"
+							className="group block p-6 sm:p-8 border border-gray-200 bg-gray-1 rounded-xl hover:border-lens hover:shadow-md transition-all"
 						>
 							<div className="flex flex-col items-center text-center">
-								<div className="flex-shrink-0 p-3 bg-blue-100 rounded-xl mb-4 sm:mb-5">
+								<div className="flex-shrink-0 p-3 bg-lens-tint rounded-xl mb-4 sm:mb-5">
 									<svg
-										className="w-7 h-7 sm:w-8 sm:h-8 text-blue-600"
+										className="w-7 h-7 sm:w-8 sm:h-8 text-lens"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -89,7 +89,7 @@ export function PageContent() {
 										/>
 									</svg>
 								</div>
-								<h2 className="text-xl sm:text-2xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2 sm:mb-3">
+								<h2 className="text-xl sm:text-2xl font-semibold text-gray-900 group-hover:text-lens transition-colors mb-2 sm:mb-3">
 									{category.title}
 								</h2>
 								<p className="text-sm sm:text-base text-gray-600">

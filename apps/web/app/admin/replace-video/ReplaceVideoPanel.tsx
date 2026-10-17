@@ -113,7 +113,7 @@ export function ReplaceVideoPanel() {
 						value={videoId}
 						onChange={(e) => setVideoId(e.target.value)}
 						placeholder="e.g. abc123xyz"
-						className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+						className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 hover:border-gray-400 focus:border-lens focus:ring-2 focus:ring-lens"
 					/>
 				</div>
 

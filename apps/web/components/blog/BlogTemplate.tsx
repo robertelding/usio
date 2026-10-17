@@ -123,7 +123,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 	return (
 		<article className="relative z-10 px-3 py-32 mx-auto max-w-3xl md:py-40">
 			<header className="mb-16 text-center">
-				<div className="mb-4 text-sm font-medium text-blue-600 fade-in-down">
+				<div className="mb-4 text-sm font-medium text-lens fade-in-down">
 					{content.category}
 				</div>
 				<h1 className="mb-6 text-4xl font-medium text-gray-900 md:text-5xl fade-in-down">
@@ -143,7 +143,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 				</div>
 			</header>
 
-			<div className="p-8 mb-12 bg-blue-50 rounded-xl border border-blue-100 shadow-md">
+			<div className="p-8 mb-12 bg-lens-tint rounded-xl border border-blue-100 shadow-md">
 				<h2 className="inline-block relative mb-4 text-2xl font-medium text-gray-900">
 					TL;DR
 					<span className="absolute left-0 -bottom-1 w-16 h-1 bg-blue-500 rounded-full"></span>
@@ -170,7 +170,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 
 					<div className="overflow-x-auto">
 						<table className="overflow-hidden w-full rounded-lg shadow-md border-collapse">
-							<thead className="bg-blue-50">
+							<thead className="bg-lens-tint">
 								<tr>
 									{content.comparisonTable.headers.map(
 										(header, headerIndex) => (
@@ -269,9 +269,9 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 						{content.proTips.tips.map((tip, tipIndex) => (
 							<div
 								key={`tip-${tipIndex}-${tip.title}`}
-								className="p-6 bg-blue-50 rounded-xl border border-blue-100 shadow-md"
+								className="p-6 bg-lens-tint rounded-xl border border-blue-100 shadow-md"
 							>
-								<h3 className="mb-3 text-xl font-semibold text-blue-800">
+								<h3 className="mb-3 text-xl font-semibold text-lens">
 									🔹 {tip.title}
 								</h3>
 								<p className="text-gray-700">{tip.description}</p>
@@ -332,7 +332,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 						<span className="absolute -bottom-2 left-1/2 w-20 h-1 bg-blue-500 rounded-full transform -translate-x-1/2"></span>
 					</h2>
 
-					<blockquote className="p-8 rounded-xl border-l-4 border-blue-500 shadow-md bg-gray-1">
+					<blockquote className="p-8 rounded-xl border-l-4 border-lens shadow-md bg-gray-1">
 						<p className="mb-6 text-xl italic text-gray-700">
 							"{content.testimonial.quote}"
 						</p>
@@ -396,7 +396,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 								href={content.cta.buttonLink}
 								variant="white"
 								size="lg"
-								className="px-8 py-3 text-blue-600 shadow-lg"
+								className="px-8 py-3 text-lens shadow-lg"
 							>
 								{content.cta.buttonText}
 							</Button>
@@ -413,7 +413,7 @@ export const BlogTemplate = ({ content }: { content: BlogPost }) => {
 							<span key={`link-${linkIndex}-${link.url}`}>
 								<Link
 									href={link.url}
-									className="text-blue-600 transition-colors hover:underline"
+									className="text-lens transition-colors hover:underline"
 								>
 									{link.text}
 								</Link>

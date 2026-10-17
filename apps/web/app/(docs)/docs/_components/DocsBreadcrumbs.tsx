@@ -19,7 +19,7 @@ export function DocsBreadcrumbs({
 	}
 
 	return (
-		<p className="mb-2.5 text-[13px] font-medium leading-5 text-blue-11">
+		<p className="mb-2.5 text-[13px] font-medium leading-5 text-lens">
 			{group.title}
 		</p>
 	);

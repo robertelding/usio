@@ -98,14 +98,16 @@ export const CollectionShareDialog = ({
 					<div
 						className={clsx(
 							"flex gap-3 justify-between items-center p-3.5 rounded-xl border transition-colors",
-							isPublic ? "border-blue-9 bg-gray-1" : "border-gray-4 bg-gray-1",
+							isPublic ? "border-lens bg-gray-1" : "border-gray-4 bg-gray-1",
 						)}
 					>
 						<div className="flex gap-3 items-center min-w-0">
 							<div
 								className={clsx(
 									"flex justify-center items-center rounded-full transition-colors size-9 shrink-0",
-									isPublic ? "text-blue-9 bg-blue-3" : "text-gray-11 bg-gray-3",
+									isPublic
+										? "text-lens bg-lens-tint"
+										: "text-gray-11 bg-gray-3",
 								)}
 							>
 								<FontAwesomeIcon
@@ -156,7 +158,7 @@ export const CollectionShareDialog = ({
 								>
 									<FontAwesomeIcon
 										icon={copied ? faCheck : faCopy}
-										className={clsx("size-3.5", copied && "text-blue-11")}
+										className={clsx("size-3.5", copied && "text-lens")}
 									/>
 								</button>
 							</div>

@@ -58,7 +58,7 @@ export const BillingToggle = ({
 									"px-1.5 py-0.5 text-[10px] font-semibold leading-none rounded-full transition-colors",
 									isActive
 										? "text-white bg-blue-500"
-										: "text-blue-600 bg-blue-500/10",
+										: "text-lens bg-blue-500/10",
 								)}
 							>
 								{option.badge}

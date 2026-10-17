@@ -188,7 +188,7 @@ export function VoiceRecorderPanel({
 							onClick={() => void stop()}
 							disabled={phase === "processing"}
 							aria-label="Send voice note"
-							className="h-7 rounded-lg bg-blue-9 px-3 text-xs font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+							className="h-7 rounded-lg bg-signal-strong px-3 text-xs font-medium text-on-signal transition-opacity hover:opacity-90 disabled:opacity-40"
 						>
 							Send
 						</button>
@@ -206,7 +206,7 @@ export function VoiceRecorderPanel({
 							type="button"
 							onClick={() => void start()}
 							disabled={phase === "requesting"}
-							className="h-7 rounded-lg bg-blue-9 px-3 text-xs font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+							className="h-7 rounded-lg bg-signal-strong px-3 text-xs font-medium text-on-signal transition-opacity hover:opacity-90 disabled:opacity-40"
 						>
 							{phase === "denied" ? "Try again" : "Start"}
 						</button>

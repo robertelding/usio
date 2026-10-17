@@ -34,8 +34,8 @@ const avatarDefaultPalette = [
 
 // Palette of slightly darker text colors to match each background
 const avatarTextPalette = [
-	"text-blue-600",
-	"text-blue-700",
+	"text-lens",
+	"text-lens",
 	"text-sky-600",
 	"text-sky-700",
 	"text-cyan-600",

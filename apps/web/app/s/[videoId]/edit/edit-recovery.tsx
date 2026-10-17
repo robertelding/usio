@@ -35,7 +35,7 @@ export function EditRecovery({
 					<button
 						type="button"
 						disabled={pending}
-						className="rounded-lg bg-blue-9 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+						className="rounded-lg bg-signal-strong hover:bg-signal-hover px-4 py-2 text-sm font-medium text-on-signal disabled:opacity-50"
 						onClick={() => {
 							setError(undefined);
 							startTransition(async () => {
@@ -56,10 +56,7 @@ export function EditRecovery({
 						{pending ? "Preparing recovery..." : "Restore original"}
 					</button>
 				) : null}
-				<a
-					href={`/s/${videoId}`}
-					className="block text-sm text-blue-11 underline"
-				>
+				<a href={`/s/${videoId}`} className="block text-sm text-lens underline">
 					View recording
 				</a>
 			</div>

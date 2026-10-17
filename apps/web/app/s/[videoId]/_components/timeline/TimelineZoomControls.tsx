@@ -25,7 +25,7 @@ export function TimelineZoomControls() {
 				<button
 					type="button"
 					onClick={resetZoom}
-					className="rounded-md px-2 py-1 text-xs font-medium text-gray-10 transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+					className="rounded-md px-2 py-1 text-xs font-medium text-gray-10 transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 				>
 					Fit
 				</button>
@@ -36,7 +36,7 @@ export function TimelineZoomControls() {
 				type="button"
 				aria-label="Zoom out"
 				onClick={() => zoom(1 / ZOOM_STEP)}
-				className="max-sm:hidden flex size-8 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+				className="max-sm:hidden flex size-8 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 			>
 				<MinusIcon />
 			</button>
@@ -44,7 +44,7 @@ export function TimelineZoomControls() {
 				type="button"
 				aria-label="Zoom in"
 				onClick={() => zoom(ZOOM_STEP)}
-				className="max-sm:hidden flex size-8 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+				className="max-sm:hidden flex size-8 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 			>
 				<PlusIcon />
 			</button>

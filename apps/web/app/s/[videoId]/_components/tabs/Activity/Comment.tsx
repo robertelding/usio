@@ -127,7 +127,7 @@ const CommentComponent: React.FC<{
 									onClick={() => {
 										onSeek?.(Number(comment.timestamp));
 									}}
-									className="text-xs text-blue-500 cursor-pointer hover:text-blue-700"
+									className="text-xs text-lens cursor-pointer hover:text-lens"
 								>
 									{new Date(comment.timestamp * 1000)
 										.toISOString()

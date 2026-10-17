@@ -232,9 +232,9 @@ export const StudentDiscountPage = () => {
 
 					<div className="grid gap-8 md:grid-cols-3">
 						<div className="p-8 bg-gray-1 rounded-2xl border border-gray-4 shadow-sm">
-							<div className="flex items-center justify-center w-14 h-14 bg-blue-50 rounded-full mb-6">
+							<div className="flex items-center justify-center w-14 h-14 bg-lens-tint rounded-full mb-6">
 								<FontAwesomeIcon
-									className="text-blue-500 size-6"
+									className="text-lens size-6"
 									icon={faBookOpen}
 								/>
 							</div>

@@ -191,7 +191,7 @@ export function CameraRecorderPanel({
 						type="button"
 						onClick={() => void startCameraRecording()}
 						disabled={phase !== "ready" || switchingCamera}
-						className="h-7 rounded-lg bg-blue-9 px-3 text-xs font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+						className="h-7 rounded-lg bg-signal-strong px-3 text-xs font-medium text-on-signal transition-opacity hover:opacity-90 disabled:opacity-40"
 					>
 						Start
 					</button>

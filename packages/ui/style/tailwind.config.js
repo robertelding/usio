@@ -11,6 +11,59 @@ module.exports = (__app, _options) => {
 		return scale;
 	}
 
+	const usioLens = {
+		1: "#fbfcff",
+		2: "#f3f5fe",
+		3: "#e3e8fb",
+		4: "#d5ddfa",
+		5: "#c4cff7",
+		6: "#adbdf2",
+		7: "#8fa3ea",
+		8: "#6680de",
+		9: "#2747c9",
+		10: "#213db0",
+		11: "#2747c9",
+		12: "#14245f",
+		50: "#f3f5fe",
+		100: "#e3e8fb",
+		200: "#c4cff7",
+		300: "#8fa3ea",
+		400: "#6680de",
+		500: "#2747c9",
+		600: "#213db0",
+		700: "#213db0",
+		800: "#14245f",
+		900: "#14245f",
+		950: "#14245f",
+	};
+
+	const blue = __app === "web" ? usioLens : getColorScale("blue");
+
+	const usio = (name) => `var(--usio-${name})`;
+
+	const usioFonts = {
+		sans: [
+			"var(--font-usio-body)",
+			"system-ui",
+			"-apple-system",
+			"Segoe UI",
+			"sans-serif",
+		],
+		display: [
+			"var(--font-usio-display)",
+			"Helvetica Neue",
+			"Arial",
+			"sans-serif",
+		],
+		mono: [
+			"var(--font-usio-mono)",
+			"ui-monospace",
+			"Menlo",
+			"Consolas",
+			"monospace",
+		],
+	};
+
 	const config = {
 		content: [
 			`../../apps/*/pages/**/*.{js,ts,jsx,tsx,mdx}`,
@@ -44,6 +97,12 @@ module.exports = (__app, _options) => {
 				typography: {
 					DEFAULT: {
 						css: {
+							...(__app === "web"
+								? {
+										"--tw-prose-links": "var(--usio-lens)",
+										"--tw-prose-invert-links": "var(--usio-lens)",
+									}
+								: {}),
 							strong: {
 								fontWeight: "500",
 							},
@@ -74,7 +133,34 @@ module.exports = (__app, _options) => {
 				colors: {
 					gray: getColorScale("gray"),
 					"gray-a": getColorScale("gray-a", true),
-					blue: getColorScale("blue"),
+					blue,
+					paper: usio("paper"),
+					surface: {
+						DEFAULT: usio("surface"),
+						sunken: usio("surface-sunken"),
+					},
+					line: {
+						DEFAULT: usio("line"),
+						strong: usio("line-strong"),
+					},
+					ink: {
+						DEFAULT: usio("ink"),
+						muted: usio("ink-muted"),
+					},
+					signal: {
+						DEFAULT: usio("signal"),
+						strong: usio("signal-strong"),
+						hover: "var(--primary-2)",
+						tint: usio("signal-tint"),
+					},
+					"on-signal": usio("on-signal"),
+					lens: {
+						DEFAULT: usio("lens"),
+						tint: usio("lens-tint"),
+					},
+					success: usio("success"),
+					warning: usio("warning"),
+					danger: usio("danger"),
 					border: "hsl(var(--border))",
 					input: "hsl(var(--input))",
 					ring: "hsl(var(--ring))",
@@ -155,8 +241,9 @@ module.exports = (__app, _options) => {
 					"gradient-conic":
 						"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 				},
-				fontFamily: {
-					primary: ["var(--font-sf-pro-display)", "sans-serif"],
+				fontFamily: __app === "web" ? usioFonts : {},
+				boxShadow: {
+					raised: usio("shadow-raised"),
 				},
 				keyframes: {
 					flyEmoji: {

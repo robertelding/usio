@@ -80,10 +80,10 @@ function PromoCodeChip() {
 			type="button"
 			onClick={handleCopy}
 			aria-label={`Copy discount code ${MIGRATE_PROMO_CODE}`}
-			className="inline-flex items-center gap-2 px-3 py-1.5 font-mono text-sm font-semibold rounded-lg border border-dashed transition-colors border-blue-300 bg-white/60 text-blue-700 hover:bg-white hover:border-blue-400"
+			className="inline-flex items-center gap-2 px-3 py-1.5 font-mono text-sm font-semibold rounded-lg border border-dashed transition-colors border-blue-300 bg-white/60 text-lens hover:bg-white hover:border-lens"
 		>
 			<span>{MIGRATE_PROMO_CODE}</span>
-			<span className="text-[11px] uppercase tracking-wide text-blue-500">
+			<span className="text-[11px] uppercase tracking-wide text-lens">
 				{copied ? "Copied" : "Tap to copy"}
 			</span>
 		</button>
@@ -104,7 +104,7 @@ function MigrationBanner() {
 				</div>
 				<p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
 					Migrating from Loom? Use{" "}
-					<span className="font-mono font-semibold text-blue-700">
+					<span className="font-mono font-semibold text-lens">
 						{MIGRATE_PROMO_CODE}
 					</span>{" "}
 					at checkout for 20% off usio Pro.
@@ -197,7 +197,7 @@ function MigrationSuccessState({
 						Skip the one-by-one downloads. usio Pro's built-in Loom importer
 						transfers your entire Loom workspace to usio in a single click —
 						titles, transcripts, and all. Use{" "}
-						<span className="font-mono font-semibold text-blue-700">
+						<span className="font-mono font-semibold text-lens">
 							{MIGRATE_PROMO_CODE}
 						</span>{" "}
 						at checkout for 20% off your first year.
@@ -244,7 +244,7 @@ function MigrationSuccessState({
 							className="flex items-start gap-2 text-xs text-gray-700 sm:text-sm"
 						>
 							<svg
-								className="flex-shrink-0 w-4 h-4 mt-0.5 text-blue-600"
+								className="flex-shrink-0 w-4 h-4 mt-0.5 text-lens"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -562,7 +562,7 @@ export function LoomDownloader() {
 				</div>
 				<a
 					href={MIGRATE_CHECKOUT_HREF}
-					className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+					className="inline-flex items-center gap-1 text-xs font-semibold text-lens hover:text-lens hover:underline"
 				>
 					Import Loom videos with usio Pro
 					<svg

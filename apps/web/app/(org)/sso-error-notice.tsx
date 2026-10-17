@@ -7,7 +7,7 @@ export function SsoErrorNotice({
 		return (
 			<div
 				role="alert"
-				className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900"
+				className="rounded-xl border border-blue-200 bg-lens-tint p-4 text-sm text-lens"
 			>
 				<h2 className="mb-2 font-semibold">
 					Interested in Cap? We're open source.

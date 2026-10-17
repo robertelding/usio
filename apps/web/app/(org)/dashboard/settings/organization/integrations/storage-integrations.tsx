@@ -68,7 +68,7 @@ function StatusBadge({
 
 	if (configured) {
 		return (
-			<span className="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-500/10 text-blue-600">
+			<span className="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-500/10 text-lens">
 				<span className="size-1.5 rounded-full bg-blue-500" />
 				Connected
 			</span>
