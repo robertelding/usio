@@ -4,61 +4,68 @@ Everything below is ready to paste into the Chrome Web Store Developer Dashboard
 
 ## Store Fields
 
-Name: Cap - Screen Recorder & Screen Capture
+Name: usio - Screen Recorder & Video Messages
 
-Short name: Cap
+Short name: usio
 
-Summary (132 char max, mirrors manifest description): Free, open source screen recorder. Capture your screen, tab, camera & mic in Chrome and share a video link the moment you stop.
+Summary (132 char max, mirrors manifest description): Record your screen, tab, camera and mic in Chrome, then share a video link the moment you stop.
 
 Category: Productivity → Communication
 
 Language: English
 
-Website: https://cap.so
+Website: https://usio.co.uk
 
-Support: https://cap.so/docs
+Support: https://usio.co.uk/support
 
-Privacy policy: https://cap.so/privacy
+Privacy policy: https://usio.co.uk/privacy
 
 ## Detailed Description (paste as plain text)
 
-Cap is the open source screen recorder for Chrome. Record your screen, a window, the current browser tab, or camera-only video. Your recording uploads while you record, so a shareable link is ready the moment you stop. No exports, no waiting, no switching tools.
+usio is a screen recorder for Chrome. Record. Stop. Share.
 
-WHY PEOPLE SWITCH TO CAP
+Record a tab, a window, your full screen, or just your camera. Your video uploads while you record, so the link is ready the moment you stop. No exports, no waiting.
 
-Cap is a Loom alternative built on a simple idea: your recordings belong to you. Cap is fully open source, lets you connect your own storage, and gives you a fast, lightweight recorder that stays out of your way.
+usio is a simple Loom alternative for quick video messages: show what you mean, send a link, and skip the meeting.
 
-• Truly open source: inspect every line of code, contribute, or self-host the entire stack.
-• Own your recordings: use Cap Cloud or connect your own S3 bucket. No vendor lock-in, ever.
-• Instant share links: video uploads as you record, so the link is live the second you stop.
-• Cap AI: auto-generated titles, summaries, clickable chapters, and searchable transcripts for every recording.
-• Built for teams: comments, reactions, viewer analytics, password-protected shares, custom domains, and team workspaces.
-• Switching from Loom? Import your existing Loom videos directly into Cap with the built-in importer.
+What you can record
 
-WHAT YOU CAN RECORD
+• The current tab, for web app demos and bug reports.
+• Your full screen or a single window.
+• Your camera on its own, for quick updates.
+• Your mic, system audio (where Chrome supports it), and your camera in a bubble over your screen.
 
-• Current browser tab: perfect for web app demos and bug reports.
-• Full screen or a single window.
-• Camera-only video for quick personal updates.
-• Microphone audio, system audio (where Chrome supports it), and a webcam overlay for walkthroughs.
+While you record
 
-MADE FOR EVERYDAY VIDEO
+• Pause and pick up where you left off.
+• Draw on the page to point things out.
+• Blur anything you don't want people to see.
 
-Screen recording for async standups, code reviews, bug reports, product demos, customer support, onboarding, tutorials, design feedback, and sales outreach. Record once, share a link, and skip the meeting.
+After you stop
 
-HOW IT WORKS
+• One link to share. People watch in their browser.
+• Viewers can comment and react.
+• Add a password to any link.
+• Transcripts, plus AI titles, summaries and chapters.
+• A shared library for your team, with folders and spaces.
+• Keep videos in your own S3-compatible storage.
+• Moving from Loom? Import your old videos from their share links.
 
-1. Click the Cap icon and pick tab, screen, window, or camera.
-2. Choose your microphone and camera, then hit record.
-3. Stop recording. Your video is already uploaded to your Cap workspace and the share link is ready.
+Made for everyday video
 
-CAP EVERYWHERE
+Async standups, code reviews, bug reports, product demos, customer support, onboarding, tutorials and design feedback. Record once, share a link.
 
-The extension is part of the Cap platform: native desktop apps for macOS and Windows, a web recorder, and a shared library at cap.so. Recordings stay connected to your Cap account wherever you capture them.
+How it works
 
-Cap is free to get started. Upgrade to Cap Pro for unlimited recording length, Cap AI, custom domains, custom S3 storage, and team features.
+1. Click the usio icon and pick tab, window, full screen or camera.
+2. Choose your mic and camera, then hit record.
+3. Stop. Your video is already in your usio library and the link is ready to share.
 
-Open source on GitHub: https://github.com/CapSoftware/Cap
+Also on the web
+
+You can record from usio.co.uk in any browser too. Everything lands in the same library.
+
+usio is open source under AGPLv3: https://github.com/robertelding/usio
 
 ## SEO Positioning
 
@@ -69,34 +76,38 @@ Primary keywords (use naturally in the description, never stuffed):
 - record browser tab
 - screen recorder with camera and microphone
 - webcam recorder
-- video messaging / async video
-- Loom alternative (used exactly once in the detailed description; never in the name, summary, or screenshot text)
+- video messages / async video
+- Loom alternative (used exactly once in the detailed description; never in the name, summary or screenshot text)
 
-Name strategy: "Cap - Screen Recorder & Screen Capture" leads with the brand and covers the two highest-volume queries, matching how the top competitor titles its listing without keyword spam.
+Name strategy: "usio - Screen Recorder & Video Messages" leads with the brand, then covers the highest-volume query and what usio is for. It matches the manifest name.
 
-Summary strategy: front-loads "free, open source screen recorder" (differentiator + keyword), lists capture surfaces, and ends on the instant-share-link benefit.
+Summary strategy: lists the capture surfaces, then ends on the instant link. It matches the manifest description word for word.
 
 Review-safety notes:
 
 - Keep every claim true for the submitted build (system audio is "where Chrome supports it").
-- Do not mention competitor names in metadata fields other than the single description mention.
-- Do not claim "unlimited free": free tier has limits; Pro removes them.
+- Name competitors only in the detailed description: "Loom alternative" once, and Loom once more for the importer.
+- Don't mention prices, plan names, free tiers or limits until usio pricing is set.
+- Don't claim certifications or compliance (SOC 2, HIPAA, GDPR, audits). usio has none.
+- Don't mention desktop or mobile apps. usio has neither yet.
 
 ## Icons
 
-`public/icons/` is generated from the brand mark `apps/web/public/logos/logo-solo.svg`:
+`public/icons/` is generated from the usio mark `apps/web/public/usio-icon.svg`, the same mark the web app uses as its favicon:
 
 - icon-16/32/48: full-bleed, used for toolbar and favicon contexts.
-- icon-128: 96x96 artwork centered with 16px transparent padding, per Chrome Web Store icon guidelines (this is the store listing icon).
+- icon-128: 96x96 artwork centred with 16px transparent padding, per Chrome Web Store icon guidelines (this is the store listing icon).
 - icon-256: same padded treatment at 2x.
+
+The committed icon-128 and icon-256 are full-bleed. Regenerate them before you submit.
 
 Regenerate with rsvg-convert:
 
 ```sh
 cd apps/chrome-extension/public/icons
-for s in 16 32 48; do rsvg-convert -w $s -h $s ../../../web/public/logos/logo-solo.svg -o icon-$s.png; done
-rsvg-convert -w 96 -h 96 --page-width 128 --page-height 128 --top 16 --left 16 ../../../web/public/logos/logo-solo.svg -o icon-128.png
-rsvg-convert -w 192 -h 192 --page-width 256 --page-height 256 --top 32 --left 32 ../../../web/public/logos/logo-solo.svg -o icon-256.png
+for s in 16 32 48; do rsvg-convert -w $s -h $s ../../../web/public/usio-icon.svg -o icon-$s.png; done
+rsvg-convert -w 96 -h 96 --page-width 128 --page-height 128 --top 16 --left 16 ../../../web/public/usio-icon.svg -o icon-128.png
+rsvg-convert -w 192 -h 192 --page-width 256 --page-height 256 --top 32 --left 32 ../../../web/public/usio-icon.svg -o icon-256.png
 ```
 
 ## Promotional Images
@@ -150,13 +161,21 @@ python3 -c 'import sys; from PIL import Image; [Image.open(f"{sys.argv[1]}/{n}.p
 
 ## Screenshot Plan
 
-Use 1280x800 PNG screenshots, full bleed, square corners, no padding. Capture against a real page, not a blank tab.
+Use 1280x800 PNG screenshots, full bleed, square corners, no padding. Capture the rebranded extension against a real page, not a blank tab. Headlines follow the usio voice: short, sentence case, "usio" in lowercase.
 
-1. In-page recorder panel open with the recording mode selector (tab / screen / camera) visible.
+1. Recorder panel open with the recording mode selector (tab / window / full screen / camera) visible.
 2. Recording setup showing microphone and camera selectors plus the system audio toggle.
-3. Recording in progress with the floating recording bar and webcam overlay on a real page.
+3. Recording in progress with the recording bar and camera bubble on a real page.
 4. Upload/completion state with the share-link handoff.
-5. The Cap share page (player, transcript/chapters) after a recording is available.
+5. The usio share page at usio.co.uk/s/… (player, comments, summary, chapters) after a recording is available.
+
+All five files in `store-assets/` still show Cap UI and need re-capturing:
+
+- screenshot-1-record.png: "Cap" panel header, Cap's blue ring mark in the toolbar and panel, blue "Start recording" button.
+- screenshot-2-modes.png: "Cap" panel header and blue ring mark, blue mode selector.
+- screenshot-3-devices.png: "Cap" panel header and blue ring mark, blue camera bubble and "Start recording" button.
+- screenshot-4-upload.png: Cap's blue ring mark in the toolbar and recording bar.
+- screenshot-5-share.png: cap.so URLs in the address bar and "Link copied" toast, "— Cap" tab title, Cap logo on the player, and the headline copy "Send a Cap the moment you finish. Open source, owned by you."
 
 ## Review Notes: Permission Justifications
 
@@ -164,7 +183,7 @@ Use 1280x800 PNG screenshots, full bleed, square corners, no padding. Capture ag
 - tabCapture: record the current browser tab when the user selects tab recording.
 - offscreen: run capture, encoding, and upload outside the recorder panel so recordings survive closing it.
 - storage: remember account session, selected devices, and recording preferences.
-- identity: sign the user in to their Cap account.
+- identity: sign the user in to their usio account.
 - host permissions: inject the recording overlay and camera preview on pages the user chooses to record.
 
-Submission checklist: icon present (128px padded), summary under 132 chars, at least one 1280x800 screenshot, small promo tile uploaded, privacy policy URL set, permission justifications filled in.
+Submission checklist: icon present (128px padded), summary under 132 chars, at least one 1280x800 screenshot of the usio UI, small promo tile uploaded, privacy policy URL set and the page describes usio, permission justifications filled in.
