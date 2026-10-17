@@ -96,6 +96,32 @@ function createServerEnv() {
 
 			/// AI providers
 			ASSEMBLY_API_KEY: z.string().optional().describe("Audio transcription"),
+			TRANSCRIPTION_PROVIDER: z
+				.union([z.literal("assemblyai"), z.literal("whisper")])
+				.optional()
+				.describe(
+					"Speech-to-text provider. When unset: AssemblyAI if ASSEMBLY_API_KEY is set, otherwise a Whisper-compatible API from WHISPER_BASE_URL, GROQ_API_KEY or OPENAI_API_KEY",
+				),
+			WHISPER_BASE_URL: z
+				.string()
+				.optional()
+				.describe(
+					"OpenAI-compatible base URL serving /audio/transcriptions, eg. a local faster-whisper server at http://localhost:8001/v1",
+				),
+			WHISPER_API_KEY: z
+				.string()
+				.optional()
+				.describe("API key for WHISPER_BASE_URL, if it needs one"),
+			WHISPER_PROMPT: z
+				.string()
+				.optional()
+				.describe(
+					"Vocabulary hint sent to Whisper, eg. product and team names it should spell correctly",
+				),
+			WHISPER_MODEL: z
+				.string()
+				.optional()
+				.describe("Whisper model name; defaults per provider"),
 			ANTHROPIC_API_KEY: z.string().optional().describe("AI chat"),
 			OPENAI_API_KEY: z.string().optional().describe("AI summaries"),
 			GROQ_API_KEY: z.string().optional().describe("AI summaries"),

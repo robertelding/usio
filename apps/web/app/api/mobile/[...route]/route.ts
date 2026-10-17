@@ -169,7 +169,7 @@ const sendMobileEmailCode = async (email: string, code: string) => {
 
 	await sendEmail({
 		email,
-		subject: "Your Cap Verification Code",
+		subject: "Your usio verification code",
 		react: OTPEmail({ code, email }),
 	});
 };

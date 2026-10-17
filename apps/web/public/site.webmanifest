@@ -1,6 +1,6 @@
 {
-	"name": "",
-	"short_name": "",
+	"name": "usio",
+	"short_name": "usio",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#ffffff",
+	"theme_color": "#F2542D",
 	"background_color": "#ffffff",
 	"display": "standalone"
 }

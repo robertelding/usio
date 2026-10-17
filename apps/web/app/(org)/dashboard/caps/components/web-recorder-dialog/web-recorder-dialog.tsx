@@ -56,8 +56,12 @@ const waitForNextFrame = () =>
 		window.requestAnimationFrame(() => resolve());
 	});
 
-export const WebRecorderDialog = () => {
-	const [open, setOpen] = useState(false);
+export const WebRecorderDialog = ({
+	defaultOpen = false,
+}: {
+	defaultOpen?: boolean;
+}) => {
+	const [open, setOpen] = useState(defaultOpen);
 	const [settingsOpen, setSettingsOpen] = useState(false);
 	const [howItWorksOpen, setHowItWorksOpen] = useState(false);
 	const [recordingMode, setRecordingMode] =
@@ -214,7 +218,7 @@ export const WebRecorderDialog = () => {
 	const handleOpenChange = (next: boolean) => {
 		if (next && supportCheckCompleted && !isBrowserSupported) {
 			toast.error(
-				"This browser isn't compatible with Cap's web recorder. We recommend Google Chrome or other Chromium-based browsers.",
+				"This browser isn't compatible with usio's web recorder. We recommend Google Chrome or other Chromium-based browsers.",
 			);
 			return;
 		}

@@ -4904,7 +4904,7 @@ const AgentManagementHandlersLive = HttpApiBuilder.group(
 									try: async () => {
 										const delivery = await sendEmail({
 											email,
-											subject: `Invitation to join ${organization.name} on Cap`,
+											subject: `Invitation to join ${organization.name} on usio`,
 											react: OrganizationInvite({
 												email,
 												url: invitation.inviteUrl,
@@ -6575,7 +6575,7 @@ const AgentManagementHandlersLive = HttpApiBuilder.group(
 							videoId,
 						);
 						const fileTitle = payload.fileName.replace(/\.[^/.]+$/, "").trim();
-						const title = payload.title?.trim() || fileTitle || "Cap Upload";
+						const title = payload.title?.trim() || fileTitle || "usio Upload";
 						if (title.length > 255) {
 							return yield* badRequest(requestId, "Upload title is too long");
 						}

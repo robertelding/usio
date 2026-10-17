@@ -81,7 +81,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 
 	const manageNavigation = [
 		{
-			name: "My Caps",
+			name: "My Videos",
 			href: `/dashboard/caps`,
 			extraText: userCapsCount,
 			icon: <CapIcon />,
@@ -95,7 +95,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 			subNav: [],
 		},
 		{
-			name: "Record a Cap",
+			name: "Record a video",
 			href: `/dashboard/caps/record`,
 			icon: <RecordIcon />,
 			subNav: [],
@@ -449,7 +449,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 							</div>
 						)}
 						<p className="mt-2 text-xs text-center truncate text-gray-10">
-							Cap Software, Inc. {new Date().getFullYear()}.
+							usio {new Date().getFullYear()}.
 						</p>
 					</div>
 				</nav>

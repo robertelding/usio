@@ -1,10 +1,13 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { Fragment, useMemo } from "react";
+
+const FINAL_STEP_NAME = BRAND.desktopAppAvailable ? "Download" : "Record";
 
 export default function Stepper({
 	completedSteps,
@@ -24,7 +27,7 @@ export default function Stepper({
 			return "Organization Setup";
 		if (currentPath === "/onboarding/custom-domain") return "Custom Domain";
 		if (currentPath === "/onboarding/invite-team") return "Invite your team";
-		if (currentPath === "/onboarding/download") return "Download";
+		if (currentPath === "/onboarding/download") return FINAL_STEP_NAME;
 	}, [currentPath]);
 
 	const steps = [
@@ -50,7 +53,7 @@ export default function Stepper({
 		},
 		{
 			id: "5",
-			name: "Download",
+			name: FINAL_STEP_NAME,
 			completed: completedSteps.download || false,
 		},
 	];

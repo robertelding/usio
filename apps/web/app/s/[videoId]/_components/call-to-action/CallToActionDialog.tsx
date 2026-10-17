@@ -1,5 +1,6 @@
 "use client";
 
+import { buildEnv } from "@cap/env";
 import { Dialog, DialogContent, DialogTitle, Switch } from "@cap/ui";
 import type { Video } from "@cap/web-domain";
 import clsx from "clsx";
@@ -144,7 +145,7 @@ export function CallToActionDialog({
 
 	const previewCta: ShareCallToAction = {
 		label: form.label.trim() || PREVIEW_PLACEHOLDER_LABEL,
-		url: normalizeCallToActionUrl(form.url) ?? "https://cap.so",
+		url: normalizeCallToActionUrl(form.url) ?? buildEnv.NEXT_PUBLIC_WEB_URL,
 		headline: form.headline.trim() || null,
 		color: normalizeHexColor(form.color) ?? DEFAULT_CTA_COLOR,
 		showWhilePlaying: form.showWhilePlaying,
