@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { Check } from "lucide-react";
 import Link from "next/link";
@@ -25,7 +26,9 @@ const { commercial, pro, subtitle, lovedBy } = homepageCopy.pricing;
 const BLURB = {
 	commercial:
 		"A commercial licence for the usio desktop app, with unlimited local recording and editing.",
-	pro: "Everything in Desktop plus unlimited cloud features for sharing and collaboration.",
+	pro: BRAND.desktopAppAvailable
+		? "Everything in Desktop plus unlimited cloud features for sharing and collaboration."
+		: "Unlimited recording and sharing, with AI summaries, custom domains, analytics and team workspaces.",
 };
 
 type Billing = "annual" | "monthly";
@@ -169,26 +172,35 @@ export const Pricing = () => {
 				</div>
 
 				<div
-					className="mt-14 grid gap-3 rounded-[20px] p-3 lg:grid-cols-2 lg:gap-4 lg:p-4"
+					className={classNames(
+						"mt-14 grid gap-3 rounded-[20px] p-3 lg:gap-4 lg:p-4",
+						BRAND.desktopAppAvailable
+							? "lg:grid-cols-2"
+							: "mx-auto max-w-[560px]",
+					)}
 					style={grainBg(BAND)}
 				>
-					<PlanCard
-						name={commercial.title}
-						blurb={BLURB.commercial}
-						price={money(
-							annual ? commercial.pricing.yearly : commercial.pricing.lifetime,
-						)}
-						cadence={annual ? "per year" : "one time"}
-						note={
-							annual
-								? `Or ${money(commercial.pricing.lifetime)} once, for a licence that never renews.`
-								: `Or ${money(commercial.pricing.yearly)} a year if you would rather pay as you go.`
-						}
-						features={commercial.features}
-						cta={commercial.cta}
-						href="/pricing"
-						theme={MODE_THEME.screenshot}
-					/>
+					{BRAND.desktopAppAvailable && (
+						<PlanCard
+							name={commercial.title}
+							blurb={BLURB.commercial}
+							price={money(
+								annual
+									? commercial.pricing.yearly
+									: commercial.pricing.lifetime,
+							)}
+							cadence={annual ? "per year" : "one time"}
+							note={
+								annual
+									? `Or ${money(commercial.pricing.lifetime)} once, for a licence that never renews.`
+									: `Or ${money(commercial.pricing.yearly)} a year if you would rather pay as you go.`
+							}
+							features={commercial.features}
+							cta={commercial.cta}
+							href="/pricing"
+							theme={MODE_THEME.screenshot}
+						/>
+					)}
 					<PlanCard
 						name={pro.title}
 						badge={pro.badge}
@@ -200,7 +212,13 @@ export const Pricing = () => {
 								? "Billed annually. Save 32% against monthly."
 								: `Billed monthly. Switch to annual for ${money(pro.pricing.annual)} a month.`
 						}
-						features={pro.features}
+						features={
+							BRAND.desktopAppAvailable
+								? pro.features
+								: pro.features.filter(
+										(feature) => feature !== "Everything in Desktop License",
+									)
+						}
 						cta={pro.cta}
 						href="/pricing"
 						onClick={() =>

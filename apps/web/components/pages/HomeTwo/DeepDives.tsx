@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import {
 	BookOpen,
 	Captions,
@@ -34,8 +35,12 @@ const INSTANT: DiveConfig = {
 			body: "Instant Mode streams to the cloud as you go, so the video is ready the moment you press stop.",
 		},
 		{
-			title: "The link is on your clipboard",
-			body: "Press stop and it is already copied, ready to paste into Slack, a ticket, or an email.",
+			title: BRAND.desktopAppAvailable
+				? "The link is on your clipboard"
+				: "Your video opens when you stop",
+			body: BRAND.desktopAppAvailable
+				? "Press stop and it is already copied, ready to paste into Slack, a ticket, or an email."
+				: "Press stop and your video page opens, with the link ready to paste into Slack, a ticket, or an email.",
 		},
 		{
 			title: "Share publicly or privately",
@@ -210,9 +215,13 @@ const UNDERSTAND: DiveConfig = {
 export const DeepDives = () => (
 	<>
 		<DeepDive config={INSTANT} />
-		<DeepDive config={STUDIO} />
-		<StudioFeatures />
-		<DeepDive config={SCREENSHOT} />
+		{BRAND.desktopAppAvailable && (
+			<>
+				<DeepDive config={STUDIO} />
+				<StudioFeatures />
+				<DeepDive config={SCREENSHOT} />
+			</>
+		)}
 		<DeepDive config={UNDERSTAND} />
 	</>
 );

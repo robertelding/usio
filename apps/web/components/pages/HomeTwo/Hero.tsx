@@ -151,9 +151,9 @@ export const Hero = () => {
 				<p
 					className={`${BODY_TEXT} mt-8 max-w-[660px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[19px] md:mt-10`}
 				>
-					One open source app for every way you capture your screen. Start free
-					and move to usio Pro when you need more, whether you work alone, with
-					a small team, or across an entire organization.
+					{BRAND.desktopAppAvailable
+						? "One open source app for every way you capture your screen. Start free and move to usio Pro when you need more, whether you work alone, with a small team, or across an entire organization."
+						: "Record your screen and camera right in your browser, with nothing to install. Stop, and your link is ready to share, with comments, a transcript and an AI summary built in."}
 				</p>
 
 				<div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
@@ -269,7 +269,7 @@ export const Hero = () => {
 						</span>
 					</div>
 				)}
-				<PhoneStage />
+				{BRAND.desktopAppAvailable && <PhoneStage />}
 			</div>
 		</section>
 	);
