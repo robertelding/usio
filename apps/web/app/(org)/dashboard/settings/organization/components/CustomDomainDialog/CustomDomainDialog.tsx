@@ -6,6 +6,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { Organisation } from "@cap/web-domain";
 import { faGlobe, faRefresh } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -306,7 +307,11 @@ const CustomDomainDialog = ({
 		const cleanDomain = (input: string) => {
 			if (!input) return "";
 
-			if (input === "cap.so" || input === "cap.link") {
+			if (
+				input === "cap.so" ||
+				input === "cap.link" ||
+				input === BRAND.domain
+			) {
 				return "";
 			}
 
@@ -374,7 +379,7 @@ const CustomDomainDialog = ({
 				>
 					<DialogHeader
 						icon={<FontAwesomeIcon icon={faGlobe} />}
-						description="Let's get you setup with your custom domain for your caps."
+						description="Let's get you setup with your custom domain for your videos."
 					>
 						<DialogTitle className="text-lg text-gray-12">
 							Custom Domain

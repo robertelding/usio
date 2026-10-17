@@ -1,4 +1,5 @@
 import { buildEnv, serverEnv } from "@cap/env";
+import { BRAND } from "@cap/utils";
 import type { JSXElementConstructor, ReactElement } from "react";
 import { Resend } from "resend";
 
@@ -36,7 +37,8 @@ export const sendEmail = async ({
 }) => {
 	const r = resend();
 	if (!r) {
-		return Promise.resolve();
+		await captureDevEmail({ email, subject, react });
+		return;
 	}
 
 	if (marketing && !buildEnv.NEXT_PUBLIC_IS_CAP) return;
@@ -46,7 +48,8 @@ export const sendEmail = async ({
 	else if (marketing) from = "Richie from Cap <richie@send.cap.so>";
 	else if (buildEnv.NEXT_PUBLIC_IS_CAP)
 		from = "Cap Auth <no-reply@auth.cap.so>";
-	else from = `auth@${serverEnv().RESEND_FROM_DOMAIN}`;
+	else
+		from = `${BRAND.emailFromName} <no-reply@${serverEnv().RESEND_FROM_DOMAIN ?? BRAND.domain}>`;
 
 	return r.emails.send(
 		{
@@ -62,3 +65,40 @@ export const sendEmail = async ({
 		idempotencyKey ? { idempotencyKey } : undefined,
 	);
 };
+
+async function captureDevEmail({
+	email,
+	subject,
+	react,
+}: {
+	email: string;
+	subject: string;
+	react: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
+}) {
+	if (process.env.NODE_ENV === "production") return;
+	try {
+		const [{ render }, fs, os, path] = await Promise.all([
+			import("@react-email/render"),
+			import("node:fs/promises"),
+			import("node:os"),
+			import("node:path"),
+		]);
+		const dir = path.join(os.tmpdir(), "usio-dev-emails");
+		await fs.mkdir(dir, { recursive: true });
+		const slug = subject
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, "-")
+			.replace(/^-|-$/g, "")
+			.slice(0, 60);
+		const file = path.join(
+			dir,
+			`${new Date().toISOString().replace(/[:.]/g, "-")}-${slug}.html`,
+		);
+		await fs.writeFile(file, await render(react));
+		console.log(
+			`[email] RESEND_API_KEY not set. Captured "${subject}" for ${email} at ${file}`,
+		);
+	} catch (error) {
+		console.warn("[email] Could not capture development email", error);
+	}
+}

@@ -187,7 +187,7 @@ export const Settings = () => {
 						<div className="space-y-1">
 							<CardTitle>Profile image</CardTitle>
 							<CardDescription>
-								This image appears in your profile, comments, and shared caps.
+								This image appears in your profile, comments, and shared videos.
 							</CardDescription>
 						</div>
 						<ProfileImage
