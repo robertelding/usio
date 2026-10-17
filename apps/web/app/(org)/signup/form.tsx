@@ -415,7 +415,7 @@ export function SignupForm() {
 							Already have an account?{" "}
 							<Link
 								href="/login"
-								className="text-xs font-semibold text-blue-9 hover:text-blue-8"
+								className="text-xs font-semibold text-lens hover:text-blue-8"
 							>
 								Log in here
 							</Link>
@@ -429,7 +429,7 @@ export function SignupForm() {
 							<Link
 								href="/terms"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Terms of Service
 							</Link>{" "}
@@ -437,7 +437,7 @@ export function SignupForm() {
 							<Link
 								href="/privacy"
 								target="_blank"
-								className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+								className="text-xs font-semibold text-gray-12 hover:text-lens"
 							>
 								Privacy Policy
 							</Link>
@@ -495,7 +495,7 @@ const SignupWithSSO = ({
 			<div>
 				<Button
 					type="submit"
-					variant="dark"
+					variant="primary"
 					className="w-full max-w-full"
 					disabled={loading}
 					spinner={loading}
@@ -545,7 +545,7 @@ const NormalSignup = ({
 					}}
 				/>
 				<MotionButton
-					variant="dark"
+					variant="primary"
 					type="submit"
 					disabled={loading || emailSent}
 					spinner={loading}

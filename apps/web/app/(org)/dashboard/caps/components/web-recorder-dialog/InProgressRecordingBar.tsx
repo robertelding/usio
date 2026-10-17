@@ -286,7 +286,7 @@ export const InProgressRecordingBar = ({
 								<a
 									href={errorDownload.url}
 									download={errorDownload.fileName}
-									className="text-[0.85rem] font-medium text-blue-11 underline underline-offset-2 hover:text-blue-12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-9"
+									className="text-[0.85rem] font-medium text-lens underline underline-offset-2 hover:text-lens focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lens"
 								>
 									Download here.
 								</a>
@@ -300,7 +300,7 @@ export const InProgressRecordingBar = ({
 							<button
 								type="button"
 								onClick={() => void onRetryUpload()}
-								className="rounded-md bg-blue-9 px-3 py-2 text-sm font-medium text-white"
+								className="rounded-[10px] bg-signal-strong px-3 py-2 text-sm font-medium text-on-signal hover:bg-signal-hover"
 							>
 								Retry upload
 							</button>
@@ -319,7 +319,7 @@ export const InProgressRecordingBar = ({
 								href={shareUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-sm text-blue-11 underline"
+								className="text-sm text-lens underline"
 							>
 								Open video
 							</a>
@@ -332,10 +332,17 @@ export const InProgressRecordingBar = ({
 							data-no-drag
 							onClick={handleStop}
 							disabled={!canStop}
-							className="py-[0.25rem] px-[0.5rem] text-red-300 gap-[0.35rem] flex flex-row items-center rounded-lg transition-opacity disabled:opacity-60"
+							className="py-[0.25rem] px-[0.5rem] text-signal-strong gap-[0.35rem] flex flex-row items-center rounded-lg transition-opacity disabled:opacity-60"
 						>
 							<StopCircle className="size-5" />
-							<span className="font-[500] text-[0.875rem] tabular-nums">
+							<span
+								aria-hidden="true"
+								className={clsx(
+									"size-2 rounded-full bg-signal",
+									!isPaused && "usio-record-dot-live",
+								)}
+							/>
+							<span className="font-mono font-[500] text-[0.8125rem] tabular-nums text-ink">
 								{statusText}
 							</span>
 						</button>
@@ -347,7 +354,7 @@ export const InProgressRecordingBar = ({
 									href={shareUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="text-sm text-blue-11 underline"
+									className="text-sm text-lens underline"
 								>
 									Open video
 								</a>
@@ -418,7 +425,7 @@ const ActionButton = ({ className, ...props }: ComponentProps<"button">) => (
 			"p-[0.25rem] rounded-lg transition-all",
 			"text-gray-11",
 			"h-8 w-8 flex items-center justify-center",
-			"hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-9",
+			"hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lens",
 			"disabled:opacity-50 disabled:cursor-not-allowed",
 			className,
 		)}
@@ -465,7 +472,7 @@ const InlineChunkProgress = ({
 		? "text-red-9"
 		: completedCount === chunkUploads.length
 			? "text-green-9"
-			: "text-blue-9";
+			: "text-lens";
 
 	const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 	const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -491,7 +498,7 @@ const InlineChunkProgress = ({
 	useEffect(() => () => clearHoverTimeout(), [clearHoverTimeout]);
 
 	const statusSummary = [
-		{ label: "Uploading", count: uploadingCount, color: "text-blue-11" },
+		{ label: "Uploading", count: uploadingCount, color: "text-lens" },
 		{ label: "Pending", count: queuedCount, color: "text-amber-11" },
 		{ label: "Completed", count: completedCount, color: "text-green-11" },
 		{
@@ -509,7 +516,7 @@ const InlineChunkProgress = ({
 	};
 
 	const statusAccent: Record<ChunkUploadState["status"], string> = {
-		uploading: "text-blue-11",
+		uploading: "text-lens",
 		queued: "text-amber-11",
 		complete: "text-green-11",
 		error: "text-red-11",
@@ -537,7 +544,7 @@ const InlineChunkProgress = ({
 				<button
 					type="button"
 					data-no-drag
-					className="inline-flex items-center gap-2 rounded-lg px-1.5 py-1 text-[12px] text-gray-12 transition-colors hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-9"
+					className="inline-flex items-center gap-2 rounded-lg px-1.5 py-1 text-[12px] text-gray-12 transition-colors hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lens"
 					aria-label="Show upload segments"
 					aria-expanded={isPopoverOpen}
 				>

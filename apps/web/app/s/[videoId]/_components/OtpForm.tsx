@@ -168,7 +168,7 @@ const OtpForm = ({
 								.replace(/\D/g, "");
 							handleOTPChange(0, pastedData);
 						}}
-						className="flex-1 h-[52px] text-lg font-semibold text-center rounded-lg border transition-all bg-gray-1 border-gray-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+						className="flex-1 h-[52px] text-lg font-semibold text-center rounded-lg border transition-all bg-gray-1 border-gray-5 focus:outline-none focus:ring-2 focus:ring-lens focus:border-transparent"
 						disabled={isVerifying}
 					/>
 				))}

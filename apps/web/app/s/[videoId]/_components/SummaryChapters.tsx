@@ -60,7 +60,7 @@ const SummaryChapters = ({
 							<button
 								type="button"
 								key={chapter.start}
-								className="flex items-center w-full p-2 text-left rounded transition-colors hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+								className="flex items-center w-full p-2 text-left rounded transition-colors hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 								onClick={() => handleSeek(chapter.start)}
 							>
 								<span className="w-16 text-xs text-gray-500">

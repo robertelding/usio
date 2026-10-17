@@ -3255,11 +3255,7 @@ function MediaPlayerEnhancedAudio(props: MediaPlayerEnhancedAudioProps) {
 				{...enhancedAudioProps}
 				variant="ghost"
 				size="icon"
-				className={cn(
-					"size-8",
-					enhancedAudioEnabled && "text-blue-500",
-					className,
-				)}
+				className={cn("size-8", enhancedAudioEnabled && "text-lens", className)}
 				onClick={onEnhancedAudioToggle}
 			>
 				{children ??

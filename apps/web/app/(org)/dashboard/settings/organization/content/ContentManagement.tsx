@@ -62,7 +62,7 @@ function operationStatusClass(
 ) {
 	if (state === "succeeded") return "bg-green-3 text-green-11";
 	if (state === "failed") return "bg-red-3 text-red-11";
-	return "bg-blue-3 text-blue-11";
+	return "bg-lens-tint text-lens";
 }
 
 function PreviewSummary({ preview }: { preview: ContentTransferPreview }) {
@@ -294,7 +294,7 @@ export function ContentManagement({
 											className={clsx(
 												"flex gap-3 items-center px-3 w-full h-11 text-left transition-colors",
 												sourceFolderId === folder.id
-													? "bg-blue-3"
+													? "bg-lens-tint"
 													: "hover:bg-gray-3",
 											)}
 										>
@@ -354,7 +354,7 @@ export function ContentManagement({
 											className={clsx(
 												"flex gap-3 items-center px-3 w-full h-12 text-left transition-colors",
 												targetUserId === member.id
-													? "bg-blue-3"
+													? "bg-lens-tint"
 													: "hover:bg-gray-3",
 											)}
 										>
@@ -403,7 +403,7 @@ export function ContentManagement({
 						) : preview ? (
 							<div className="flex flex-col gap-4">
 								<div className="flex gap-3 items-start">
-									<ShieldCheck className="mt-0.5 shrink-0 size-5 text-blue-10" />
+									<ShieldCheck className="mt-0.5 shrink-0 size-5 text-lens" />
 									<div className="min-w-0">
 										<p className="text-sm font-medium text-gray-12">
 											{preview.sourceFolderPath} to {preview.target.email}

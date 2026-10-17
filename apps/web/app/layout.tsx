@@ -3,44 +3,26 @@ import { buildEnv } from "@cap/env";
 import { BRAND } from "@cap/utils";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Figtree, JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
 import Script from "next/script";
 import type { PropsWithChildren } from "react";
 
-const defaultFont = localFont({
-	src: [
-		{
-			path: "../public/fonts/NeueMontreal-Bold.woff2",
-			weight: "700",
-			style: "normal",
-		},
-		{
-			path: "../public/fonts/NeueMontreal-Regular.woff2",
-			weight: "400",
-			style: "normal",
-		},
-		{
-			path: "../public/fonts/NeueMontreal-Medium.woff2",
-			weight: "500",
-			style: "normal",
-		},
-		{
-			path: "../public/fonts/NeueMontreal-MediumItalic.woff2",
-			weight: "500",
-			style: "italic",
-		},
-		{
-			path: "../public/fonts/NeueMontreal-Italic.woff2",
-			weight: "400",
-			style: "italic",
-		},
-		{
-			path: "../public/fonts/NeueMontreal-BoldItalic.woff2",
-			weight: "700",
-			style: "italic",
-		},
-	],
-	preload: false,
+const bodyFont = Figtree({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-usio-body",
+});
+
+const displayFont = Schibsted_Grotesk({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-usio-display",
+});
+
+const monoFont = JetBrains_Mono({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-usio-mono",
 });
 
 const siteTitle = `${BRAND.name} — ${BRAND.tagline}`;
@@ -78,7 +60,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		// suppressHydrationWarning: the Cap Chrome extension stamps
 		// data-cap-chrome-extension-installed on <html> at document_idle,
 		// which can land before hydration finishes.
-		<html className={defaultFont.className} lang="en" suppressHydrationWarning>
+		<html
+			className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} font-sans`}
+			lang="en"
+			suppressHydrationWarning
+		>
 			<head>
 				<link
 					rel="apple-touch-icon"
@@ -101,8 +87,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="icon" type="image/svg+xml" href="/usio-icon.svg" />
 				<link rel="mask-icon" href="/usio-icon.svg" color={BRAND.color} />
 				<link rel="shortcut icon" href="/favicon.ico" />
-				<meta name="msapplication-TileColor" content="#da532c" />
-				<meta name="theme-color" content="#ffffff" />
+				<meta name="msapplication-TileColor" content={BRAND.color} />
+				<meta name="theme-color" content="#f6f6f3" />
 			</head>
 			<body suppressHydrationWarning>
 				<Script src="/theme-script.js" strategy="beforeInteractive" />

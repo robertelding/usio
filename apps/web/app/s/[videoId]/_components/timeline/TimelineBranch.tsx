@@ -60,7 +60,7 @@ export function BranchAnchor({
 // tests on a pseudo-element resolve to the button itself, so node-targeted
 // delegation (`closest("[data-comment-id]")`) still works.
 export const NODE_BASE_CLASS =
-	"pointer-events-auto absolute left-0 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 data-[active]:ring-2 data-[active]:ring-blue-9 [@media(pointer:coarse)]:before:content-[''] [@media(pointer:coarse)]:before:absolute [@media(pointer:coarse)]:before:-inset-2 [@media(pointer:coarse)]:before:rounded-full";
+	"pointer-events-auto absolute left-0 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens data-[active]:ring-2 data-[active]:ring-lens [@media(pointer:coarse)]:before:content-[''] [@media(pointer:coarse)]:before:absolute [@media(pointer:coarse)]:before:-inset-2 [@media(pointer:coarse)]:before:rounded-full";
 
 interface TimelineBranchProps {
 	id: string;

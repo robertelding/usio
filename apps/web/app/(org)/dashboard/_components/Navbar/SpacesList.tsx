@@ -246,7 +246,7 @@ const SpacesList = ({ toggleMobileNav }: { toggleMobileNav?: () => void }) => {
 								<AnimatePresence>
 									{activeDropTarget === space.id && (
 										<motion.div
-											className="absolute inset-0 z-10 rounded-xl border transition-all duration-200 pointer-events-none border-blue-10 bg-gray-4"
+											className="absolute inset-0 z-10 rounded-xl border transition-all duration-200 pointer-events-none border-lens bg-gray-4"
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
 											exit={{ opacity: 0 }}

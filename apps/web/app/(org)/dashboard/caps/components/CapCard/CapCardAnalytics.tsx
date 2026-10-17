@@ -83,7 +83,7 @@ export const CapCardAnalytics = Object.assign(
 						href={`/dashboard/analytics?capId=${capId}`}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-xs text-blue-600 hover:underline"
+						className="text-xs text-lens hover:underline"
 					>
 						View analytics
 					</Link>

@@ -22,7 +22,7 @@ export function DocsPrevNext({ currentSlug }: DocsPrevNextProps) {
 						<ArrowLeft className="size-3 transition-transform group-hover:-translate-x-0.5" />
 						Previous
 					</span>
-					<span className="text-sm font-medium text-gray-12 transition-colors group-hover:text-blue-11">
+					<span className="text-sm font-medium text-gray-12 transition-colors group-hover:text-lens">
 						{prev.title}
 					</span>
 				</Link>
@@ -38,7 +38,7 @@ export function DocsPrevNext({ currentSlug }: DocsPrevNextProps) {
 						Next
 						<ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
 					</span>
-					<span className="text-sm font-medium text-gray-12 transition-colors group-hover:text-blue-11">
+					<span className="text-sm font-medium text-gray-12 transition-colors group-hover:text-lens">
 						{next.title}
 					</span>
 				</Link>

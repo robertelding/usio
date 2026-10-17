@@ -151,7 +151,7 @@ export const SeoPageTemplate = ({
 									transition={{ duration: 0.3, delay: 0.1 }}
 									className="mb-4"
 								>
-									<span className="inline-flex items-center px-2 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full border border-blue-200">
+									<span className="inline-flex items-center px-2 py-1 text-xs font-medium text-lens bg-lens-tint rounded-full border border-blue-200">
 										{content.badge}
 									</span>
 								</motion.div>

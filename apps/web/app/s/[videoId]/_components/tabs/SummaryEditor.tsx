@@ -146,7 +146,7 @@ export function SummaryEditor({
 						maxLength={MAX_SUMMARY_LENGTH}
 						disabled={isSaving}
 						rows={10}
-						className="w-full min-h-40 p-3 text-sm leading-relaxed text-gray-12 bg-gray-1 border border-gray-5 rounded-lg resize-y focus:outline-none focus:ring-2 focus:ring-blue-9 disabled:opacity-60"
+						className="w-full min-h-40 p-3 text-sm leading-relaxed text-gray-12 bg-gray-1 border border-gray-5 rounded-lg resize-y focus:outline-none focus:ring-2 focus:ring-lens disabled:opacity-60"
 					/>
 				</div>
 				<fieldset disabled={isSaving} className="space-y-3">
@@ -178,7 +178,7 @@ export function SummaryEditor({
 										)
 									}
 									placeholder="00:00"
-									className="w-full px-2 py-2 text-sm font-mono bg-gray-1 border border-gray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-9"
+									className="w-full px-2 py-2 text-sm font-mono bg-gray-1 border border-gray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-lens"
 								/>
 							</div>
 							<div className="flex-1 min-w-0">
@@ -202,7 +202,7 @@ export function SummaryEditor({
 									}
 									maxLength={MAX_CHAPTER_TITLE_LENGTH}
 									placeholder="Chapter title"
-									className="w-full px-2 py-2 text-sm bg-gray-1 border border-gray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-9"
+									className="w-full px-2 py-2 text-sm bg-gray-1 border border-gray-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-lens"
 								/>
 							</div>
 							<button
@@ -213,7 +213,7 @@ export function SummaryEditor({
 										current.filter((item) => item.id !== chapter.id),
 									)
 								}
-								className="p-2 text-gray-10 rounded-lg hover:bg-gray-3 hover:text-red-9 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+								className="p-2 text-gray-10 rounded-lg hover:bg-gray-3 hover:text-red-9 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 							>
 								<Trash2 className="size-4" />
 							</button>

@@ -167,7 +167,7 @@ function ExternalLinkWarning({
 }
 
 const DEFAULT_LINK_CLASS =
-	"font-medium text-blue-500 underline underline-offset-2 break-all transition-colors hover:text-blue-600";
+	"font-medium text-lens underline underline-offset-2 break-all transition-colors hover:text-lens";
 
 export function LinkifiedText({
 	text,

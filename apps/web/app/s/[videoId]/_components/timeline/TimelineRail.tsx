@@ -238,7 +238,7 @@ export function TimelineRail({
 				// chrome, so its base is a quiet gray the frames land on and the dark
 				// waveform reads over even before any frame has been captured.
 				// Focus feedback is an inset ring, corners having gone.
-				className="relative h-full overflow-hidden bg-gray-3 group-focus-visible:ring-2 group-focus-visible:ring-inset group-focus-visible:ring-blue-9"
+				className="relative h-full overflow-hidden bg-gray-3 group-focus-visible:ring-2 group-focus-visible:ring-inset group-focus-visible:ring-lens"
 			>
 				<FilmstripTiles tileCount={tileCount} tiles={filmstrip.tiles} />
 

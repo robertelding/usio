@@ -199,7 +199,7 @@ export function VerifyOTPForm({
 								.replace(/\D/g, "");
 							handleChange(0, pastedData);
 						}}
-						className="flex-1 h-[52px] text-xl font-semibold text-center rounded-lg border transition-all bg-gray-1 border-gray-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+						className="flex-1 h-[52px] text-xl font-semibold text-center rounded-lg border transition-all bg-gray-1 border-gray-5 focus:outline-none focus:ring-2 focus:ring-lens focus:border-transparent"
 						disabled={handleVerify.isPending || handleVerify.isSuccess}
 					/>
 				))}
@@ -234,7 +234,7 @@ export function VerifyOTPForm({
 				<Link
 					href="/terms"
 					target="_blank"
-					className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+					className="text-xs font-semibold text-gray-12 hover:text-lens"
 				>
 					Terms of Service
 				</Link>{" "}
@@ -242,7 +242,7 @@ export function VerifyOTPForm({
 				<Link
 					href="/privacy"
 					target="_blank"
-					className="text-xs font-semibold text-gray-12 hover:text-blue-300"
+					className="text-xs font-semibold text-gray-12 hover:text-lens"
 				>
 					Privacy Policy
 				</Link>

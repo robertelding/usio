@@ -73,7 +73,7 @@ export const FaqPage = () => {
 							{section.link && (
 								<Link
 									href={section.link.href}
-									className="inline-block mt-2 text-blue-500 hover:text-blue-600 hover:underline"
+									className="inline-block mt-2 text-lens hover:text-lens hover:underline"
 								>
 									{section.link.text} &rarr;
 								</Link>

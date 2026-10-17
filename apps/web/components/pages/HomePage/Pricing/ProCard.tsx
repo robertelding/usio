@@ -86,7 +86,7 @@ export const ProCard = () => {
 		<article
 			onMouseEnter={() => artRef.current?.playHoverAnimation()}
 			onMouseLeave={() => artRef.current?.playDefaultAnimation()}
-			className="flex relative flex-col p-8 rounded-2xl ring-2 shadow-xl bg-gray-1 ring-blue-500 shadow-blue-500/10"
+			className="flex relative flex-col p-8 rounded-2xl ring-2 shadow-xl bg-gray-1 ring-lens shadow-blue-500/10"
 		>
 			<span className="absolute -top-3 left-1/2 px-3 py-1 text-xs font-semibold text-white whitespace-nowrap bg-blue-500 rounded-full -translate-x-1/2">
 				Most popular

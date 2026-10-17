@@ -59,7 +59,7 @@ export default async function McpAuthorizePage(props: {
 						<input key={key} name={key} type="hidden" value={value} />
 					))}
 					<button
-						className="w-full rounded-lg bg-blue-9 px-4 py-3 text-sm font-medium text-white"
+						className="w-full rounded-lg bg-signal-strong hover:bg-signal-hover px-4 py-3 text-sm font-medium text-on-signal"
 						name="decision"
 						type="submit"
 						value="approve"

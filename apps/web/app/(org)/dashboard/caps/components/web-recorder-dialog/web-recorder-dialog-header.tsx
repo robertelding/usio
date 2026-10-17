@@ -18,7 +18,7 @@ export const WebRecorderDialogHeader = ({
 	const planClassName = clsx(
 		"ml-2 inline-flex items-center rounded-full px-2 text-[0.7rem] font-medium transition-colors",
 		user.isPro
-			? "bg-blue-9 text-gray-1"
+			? "bg-lens-tint text-lens"
 			: "cursor-pointer bg-gray-3 text-gray-12 hover:bg-gray-4",
 	);
 

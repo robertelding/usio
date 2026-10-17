@@ -39,7 +39,7 @@ const MODE_CYCLE_INTERVAL = 3500;
 
 const HERO_MODE_COLORS = {
 	instant: "text-amber-600",
-	studio: "text-blue-11",
+	studio: "text-lens",
 	screenshot: "text-violet-600",
 } as const;
 
@@ -369,7 +369,7 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 									onChange={(e) => setEmail(e.target.value)}
 									placeholder="you@email.com"
 									required
-									className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm text-black placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+									className="w-full rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm text-black placeholder:text-gray-400 focus:border-lens focus:outline-none focus:ring-1 focus:ring-lens"
 								/>
 								<button
 									type="submit"

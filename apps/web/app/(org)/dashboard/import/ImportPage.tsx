@@ -25,7 +25,7 @@ export const ImportPage = ({
 			<div className="grid grid-cols-1 gap-5 max-w-4xl sm:grid-cols-2 lg:grid-cols-3">
 				<Link
 					href="/dashboard/import/file"
-					className="flex overflow-hidden relative flex-col w-full rounded-xl border transition-all duration-200 group border-gray-3 bg-gray-1 hover:border-blue-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-8"
+					className="flex overflow-hidden relative flex-col w-full rounded-xl border transition-all duration-200 group border-gray-3 bg-gray-1 hover:border-lens focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 				>
 					<div className="flex justify-center items-center w-full h-32 transition-colors duration-200 bg-gray-3 group-hover:bg-gray-4">
 						<div className="flex justify-center items-center rounded-full transition-all duration-200 size-14 bg-gray-1 text-gray-10 group-hover:text-gray-12 group-hover:scale-110">
@@ -44,7 +44,7 @@ export const ImportPage = ({
 
 				<Link
 					href={loomImportPageHref(initialDestination, "loom")}
-					className="flex overflow-hidden relative flex-col w-full rounded-xl border transition-all duration-200 group border-gray-3 bg-gray-1 hover:border-blue-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-8"
+					className="flex overflow-hidden relative flex-col w-full rounded-xl border transition-all duration-200 group border-gray-3 bg-gray-1 hover:border-lens focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 				>
 					<div className="flex justify-center items-center w-full h-32 transition-colors duration-200 bg-gray-3 group-hover:bg-gray-4">
 						<div className="flex justify-center items-center rounded-full transition-all duration-200 size-14 bg-gray-1 group-hover:scale-110">

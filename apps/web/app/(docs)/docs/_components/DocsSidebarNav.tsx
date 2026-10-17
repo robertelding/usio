@@ -27,7 +27,7 @@ export function DocsSidebarNav() {
 										aria-current={active ? "page" : undefined}
 										className={`block border-l py-[7px] pl-4 text-[13px] leading-5 transition-colors ${
 											active
-												? "border-blue-9 font-medium text-blue-11"
+												? "border-lens font-medium text-lens"
 												: "border-gray-4 text-gray-11 hover:border-gray-8 hover:text-gray-12"
 										}`}
 									>

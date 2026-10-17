@@ -166,7 +166,7 @@ export const Summary: React.FC<SummaryProps> = ({
 			<div className="flex flex-col justify-center items-center p-8 h-full text-center">
 				<div className="space-y-4 max-w-sm">
 					<div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border border-blue-100">
-						<div className="mb-3 text-blue-600">
+						<div className="mb-3 text-lens">
 							<svg
 								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +314,7 @@ export const Summary: React.FC<SummaryProps> = ({
 									<button
 										type="button"
 										key={chapter.start}
-										className="flex items-center w-full p-2 text-left rounded transition-colors hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+										className="flex items-center w-full p-2 text-left rounded transition-colors hover:bg-gray-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 										onClick={() => handleSeek(chapter.start)}
 									>
 										<span className="w-16 text-xs text-gray-500">

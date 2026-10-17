@@ -47,7 +47,7 @@ export default function DocsAskAnswer({
 									<Link
 										href={href}
 										onClick={onNavigate}
-										className="font-medium text-blue-11 underline-offset-[3px] hover:underline"
+										className="font-medium text-lens underline-offset-[3px] hover:underline"
 									>
 										{props.children}
 									</Link>
@@ -58,7 +58,7 @@ export default function DocsAskAnswer({
 									href={href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="font-medium text-blue-11 underline-offset-[3px] hover:underline"
+									className="font-medium text-lens underline-offset-[3px] hover:underline"
 								>
 									{props.children}
 								</a>

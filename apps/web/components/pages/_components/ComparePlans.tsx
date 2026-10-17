@@ -307,7 +307,7 @@ export const ComparePlans = () => {
 			return value ? (
 				<>
 					<FontAwesomeIcon
-						className="text-blue-500 size-3.5"
+						className="text-lens size-3.5"
 						icon={faCheck}
 						aria-hidden="true"
 					/>
@@ -348,7 +348,7 @@ export const ComparePlans = () => {
 											className={classNames(
 												"px-3 pt-6 pb-6 w-[20%] font-normal text-center align-bottom",
 												isPro
-													? "border-t-2 border-x-2 rounded-t-2xl border-blue-500"
+													? "border-t-2 border-x-2 rounded-t-2xl border-lens"
 													: "border-b border-gray-3",
 											)}
 										>
@@ -381,7 +381,7 @@ export const ComparePlans = () => {
 										</td>
 										<td className="pt-8 pb-3" />
 										<td className="pt-8 pb-3" />
-										<td className="px-3 pt-8 pb-3 border-x-2 border-blue-500" />
+										<td className="px-3 pt-8 pb-3 border-x-2 border-lens" />
 									</tr>
 									{section.rows.map((row) => (
 										<tr key={row.label}>
@@ -394,7 +394,7 @@ export const ComparePlans = () => {
 											<td className="px-3 py-3.5 text-center border-t border-gray-3">
 												{renderCell(row.desktop)}
 											</td>
-											<td className="px-3 py-3.5 text-center border-t border-x-2 border-blue-500 border-t-blue-500/10">
+											<td className="px-3 py-3.5 text-center border-t border-x-2 border-lens border-t-blue-500/10">
 												{renderCell(row.pro)}
 											</td>
 										</tr>
@@ -405,7 +405,7 @@ export const ComparePlans = () => {
 								<td />
 								<td />
 								<td />
-								<td className="h-4 border-b-2 border-x-2 rounded-b-2xl border-blue-500" />
+								<td className="h-4 border-b-2 border-x-2 rounded-b-2xl border-lens" />
 							</tr>
 						</tbody>
 					</table>
@@ -421,7 +421,7 @@ export const ComparePlans = () => {
 								key={plan.key}
 								className={classNames(
 									"flex flex-col p-3 text-center rounded-xl bg-gray-1",
-									isPro ? "ring-2 ring-blue-500" : "border border-gray-5",
+									isPro ? "ring-2 ring-lens" : "border border-gray-5",
 								)}
 							>
 								<p className="text-sm font-semibold text-gray-12">
@@ -461,7 +461,7 @@ export const ComparePlans = () => {
 													key={plan.key}
 													className={classNames(
 														"flex flex-col gap-1 justify-center items-center px-1.5 py-2 text-center rounded-lg min-h-[52px]",
-														isPro ? "bg-blue-2" : "bg-gray-2",
+														isPro ? "bg-lens-tint" : "bg-gray-2",
 													)}
 												>
 													<span className="text-[10px] font-medium tracking-wide uppercase text-gray-9">

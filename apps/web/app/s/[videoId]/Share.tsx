@@ -827,7 +827,7 @@ export const Share = ({
 												target="_blank"
 												rel="noreferrer"
 												title="How does the timeline work?"
-												className="inline-flex shrink-0 items-center rounded-full border border-gray-5 bg-gray-3 p-0.5 text-xs font-medium text-gray-11 transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+												className="inline-flex shrink-0 items-center rounded-full border border-gray-5 bg-gray-3 p-0.5 text-xs font-medium text-gray-11 transition-colors hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 											>
 												<span className="flex items-center gap-1.5 rounded-full px-3 py-1">
 													<svg

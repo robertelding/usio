@@ -808,7 +808,7 @@ export const ImportLoomPage = ({
 									className={clsx(
 										"relative flex flex-col items-center justify-center w-full rounded-xl border-2 border-dashed transition-all duration-200 py-14 px-8",
 										isDragOver
-											? "border-blue-10 bg-blue-3"
+											? "border-lens bg-lens-tint"
 											: "border-gray-4 bg-gray-1 hover:border-gray-6 hover:bg-gray-2",
 									)}
 								>

@@ -167,7 +167,7 @@ const InteractiveSlider = ({
 						}}
 					/>
 					<div
-						className="absolute top-1/2 w-3 h-3 rounded-full bg-white border-2 border-blue-500 shadow-sm shadow-blue-200/50"
+						className="absolute top-1/2 w-3 h-3 rounded-full bg-white border-2 border-lens shadow-sm shadow-blue-200/50"
 						style={{
 							left: `${pct}%`,
 							transform: "translate(-50%, -50%)",
@@ -201,7 +201,7 @@ const MockScreenContent = () => (
 				<div className="h-1.5 rounded bg-gray-200/50 w-full mb-1" />
 				<div className="h-1.5 rounded bg-gray-200/50 w-5/6 mb-3" />
 				<div className="grid grid-cols-2 gap-1.5 mb-2">
-					<div className="rounded-lg bg-blue-50 border border-blue-100/80 p-2">
+					<div className="rounded-lg bg-lens-tint border border-blue-100/80 p-2">
 						<div className="h-1.5 rounded bg-blue-200/50 w-3/4 mb-1.5" />
 						<div className="h-1 rounded bg-blue-100/70 w-full" />
 					</div>
@@ -583,7 +583,7 @@ const MockEditor = () => {
 
 				<div className="hidden md:flex w-40 lg:w-48 xl:w-52 border-l border-gray-4 bg-gray-1 flex-col shrink-0 overflow-hidden">
 					<div className="flex items-center justify-around px-2 py-2 border-b border-gray-4 shrink-0">
-						<div className="p-1 lg:p-1.5 rounded-md bg-blue-50 text-blue-600">
+						<div className="p-1 lg:p-1.5 rounded-md bg-lens-tint text-lens">
 							<ImageIcon className="size-3" />
 						</div>
 						<div className="p-1 lg:p-1.5 rounded-md text-gray-8">
@@ -698,7 +698,7 @@ const StudioModeDetail = () => {
 						className="size-5"
 						strokeWidth={1.5}
 					/>
-					<span className="text-sm font-medium text-blue-11 uppercase tracking-wider">
+					<span className="text-sm font-medium text-lens uppercase tracking-wider">
 						Studio Mode
 					</span>
 				</div>
@@ -744,7 +744,7 @@ const StudioModeDetail = () => {
 						key={feature.title}
 						className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-4 rounded-xl border border-gray-5 bg-gray-1"
 					>
-						<div className="text-blue-11 mt-0.5 shrink-0">{feature.icon}</div>
+						<div className="text-lens mt-0.5 shrink-0">{feature.icon}</div>
 						<div>
 							<h4 className="text-sm font-medium text-gray-12">
 								{feature.title}

@@ -67,9 +67,9 @@ function NativeAnnouncement({ boil }: { boil: string }) {
 	return (
 		<div className="inline-flex items-center gap-5 text-[13px]">
 			<span className="relative inline-flex px-2 py-0.5">
-				<span className="relative z-10 font-medium text-blue-11">New</span>
+				<span className="relative z-10 font-medium text-lens">New</span>
 				<svg
-					className="dl-ink pointer-events-none absolute -inset-x-2 -inset-y-1.5 h-[calc(100%+12px)] w-[calc(100%+16px)] overflow-visible text-blue-9"
+					className="dl-ink pointer-events-none absolute -inset-x-2 -inset-y-1.5 h-[calc(100%+12px)] w-[calc(100%+16px)] overflow-visible text-lens"
 					viewBox="0 0 300 60"
 					preserveAspectRatio="none"
 					aria-hidden="true"
@@ -78,7 +78,7 @@ function NativeAnnouncement({ boil }: { boil: string }) {
 					<path className="dl-ink-loop" pathLength={1} d={BADGE_LOOP} />
 				</svg>
 				<svg
-					className="dl-ink pointer-events-none absolute -top-4 -right-5 size-[18px] overflow-visible text-blue-9"
+					className="dl-ink pointer-events-none absolute -top-4 -right-5 size-[18px] overflow-visible text-lens"
 					viewBox="0 0 20 20"
 					aria-hidden="true"
 					style={ink}
@@ -112,7 +112,7 @@ function InkUnderline({
 		<span className="relative inline-block whitespace-nowrap text-gray-12">
 			{children}
 			<svg
-				className="dl-ink pointer-events-none absolute -bottom-1 left-0 h-2.5 w-full overflow-visible text-blue-9"
+				className="dl-ink pointer-events-none absolute -bottom-1 left-0 h-2.5 w-full overflow-visible text-lens"
 				viewBox="0 0 200 10"
 				preserveAspectRatio="none"
 				aria-hidden="true"

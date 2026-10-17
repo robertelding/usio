@@ -64,7 +64,7 @@ const proseClassName = [
 	"prose-h2:mb-4 prose-h2:mt-12 prose-h2:text-xl prose-h2:leading-7",
 	"prose-h3:mb-3 prose-h3:mt-8 prose-h3:text-[17px] prose-h3:leading-6",
 	"prose-p:my-4 prose-p:text-[15px] prose-p:leading-[1.75] prose-p:text-gray-11",
-	"prose-a:font-medium prose-a:text-blue-11 prose-a:no-underline prose-a:underline-offset-[3px] hover:prose-a:underline",
+	"prose-a:font-medium prose-a:text-lens prose-a:no-underline prose-a:underline-offset-[3px] hover:prose-a:underline",
 	"prose-strong:font-medium prose-strong:text-gray-12",
 	"prose-ul:my-4 prose-ol:my-4 prose-li:my-1.5 prose-li:text-[15px] prose-li:leading-[1.75] prose-li:text-gray-11",
 	"prose-blockquote:my-5 prose-blockquote:border-l-2 prose-blockquote:border-gray-6 prose-blockquote:pl-4 prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:text-gray-11",

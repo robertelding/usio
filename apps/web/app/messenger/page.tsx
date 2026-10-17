@@ -102,7 +102,7 @@ export default async function MessengerPage() {
 								<Link
 									key={conversation.id}
 									href={`/messenger/${conversation.id}`}
-									className={`flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-blue-50/50 active:bg-blue-50 ${
+									className={`flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-blue-50/50 active:bg-lens-tint ${
 										index < conversations.length - 1
 											? "border-b border-gray-3"
 											: ""

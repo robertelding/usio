@@ -188,7 +188,7 @@ export function ScreenRecorderPanel({
 							type="button"
 							onClick={() => void startScreen()}
 							disabled={phase === "requesting"}
-							className="h-7 rounded-lg bg-blue-9 px-3 text-xs font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+							className="h-7 rounded-lg bg-signal-strong px-3 text-xs font-medium text-on-signal transition-opacity hover:opacity-90 disabled:opacity-40"
 						>
 							{error ? "Try again" : "Next"}
 						</button>

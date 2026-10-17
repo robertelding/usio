@@ -63,7 +63,7 @@ const CapAIDialog = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
 							>
 								<FontAwesomeIcon
 									icon={faWandMagicSparkles}
-									className="mr-2 mt-0.5 text-blue-11 size-3"
+									className="mr-2 mt-0.5 text-lens size-3"
 								/>
 								<span className="text-gray-12">{feature}</span>
 							</li>

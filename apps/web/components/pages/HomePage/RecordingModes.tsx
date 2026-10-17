@@ -74,7 +74,7 @@ const RecordingModes = () => {
 							"flex-1 gap-3 justify-center items-center px-6 py-4 text-lg md:text-2xl font-medium rounded-2xl border transition-colors duration-200",
 							"cursor-pointer",
 							activeMode?.name === mode.name
-								? "bg-blue-2 border-blue-6 text-blue-12"
+								? "bg-lens-tint border-blue-6 text-lens"
 								: "text-gray-12 bg-gray-1 border-gray-5 hover:bg-gray-3",
 						)}
 					>

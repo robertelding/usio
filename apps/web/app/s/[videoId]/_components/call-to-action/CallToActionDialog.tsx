@@ -293,7 +293,7 @@ export function CallToActionDialog({
 
 				<section className="flex min-h-0 flex-1 flex-col">
 					<header className="flex items-start gap-3 px-6 pb-4 pt-6">
-						<span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-3 text-blue-11">
+						<span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-lens-tint text-lens">
 							<MousePointer2 className="size-[18px]" strokeWidth={2} />
 						</span>
 						<div className="min-w-0 flex-1">
@@ -309,7 +309,7 @@ export function CallToActionDialog({
 							onClick={() => onOpenChange(false)}
 							disabled={busy}
 							aria-label="Close"
-							className="-mr-1 rounded-lg p-1 text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+							className="-mr-1 rounded-lg p-1 text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 						>
 							<X className="size-5" />
 						</button>
@@ -350,9 +350,9 @@ export function CallToActionDialog({
 										type="button"
 										onClick={() => update("label", suggestion)}
 										className={clsx(
-											"rounded-full border px-2.5 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9",
+											"rounded-full border px-2.5 py-1 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens",
 											form.label === suggestion
-												? "border-blue-7 bg-blue-3 text-blue-11"
+												? "border-blue-7 bg-lens-tint text-lens"
 												: "border-gray-4 bg-gray-1 text-gray-11 hover:border-gray-6 hover:bg-gray-3 hover:text-gray-12",
 										)}
 									>
@@ -719,7 +719,7 @@ function ColorPicker({
 						title={preset.name}
 						onClick={() => onChange(preset.value)}
 						className={clsx(
-							"relative flex size-8 items-center justify-center rounded-full transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-1",
+							"relative flex size-8 items-center justify-center rounded-full transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens focus-visible:ring-offset-2 focus-visible:ring-offset-gray-1",
 							selected &&
 								"ring-2 ring-gray-12 ring-offset-2 ring-offset-gray-1",
 						)}
@@ -737,7 +737,7 @@ function ColorPicker({
 			<label
 				title="Custom color"
 				className={clsx(
-					"relative flex size-8 cursor-pointer items-center justify-center rounded-full transition-transform hover:scale-105 focus-within:ring-2 focus-within:ring-blue-9 focus-within:ring-offset-2 focus-within:ring-offset-gray-1",
+					"relative flex size-8 cursor-pointer items-center justify-center rounded-full transition-transform hover:scale-105 focus-within:ring-2 focus-within:ring-lens focus-within:ring-offset-2 focus-within:ring-offset-gray-1",
 					isCustom && "ring-2 ring-gray-12 ring-offset-2 ring-offset-gray-1",
 				)}
 				style={{

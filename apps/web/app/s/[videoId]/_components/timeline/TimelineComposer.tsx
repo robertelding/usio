@@ -204,7 +204,7 @@ export function TimelineComposer({
 											void submit();
 										}
 									}}
-									className="h-8 w-full rounded-lg bg-gray-2 px-2 text-sm text-gray-12 outline-none ring-1 ring-gray-4 placeholder:text-gray-9 focus:ring-blue-9"
+									className="h-8 w-full rounded-lg bg-gray-2 px-2 text-sm text-gray-12 outline-none ring-1 ring-gray-4 placeholder:text-gray-9 focus:ring-lens"
 								/>
 							) : (
 								<button

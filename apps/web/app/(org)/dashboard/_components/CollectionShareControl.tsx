@@ -184,14 +184,14 @@ export const CollectionShareControl = ({
 						onClick={copy}
 						className="group flex gap-2.5 items-center pr-2.5 pl-3 h-10 text-sm rounded-xl border transition-colors border-gray-4 bg-gray-2 hover:bg-gray-3 hover:border-gray-5"
 					>
-						<FontAwesomeIcon icon={faGlobe} className="text-blue-9 size-3" />
+						<FontAwesomeIcon icon={faGlobe} className="text-lens size-3" />
 						<span className="max-w-[140px] truncate text-gray-11 sm:max-w-[220px]">
 							{displayUrl}
 						</span>
 						<span className="flex justify-center items-center rounded-md transition-colors size-6 text-gray-10 group-hover:text-gray-12">
 							<FontAwesomeIcon
 								icon={copied ? faCheck : faCopy}
-								className={copied ? "size-3 text-blue-11" : "size-3"}
+								className={copied ? "size-3 text-lens" : "size-3"}
 							/>
 						</span>
 					</button>

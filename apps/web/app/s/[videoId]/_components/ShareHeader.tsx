@@ -1055,7 +1055,7 @@ export const ShareHeader = ({
 								{userIsOwnerAndNotPro && (
 									<button
 										type="button"
-										className="flex items-center mt-2 mb-3 text-sm text-gray-400 duration-200 cursor-pointer hover:text-blue-500"
+										className="flex items-center mt-2 mb-3 text-sm text-gray-400 duration-200 cursor-pointer hover:text-lens"
 										onClick={() => setUpgradeModalOpen(true)}
 									>
 										<Globe2 className="mr-1 w-4 h-4" />

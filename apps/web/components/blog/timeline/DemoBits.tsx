@@ -149,9 +149,9 @@ export function BranchNode({
 				onFocus={() => onHover?.(true)}
 				onBlur={() => onHover?.(false)}
 				className={clsx(
-					"pointer-events-auto absolute left-0 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full shadow-[0_1px_3px_rgba(18,22,31,0.10)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9",
+					"pointer-events-auto absolute left-0 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full shadow-[0_1px_3px_rgba(18,22,31,0.10)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens",
 					nodeClassName(comment, count),
-					active && "ring-2 ring-blue-9",
+					active && "ring-2 ring-lens",
 				)}
 				style={{ top: stem, width: NODE_SIZE, height: NODE_SIZE }}
 			>
@@ -188,7 +188,7 @@ export function TransportButton({
 			onClick={onClick}
 			aria-label={playing ? "Pause" : "Play"}
 			className={clsx(
-				"flex size-8 shrink-0 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9",
+				"flex size-8 shrink-0 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens",
 				tone === "dark"
 					? "text-white hover:bg-white/15"
 					: "text-gray-12 hover:bg-gray-3",

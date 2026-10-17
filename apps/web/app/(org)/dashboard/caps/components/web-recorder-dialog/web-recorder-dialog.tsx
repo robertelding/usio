@@ -406,7 +406,7 @@ export const WebRecorderDialog = ({
 								)}
 								{phase === "idle" && recoveredDownloads.length > 0 && (
 									<div className="rounded-md border border-blue-6 bg-blue-3/60 px-3 py-2">
-										<div className="text-xs font-medium text-blue-12">
+										<div className="text-xs font-medium text-lens">
 											Recovered recordings
 										</div>
 										<div className="mt-2 flex flex-col gap-2">
@@ -429,7 +429,7 @@ export const WebRecorderDialog = ({
 														<a
 															href={download.url}
 															download={download.fileName}
-															className="font-medium text-blue-11 hover:text-blue-12"
+															className="font-medium text-lens hover:text-lens"
 														>
 															Download
 														</a>

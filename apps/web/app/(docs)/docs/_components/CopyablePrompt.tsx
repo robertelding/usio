@@ -83,7 +83,7 @@ export function CopyablePrompt() {
 	return (
 		<section className="not-prose my-8 overflow-hidden rounded-2xl border border-gray-4 bg-gray-1">
 			<div className="p-6 sm:p-8">
-				<p className="mb-2 text-[13px] font-medium leading-5 text-blue-11">
+				<p className="mb-2 text-[13px] font-medium leading-5 text-lens">
 					One prompt setup
 				</p>
 				<h2 className="max-w-2xl text-balance text-xl font-medium tracking-[-0.01em] text-gray-12 sm:text-2xl">
@@ -104,7 +104,7 @@ export function CopyablePrompt() {
 						>
 							<Check
 								aria-hidden="true"
-								className="size-3.5 shrink-0 text-blue-9"
+								className="size-3.5 shrink-0 text-lens"
 							/>
 							<span>{benefit}</span>
 						</li>
@@ -115,7 +115,7 @@ export function CopyablePrompt() {
 					<button
 						type="button"
 						onClick={() => void copyPrompt()}
-						className="inline-flex h-10 w-full shrink-0 touch-manipulation items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-12 px-5 text-sm font-medium text-gray-1 transition-colors hover:bg-gray-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 focus-visible:ring-offset-2 sm:w-auto"
+						className="inline-flex h-10 w-full shrink-0 touch-manipulation items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-12 px-5 text-sm font-medium text-gray-1 transition-colors hover:bg-gray-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens focus-visible:ring-offset-2 sm:w-auto"
 						aria-label={
 							copyState === "copied"
 								? "usio agent setup prompt copied"
@@ -164,7 +164,7 @@ export function CopyablePrompt() {
 						aria-label={
 							copyState === "copied" ? "Prompt copied" : "Copy prompt"
 						}
-						className="flex size-7 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-white/60 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+						className="flex size-7 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-white/60 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 					>
 						{copyState === "copied" ? (
 							<Check aria-hidden="true" className="size-3.5 text-emerald-400" />

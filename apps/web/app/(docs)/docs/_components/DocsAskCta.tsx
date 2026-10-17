@@ -11,7 +11,7 @@ export function DocsAskCta() {
 						new CustomEvent("open-docs-search", { detail: { mode: "ask" } }),
 					)
 				}
-				className="font-medium text-blue-11 underline-offset-[3px] transition-colors hover:underline"
+				className="font-medium text-lens underline-offset-[3px] transition-colors hover:underline"
 			>
 				Ask the docs a question
 			</button>

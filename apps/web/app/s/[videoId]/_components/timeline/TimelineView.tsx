@@ -534,7 +534,7 @@ function TimelineBand({
 							aria-label="Comment at current time"
 							title="Comment at current time"
 							onClick={() => handleAddAtTime(playback.getCurrentTime())}
-							className="flex size-8 shrink-0 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9"
+							className="flex size-8 shrink-0 items-center justify-center rounded-full text-gray-10 transition-colors hover:bg-gray-3 hover:text-gray-12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 						>
 							<svg
 								viewBox="0 0 16 16"

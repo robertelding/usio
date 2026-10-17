@@ -113,7 +113,7 @@ function MessageBubble({
 						isAdmin ? "bg-emerald-50 ring-1 ring-emerald-200" : "bg-gray-3"
 					}`}
 				>
-					<div className="messenger-markdown prose prose-sm max-w-none break-words prose-p:my-1 prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5 prose-strong:text-gray-12 prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-500 prose-headings:text-gray-12 prose-headings:mt-3 prose-headings:mb-1.5 prose-headings:text-sm prose-headings:font-semibold prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-code:text-[13px] prose-code:bg-gray-4 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
+					<div className="messenger-markdown prose prose-sm max-w-none break-words prose-p:my-1 prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5 prose-strong:text-gray-12 prose-a:text-lens prose-a:underline hover:prose-a:text-lens prose-headings:text-gray-12 prose-headings:mt-3 prose-headings:mb-1.5 prose-headings:text-sm prose-headings:font-semibold prose-p:text-sm prose-p:leading-relaxed prose-li:text-sm prose-code:text-[13px] prose-code:bg-gray-4 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
 						<ReactMarkdown
 							remarkPlugins={[remarkGfm]}
 							components={{
@@ -308,7 +308,7 @@ export function ChatWindow({
 			>
 				{messages.length === 0 ? (
 					<div className="flex h-full flex-col items-center justify-center pb-10">
-						<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 ring-1 ring-blue-100">
+						<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lens-tint ring-1 ring-lens">
 							<AgentAvatar name={MESSENGER_AGENT_NAME} size="md" />
 						</div>
 						<p className="mt-4 text-sm font-medium text-gray-12">
@@ -324,7 +324,7 @@ export function ChatWindow({
 									type="button"
 									onClick={() => sendMessage(prompt)}
 									disabled={isPending}
-									className="rounded-full border border-gray-4 bg-gray-2 px-3.5 py-2 text-xs text-gray-11 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600 disabled:opacity-50"
+									className="rounded-full border border-gray-4 bg-gray-2 px-3.5 py-2 text-xs text-gray-11 transition-colors hover:border-blue-300 hover:bg-lens-tint hover:text-lens disabled:opacity-50"
 								>
 									{prompt}
 								</button>
@@ -376,7 +376,7 @@ export function ChatWindow({
 						type="submit"
 						disabled={isPending || !input.trim()}
 						aria-label="Send message"
-						className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white transition-all hover:bg-blue-500 disabled:opacity-30 disabled:hover:bg-blue-600"
+						className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-signal-strong text-on-signal transition-all hover:bg-signal-hover disabled:opacity-30 disabled:hover:bg-signal-hover"
 					>
 						<svg
 							width="16"
