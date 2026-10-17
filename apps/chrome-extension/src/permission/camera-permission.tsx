@@ -21,7 +21,7 @@ type Status = "idle" | "requesting" | "ready" | "error";
 const headlines: Record<Status, { title: string; lede: string }> = {
 	idle: {
 		title: "Camera & microphone access",
-		lede: "Allow access once so Cap can show your camera preview and record your voice.",
+		lede: "Allow access once so usio can show your camera preview and record your voice.",
 	},
 	requesting: {
 		title: "Waiting for Chrome",
@@ -29,11 +29,11 @@ const headlines: Record<Status, { title: string; lede: string }> = {
 	},
 	ready: {
 		title: "You're all set",
-		lede: "Pick the camera Cap should use. It's remembered for every recording.",
+		lede: "Pick the camera usio should use. It's remembered for every recording.",
 	},
 	error: {
-		title: "Cap needs access",
-		lede: "Allow access once so Cap can show your camera preview and record your voice.",
+		title: "usio needs access",
+		lede: "Allow access once so usio can show your camera preview and record your voice.",
 	},
 };
 
@@ -235,7 +235,7 @@ function App() {
 				{status === "ready" && devices.length > 0 && (
 					<div className="card device-card">
 						<label className="field">
-							<span>Camera Cap should use</span>
+							<span>Camera usio should use</span>
 							<select
 								value={selectedDeviceId}
 								onChange={(event) =>
@@ -302,7 +302,7 @@ function App() {
 				</svg>
 			</main>
 			<p className="footnote">
-				Chrome remembers this. Cap only uses your camera while you record.
+				Chrome remembers this. usio only uses your camera while you record.
 			</p>
 		</>
 	);

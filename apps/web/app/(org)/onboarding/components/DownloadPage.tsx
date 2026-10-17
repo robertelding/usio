@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, LogoBadge } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { useDetectPlatform } from "hooks/useDetectPlatform";
 import { Clapperboard, Zap } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -33,6 +34,68 @@ const recordingModes = [
 ];
 
 export function DownloadPage() {
+	if (!BRAND.desktopAppAvailable) return <RecordFirstVideoPage />;
+	return <DesktopDownloadPage />;
+}
+
+function RecordFirstVideoPage() {
+	const router = useRouter();
+	const [instantMode] = recordingModes;
+
+	return (
+		<div className="flex flex-col gap-12 justify-center items-center min-h-fit lg:gap-20">
+			<div className="space-y-10">
+				<div className="flex flex-col gap-6 justify-center items-center">
+					<LogoBadge className="mx-auto w-auto h-12" />
+					<div className="space-y-1 text-center">
+						<h1 className="text-3xl font-medium text-gray-12">
+							Record your first video
+						</h1>
+						<p className="text-lg text-center text-gray-11 text-pretty">
+							{BRAND.name} records right in your browser. There is nothing to
+							install.
+						</p>
+					</div>
+				</div>
+				{instantMode && (
+					<div className="flex flex-col w-full max-w-[440px] gap-2 items-center p-6 mx-auto text-center rounded-xl border bg-gray-2 border-gray-3">
+						{instantMode.icon}
+						<h2 className="text-xl font-medium text-gray-12">
+							{instantMode.name}
+						</h2>
+						<p className="text-base text-gray-10 text-pretty">
+							{instantMode.description}
+						</p>
+					</div>
+				)}
+			</div>
+			<div className="flex flex-wrap gap-4 justify-center">
+				<Button
+					variant="blue"
+					size="lg"
+					onClick={() =>
+						router.push(consumeOnboardingNextPath("/dashboard/caps/record"))
+					}
+					className="min-w-[160px]"
+				>
+					Record now
+				</Button>
+				<Button
+					onClick={() =>
+						router.push(consumeOnboardingNextPath("/dashboard/caps"))
+					}
+					className="min-w-[120px]"
+					variant="dark"
+					size="lg"
+				>
+					Go to dashboard
+				</Button>
+			</div>
+		</div>
+	);
+}
+
+function DesktopDownloadPage() {
 	const { platform, isIntel } = useDetectPlatform();
 	const loading = platform === null;
 	const router = useRouter();

@@ -20,7 +20,7 @@ const REDIRECT_DELAY_MS = 1600;
 // Only declare failure if no fresh status shows up for this long.
 const RETRY_STATUS_TIMEOUT_MS = 45_000;
 const RETRY_SILENT_FAILURE_MESSAGE =
-	"The retry did not report any progress. It may still be running - check your Caps before retrying again.";
+	"The retry did not report any progress. It may still be running - check your videos before retrying again.";
 
 type ActiveStatus = Extract<
 	RecordingStatus,
@@ -97,18 +97,18 @@ const syncTabTitle = () => {
 	if (key === lastTitleKey) return;
 	lastTitleKey = key;
 	if (mode === "completed") {
-		document.title = "Ready - Cap";
+		document.title = "Ready - usio";
 		return;
 	}
 	if (mode === "error") {
-		document.title = "Upload needs attention - Cap";
+		document.title = "Upload needs attention - usio";
 		return;
 	}
 	if (mode === "waiting") {
-		document.title = "Uploading - Cap";
+		document.title = "Uploading - usio";
 		return;
 	}
-	document.title = `Uploading ${percent}% - Cap`;
+	document.title = `Uploading ${percent}% - usio`;
 };
 
 const applyPercentDom = () => {
@@ -182,7 +182,7 @@ const renderActiveStatus = (status: ActiveStatus) => {
 		applyStageState(
 			"recording",
 			"Still recording",
-			"Your Cap streams to the cloud while you record.",
+			"Your video streams to the cloud while you record.",
 		);
 		return;
 	}
@@ -212,7 +212,7 @@ const renderActiveStatus = (status: ActiveStatus) => {
 	setMode("uploading");
 	applyStageState(
 		"uploading",
-		"Uploading your Cap",
+		"Uploading your video",
 		"We'll take you to it the moment it's ready.",
 	);
 };
@@ -223,7 +223,7 @@ const renderCompleted = (
 	hideErrorActions();
 	targetPercent = 100;
 	setMode("completed");
-	applyStageState("completed", "Your Cap is ready", "Taking you there now…");
+	applyStageState("completed", "Your video is ready", "Taking you there now…");
 	metaElement.hidden = true;
 	shareLink.href = status.shareUrl;
 	shareLink.hidden = false;
@@ -437,7 +437,7 @@ const pollStatus = async () => {
 		consecutivePollFailures += 1;
 	}
 	if (consecutivePollFailures >= 10 && mode === "waiting") {
-		detailElement.textContent = "Still trying to reach the Cap extension…";
+		detailElement.textContent = "Still trying to reach the usio extension…";
 	}
 };
 

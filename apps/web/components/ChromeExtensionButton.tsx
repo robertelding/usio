@@ -1,4 +1,5 @@
 import { Button, type ButtonProps } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import Image from "next/image";
 import { CAP_CHROME_EXTENSION_URL } from "@/lib/chrome-extension";
 
@@ -14,7 +15,7 @@ type ChromeExtensionButtonProps = {
 
 export function ChromeExtensionButton({
 	className,
-	href = CAP_CHROME_EXTENSION_URL,
+	href = BRAND.chromeExtensionUrl ?? CAP_CHROME_EXTENSION_URL,
 	label = "Add to Chrome",
 	onClick,
 	size = "lg",

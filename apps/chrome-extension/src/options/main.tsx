@@ -409,14 +409,14 @@ function App() {
 				</svg>
 				<h1>Recorder options</h1>
 				<p className="lede">
-					Tune where Cap uploads and how your camera shows up by default.
+					Tune where usio uploads and how your camera shows up by default.
 				</p>
 
 				<div className="sheet">
 					<section className="card card-1">
 						<h2>Connection</h2>
 						<label className="field">
-							<span>Cap URL</span>
+							<span>usio URL</span>
 							<input
 								type="url"
 								value={settings.apiBaseUrl}
