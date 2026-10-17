@@ -1,20 +1,12 @@
 <svg width="440" height="280" viewBox="0 0 440 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<defs>
-		<linearGradient id="bg" x1="0" y1="0" x2="440" y2="280" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#0E1320"/>
-			<stop offset="1" stop-color="#1C2B47"/>
-		</linearGradient>
-		<radialGradient id="glow" cx="0.5" cy="0.42" r="0.65">
-			<stop stop-color="#4785FF" stop-opacity="0.22"/>
-			<stop offset="1" stop-color="#4785FF" stop-opacity="0"/>
-		</radialGradient>
-	</defs>
-	<rect width="440" height="280" fill="url(#bg)"/>
-	<rect width="440" height="280" fill="url(#glow)"/>
-	<circle cx="150" cy="112" r="38" fill="#4785FF"/>
-	<circle cx="150" cy="112" r="30.875" fill="#ADC9FF"/>
-	<circle cx="150" cy="112" r="23.75" fill="#FFFFFF"/>
-	<text x="206" y="136" font-family="Neue Montreal" font-weight="500" font-size="68" fill="#FFFFFF">Cap</text>
-	<text x="220" y="196" text-anchor="middle" font-family="Neue Montreal" font-weight="500" font-size="20" fill="#C7D4EA">Screen recording, owned by you</text>
-	<text x="220" y="231" text-anchor="middle" font-family="Neue Montreal" font-size="14" fill="#7E8DA8">Record your tab, screen, or camera. Share a link in seconds</text>
+	<rect width="440" height="280" fill="#F6F6F3"/>
+	<circle cx="440" cy="0" r="84" stroke="#FDE3DB" stroke-width="12"/>
+	<circle cx="440" cy="0" r="40" fill="#FDE3DB"/>
+	<rect x="143" y="50" width="64" height="64" rx="17.92" fill="#F2542D"/>
+	<circle cx="175" cy="82" r="17.28" stroke="#FFFFFF" stroke-width="5.44"/>
+	<circle cx="175" cy="82" r="8" fill="#FFFFFF"/>
+	<text x="219.8" y="95.6" font-family="Schibsted Grotesk" font-weight="800" font-size="40" letter-spacing="-1.8" fill="#15171C">usio</text>
+	<text x="220" y="170" text-anchor="middle" font-family="Schibsted Grotesk" font-weight="800" font-size="34" letter-spacing="-1.2" word-spacing="3" fill="#15171C">Record. Stop. <tspan fill="#F2542D">Share.</tspan></text>
+	<text x="220" y="204" text-anchor="middle" font-family="Figtree" font-size="15" fill="#585D68">Record your tab, screen or camera in Chrome.</text>
+	<text x="220" y="226" text-anchor="middle" font-family="Figtree" font-size="15" fill="#585D68">Your link is ready the moment you stop.</text>
 </svg>

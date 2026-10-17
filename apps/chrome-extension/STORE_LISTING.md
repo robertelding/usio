@@ -101,27 +101,52 @@ rsvg-convert -w 192 -h 192 --page-width 256 --page-height 256 --top 32 --left 32
 
 ## Promotional Images
 
-Store sources live in `store-assets/`. PNGs are full-bleed with square corners, as the store requires.
+Store sources live in `store-assets/`. PNGs are full-bleed 24-bit PNGs with square corners and no alpha channel, as the store requires.
 
 - promo-small.png: 440x280 small promo tile (required).
 - promo-marquee.png: 1400x560 marquee tile (optional, needed for feature placement).
 
-The SVG sources use the Neue Montreal fonts bundled in `public/fonts`. Regenerate with a fontconfig file that points at that directory:
+The SVG sources follow the usio design system: the mark on a signal `#F2542D` tile, ink `#15171C` and ink-muted `#585D68` text on paper `#F6F6F3`, the wordmark and "Record. Stop. Share." in Schibsted Grotesk 800, body text in Figtree 400 and 600, and the timecode in JetBrains Mono 500.
+
+The fonts are the variable woff2 files in `public/fonts`, with their OFL licences beside them. Renderers can't use them as they are: fontconfig and resvg don't read woff2, resvg only sees a variable font's default instance, and Figtree's variable font names its family "Figtree Light". The script below cuts static TTFs at the weights the SVGs use and gives each its plain family name. Render with resvg (`brew install resvg` or `cargo install resvg`), which takes the font directory as an argument. librsvg builds that resolve text through CoreText ignore `FONTCONFIG_FILE` on macOS and fall back to system fonts.
 
 ```sh
-cat > /tmp/cap-fonts.conf <<'EOF'
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-  <dir>/path/to/Cap/apps/chrome-extension/public/fonts</dir>
-  <dir>/System/Library/Fonts</dir>
-  <cachedir>/tmp/cap-fc-cache</cachedir>
-</fontconfig>
+cd apps/chrome-extension
+python3 -m pip install fonttools brotli pillow
+FONTS=/tmp/usio-fonts
+python3 - public/fonts "$FONTS" <<'EOF'
+import sys
+from pathlib import Path
+from fontTools.ttLib import TTFont
+from fontTools.varLib.instancer import instantiateVariableFont
+
+src, out = Path(sys.argv[1]), Path(sys.argv[2])
+out.mkdir(parents=True, exist_ok=True)
+faces = [
+    ("schibsted-grotesk", "Schibsted Grotesk", 800),
+    ("figtree", "Figtree", 400),
+    ("figtree", "Figtree", 600),
+    ("jetbrains-mono", "JetBrains Mono", 500),
+]
+for stem, family, weight in faces:
+    font = instantiateVariableFont(TTFont(src / f"{stem}-latin-wght-normal.woff2"), {"wght": weight})
+    font.flavor = None
+    font["OS/2"].usWeightClass = weight
+    names = font["name"]
+    for name_id in (1, 2, 4, 6, 16, 17):
+        names.removeNames(nameID=name_id)
+    names.setName(family, 1, 3, 1, 0x409)
+    names.setName("Regular", 2, 3, 1, 0x409)
+    names.setName(f"{family} {weight}", 4, 3, 1, 0x409)
+    names.setName(f"{family.replace(' ', '')}-{weight}", 6, 3, 1, 0x409)
+    font.save(out / f"{stem}-{weight}.ttf")
 EOF
-cd apps/chrome-extension/store-assets
-FONTCONFIG_FILE=/tmp/cap-fonts.conf rsvg-convert -w 440 -h 280 promo-small.svg -o promo-small.png
-FONTCONFIG_FILE=/tmp/cap-fonts.conf rsvg-convert -w 1400 -h 560 promo-marquee.svg -o promo-marquee.png
+resvg --skip-system-fonts --use-fonts-dir "$FONTS" -w 440 -h 280 store-assets/promo-small.svg "$FONTS/promo-small.png"
+resvg --skip-system-fonts --use-fonts-dir "$FONTS" -w 1400 -h 560 store-assets/promo-marquee.svg "$FONTS/promo-marquee.png"
+python3 -c 'import sys; from PIL import Image; [Image.open(f"{sys.argv[1]}/{n}.png").convert("RGB").save(f"store-assets/{n}.png", optimize=True) for n in ("promo-small", "promo-marquee")]' "$FONTS"
 ```
+
+`resvg --list-fonts` with the same font flags shows which faces it loaded. Check that the PNGs show Schibsted Grotesk and Figtree, not a fallback, before you upload them.
 
 ## Screenshot Plan
 
