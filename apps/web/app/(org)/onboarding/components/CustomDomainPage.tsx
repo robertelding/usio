@@ -44,7 +44,7 @@ export function CustomDomainPage() {
 						Pro users can setup a custom domain to access their shareable usio
 						links i.e{" "}
 						<span className="font-medium text-blue-500">
-							cap.yourdomain.com
+							videos.yourdomain.com
 						</span>
 					</p>
 				</div>

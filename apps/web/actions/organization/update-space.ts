@@ -5,7 +5,7 @@ import { getCurrentUser } from "@cap/database/auth/session";
 import { hashPassword } from "@cap/database/crypto";
 import { nanoId } from "@cap/database/helpers";
 import { spaceMembers, spaces } from "@cap/database/schema";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import { S3Buckets } from "@cap/web-backend";
 import {
 	Space,
@@ -76,7 +76,7 @@ export async function updateSpace(formData: FormData) {
 	) {
 		return {
 			success: false,
-			error: "Upgrade to Cap Pro to create a public collection link",
+			error: `Upgrade to ${BRAND.proPlanName} to create a public collection link`,
 		};
 	}
 

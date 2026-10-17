@@ -3,6 +3,7 @@
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { folders, spaces } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import { ImageUploads } from "@cap/web-backend";
 import {
 	type Folder,
@@ -110,7 +111,7 @@ async function setSpaceLogo(
 	if (!(await isOrganizationOwnerPro(space.organizationId))) {
 		return {
 			success: false,
-			error: "Upgrade to Cap Pro to customize the collection logo",
+			error: `Upgrade to ${BRAND.proPlanName} to customize the collection logo`,
 		};
 	}
 
@@ -182,7 +183,7 @@ async function setFolderLogo(
 	if (!(await isOrganizationOwnerPro(folder.organizationId))) {
 		return {
 			success: false,
-			error: "Upgrade to Cap Pro to customize the collection logo",
+			error: `Upgrade to ${BRAND.proPlanName} to customize the collection logo`,
 		};
 	}
 

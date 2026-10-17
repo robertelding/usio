@@ -7,6 +7,7 @@ import {
 	organizations,
 	users,
 } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import { and, eq, inArray } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
@@ -84,7 +85,7 @@ export async function toggleProSeat(
 			});
 			if (!seatProvider) {
 				throw new Error(
-					"An active Cap Pro subscription is required before assigning seats.",
+					`An active ${BRAND.proPlanName} subscription is required before assigning seats.`,
 				);
 			}
 

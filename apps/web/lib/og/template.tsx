@@ -849,7 +849,7 @@ const MenuBar = () => (
 		})}
 	>
 		<AppleGlyph size={15} />
-		<span style={{ fontWeight: 600 }}>Cap</span>
+		<span style={{ fontWeight: 600 }}>{BRAND.name}</span>
 		<span style={{ fontWeight: 400 }}>File</span>
 		<span style={{ fontWeight: 400 }}>Edit</span>
 		<span style={{ fontWeight: 400 }}>View</span>
@@ -1030,7 +1030,7 @@ export const PricingArt = ({
 	<MeshFrame mesh={mesh} width={500} height={620} padding={10} radius={30}>
 		<PlanCardArt
 			width={480}
-			name="Cap Pro"
+			name={BRAND.proPlanName}
 			chip="Most popular"
 			chipBg="#DCEBFC"
 			chipColor="#2F62D4"
@@ -1080,7 +1080,7 @@ export const PricingArt = ({
 					boxShadow: "0 10px 24px -10px rgba(120,178,240,0.55)",
 				})}
 			>
-				Get Cap Pro
+				Get {BRAND.proPlanName}
 			</div>
 		</PlanCardArt>
 	</MeshFrame>

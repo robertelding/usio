@@ -14,7 +14,7 @@ import {
 	videos,
 } from "@cap/database/schema";
 import { serverEnv } from "@cap/env";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import {
 	type GoogleDriveIntegrationConfig,
 	getGoogleDriveAccessToken,
@@ -30,8 +30,7 @@ import { requireOrganizationSettingsManager } from "./authorization";
 
 const googleDriveProvider = "googleDrive";
 const settingsPath = "/dashboard/settings/organization/integrations";
-const proRequiredMessage =
-	"Cap Pro is required to manage organization integrations";
+const proRequiredMessage = `${BRAND.proPlanName} is required to manage organization integrations`;
 
 type OrganizationStorageProvider = "s3" | "googleDrive";
 

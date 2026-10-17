@@ -29,13 +29,13 @@ type AccountDeletionUser = {
 
 const createRequestMessage = (user: AccountDeletionUser, now: Date) =>
 	[
-		"An account deletion request was initiated and confirmed inside the Cap mobile app.",
+		`An account deletion request was initiated and confirmed inside the ${BRAND.name} mobile app.`,
 		"",
 		`User ID: ${user.id}`,
 		`Email: ${user.email}`,
 		`Requested at: ${now.toISOString()}`,
 		"",
-		"Complete permanent deletion of the account and associated personal data, Caps, videos, comments, profile data, and organizations owned solely by this user within 30 days. Cancel any direct Cap subscription that remains active. Confirm completion to the user by email, then change this request subject from [PENDING] to [COMPLETED].",
+		`Complete permanent deletion of the account and associated personal data, videos, comments, profile data, and organizations owned solely by this user within 30 days. Cancel any direct ${BRAND.name} subscription that remains active. Confirm completion to the user by email, then change this request subject from [PENDING] to [COMPLETED].`,
 	].join("\n");
 
 export const hasPendingAccountDeletion = async ({
@@ -195,7 +195,7 @@ export const createMobileContentReport = async ({
 		email: reporter.email.trim().toLowerCase(),
 	};
 	const message = [
-		"A signed-in user reported a Cap from the iOS app.",
+		"A signed-in user reported a video from the iOS app.",
 		"",
 		`Reporter user ID: ${normalizedReporter.id}`,
 		`Reporter email: ${normalizedReporter.email}`,
