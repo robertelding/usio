@@ -18,7 +18,7 @@ import {
 } from "@cap/database/schema";
 import { getNewVideoPublic } from "@cap/database/video-sharing-default";
 import { buildEnv, NODE_ENV, serverEnv } from "@cap/env";
-import { dub, userIsPro } from "@cap/utils";
+import { BRAND, dub, userIsPro } from "@cap/utils";
 import { Storage } from "@cap/web-backend";
 import {
 	type Organisation,
@@ -536,7 +536,7 @@ export async function importFromLoom({
 	if (!userIsPro(user)) {
 		return {
 			success: false,
-			error: "Importing from Loom requires a Cap Pro subscription.",
+			error: `Importing from Loom requires a ${BRAND.proPlanName} subscription.`,
 		};
 	}
 
@@ -756,7 +756,7 @@ export async function importFromLoomCsv({
 			importedCount: 0,
 			failedCount: 0,
 			results: [],
-			error: "Importing from Loom requires a Cap Pro subscription.",
+			error: `Importing from Loom requires a ${BRAND.proPlanName} subscription.`,
 		};
 	}
 

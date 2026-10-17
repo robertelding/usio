@@ -5,7 +5,7 @@ import { getCurrentUser } from "@cap/database/auth/session";
 import { nanoId } from "@cap/database/helpers";
 import { videos, videoUploads } from "@cap/database/schema";
 import { getNewVideoPublic } from "@cap/database/video-sharing-default";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import { Storage as StorageService } from "@cap/web-backend";
 import {
 	type Folder,
@@ -196,7 +196,7 @@ export async function createVideoAndGetUploadUrl({
 		}
 
 		const idToUse = Video.VideoId.make(videoId || nanoId());
-		const videoTitle = `Cap ${
+		const videoTitle = `${BRAND.name} ${
 			isScreenshot ? "Screenshot" : isUpload ? "Upload" : "Recording"
 		} - ${formattedDate}`;
 

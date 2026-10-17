@@ -1,6 +1,7 @@
 import { db } from "@cap/database";
 import { getWorkOS, normalizeSsoDomain } from "@cap/database/auth/sso";
 import { organizations } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import { DomainDataState } from "@workos-inc/node";
 import { and, eq, isNull } from "drizzle-orm";
@@ -27,7 +28,7 @@ export async function getSsoConfiguration(organization: CapOrganization) {
 	}
 	if (connections.listMetadata.after) {
 		throw new Error(
-			"This organization has too many SSO connections. Please contact Cap support.",
+			`This organization has too many SSO connections. Please contact ${BRAND.name} support.`,
 		);
 	}
 	const active = connections.data.filter(

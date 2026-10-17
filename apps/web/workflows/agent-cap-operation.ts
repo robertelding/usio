@@ -167,7 +167,9 @@ async function createDuplicate(operationId: string, payload: OperationPayload) {
 			.limit(1)
 			.for("update");
 		if (existing && existing.ownerId !== snapshot.ownerId) {
-			throw new FatalError("Duplicate destination conflicts with another Cap");
+			throw new FatalError(
+				"Duplicate destination conflicts with another video",
+			);
 		}
 		if (!existing) {
 			await tx.insert(Db.videos).values({
@@ -474,7 +476,7 @@ async function updateOrganizationDomain(
 	if (kind === "set_organization_domain") {
 		if (!payload.domain) throw new FatalError("Organization domain is missing");
 		if (!isAiGenerationEnabledForUser(context)) {
-			throw new FatalError("Cap Pro is required for custom domains");
+			throw new FatalError("usio Pro is required for custom domains");
 		}
 		const status = await addOrganizationDomain(payload.domain);
 		await finishOrganizationDomain(operationId, payload, {

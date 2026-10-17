@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type {
 	BufferTarget,
 	Input as MediaInput,
@@ -102,8 +103,7 @@ const REQUIRED_BROWSER_FEATURES: Array<{
 const UNSUPPORTED_BROWSER_MESSAGE =
 	"Streaming Loom downloads are converted in your browser. Use the latest desktop Chrome or Edge, keep this tab open, and choose a save location when prompted. Safari and Firefox do not currently expose the required media and file APIs.";
 
-const UNREADABLE_STREAM_MESSAGE =
-	"This Loom stream could not be read directly by the browser. Try the latest desktop Chrome or Edge. If it still fails, use the Cap Loom importer for this video.";
+const UNREADABLE_STREAM_MESSAGE = `This Loom stream could not be read directly by the browser. Try the latest desktop Chrome or Edge. If it still fails, use the ${BRAND.name} Loom importer for this video.`;
 
 function getBrowserFeatureTarget(): BrowserFeatureTarget {
 	return globalThis as BrowserFeatureTarget;

@@ -5,7 +5,7 @@ import { getCurrentUser } from "@cap/database/auth/session";
 import { getSsoEmailDomain, getWorkOS } from "@cap/database/auth/sso";
 import { organizations } from "@cap/database/schema";
 import { serverEnv } from "@cap/env";
-import { hasSsoAccess } from "@cap/utils";
+import { BRAND, hasSsoAccess } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import { GeneratePortalLinkIntent } from "@workos-inc/node";
 import { and, eq, isNull } from "drizzle-orm";
@@ -123,7 +123,7 @@ export async function getOrganizationSsoSettings(
 			? { name: connection.name, state: connection.state }
 			: null,
 		connectionIssue: configuration?.requiresConnectionSelection
-			? "Multiple SSO connections are active. Open Manage SSO to keep one active connection, or contact Cap support to select the default connection."
+			? `Multiple SSO connections are active. Open Manage SSO to keep one active connection, or contact ${BRAND.name} support to select the default connection.`
 			: undefined,
 		signInUrl:
 			entitled &&

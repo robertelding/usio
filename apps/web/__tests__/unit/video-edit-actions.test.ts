@@ -77,6 +77,7 @@ vi.mock("@cap/database", () => {
 });
 vi.mock("@cap/database/auth/session", () => ({ getCurrentUser: mocks.auth }));
 vi.mock("@cap/utils", () => ({
+	BRAND: { name: "usio", proPlanName: "usio Pro" },
 	userIsPro: (user: { isPro: boolean }) => user.isPro,
 }));
 vi.mock("@cap/env", () => ({
@@ -247,7 +248,7 @@ describe("video edit claims and recovery", () => {
 	});
 	it.each([
 		[{ id: "other", isPro: true }, "Forbidden"],
-		[{ id: "owner", isPro: false }, "Cap Pro"],
+		[{ id: "owner", isPro: false }, "usio Pro"],
 	] as const)(
 		"requires the recording owner with edit access",
 		async (user, message) => {

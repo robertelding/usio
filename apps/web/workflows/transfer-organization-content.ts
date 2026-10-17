@@ -606,7 +606,9 @@ async function transferOneVideo(
 
 	const current = await getCurrentVideo(item);
 	if (!current || current.orgId !== payload.organizationId) {
-		throw new FatalError(`Cap ${item.name} is no longer in this organization`);
+		throw new FatalError(
+			`Video ${item.name} is no longer in this organization`,
+		);
 	}
 	if (
 		current.ownerId !== item.sourceOwnerId &&
@@ -622,7 +624,7 @@ async function transferOneVideo(
 		throw new FatalError(`Storage changed for ${item.name}`);
 	}
 	if (current.uploadPhase && current.uploadPhase !== "complete") {
-		throw new FatalError(`Cap ${item.name} is not ready to transfer`);
+		throw new FatalError(`Video ${item.name} is not ready to transfer`);
 	}
 	const storageBlockReason = getContentTransferStorageBlockReason({
 		sourceOwnerId: current.ownerId,
@@ -702,7 +704,8 @@ async function transferOneVideo(
 			.where(eq(Db.videos.id, videoId))
 			.limit(1)
 			.for("update");
-		if (!lockedVideo) throw new FatalError(`Cap ${item.name} no longer exists`);
+		if (!lockedVideo)
+			throw new FatalError(`Video ${item.name} no longer exists`);
 		if (
 			lockedVideo.ownerId !== item.sourceOwnerId &&
 			lockedVideo.ownerId !== payload.targetUserId

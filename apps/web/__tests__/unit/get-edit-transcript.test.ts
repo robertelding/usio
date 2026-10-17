@@ -34,6 +34,7 @@ vi.mock("@cap/database/auth/session", () => ({
 vi.mock("@cap/database/schema", () => schema);
 
 vi.mock("@cap/utils", () => ({
+	BRAND: { name: "usio", proPlanName: "usio Pro" },
 	userIsPro: () => true,
 }));
 

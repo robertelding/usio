@@ -3,7 +3,7 @@
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { organizations, users } from "@cap/database/schema";
-import { isProSubscription, stripe } from "@cap/utils";
+import { BRAND, isProSubscription, stripe } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import { eq } from "drizzle-orm";
 
@@ -77,7 +77,7 @@ export async function getSubscriptionDetails(
 		interval === "year" ? unitAmount / 100 / 12 : unitAmount / 100;
 
 	return {
-		planName: "Cap Pro",
+		planName: BRAND.proPlanName,
 		status: subscription.status,
 		billingInterval: interval,
 		pricePerSeat,

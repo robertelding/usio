@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Input, Label, Select } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import type { Organisation } from "@cap/web-domain";
 import {
 	ChevronRightIcon,
@@ -746,8 +747,9 @@ export function OrganizationStorageIntegrations({
 						) : (
 							<div className="flex items-center justify-between gap-3">
 								<p className="text-[12px] text-gray-10">
-									Link your Google account to store uploads in a "Cap" folder in
-									your Drive. You can change the location after connecting.
+									Link your Google account to store uploads in a &quot;
+									{BRAND.name}&quot; folder in your Drive. You can change the
+									location after connecting.
 								</p>
 								<Button
 									type="button"

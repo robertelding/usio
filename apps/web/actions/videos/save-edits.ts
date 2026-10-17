@@ -6,7 +6,7 @@ import { getCurrentUser } from "@cap/database/auth/session";
 import { videoEdits, videos, videoUploads } from "@cap/database/schema";
 import type { VideoEditSpec } from "@cap/database/types";
 import { serverEnv } from "@cap/env";
-import { userIsPro } from "@cap/utils";
+import { BRAND, userIsPro } from "@cap/utils";
 import { Storage } from "@cap/web-backend";
 import type { Video } from "@cap/web-domain";
 import { eq } from "drizzle-orm";
@@ -180,7 +180,8 @@ async function loadEditableVideo(
 ) {
 	const user = await getCurrentUser();
 	if (!user) throw new Error("Unauthorized");
-	if (!userIsPro(user)) throw new Error("Cap Pro is required to edit videos");
+	if (!userIsPro(user))
+		throw new Error(`${BRAND.proPlanName} is required to edit videos`);
 
 	const [video] = await db()
 		.select()
