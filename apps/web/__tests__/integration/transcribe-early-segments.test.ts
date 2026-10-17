@@ -225,6 +225,7 @@ describe("transcribeVideoWorkflow earlyFromSegments", () => {
 					ok: true,
 					status: 200,
 					statusText: "OK",
+					headers: new Headers(),
 					arrayBuffer: async () => new TextEncoder().encode("seg").buffer,
 				};
 			}),

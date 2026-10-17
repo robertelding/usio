@@ -193,6 +193,7 @@ describe("transcribeVideoWorkflow", () => {
 				ok: true,
 				status: 200,
 				statusText: "OK",
+				headers: new Headers(),
 				arrayBuffer: async () => new ArrayBuffer(8),
 			})),
 		);
@@ -350,6 +351,7 @@ describe("backfillEditTranscriptWorkflow", () => {
 				ok: true,
 				status: 200,
 				statusText: "OK",
+				headers: new Headers(),
 				arrayBuffer: async () => new ArrayBuffer(8),
 			})),
 		);
