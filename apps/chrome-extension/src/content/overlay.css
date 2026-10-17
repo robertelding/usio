@@ -1,4 +1,27 @@
 :host {
+	--usio-paper: #f6f6f3;
+	--usio-surface: #ffffff;
+	--usio-surface-sunken: #ecece7;
+	--usio-line: #d9d9d2;
+	--usio-line-strong: #878b94;
+	--usio-ink: #15171c;
+	--usio-ink-muted: #585d68;
+	--usio-signal: #f2542d;
+	--usio-signal-strong: #c2391a;
+	--usio-on-signal: #ffffff;
+	--usio-signal-tint: #fde3db;
+	--usio-lens: #2747c9;
+	--usio-lens-tint: #e3e8fb;
+	--usio-success: #1e7a4c;
+	--usio-warning: #8a5a00;
+	--usio-danger: var(--usio-signal-strong);
+	--usio-signal-hover: color-mix(
+		in srgb,
+		var(--usio-signal-strong) 88%,
+		var(--usio-ink)
+	);
+	--usio-font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--usio-font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 	all: initial;
 	position: fixed;
 	inset: 0;
@@ -29,10 +52,8 @@
 	touch-action: none;
 	user-select: none;
 	will-change: transform;
-	color: #202020;
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	color: var(--usio-ink);
+	font-family: var(--usio-font-body);
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: 0;
@@ -79,9 +100,9 @@
 	padding: 4px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 12px;
-	background: #fcfcfc;
+	background: var(--usio-surface);
 	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
-	color: #838383;
+	color: var(--usio-ink-muted);
 	opacity: 0;
 	pointer-events: auto;
 	transform: translateY(8px);
@@ -105,7 +126,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 8px;
-	color: #838383;
+	color: var(--usio-ink-muted);
 	cursor: pointer;
 	transition:
 		background 160ms ease,
@@ -116,12 +137,12 @@
 .cap-extension-camera-control:hover,
 .cap-extension-camera-control:focus-visible,
 .cap-extension-camera-control.is-active {
-	background: #f0f0f0;
-	color: #202020;
+	background: var(--usio-surface-sunken);
+	color: var(--usio-ink);
 }
 
 .cap-extension-camera-control:focus-visible {
-	outline: 1px solid #5eb1ef;
+	outline: 1px solid var(--usio-lens);
 	outline-offset: 1px;
 }
 
@@ -293,7 +314,7 @@
 }
 
 .cap-extension-camera-dismiss-btn:hover {
-	background: rgba(239, 68, 68, 0.9);
+	background: var(--usio-signal-strong);
 	transform: scale(1.1);
 }
 
@@ -445,7 +466,7 @@
 	overflow: hidden;
 	border: 1px solid rgba(18, 18, 23, 0.1);
 	border-radius: 20px;
-	background: #f9f9f9;
+	background: var(--usio-paper);
 	box-shadow:
 		0 24px 64px rgba(0, 0, 0, 0.28),
 		0 4px 16px rgba(0, 0, 0, 0.12);
@@ -483,18 +504,16 @@
 	padding: 10px 12px;
 	border: 1px solid rgba(18, 18, 23, 0.08);
 	border-radius: 18px;
-	background: rgba(252, 252, 252, 0.97);
+	background: color-mix(in srgb, var(--usio-surface) 97%, transparent);
 	box-shadow:
 		0 24px 64px rgba(0, 0, 0, 0.28),
 		0 4px 16px rgba(0, 0, 0, 0.12);
-	color: #202020;
+	color: var(--usio-ink);
 	cursor: grab;
 	pointer-events: auto;
 	user-select: none;
 	backdrop-filter: blur(20px);
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	font-size: 13px;
 	letter-spacing: 0;
 	line-height: 1;
@@ -531,18 +550,19 @@
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 1;
-	color: #18181b;
+	color: var(--usio-ink);
 	white-space: nowrap;
 }
 
 .cap-extension-control-bar-title.is-timer {
 	min-width: 44px;
 	font-size: 15px;
+	font-family: var(--usio-font-mono);
 	font-variant-numeric: tabular-nums;
 }
 
 .cap-extension-control-bar-title.is-warning {
-	color: #e5484d;
+	color: var(--usio-signal-strong);
 }
 
 .cap-extension-control-bar-subtitle {
@@ -552,7 +572,7 @@
 	font-size: 11.5px;
 	font-weight: 500;
 	line-height: 1;
-	color: #83838b;
+	color: var(--usio-ink-muted);
 	white-space: nowrap;
 }
 
@@ -564,18 +584,18 @@
 }
 
 .cap-extension-control-bar-dot.is-recording {
-	background: #e5484d;
-	box-shadow: 0 0 0 3px rgba(229, 72, 77, 0.18);
+	background: var(--usio-signal);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--usio-signal) 18%, transparent);
 	animation: cap-extension-pulse 1.6s ease-in-out infinite;
 }
 
 .cap-extension-control-bar-dot.is-paused {
-	background: #b4b4b4;
+	background: var(--usio-line-strong);
 }
 
 .cap-extension-control-bar-dot.is-ready {
-	background: #3b82f6;
-	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+	background: var(--usio-lens);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--usio-lens) 16%, transparent);
 }
 
 .cap-extension-control-bar-divider {
@@ -600,7 +620,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 12px;
-	color: #5f5f66;
+	color: var(--usio-ink-muted);
 	cursor: pointer;
 	transition:
 		background 160ms ease,
@@ -615,11 +635,11 @@
 .cap-extension-control-bar-icon-button:hover,
 .cap-extension-control-bar-icon-button:focus-visible {
 	background: rgba(18, 18, 23, 0.06);
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-control-bar-icon-button:focus-visible {
-	outline: 2px solid #5eb1ef;
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 1px;
 }
 
@@ -635,18 +655,18 @@
 }
 
 .cap-extension-control-bar-icon-button.is-quiet {
-	color: #9b9ba3;
+	color: var(--usio-line-strong);
 }
 
 .cap-extension-control-bar-icon-button.is-active {
-	background: rgba(37, 99, 235, 0.12);
-	color: #2563eb;
+	background: var(--usio-lens-tint);
+	color: var(--usio-lens);
 }
 
 .cap-extension-control-bar-icon-button.is-active:hover,
 .cap-extension-control-bar-icon-button.is-active:focus-visible {
-	background: rgba(37, 99, 235, 0.18);
-	color: #1d4ed8;
+	background: color-mix(in srgb, var(--usio-lens) 14%, var(--usio-lens-tint));
+	color: var(--usio-lens);
 }
 
 .cap-extension-control-bar-pill {
@@ -660,7 +680,7 @@
 	border-radius: 12px;
 	border: 1px solid transparent;
 	box-shadow: 0 1.5px 0 0 rgba(255, 255, 255, 0.2) inset;
-	color: #fff;
+	color: var(--usio-on-signal);
 	font-size: 13.5px;
 	font-weight: 600;
 	line-height: 1;
@@ -677,7 +697,7 @@
 }
 
 .cap-extension-control-bar-pill:focus-visible {
-	outline: 2px solid #5eb1ef;
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 1px;
 }
 
@@ -689,13 +709,13 @@
 .cap-extension-control-bar-pill.is-stop {
 	gap: 7px;
 	padding: 0 16px;
-	background: #e5484d;
-	border-color: #d93036;
+	background: var(--usio-signal-strong);
+	border-color: var(--usio-signal-strong);
 }
 
 .cap-extension-control-bar-pill.is-stop:hover:not(:disabled),
 .cap-extension-control-bar-pill.is-stop:focus-visible {
-	background: #d93036;
+	background: var(--usio-signal-hover);
 }
 
 .cap-extension-control-bar-pill.is-stop.is-compact {
@@ -707,13 +727,13 @@
 }
 
 .cap-extension-control-bar-pill.is-start {
-	background: #2563eb;
-	border-color: #1d4ed8;
+	background: var(--usio-signal-strong);
+	border-color: var(--usio-signal-strong);
 }
 
 .cap-extension-control-bar-pill.is-start:hover:not(:disabled),
 .cap-extension-control-bar-pill.is-start:focus-visible {
-	background: #1d4ed8;
+	background: var(--usio-signal-hover);
 }
 
 .cap-extension-recording-rail {
@@ -725,19 +745,17 @@
 	padding: 4px;
 	border: 1px solid rgba(18, 18, 23, 0.08);
 	border-radius: 14px;
-	background: rgba(252, 252, 252, 0.97);
+	background: color-mix(in srgb, var(--usio-surface) 97%, transparent);
 	box-shadow:
 		0 16px 40px rgba(0, 0, 0, 0.22),
 		0 3px 10px rgba(0, 0, 0, 0.1);
-	color: #202020;
+	color: var(--usio-ink);
 	cursor: grab;
 	pointer-events: auto;
 	touch-action: none;
 	user-select: none;
 	backdrop-filter: blur(20px);
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	font-size: 13px;
 	letter-spacing: 0;
 	line-height: 1;
@@ -762,7 +780,7 @@
 
 .cap-extension-recording-rail-grip {
 	flex: 0 0 auto;
-	color: #a1a1aa;
+	color: var(--usio-line-strong);
 }
 
 .cap-extension-recording-rail-time {
@@ -770,8 +788,9 @@
 	font-size: 13px;
 	font-weight: 600;
 	line-height: 1;
-	color: #18181b;
+	color: var(--usio-ink);
 	text-align: center;
+	font-family: var(--usio-font-mono);
 	font-variant-numeric: tabular-nums;
 	white-space: nowrap;
 }
@@ -788,7 +807,7 @@
 	padding: 3px 4px;
 	border: 1px solid rgba(18, 18, 23, 0.08);
 	border-radius: 14px;
-	background: rgba(252, 252, 252, 0.97);
+	background: color-mix(in srgb, var(--usio-surface) 97%, transparent);
 	box-shadow:
 		0 12px 30px rgba(0, 0, 0, 0.16),
 		0 2px 8px rgba(0, 0, 0, 0.08);
@@ -842,7 +861,7 @@
 
 .cap-extension-recording-rail-timer.is-warning
 	.cap-extension-recording-rail-time {
-	color: #e5484d;
+	color: var(--usio-signal-strong);
 }
 
 @keyframes cap-extension-rail-in {
@@ -886,9 +905,7 @@
 	pointer-events: auto;
 	touch-action: none;
 	user-select: none;
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	font-size: 13px;
 	line-height: 1;
 	isolation: isolate;
@@ -911,7 +928,7 @@
 	box-shadow:
 		0 14px 34px rgba(0, 0, 0, 0.18),
 		0 3px 10px rgba(0, 0, 0, 0.1);
-	color: #18181b;
+	color: var(--usio-ink);
 	cursor: grab;
 	backdrop-filter: blur(24px);
 	transition:
@@ -925,9 +942,9 @@
 	height: 48px;
 	padding: 0;
 	justify-content: center;
-	border-color: #ef4444;
+	border-color: var(--usio-signal);
 	box-shadow:
-		0 0 0 4px rgba(239, 68, 68, 0.2),
+		0 0 0 4px color-mix(in srgb, var(--usio-signal) 20%, transparent),
 		0 14px 34px rgba(0, 0, 0, 0.18);
 }
 
@@ -942,7 +959,7 @@
 .cap-extension-badge-countdown-number {
 	font-size: 22px;
 	font-weight: 800;
-	color: #ef4444;
+	color: var(--usio-signal-strong);
 	line-height: 1;
 	animation: cap-extension-countdown-pop 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -971,9 +988,9 @@
 }
 
 .cap-extension-recording-badge.is-active {
-	border-color: #3b82f6;
+	border-color: var(--usio-lens);
 	box-shadow:
-		0 0 0 3px rgba(59, 130, 246, 0.25),
+		0 0 0 3px color-mix(in srgb, var(--usio-lens) 25%, transparent),
 		0 14px 34px rgba(0, 0, 0, 0.18);
 }
 
@@ -1000,19 +1017,20 @@
 	width: 10px;
 	height: 10px;
 	border: 2px solid #fff;
-	box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+	box-shadow: 0 0 0 2px color-mix(in srgb, var(--usio-signal) 30%, transparent);
 }
 
 .cap-extension-recording-badge-time {
 	font-size: 13px;
 	font-weight: 700;
+	font-family: var(--usio-font-mono);
 	font-variant-numeric: tabular-nums;
-	color: #18181b;
+	color: var(--usio-ink);
 	white-space: nowrap;
 }
 
 .cap-extension-recording-badge-time.is-warning {
-	color: #e5484d;
+	color: var(--usio-signal-strong);
 }
 
 .cap-extension-recording-badge::before {
@@ -1079,7 +1097,7 @@
 	border: none;
 	border-radius: 50%;
 	background: rgba(18, 18, 23, 0.05);
-	color: #27272a;
+	color: var(--usio-ink);
 	cursor: pointer;
 	transition: all 140ms ease;
 }
@@ -1094,56 +1112,58 @@
 }
 
 .cap-extension-dock-btn.is-stop {
-	background: #ef4444;
-	color: #ffffff;
-	box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+	background: var(--usio-signal-strong);
+	color: var(--usio-on-signal);
+	box-shadow: 0 2px 8px
+		color-mix(in srgb, var(--usio-signal-strong) 30%, transparent);
 }
 
 .cap-extension-dock-btn.is-stop:hover {
-	background: #dc2626;
-	box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+	background: var(--usio-signal-hover);
+	box-shadow: 0 4px 14px
+		color-mix(in srgb, var(--usio-signal-strong) 40%, transparent);
 }
 
 .cap-extension-dock-btn.is-pause {
 	background: rgba(18, 18, 23, 0.07);
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-dock-btn.is-pause.is-paused {
-	background: #eab308;
+	background: var(--usio-warning);
 	color: #ffffff;
 }
 
 .cap-extension-dock-btn.is-blur.is-active {
-	background: #3b82f6;
+	background: var(--usio-lens);
 	color: #ffffff;
-	box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+	box-shadow: 0 2px 8px color-mix(in srgb, var(--usio-lens) 30%, transparent);
 }
 
 .cap-extension-dock-btn.is-pen.is-active {
-	background: #8b5cf6;
+	background: var(--usio-lens);
 	color: #ffffff;
-	box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+	box-shadow: 0 2px 8px color-mix(in srgb, var(--usio-lens) 30%, transparent);
 }
 
 .cap-extension-dock-btn.is-camera.is-active {
-	background: rgba(34, 197, 94, 0.14);
-	color: #16a34a;
+	background: color-mix(in srgb, var(--usio-success) 14%, transparent);
+	color: var(--usio-success);
 }
 
 .cap-extension-dock-btn.is-mic.is-muted {
-	background: rgba(239, 68, 68, 0.14);
-	color: #dc2626;
+	background: var(--usio-signal-tint);
+	color: var(--usio-danger);
 }
 
 .cap-extension-dock-btn.is-collapse {
 	background: transparent;
-	color: #a1a1aa;
+	color: var(--usio-line-strong);
 }
 
 .cap-extension-dock-btn.is-collapse:hover {
 	background: rgba(18, 18, 23, 0.06);
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-dock-btn::after {
@@ -1153,7 +1173,7 @@
 	transform: translateY(-50%) scale(0.9);
 	padding: 4px 10px;
 	border-radius: 8px;
-	background: #18181b;
+	background: var(--usio-ink);
 	color: #ffffff;
 	font-size: 11px;
 	font-weight: 500;
@@ -1195,9 +1215,9 @@
 	position: fixed;
 	z-index: 2147483646;
 	box-sizing: border-box;
-	border: 2px dashed #3b82f6;
+	border: 2px dashed var(--usio-lens);
 	border-radius: 6px;
-	background: rgba(59, 130, 246, 0.12);
+	background: color-mix(in srgb, var(--usio-lens) 12%, transparent);
 	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 	pointer-events: none;
 	animation: cap-extension-fade-in 140ms ease;
@@ -1209,7 +1229,7 @@
 	left: 0;
 	padding: 2px 8px;
 	border-radius: 6px;
-	background: #18181b;
+	background: var(--usio-ink);
 	color: #ffffff;
 	font-size: 11px;
 	font-weight: 500;
@@ -1274,17 +1294,15 @@
 	padding: 8px 10px;
 	border: 1px solid rgba(18, 18, 23, 0.08);
 	border-radius: 16px;
-	background: rgba(252, 252, 252, 0.97);
+	background: color-mix(in srgb, var(--usio-surface) 97%, transparent);
 	box-shadow:
 		0 24px 64px rgba(0, 0, 0, 0.28),
 		0 4px 16px rgba(0, 0, 0, 0.12);
-	color: #202020;
+	color: var(--usio-ink);
 	pointer-events: auto;
 	user-select: none;
 	backdrop-filter: blur(20px);
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	font-size: 13px;
 	letter-spacing: 0;
 	line-height: 1;
@@ -1331,7 +1349,7 @@
 }
 
 .cap-extension-draw-swatch:focus-visible {
-	outline: 2px solid #5eb1ef;
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 2px;
 }
 
@@ -1345,7 +1363,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 9px;
-	color: #5f5f66;
+	color: var(--usio-ink-muted);
 	cursor: pointer;
 	transition:
 		background 140ms ease,
@@ -1357,19 +1375,19 @@
 .cap-extension-draw-size:focus-visible,
 .cap-extension-draw-icon-button:focus-visible {
 	background: rgba(18, 18, 23, 0.06);
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-draw-size:focus-visible,
 .cap-extension-draw-icon-button:focus-visible {
-	outline: 2px solid #5eb1ef;
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 1px;
 }
 
 .cap-extension-draw-size.is-active,
 .cap-extension-draw-icon-button.is-active {
 	background: rgba(18, 18, 23, 0.09);
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-draw-icon-button svg {
@@ -1415,9 +1433,7 @@
 	backdrop-filter: blur(10px) saturate(120%);
 	-webkit-backdrop-filter: blur(10px) saturate(120%);
 	color: #fff;
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	animation: cap-countdown-backdrop-in 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
 	will-change: opacity;
 }
@@ -1567,9 +1583,7 @@
 	justify-content: center;
 	padding: 24px;
 	pointer-events: auto;
-	font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	font-family: var(--usio-font-body);
 	animation: cap-countdown-backdrop-in 160ms ease-out both;
 }
 
@@ -1596,8 +1610,8 @@
 	width: min(340px, 100%);
 	padding: 24px;
 	border-radius: 18px;
-	background: #fff;
-	color: #18181b;
+	background: var(--usio-surface);
+	color: var(--usio-ink);
 	text-align: center;
 	box-shadow:
 		0 1px 2px rgba(0, 0, 0, 0.08),
@@ -1611,8 +1625,8 @@
 	padding: 9px;
 	box-sizing: content-box;
 	border-radius: 9999px;
-	background: #fde8e8;
-	color: #dc2626;
+	background: var(--usio-signal-tint);
+	color: var(--usio-signal-strong);
 }
 
 .cap-extension-confirm-title {
@@ -1620,7 +1634,7 @@
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.25;
-	color: #18181b;
+	color: var(--usio-ink);
 }
 
 .cap-extension-confirm-message {
@@ -1628,7 +1642,7 @@
 	font-size: 13.5px;
 	font-weight: 400;
 	line-height: 1.45;
-	color: #52525b;
+	color: var(--usio-ink-muted);
 }
 
 .cap-extension-confirm-actions {
@@ -1657,27 +1671,27 @@
 }
 
 .cap-extension-confirm-button:focus-visible {
-	outline: 2px solid #2563eb;
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 2px;
 }
 
 .cap-extension-confirm-button.is-secondary {
-	background: #f4f4f5;
+	background: var(--usio-surface-sunken);
 	border-color: #e4e4e7;
-	color: #27272a;
+	color: var(--usio-ink);
 }
 
 .cap-extension-confirm-button.is-secondary:hover {
-	background: #e4e4e7;
+	background: var(--usio-line);
 }
 
 .cap-extension-confirm-button.is-primary {
-	background: #18181b;
-	color: #fafafa;
+	background: var(--usio-signal-strong);
+	color: var(--usio-on-signal);
 }
 
 .cap-extension-confirm-button.is-primary:hover {
-	background: #27272a;
+	background: var(--usio-signal-hover);
 }
 
 @keyframes cap-confirm-card-in {

@@ -1,84 +1,35 @@
-@import "@radix-ui/colors/red.css";
-@import "@radix-ui/colors/red-dark.css";
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/gray-alpha.css";
-@import "@radix-ui/colors/gray-dark.css";
-@import "@radix-ui/colors/blue.css";
-@import "@radix-ui/colors/green.css";
-@import "@radix-ui/colors/purple.css";
+@import "../shared/usio-tokens.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Regular.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Italic.otf") format("opentype");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Medium.otf") format("opentype");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-MediumItalic.otf") format("opentype");
-	font-weight: 500;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-BoldItalic.otf") format("opentype");
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
-}
-
 :root {
-	--primary: #005cb1;
-	--primary-2: #004c93;
-	--primary-3: #003b73;
-	--secondary: #2eb4ff;
-	--secondary-2: #1696e0;
-	--secondary-3: #117ebd;
-	--tertiary: #c5eaff;
-	--tertiary-2: #d3e5ff;
-	--tertiary-3: #e0edff;
-	--filler: #efefef;
-	--filler-2: #e4e4e4;
-	--filler-3: #e2e2e2;
-	--filler-txt: #b3b3b3;
-	--text-primary: #0d1b2a;
-	--text-secondary: #ffffff;
-	color-scheme: light;
-	font-family:
-		"Neue Montreal", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	--gray-1: #ffffff;
+	--gray-2: #f6f6f3;
+	--gray-3: #ecece7;
+	--gray-4: #e5e5df;
+	--gray-5: #dfdfd8;
+	--gray-6: #d9d9d2;
+	--gray-7: #c9cac3;
+	--gray-8: #b3b5b0;
+	--gray-9: #878b94;
+	--gray-10: #63676f;
+	--gray-11: #585d68;
+	--gray-12: #15171c;
+	--primary: var(--usio-signal-strong);
+	--primary-2: var(--usio-signal-hover);
+	--primary-3: color-mix(
+		in srgb,
+		var(--usio-signal-strong) 78%,
+		var(--usio-ink)
+	);
+	--secondary: var(--usio-lens);
+	--tertiary: var(--usio-lens-tint);
+	--filler: var(--usio-surface-sunken);
+	--text-primary: var(--usio-ink);
+	--text-secondary: var(--usio-on-signal);
+	font-family: var(--usio-font-body);
 }
 
 @layer base {
@@ -120,8 +71,8 @@
 }
 
 ::selection {
-	background: #000000;
-	color: #ffffff;
+	background: var(--usio-lens-tint);
+	color: var(--usio-ink);
 }
 
 ::-webkit-scrollbar {
@@ -144,6 +95,11 @@ h3,
 h4,
 h5 {
 	@apply m-0 font-normal tracking-normal;
+	font-family: var(--usio-font-display);
+}
+
+:focus-visible {
+	outline-color: var(--usio-lens);
 }
 
 a,
@@ -186,8 +142,8 @@ label {
 body {
 	margin: 0;
 	width: 100%;
-	color: var(--text-primary);
-	background: var(--gray-2);
+	color: var(--usio-ink);
+	background: var(--usio-paper);
 }
 
 .settings-slider {
@@ -198,10 +154,10 @@ body {
 	border-radius: 999px;
 	background: linear-gradient(
 		to right,
-		var(--blue-9) 0%,
-		var(--blue-9) var(--slider-progress, 50%),
-		var(--gray-4) var(--slider-progress, 50%),
-		var(--gray-4) 100%
+		var(--usio-lens) 0%,
+		var(--usio-lens) var(--slider-progress, 50%),
+		var(--usio-surface-sunken) var(--slider-progress, 50%),
+		var(--usio-surface-sunken) 100%
 	);
 	outline: none;
 	cursor: pointer;
@@ -213,25 +169,15 @@ body {
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
-	background: #ffffff;
-	border: 1px solid var(--gray-6);
+	background: var(--usio-surface);
+	border: 1px solid var(--usio-line-strong);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-/* Paper aesthetic shared with the welcome / how-it-works pages. */
-:root {
-	--paper: #fbfaf7;
-	--ink: #20242c;
-	--ink-soft: #8b8f98;
-	--paper-accent: #4785ff;
-	--track: #dcdcd4;
 }
 
 .cap-fade-up {
 	animation: cap-fade-up 0.45s ease both;
 }
 
-/* Drill-in sheet (device pickers) sliding over the recorder panel. */
 .cap-sheet-in {
 	animation: cap-sheet-in 0.2s ease both;
 }
@@ -273,7 +219,7 @@ body {
 .cap-signin-brand {
 	height: 24px;
 	width: auto;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .cap-signin-doodle {
@@ -289,7 +235,7 @@ body {
 
 .cap-signin-stroke {
 	fill: none;
-	stroke: var(--ink);
+	stroke: var(--usio-ink);
 	stroke-width: 4.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -302,7 +248,7 @@ body {
 }
 
 .cap-signin-dot {
-	fill: var(--paper-accent);
+	fill: var(--usio-signal);
 	opacity: 0;
 	transform-box: fill-box;
 	transform-origin: center;
@@ -313,7 +259,7 @@ body {
 
 .cap-signin-spark {
 	fill: none;
-	stroke: var(--paper-accent);
+	stroke: var(--usio-signal);
 	stroke-width: 3.5;
 	stroke-linecap: round;
 	opacity: 0;
@@ -337,10 +283,10 @@ body {
 .cap-signin h1 {
 	margin-top: 22px;
 	font-size: 19px;
-	font-weight: 500;
+	font-weight: 700;
 	letter-spacing: -0.01em;
 	line-height: 1.25;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .cap-signin-lede {
@@ -348,7 +294,7 @@ body {
 	max-width: 236px;
 	font-size: 13px;
 	line-height: 1.5;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .cap-signin-wait {
@@ -359,7 +305,7 @@ body {
 	font-size: 12.5px;
 	font-weight: 500;
 	line-height: 1.4;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .cap-signin-wait svg {
@@ -371,7 +317,7 @@ body {
 
 .cap-signin-wait circle {
 	fill: none;
-	stroke: var(--paper-accent);
+	stroke: var(--usio-lens);
 	stroke-width: 3;
 	stroke-linecap: round;
 	stroke-dasharray: 0.125 0.125;
@@ -387,13 +333,13 @@ body {
 	min-height: 42px;
 	margin-top: 22px;
 	padding: 0 24px;
-	border: 1.5px solid var(--ink);
+	border: 1.5px solid var(--usio-signal-strong);
 	border-radius: 999px;
-	background: transparent;
-	color: var(--ink);
+	background: var(--usio-signal-strong);
+	color: var(--usio-on-signal);
 	font-family: inherit;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 1.4;
 	cursor: pointer;
 	transition:
@@ -404,12 +350,12 @@ body {
 }
 
 .cap-paper-cta:hover:not(:disabled) {
-	background: var(--ink);
-	color: var(--paper);
+	border-color: var(--primary-2);
+	background: var(--primary-2);
 }
 
 .cap-paper-cta:focus-visible {
-	outline: 2px solid var(--paper-accent);
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 2px;
 }
 
@@ -419,28 +365,30 @@ body {
 }
 
 .cap-paper-cta.is-ghost {
-	border-color: var(--track);
-	color: var(--ink-soft);
+	border-color: var(--usio-line-strong);
+	background: transparent;
+	color: var(--usio-ink-muted);
 }
 
 .cap-paper-cta.is-ghost:hover:not(:disabled) {
-	background: transparent;
-	border-color: var(--ink-soft);
-	color: var(--ink);
+	background: var(--usio-surface-sunken);
+	border-color: var(--usio-line-strong);
+	color: var(--usio-ink);
 }
 
 .cap-signin-footnote {
 	margin-top: 14px;
 	font-size: 12px;
 	line-height: 1.5;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .cap-paper-error {
 	padding: 10px 14px;
-	border: 1.5px solid #e5484d;
+	border: 1.5px solid var(--usio-danger);
 	border-radius: 14px;
-	color: #e5484d;
+	background: var(--usio-signal-tint);
+	color: var(--usio-ink);
 	font-size: 12px;
 	line-height: 1.5;
 	text-align: left;

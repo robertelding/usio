@@ -699,7 +699,7 @@ function App() {
 							</div>
 						)}
 						{status.phase === "error" && (
-							<div className="cap-fade-up rounded-md border border-red-6 bg-red-3/70 px-3 py-2 text-xs leading-snug text-red-12">
+							<div className="cap-fade-up rounded-md border border-danger bg-signal-tint px-3 py-2 text-xs leading-snug text-ink">
 								<span className="font-medium">Recording failed.</span>{" "}
 								{status.message}
 							</div>
@@ -712,7 +712,7 @@ function App() {
 								<button
 									type="button"
 									onClick={() => void openOptions()}
-									className="flex w-full items-center justify-center gap-1 text-xs font-medium text-[var(--red-11)] transition-colors hover:text-[var(--red-12)]"
+									className="flex w-full items-center justify-center gap-1 text-xs font-medium text-danger transition-colors hover:text-ink"
 								>
 									Recover {failedRecordingsCount}{" "}
 									{failedRecordingsCount === 1 ? "recording" : "recordings"}
@@ -734,7 +734,7 @@ function App() {
 							"cap-fade-up",
 							signedOut
 								? "cap-paper-error"
-								: "rounded-md border border-red-6 bg-red-3/70 px-3 py-2 text-xs leading-snug text-red-12",
+								: "rounded-md border border-danger bg-signal-tint px-3 py-2 text-xs leading-snug text-ink",
 						)}
 					>
 						{error}

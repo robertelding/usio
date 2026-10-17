@@ -23,7 +23,7 @@ export const RecorderHeader = ({
 	const planClassName = clsx(
 		"ml-2 inline-flex items-center rounded-full px-2 text-[0.7rem] font-medium transition-colors",
 		isPro
-			? "bg-blue-9 text-gray-1"
+			? "bg-lens text-on-signal"
 			: "cursor-pointer bg-gray-3 text-gray-12 hover:bg-gray-4",
 	);
 
@@ -102,9 +102,10 @@ export const RecorderHeader = ({
 								x="48"
 								y="28.5"
 								fontSize="25"
-								fontWeight="600"
-								letterSpacing="-0.5"
-								fill="#12161F"
+								fontWeight="800"
+								letterSpacing="-1.1"
+								fill="var(--usio-ink)"
+								style={{ fontFamily: "var(--usio-font-display)" }}
 							>
 								usio
 							</text>

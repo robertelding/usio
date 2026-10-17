@@ -19,13 +19,13 @@
 }
 
 .lens-dot {
-	fill: var(--accent);
+	fill: var(--usio-lens);
 	opacity: 0;
 	animation: fade-in 0.3s ease 1.2s forwards;
 }
 
 .flash-dot {
-	fill: var(--accent);
+	fill: var(--usio-signal);
 	opacity: 0;
 	animation: fade-in 0.3s ease 1.35s forwards;
 }
@@ -36,7 +36,7 @@
 }
 
 .stage[data-mode="error"] .lens-dot {
-	fill: var(--error);
+	fill: var(--usio-danger);
 }
 
 .spark {
@@ -96,7 +96,7 @@
 
 .wait-squiggle-path {
 	fill: none;
-	stroke: var(--ink-soft);
+	stroke: var(--usio-ink-muted);
 	stroke-width: 2.5;
 	stroke-linecap: round;
 	stroke-dasharray: 2 4.2;

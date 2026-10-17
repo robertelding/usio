@@ -24,9 +24,10 @@ export const CapBrand = (props: SVGProps<SVGSVGElement>) => (
 			x="48"
 			y="28.5"
 			fontSize="25"
-			fontWeight="600"
-			letterSpacing="-0.5"
+			fontWeight="800"
+			letterSpacing="-1.1"
 			fill="currentColor"
+			style={{ fontFamily: "var(--usio-font-display)" }}
 		>
 			usio
 		</text>

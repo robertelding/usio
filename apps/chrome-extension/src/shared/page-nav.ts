@@ -14,7 +14,7 @@ const DEFAULT_DASHBOARD_URL =
 		? "http://localhost:3000/dashboard"
 		: "https://usio.co.uk/dashboard";
 
-const CAP_LOGO_SVG = `<svg class="page-nav-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 103 40" aria-hidden="true"><rect x="0" y="0" width="40" height="40" rx="11.2" fill="#F2542D" /><circle cx="20" cy="20" r="10.8" fill="none" stroke="#fff" stroke-width="3.4" /><circle cx="20" cy="20" r="5" fill="#fff" /><text x="48" y="28.5" font-size="25" font-weight="600" letter-spacing="-0.5" fill="currentColor">usio</text></svg>`;
+const CAP_LOGO_SVG = `<svg class="page-nav-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 103 40" aria-hidden="true"><rect x="0" y="0" width="40" height="40" rx="11.2" fill="#F2542D" /><circle cx="20" cy="20" r="10.8" fill="none" stroke="#fff" stroke-width="3.4" /><circle cx="20" cy="20" r="5" fill="#fff" /><text x="48" y="28.5" font-size="25" font-weight="800" letter-spacing="-1.1" fill="currentColor" style="font-family: var(--usio-font-display)">usio</text></svg>`;
 
 export const mountPageNav = (active: PageNavId) => {
 	if (document.querySelector(".page-nav")) return;

@@ -61,7 +61,7 @@ export const DeviceSelectOverlay = ({
 					type="button"
 					onClick={onClose}
 					aria-label="Back"
-					className="flex size-7 items-center justify-center rounded-lg text-gray-11 transition-colors hover:bg-gray-3 hover:text-[--text-primary] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-8)]"
+					className="flex size-7 items-center justify-center rounded-lg text-gray-11 transition-colors hover:bg-gray-3 hover:text-[--text-primary] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens"
 				>
 					<ArrowLeftIcon className="size-4" aria-hidden />
 				</button>
@@ -82,23 +82,23 @@ export const DeviceSelectOverlay = ({
 									aria-pressed={selected}
 									title={option.label}
 									className={clsx(
-										"flex w-full items-center gap-[0.5rem] rounded-lg px-[0.625rem] py-[0.5rem] text-left text-[0.875rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-8)]",
+										"flex w-full items-center gap-[0.5rem] rounded-lg px-[0.625rem] py-[0.5rem] text-left text-[0.875rem] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lens",
 										selected
-											? "bg-[var(--blue-3)] text-[var(--blue-11)]"
+											? "bg-lens-tint text-lens"
 											: "text-[--text-primary] hover:bg-gray-3",
 									)}
 								>
 									<Icon
 										className={clsx(
 											"size-4 shrink-0",
-											selected ? "text-[var(--blue-11)]" : "text-gray-11",
+											selected ? "text-lens" : "text-gray-11",
 										)}
 										aria-hidden
 									/>
 									<span className="flex-1 truncate">{option.label}</span>
 									{selected && (
 										<CheckIcon
-											className="size-4 shrink-0 text-[var(--blue-11)]"
+											className="size-4 shrink-0 text-lens"
 											aria-hidden
 										/>
 									)}
