@@ -41,7 +41,7 @@
 	margin-right: 18px;
 	font-size: 14px;
 	font-style: italic;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 	opacity: 0;
 	transform: rotate(-4deg);
 	animation: fade-in 0.5s ease 1.3s forwards;
@@ -60,7 +60,7 @@
 }
 
 .pin-needle {
-	stroke: var(--accent);
+	stroke: var(--usio-signal);
 	stroke-dasharray: 1;
 	stroke-dashoffset: 1;
 	animation: draw 0.35s ease 1.05s forwards;
@@ -94,9 +94,9 @@
 	align-items: center;
 	gap: 6px;
 	padding: 20px 16px 18px;
-	border: 1.5px solid var(--track);
+	border: 1.5px solid var(--usio-line);
 	border-radius: 16px;
-	background: rgba(255, 255, 255, 0.65);
+	background: var(--usio-surface);
 	animation: fade-up 0.5s ease both;
 }
 
@@ -120,14 +120,14 @@
 
 .doodle-stroke-sm {
 	fill: none;
-	stroke: var(--ink);
+	stroke: var(--usio-ink);
 	stroke-width: 3;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 }
 
 .record-dot {
-	fill: var(--accent);
+	fill: var(--usio-signal);
 	animation: record-pulse 1.8s ease-in-out 1.4s infinite;
 }
 
@@ -136,13 +136,13 @@
 	font-weight: 500;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .step p {
 	font-size: 13.5px;
 	line-height: 1.45;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .cta-row {
@@ -157,7 +157,7 @@
 .cta-note {
 	margin-top: 14px;
 	font-size: 13px;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 	animation: fade-up 0.3s ease both;
 }
 

@@ -1,49 +1,9 @@
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Regular.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Italic.otf") format("opentype");
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Medium.otf") format("opentype");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Neue Montreal";
-	src: url("/fonts/NeueMontreal-Bold.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+@import "./usio-tokens.css";
 
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
-}
-
-:root {
-	--paper: #fbfaf7;
-	--ink: #20242c;
-	--ink-soft: #8b8f98;
-	--accent: #4785ff;
-	--track: #dcdcd4;
-	--error: #e5484d;
-	--success: #2f9e69;
 }
 
 html,
@@ -56,11 +16,9 @@ body {
 	min-height: 100dvh;
 	display: flex;
 	flex-direction: column;
-	background: var(--paper);
-	color: var(--ink);
-	font-family:
-		"Neue Montreal", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", sans-serif;
+	background: var(--usio-paper);
+	color: var(--usio-ink);
+	font-family: var(--usio-font-body);
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -68,6 +26,11 @@ h1,
 h2,
 p {
 	margin: 0;
+}
+
+h1,
+h2 {
+	font-family: var(--usio-font-display);
 }
 
 .page-nav {
@@ -79,8 +42,8 @@ p {
 	justify-content: center;
 	height: 64px;
 	flex: 0 0 64px;
-	border-bottom: 1.5px solid var(--track);
-	background: rgba(251, 250, 247, 0.92);
+	border-bottom: 1.5px solid var(--usio-line);
+	background: color-mix(in srgb, var(--usio-paper) 92%, transparent);
 	backdrop-filter: blur(10px);
 }
 
@@ -103,11 +66,11 @@ p {
 	display: block;
 	height: 24px;
 	width: auto;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .page-nav-brand:focus-visible {
-	outline: 2px solid var(--accent);
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 3px;
 }
 
@@ -116,9 +79,9 @@ p {
 	align-items: center;
 	gap: 4px;
 	padding: 4px;
-	border: 1.5px solid var(--track);
+	border: 1.5px solid var(--usio-line);
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.65);
+	background: var(--usio-surface);
 }
 
 .page-nav-link {
@@ -126,7 +89,7 @@ p {
 	align-items: center;
 	padding: 5px 13px;
 	border-radius: 999px;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 	font-size: 13px;
 	font-weight: 500;
 	white-space: nowrap;
@@ -137,17 +100,17 @@ p {
 }
 
 .page-nav-link:hover {
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .page-nav-link:focus-visible {
-	outline: 2px solid var(--accent);
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 1px;
 }
 
 .page-nav-link.is-active {
-	background: var(--ink);
-	color: var(--paper);
+	background: var(--usio-ink);
+	color: var(--usio-paper);
 }
 
 .stage {
@@ -168,7 +131,7 @@ p {
 .brand-logo {
 	height: 26px;
 	width: auto;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .doodle {
@@ -183,7 +146,7 @@ p {
 
 .doodle-stroke {
 	fill: none;
-	stroke: var(--ink);
+	stroke: var(--usio-ink);
 	stroke-width: 4.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -191,7 +154,7 @@ p {
 
 .spark {
 	fill: none;
-	stroke: var(--accent);
+	stroke: var(--usio-signal);
 	stroke-width: 3.5;
 	stroke-linecap: round;
 	opacity: 0;
@@ -203,8 +166,8 @@ p {
 .stage h1 {
 	margin-top: 26px;
 	font-size: 26px;
-	font-weight: 500;
-	letter-spacing: -0.01em;
+	font-weight: 700;
+	letter-spacing: -0.02em;
 	animation: fade-up 0.5s ease 0.1s both;
 }
 
@@ -213,7 +176,7 @@ p {
 	max-width: 440px;
 	font-size: 15px;
 	line-height: 1.5;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 	animation: fade-up 0.5s ease 0.15s both;
 }
 
@@ -221,9 +184,9 @@ p {
 	display: grid;
 	gap: 14px;
 	padding: 20px;
-	border: 1.5px solid var(--track);
+	border: 1.5px solid var(--usio-line);
 	border-radius: 16px;
-	background: rgba(255, 255, 255, 0.65);
+	background: var(--usio-surface);
 	text-align: left;
 	animation: fade-up 0.5s ease both;
 }
@@ -233,7 +196,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .cta {
@@ -242,13 +205,13 @@ p {
 	justify-content: center;
 	min-height: 42px;
 	padding: 0 24px;
-	border: 1.5px solid var(--ink);
+	border: 1.5px solid var(--usio-signal-strong);
 	border-radius: 999px;
-	background: transparent;
-	color: var(--ink);
+	background: var(--usio-signal-strong);
+	color: var(--usio-on-signal);
 	font-family: inherit;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	cursor: pointer;
 	transition:
 		background 0.2s ease,
@@ -257,8 +220,13 @@ p {
 }
 
 .cta:hover:not(:disabled) {
-	background: var(--ink);
-	color: var(--paper);
+	border-color: var(--usio-signal-hover);
+	background: var(--usio-signal-hover);
+}
+
+.cta:focus-visible {
+	outline: 2px solid var(--usio-lens);
+	outline-offset: 2px;
 }
 
 .cta:disabled {
@@ -267,14 +235,15 @@ p {
 }
 
 .cta.ghost {
-	border-color: var(--track);
-	color: var(--ink-soft);
+	border-color: var(--usio-line-strong);
+	background: transparent;
+	color: var(--usio-ink-muted);
 }
 
 .cta.ghost:hover:not(:disabled) {
-	background: transparent;
-	border-color: var(--ink-soft);
-	color: var(--ink);
+	background: var(--usio-surface-sunken);
+	border-color: var(--usio-line-strong);
+	color: var(--usio-ink);
 }
 
 .cta[hidden] {
@@ -287,9 +256,9 @@ p {
 	gap: 8px;
 	min-height: 42px;
 	padding: 8px 20px;
-	border: 1.5px solid var(--ink);
+	border: 1.5px solid var(--usio-ink);
 	border-radius: 999px;
-	color: var(--ink);
+	color: var(--usio-ink);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.4;
@@ -297,14 +266,15 @@ p {
 }
 
 .paper-pill.success {
-	border-color: var(--success);
-	color: var(--success);
+	border-color: var(--usio-success);
+	color: var(--usio-success);
 }
 
 .paper-pill.error {
-	border-color: var(--error);
+	border-color: var(--usio-danger);
 	border-radius: 16px;
-	color: var(--error);
+	background: var(--usio-signal-tint);
+	color: var(--usio-ink);
 	text-align: left;
 }
 
@@ -336,21 +306,21 @@ p {
 	text-align: left;
 	font-size: 13px;
 	font-weight: 500;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .field > span {
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .field input,
 .field select {
 	min-height: 40px;
 	padding: 0 12px;
-	border: 1.5px solid var(--track);
+	border: 1.5px solid var(--usio-line-strong);
 	border-radius: 10px;
-	background: #ffffff;
-	color: var(--ink);
+	background: var(--usio-surface);
+	color: var(--usio-ink);
 	font: inherit;
 	font-size: 14px;
 	transition: border-color 0.15s ease;
@@ -359,14 +329,20 @@ p {
 .field input:focus,
 .field select:focus {
 	outline: none;
-	border-color: var(--ink);
+	border-color: var(--usio-ink);
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+	outline: 2px solid var(--usio-lens);
+	outline-offset: 2px;
 }
 
 .footnote {
 	padding: 0 24px 28px;
 	text-align: center;
 	font-size: 12.5px;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 	animation: fade-up 0.5s ease 0.25s both;
 }
 

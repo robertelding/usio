@@ -24,15 +24,15 @@
 }
 
 .knob-circle {
-	fill: var(--paper);
-	stroke: var(--ink);
+	fill: var(--usio-paper);
+	stroke: var(--usio-ink);
 	stroke-width: 4.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 }
 
 .knob-accent {
-	stroke: var(--accent);
+	stroke: var(--usio-signal);
 }
 
 .slider-knob {
@@ -80,7 +80,7 @@
 .recovery-lede {
 	font-size: 13px;
 	line-height: 1.5;
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .recovery-list {
@@ -98,9 +98,9 @@
 	gap: 12px;
 	flex-wrap: wrap;
 	padding: 12px 14px;
-	border: 1.5px solid var(--track);
+	border: 1.5px solid var(--usio-line);
 	border-radius: 12px;
-	background: #ffffff;
+	background: var(--usio-surface);
 }
 
 .recovery-meta {
@@ -111,11 +111,11 @@
 
 .recovery-title {
 	font-weight: 500;
-	color: var(--ink);
+	color: var(--usio-ink);
 }
 
 .recovery-detail {
-	color: var(--ink-soft);
+	color: var(--usio-ink-muted);
 }
 
 .recovery-actions {
@@ -132,7 +132,7 @@
 }
 
 .recovery-link {
-	color: inherit;
+	color: var(--usio-lens);
 	font-weight: 500;
 }
 
@@ -154,7 +154,7 @@
 	align-items: center;
 	gap: 10px;
 	font-size: 14px;
-	color: var(--ink);
+	color: var(--usio-ink);
 	cursor: pointer;
 }
 
@@ -171,9 +171,9 @@
 	width: 22px;
 	height: 22px;
 	flex: 0 0 auto;
-	border: 1.5px solid var(--ink);
+	border: 1.5px solid var(--usio-ink);
 	border-radius: 7px;
-	background: #ffffff;
+	background: var(--usio-surface);
 }
 
 .doodle-check-box svg {
@@ -184,7 +184,7 @@
 
 .doodle-check-mark {
 	fill: none;
-	stroke: var(--accent);
+	stroke: var(--usio-lens);
 	stroke-width: 3.5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -198,7 +198,7 @@
 }
 
 .doodle-check input:focus-visible + .doodle-check-box {
-	outline: 2px solid var(--accent);
+	outline: 2px solid var(--usio-lens);
 	outline-offset: 2px;
 }
 

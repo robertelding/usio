@@ -20,7 +20,7 @@ const ActionButton = ({ className, ...props }: ComponentProps<"button">) => (
 			"p-[0.25rem] rounded-lg transition-all",
 			"text-gray-11",
 			"h-8 w-8 flex items-center justify-center",
-			"hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-9",
+			"hover:bg-gray-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lens",
 			"disabled:opacity-50 disabled:cursor-not-allowed",
 			className,
 		)}
@@ -47,10 +47,10 @@ const InlineChunkProgress = ({ upload }: { upload?: UploadSummary }) => {
 	const circumference = 2 * Math.PI * radius;
 	const strokeDashoffset = circumference * (1 - progressRatio);
 	const colorClass = failed
-		? "text-[var(--red-11)]"
+		? "text-danger"
 		: completedCount === upload.totalChunks
-			? "text-[var(--green-11)]"
-			: "text-blue-9";
+			? "text-success"
+			: "text-lens";
 
 	return (
 		<div className="inline-flex items-center gap-2 rounded-lg px-1.5 py-1 text-[12px] text-gray-12">
@@ -82,7 +82,7 @@ const InlineChunkProgress = ({ upload }: { upload?: UploadSummary }) => {
 			<span
 				className={clsx(
 					"font-semibold tabular-nums leading-none",
-					failed ? "text-[var(--red-11)]" : "text-gray-12",
+					failed ? "text-danger" : "text-gray-12",
 				)}
 			>
 				{completedCount}/{upload.totalChunks}
@@ -126,10 +126,15 @@ export const RecordingBar = ({
 					type="button"
 					onClick={onStop}
 					disabled={!canStop}
-					className="py-[0.25rem] px-[0.5rem] text-red-300 gap-[0.35rem] flex flex-row items-center rounded-lg transition-opacity disabled:opacity-60"
+					className="py-[0.25rem] px-[0.5rem] text-signal-strong gap-[0.35rem] flex flex-row items-center rounded-lg transition-opacity disabled:opacity-60"
 				>
 					<StopCircle className="size-5" />
-					<span className="font-[500] text-[0.875rem] tabular-nums">
+					<span
+						className={clsx(
+							"font-[500] text-[0.875rem] tabular-nums",
+							showTimer && "font-mono",
+						)}
+					>
 						{statusText}
 					</span>
 				</button>
@@ -141,7 +146,7 @@ export const RecordingBar = ({
 							<>
 								<Mic className="size-5 text-gray-12" />
 								<div className="absolute bottom-1 left-1 right-1 h-0.5 bg-gray-10 overflow-hidden rounded-full">
-									<div className="absolute inset-0 bg-blue-9" />
+									<div className="absolute inset-0 bg-lens" />
 								</div>
 							</>
 						) : (

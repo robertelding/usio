@@ -37,7 +37,9 @@ module.exports = (__app, _options) => {
 		950: "#14245f",
 	};
 
-	const blue = __app === "web" ? usioLens : getColorScale("blue");
+	const usioThemed = __app === "web" || __app === "chrome-extension";
+
+	const blue = usioThemed ? usioLens : getColorScale("blue");
 
 	const usio = (name) => `var(--usio-${name})`;
 
@@ -97,7 +99,7 @@ module.exports = (__app, _options) => {
 				typography: {
 					DEFAULT: {
 						css: {
-							...(__app === "web"
+							...(usioThemed
 								? {
 										"--tw-prose-links": "var(--usio-lens)",
 										"--tw-prose-invert-links": "var(--usio-lens)",
@@ -241,7 +243,7 @@ module.exports = (__app, _options) => {
 					"gradient-conic":
 						"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 				},
-				fontFamily: __app === "web" ? usioFonts : {},
+				fontFamily: usioThemed ? usioFonts : {},
 				boxShadow: {
 					raised: usio("shadow-raised"),
 				},

@@ -81,13 +81,13 @@ export const CameraSelector = ({
 	const TriggerIcon = selectedOption.icon;
 
 	const statusPillClassName = clsx(
-		"px-[0.375rem] h-[1.25rem] min-w-[2.5rem] rounded-full text-[0.75rem] leading-[1.25rem] flex items-center justify-center font-normal transition-colors duration-200 disabled:opacity-100 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-[var(--blue-8)]",
+		"px-[0.375rem] h-[1.25rem] min-w-[2.5rem] rounded-full text-[0.75rem] leading-[1.25rem] flex items-center justify-center font-normal transition-colors duration-200 disabled:opacity-100 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-lens",
 		statusPillDisabled ? "cursor-default" : "cursor-pointer",
 		shouldRequestPermission
-			? "bg-[var(--red-3)] text-[var(--red-11)]"
+			? "bg-signal-tint text-ink"
 			: cameraEnabled
-				? "bg-[var(--blue-3)] text-[var(--blue-11)] hover:bg-[var(--blue-4)]"
-				: "bg-[var(--red-3)] text-[var(--red-11)]",
+				? "bg-lens-tint text-lens hover:bg-blue-4"
+				: "bg-signal-tint text-ink",
 	);
 
 	const openPicker = () => {
