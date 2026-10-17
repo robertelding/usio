@@ -1,12 +1,12 @@
-import { buildEnv } from "@cap/env";
 import { notFound } from "next/navigation";
 import { getMessengerConversationForViewer } from "@/lib/messenger/data";
+import { isSupportAssistantEnabled } from "@/lib/messenger/enabled";
 import { ChatWindow } from "./ChatWindow";
 
 export default async function MessengerConversationPage(
 	props: PageProps<"/messenger/[id]">,
 ) {
-	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") notFound();
+	if (!isSupportAssistantEnabled()) notFound();
 
 	const params = await props.params;
 	const data = await getMessengerConversationForViewer({

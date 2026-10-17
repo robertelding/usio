@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import ReactMarkdown from "react-markdown";
@@ -10,7 +11,11 @@ import {
 	fetchMessengerConversations,
 	sendMessengerUserMessage,
 } from "@/actions/messenger";
-import { MESSENGER_SUGGESTED_PROMPTS } from "@/lib/messenger/constants";
+import {
+	MESSENGER_AGENT_NAME,
+	MESSENGER_ASSISTANT_TITLE,
+	MESSENGER_SUGGESTED_PROMPTS,
+} from "@/lib/messenger/constants";
 
 interface ConversationSummary {
 	id: string;
@@ -95,7 +100,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
 							className="inline-block h-1.5 w-1.5 rounded-full"
 							style={{ backgroundColor: "var(--msngr-admin-dot)" }}
 						/>
-						Cap Team
+						{BRAND.name} Team
 					</span>
 				)}
 				<div
@@ -161,13 +166,18 @@ function PanelHeader({
 				className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
 				style={{ backgroundColor: "var(--msngr-accent-subtle)" }}
 			>
-				<Image src="/favicon.ico" alt="Cap Logo" width={32} height={32} />
+				<Image
+					src="/favicon.ico"
+					alt={`${BRAND.name} logo`}
+					width={32}
+					height={32}
+				/>
 			</div>
 			<span
 				className="flex-1 text-[14px] font-semibold"
 				style={{ color: "var(--msngr-on-accent)" }}
 			>
-				Cap Support
+				{MESSENGER_ASSISTANT_TITLE}
 			</span>
 			<button
 				type="button"
@@ -249,12 +259,12 @@ function HomeView({
 								}`}
 							>
 								<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-3 text-[11px] font-semibold text-gray-11">
-									M
+									{MESSENGER_AGENT_NAME.charAt(0)}
 								</div>
 								<div className="min-w-0 flex-1">
 									<div className="flex items-center justify-between gap-2">
 										<span className="text-[14px] font-medium text-gray-12">
-											Millie
+											{MESSENGER_AGENT_NAME}
 										</span>
 										<span className="shrink-0 text-[11px] tabular-nums text-gray-9">
 											{relativeTime(
@@ -424,7 +434,7 @@ function ChatView({
 
 			if (hasNewReply) {
 				if (document.hidden) {
-					document.title = "New Reply — Cap";
+					document.title = `New Reply — ${BRAND.name}`;
 				}
 				const inputFocused = document.activeElement === inputRef.current;
 				if (document.hidden || (!inputFocused && !isHoveringRef.current)) {
@@ -515,7 +525,8 @@ function ChatView({
 					<div className="flex h-full flex-col px-4 pt-6">
 						<div className="flex justify-start">
 							<div className="max-w-[85%] rounded-[18px] bg-gray-3 px-4 py-2.5 text-[14px] leading-[1.6] text-gray-12">
-								Hey! I&apos;m Millie from Cap, ask me anything!
+								Hey! I&apos;m {MESSENGER_AGENT_NAME} from {BRAND.name}, ask me
+								anything!
 							</div>
 						</div>
 						<div className="flex-1" />
@@ -875,7 +886,7 @@ export function MessengerWidget() {
 					boxShadow:
 						"0 4px 14px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.1)",
 				}}
-				aria-label={isOpen ? "Close messenger" : "Open messenger"}
+				aria-label={`${isOpen ? "Close" : "Open"} ${MESSENGER_ASSISTANT_TITLE}`}
 			>
 				{isOpen ? (
 					<svg

@@ -1,8 +1,8 @@
-import { buildEnv } from "@cap/env";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { createMessengerConversation } from "@/actions/messenger";
 import { listViewerMessengerConversations } from "@/lib/messenger/data";
+import { isSupportAssistantEnabled } from "@/lib/messenger/enabled";
 
 const relativeTime = (date: Date | null) => {
 	if (!date) return "";
@@ -21,7 +21,7 @@ const relativeTime = (date: Date | null) => {
 };
 
 export default async function MessengerPage() {
-	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") notFound();
+	if (!isSupportAssistantEnabled()) notFound();
 
 	const { viewer, conversations } = await listViewerMessengerConversations();
 
