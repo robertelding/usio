@@ -381,7 +381,7 @@ export const LinkNotification = ({
 			{isWindows ? (
 				<button
 					type="button"
-					aria-label="Open the shared usio"
+					aria-label="Open the shared video"
 					onClick={onOpen}
 					className="flex w-full cursor-pointer flex-col gap-1.5 p-4 text-left transition-colors duration-200 hover:bg-[#fbfbfb]"
 					style={{
@@ -415,7 +415,7 @@ export const LinkNotification = ({
 			) : (
 				<button
 					type="button"
-					aria-label="Open the shared usio"
+					aria-label="Open the shared video"
 					onClick={onOpen}
 					className="flex w-full cursor-pointer items-center gap-3 rounded-2xl p-3 text-left backdrop-blur-xl transition-transform duration-200 hover:scale-[1.02]"
 					style={{

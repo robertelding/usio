@@ -210,7 +210,8 @@ const features: Feature[] = [
 	{
 		icon: faGlobe,
 		title: "Custom Domain",
-		description: "Share recordings from your own domain (cap.yourdomain.com)",
+		description:
+			"Share recordings from your own domain (videos.yourdomain.com)",
 		category: "sharing",
 		isPro: true,
 	},
