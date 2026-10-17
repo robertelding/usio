@@ -69,6 +69,7 @@ import {
 	SOCIAL_REFERRER_DOMAINS,
 } from "@/lib/social-crawlers";
 import { transcribeVideo } from "@/lib/transcribe";
+import { isTranscriptionConfigured } from "@/lib/transcription-provider";
 import { canUserDownloadVideo } from "@/lib/video-download-permissions";
 import { isEditSourceKey } from "@/lib/video-edit-processing";
 import {
@@ -846,7 +847,7 @@ async function AuthorizedContent({
 	const env = serverEnv();
 	const transcriptionGenerationAvailable =
 		!video.isScreenshot &&
-		Boolean(env.ASSEMBLY_API_KEY) &&
+		isTranscriptionConfigured(env) &&
 		!rules.settings.disableTranscript;
 	const aiProviderAvailable = isAiConfigured();
 
