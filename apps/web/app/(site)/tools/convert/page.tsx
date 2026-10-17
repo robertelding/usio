@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMarketingMetadata } from "@/lib/og/url";
@@ -66,9 +67,9 @@ const conversionTools: ConversionTool[] = [
 ];
 
 const breadcrumbSchema = createBreadcrumbSchema([
-	{ name: "Home", url: "https://cap.so" },
-	{ name: "Tools", url: "https://cap.so/tools" },
-	{ name: "Convert", url: "https://cap.so/tools/convert" },
+	{ name: "Home", url: BRAND.url },
+	{ name: "Tools", url: `${BRAND.url}/tools` },
+	{ name: "Convert", url: `${BRAND.url}/tools/convert` },
 ]);
 
 export default function ConvertToolsPage() {

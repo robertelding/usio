@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutPage } from "@/components/pages/about/AboutPage";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { formatStarCount, getGitHubStars } from "@/utils/github";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
@@ -19,6 +20,7 @@ const breadcrumb = createBreadcrumbSchema([
 ]);
 
 export default async function Page() {
+	hideMarketingPage("/about");
 	const stars = formatStarCount(await getGitHubStars());
 
 	return (

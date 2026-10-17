@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 // Helpers for building dynamic OG image URLs + page metadata. Server-only
 // (metadata consts and generateMetadata always run on the server): URLs are
 // HMAC-signed so third parties can't render arbitrary text via /api/og.
@@ -70,7 +71,7 @@ export const buildMarketingMetadata = ({
 			description,
 			type: "website",
 			...(path && { url: path }),
-			siteName: "Cap",
+			siteName: BRAND.name,
 			images: [image],
 		},
 		twitter: {

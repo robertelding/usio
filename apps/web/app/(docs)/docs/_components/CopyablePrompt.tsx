@@ -7,8 +7,8 @@ import { CAP_AGENT_PROMPT } from "@/data/agent-prompt";
 export { CAP_AGENT_PROMPT };
 
 const setupBenefits = [
-	"Installs the Cap CLI",
-	"Adds the full Cap skill",
+	"Installs the usio CLI",
+	"Adds the full usio skill",
 	"Connects local MCP",
 	"Verifies access and capabilities",
 ] as const;
@@ -87,13 +87,13 @@ export function CopyablePrompt() {
 					One prompt setup
 				</p>
 				<h2 className="max-w-2xl text-balance text-xl font-medium tracking-[-0.01em] text-gray-12 sm:text-2xl">
-					Make Cap Your Agent’s Video Assistant
+					Make usio Your Agent’s Video Assistant
 				</h2>
 				<p className="mt-2.5 max-w-2xl text-pretty text-[15px] leading-6 text-gray-11">
 					Copy one prompt into Codex, Claude Code, Cursor, OpenCode, or any
-					shell-capable agent. It installs Cap, connects the full skill and MCP,
-					authenticates safely, and teaches your agent to record, share, search,
-					transcribe, summarize, and manage Cap for you.
+					shell-capable agent. It installs usio, connects the full skill and
+					MCP, authenticates safely, and teaches your agent to record, share,
+					search, transcribe, summarize, and manage usio for you.
 				</p>
 
 				<ul className="mt-5 flex flex-wrap gap-2">
@@ -118,10 +118,10 @@ export function CopyablePrompt() {
 						className="inline-flex h-10 w-full shrink-0 touch-manipulation items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-12 px-5 text-sm font-medium text-gray-1 transition-colors hover:bg-gray-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-9 focus-visible:ring-offset-2 sm:w-auto"
 						aria-label={
 							copyState === "copied"
-								? "Cap agent setup prompt copied"
+								? "usio agent setup prompt copied"
 								: copyState === "selected"
-									? "Cap agent setup prompt selected for manual copy"
-									: "Copy Cap agent setup prompt"
+									? "usio agent setup prompt selected for manual copy"
+									: "Copy usio agent setup prompt"
 						}
 					>
 						{copyState === "copied" ? (

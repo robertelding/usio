@@ -1,5 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { BRAND } from "@cap/utils";
+import { isHiddenMarketingPath } from "@/lib/hidden-marketing-pages";
 import { getBlogPosts, getDocs } from "@/utils/blog";
 import {
 	CHANGELOG_PAGE_SIZE,
@@ -140,7 +142,11 @@ export default async function sitemap() {
 		{ path: string; lastModified?: string }
 	>();
 	for (const route of combined) {
-		if (route.path !== "/home" && !uniqueByPath.has(route.path)) {
+		if (
+			route.path !== "/home" &&
+			!isHiddenMarketingPath(route.path) &&
+			!uniqueByPath.has(route.path)
+		) {
 			uniqueByPath.set(route.path, route);
 		}
 	}
@@ -149,7 +155,7 @@ export default async function sitemap() {
 	const otherRoutes = dedupedRoutes.filter((route) => route.path !== "/");
 
 	return [...(homeRoute ? [homeRoute] : []), ...otherRoutes].map((route) => ({
-		url: `https://cap.so${route.path}`,
+		url: `${BRAND.url}${route.path}`,
 		...(route.lastModified ? { lastModified: route.lastModified } : {}),
 	}));
 }

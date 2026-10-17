@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import {
 	faCheck,
 	faExclamation,
@@ -17,6 +18,7 @@ import { useState } from "react";
 import { renderRichText } from "@/components/RichText";
 import { ComparisonSlider } from "@/components/seo/ComparisonSlider";
 import type { ComparisonCell, SeoPageContent } from "@/components/seo/types";
+import { isHiddenDownloadHref, resolveDownloadCta } from "@/lib/download-cta";
 
 const MotionButton = motion.create(Button);
 const MotionImage = motion.create(Image);
@@ -77,6 +79,13 @@ export const SeoPageTemplate = ({
 	showLoomComparisonSlider?: boolean;
 	skipHero?: boolean;
 }) => {
+	const primaryCta = resolveDownloadCta(
+		content.cta.buttonText,
+		content.cta.buttonHref,
+	);
+	const showSecondaryCta =
+		!!content.cta.secondaryButtonText &&
+		!isHiddenDownloadHref(content.cta.secondaryButtonHref);
 	const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
 	const toggleFaq = (index: number) => {
@@ -88,7 +97,7 @@ export const SeoPageTemplate = ({
 			{showLogosInHeader && (
 				<>
 					<MotionImage
-						alt="Cap Logo"
+						alt="usio Logo"
 						initial={{ opacity: 0, left: "-40vw" }}
 						animate={{ opacity: 0.5, left: "-17vw" }}
 						transition={{ duration: 1 }}
@@ -178,15 +187,15 @@ export const SeoPageTemplate = ({
 						>
 							<MotionButton
 								variant="blue"
-								href={content.cta.buttonHref ?? "/download"}
+								href={primaryCta.href}
 								target={content.cta.buttonTarget}
 								icon={content.cta.buttonIcon}
 								size="lg"
 								className="relative z-[20] w-full font-medium text-md sm:w-auto"
 							>
-								{content.cta.buttonText}
+								{primaryCta.text}
 							</MotionButton>
-							{content.cta.secondaryButtonText && (
+							{showSecondaryCta && (
 								<MotionButton
 									variant="white"
 									href={content.cta.secondaryButtonHref ?? "/pricing"}
@@ -206,9 +215,9 @@ export const SeoPageTemplate = ({
 				<ComparisonSlider
 					leftImage="/app/capdashboard.webp"
 					rightImage="/app/loomdashboard.webp"
-					leftAlt="Cap Dashboard"
+					leftAlt="usio Dashboard"
 					rightAlt="Loom Dashboard"
-					leftLabel="Cap"
+					leftLabel="usio"
 					rightLabel="Loom"
 				/>
 			)}
@@ -245,57 +254,59 @@ export const SeoPageTemplate = ({
 					</div>
 				</div>
 
-				{showVideo && (content.video.iframe?.src || content.video.url) && (
-					<div>
-						<div className="text-center max-w-[800px] mx-auto mb-10">
-							<h2 className="inline-block relative mb-2 text-3xl font-medium text-gray-800 md:text-4xl">
-								{content.video.title ?? "See Cap in Action"}
-							</h2>
-							<p className="text-xl leading-relaxed text-gray-10">
-								Watch how Cap makes screen recording simple, powerful, and
-								accessible.
-							</p>
-						</div>
-						<div className="mx-auto max-w-2xl">
-							{content.video.iframe ? (
-								<div
-									className="overflow-hidden w-full rounded-xl shadow-md"
-									style={{
-										position: "relative",
-										paddingBottom: "56.25%",
-										height: 0,
-									}}
-								>
-									<iframe
-										src={content.video.iframe.src}
-										title={content.video.iframe.title || "Cap Demo"}
-										frameBorder="0"
-										allow="fullscreen; picture-in-picture"
-										allowFullScreen
+				{showVideo &&
+					content.video &&
+					(content.video.iframe?.src || content.video.url) && (
+						<div>
+							<div className="text-center max-w-[800px] mx-auto mb-10">
+								<h2 className="inline-block relative mb-2 text-3xl font-medium text-gray-800 md:text-4xl">
+									{content.video.title ?? "See usio in Action"}
+								</h2>
+								<p className="text-xl leading-relaxed text-gray-10">
+									Watch how usio makes screen recording simple, powerful, and
+									accessible.
+								</p>
+							</div>
+							<div className="mx-auto max-w-2xl">
+								{content.video.iframe ? (
+									<div
+										className="overflow-hidden w-full rounded-xl shadow-md"
 										style={{
-											position: "absolute",
-											top: 0,
-											left: 0,
-											width: "100%",
-											height: "100%",
-											borderRadius: "0.75rem",
+											position: "relative",
+											paddingBottom: "56.25%",
+											height: 0,
 										}}
-									/>
-								</div>
-							) : content.video.url ? (
-								<div className="overflow-hidden rounded-xl shadow-md">
-									<iframe
-										src={content.video.url}
-										title={content.video.alt ?? "Cap demo video"}
-										allow="fullscreen; picture-in-picture"
-										allowFullScreen
-										className="w-full border-0 aspect-video"
-									/>
-								</div>
-							) : null}
+									>
+										<iframe
+											src={content.video.iframe.src}
+											title={content.video.iframe.title || "usio Demo"}
+											frameBorder="0"
+											allow="fullscreen; picture-in-picture"
+											allowFullScreen
+											style={{
+												position: "absolute",
+												top: 0,
+												left: 0,
+												width: "100%",
+												height: "100%",
+												borderRadius: "0.75rem",
+											}}
+										/>
+									</div>
+								) : content.video.url ? (
+									<div className="overflow-hidden rounded-xl shadow-md">
+										<iframe
+											src={content.video.url}
+											title={content.video.alt ?? "usio demo video"}
+											allow="fullscreen; picture-in-picture"
+											allowFullScreen
+											className="w-full border-0 aspect-video"
+										/>
+									</div>
+								) : null}
+							</div>
 						</div>
-					</div>
-				)}
+					)}
 
 				{content.comparison && content.comparisonTitle && (
 					<div>
@@ -551,21 +562,23 @@ export const SeoPageTemplate = ({
 							</h2>
 							<p className="mb-6 text-xl text-gray-10">
 								{content.cta.subtitle ??
-									"Ready to get started? Download now and see the difference."}
+									(BRAND.desktopAppAvailable
+										? "Ready to get started? Download now and see the difference."
+										: "Ready to get started? Sign up free and see the difference.")}
 							</p>
 						</div>
 						<div className="flex flex-col justify-center items-center space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
 							<Button
 								variant="blue"
-								href={content.cta.buttonHref ?? "/download"}
+								href={primaryCta.href}
 								target={content.cta.buttonTarget}
 								icon={content.cta.buttonIcon}
 								size="lg"
 								className="px-8 py-3 w-full font-medium transition-all duration-300 sm:w-auto sm:max-w-fit"
 							>
-								{content.cta.buttonText}
+								{primaryCta.text}
 							</Button>
-							{content.cta.secondaryButtonText && (
+							{showSecondaryCta && (
 								<Button
 									variant="white"
 									href={content.cta.secondaryButtonHref ?? "/pricing"}

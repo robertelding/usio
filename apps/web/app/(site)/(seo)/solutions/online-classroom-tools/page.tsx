@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { OnlineClassroomToolsPage } from "@/components/pages/seo/OnlineClassroomToolsPage";
 import { ogImageUrl } from "@/lib/og/url";
@@ -8,21 +9,21 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "Online Classroom Tools: Empower Remote Teaching with Cap",
+	title: `Online Classroom Tools: Empower Remote Teaching with ${BRAND.name}`,
 	description:
-		"Searching for online classroom tools? Learn how Cap's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
+		"Searching for online classroom tools? Learn how usio's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
 	openGraph: {
-		title: "Online Classroom Tools: Empower Remote Teaching with Cap",
+		title: `Online Classroom Tools: Empower Remote Teaching with ${BRAND.name}`,
 		description:
-			"Learn how Cap's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
-		url: "https://cap.so/solutions/online-classroom-tools",
-		siteName: "Cap",
+			"Learn how usio's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
+		url: `${BRAND.url}/solutions/online-classroom-tools`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Online Classroom Tools",
+				alt: "usio: Online Classroom Tools",
 			},
 		],
 		locale: "en_US",
@@ -30,13 +31,13 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Online Classroom Tools | Cap Screen Recorder",
+		title: `Online Classroom Tools | ${BRAND.name} Screen Recorder`,
 		description:
-			"Learn how Cap's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
+			"Learn how usio's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/solutions/online-classroom-tools",
+		canonical: `${BRAND.url}/solutions/online-classroom-tools`,
 	},
 };
 

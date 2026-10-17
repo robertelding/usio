@@ -11,6 +11,7 @@ import {
 } from "@cap/database/schema";
 import { serverEnv } from "@cap/env";
 import {
+	BRAND,
 	isProSubscription,
 	STRIPE_AVAILABLE,
 	stripe,
@@ -264,7 +265,7 @@ app.post(
 
 		try {
 			await sendEmail({
-				email: "hello@cap.so",
+				email: BRAND.contactEmail,
 				subject: `New Feedback from ${userEmail}`,
 				react: Feedback({
 					userEmail,
@@ -274,7 +275,7 @@ app.post(
 				}),
 				cc: userEmail,
 				replyTo: userEmail,
-				fromOverride: "Richie from Cap <richie@send.cap.so>",
+				fromOverride: `${BRAND.emailFromName} <no-reply@${BRAND.domain}>`,
 			});
 
 			return c.json({

@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/(seo)/async-video-code-reviews/page.tsx"),
 	"utf-8",
@@ -16,18 +18,18 @@ const componentSource = readFileSync(
 describe("AsyncVideoCodeReviewsPage metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/async-video-code-reviews"',
+			`canonical: \`${BRAND_URL}/async-video-code-reviews\``,
 		);
 	});
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/async-video-code-reviews"',
+			`url: \`${BRAND_URL}/async-video-code-reviews\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {
@@ -36,7 +38,7 @@ describe("AsyncVideoCodeReviewsPage metadata", () => {
 
 	it("uses the dynamic OG image", () => {
 		expect(pageSource).toContain("ogImageUrl(");
-		expect(pageSource).not.toContain("https://cap.so/og.png");
+		expect(pageSource).not.toContain("https://usio.co.uk/og.png");
 	});
 
 	it("title targets async video code reviews keyword", () => {

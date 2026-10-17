@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	FreeScreenRecorderPage,
@@ -14,19 +15,19 @@ const ogImage = ogImageUrl({
 export const metadata: Metadata = {
 	title: "Free Screen Recorder: High-Quality Recording at No Cost",
 	description:
-		"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+		"usio offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 	openGraph: {
 		title: "Free Screen Recorder: High-Quality Recording at No Cost",
 		description:
-			"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
-		url: "https://cap.so/free-screen-recorder",
-		siteName: "Cap",
+			"usio offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+		url: `${BRAND.url}/free-screen-recorder`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Free Screen Recorder",
+				alt: "usio: Free Screen Recorder",
 			},
 		],
 		locale: "en_US",
@@ -36,11 +37,11 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Free Screen Recorder: High-Quality Recording at No Cost",
 		description:
-			"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+			"usio offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/free-screen-recorder",
+		canonical: `${BRAND.url}/free-screen-recorder`,
 	},
 };
 

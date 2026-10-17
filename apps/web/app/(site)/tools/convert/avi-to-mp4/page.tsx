@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { MediaFormatConverter } from "@/components/tools/MediaFormatConverter";
 import { ToolsPageTemplate } from "@/components/tools/ToolsPageTemplate";
@@ -11,7 +12,7 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+	title: `AVI to MP4 Converter — Free Online Video Converter | ${BRAND.name}`,
 	description:
 		"Convert AVI videos to MP4 format directly in your browser. Free, private, no upload needed. Works with old camcorder footage, downloaded files, and any AVI video.",
 	keywords: [
@@ -24,11 +25,11 @@ export const metadata: Metadata = {
 		"convert avi video online",
 	],
 	openGraph: {
-		title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+		title: `AVI to MP4 Converter — Free Online Video Converter | ${BRAND.name}`,
 		description:
 			"Convert AVI videos to the universally compatible MP4 format directly in your browser. No uploads, no installs, 100% private. Works with camcorder footage and any AVI file.",
-		url: "https://cap.so/tools/convert/avi-to-mp4",
-		siteName: "Cap",
+		url: `${BRAND.url}/tools/convert/avi-to-mp4`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
@@ -42,13 +43,13 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+		title: `AVI to MP4 Converter — Free Online Video Converter | ${BRAND.name}`,
 		description:
 			"Convert AVI to MP4 directly in your browser. No uploads, no installs, 100% private.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/tools/convert/avi-to-mp4",
+		canonical: `${BRAND.url}/tools/convert/avi-to-mp4`,
 	},
 };
 
@@ -56,7 +57,7 @@ const faqs = [
 	{
 		question: "How do I convert AVI to MP4 online?",
 		answer:
-			"Open Cap's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+			"Open usio's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 	},
 	{
 		question: "Is the AVI to MP4 converter free?",
@@ -98,7 +99,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your AVI file",
-		text: "Open Cap's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
+		text: "Open usio's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
 	},
 	{
 		name: "Start the conversion",
@@ -128,7 +129,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Convert AVI to MP4 Online",
 	description:
-		"Convert AVI video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+		"Convert AVI video files to MP4 format for free using usio's browser-based converter. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -142,12 +143,12 @@ const howToStructuredData = {
 };
 
 const breadcrumbSchema = createBreadcrumbSchema([
-	{ name: "Home", url: "https://cap.so" },
-	{ name: "Tools", url: "https://cap.so/tools" },
-	{ name: "Convert", url: "https://cap.so/tools/convert" },
+	{ name: "Home", url: BRAND.url },
+	{ name: "Tools", url: `${BRAND.url}/tools` },
+	{ name: "Convert", url: `${BRAND.url}/tools/convert` },
 	{
 		name: "AVI to MP4 Converter",
-		url: "https://cap.so/tools/convert/avi-to-mp4",
+		url: `${BRAND.url}/tools/convert/avi-to-mp4`,
 	},
 ]);
 
@@ -193,10 +194,10 @@ export default function AVIToMP4Page() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: `${BRAND.name} is the open source Loom alternative`,
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with usio. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
+			buttonText: "Download usio Free",
 		},
 	};
 

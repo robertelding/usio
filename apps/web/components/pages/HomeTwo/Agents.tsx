@@ -29,7 +29,7 @@ const SURFACES = ["CLI", "MCP server", "JSON on every command", "REST API"];
 const FACTS = [
 	{
 		title: "One prompt to set up",
-		body: "Paste one prompt from the docs and your agent installs the CLI, the Cap skill, and the MCP server for Claude Code, Cursor, or Codex.",
+		body: "Paste one prompt from the docs and your agent installs the CLI, the usio skill, and the MCP server for Claude Code, Cursor, or Codex.",
 		snippet: "cap agents install --target claude --component all",
 		mode: "instant" as const,
 	},
@@ -41,7 +41,7 @@ const FACTS = [
 	},
 	{
 		title: "76 MCP tools, zero secrets",
-		body: "Read and manage Caps, comments, sharing, and analytics over MCP. Capture and upload stay in the CLI, so no secret passes through the model.",
+		body: "Read and manage videos, comments, sharing, and analytics over MCP. Capture and upload stay in the CLI, so no secret passes through the model.",
 		snippet: "cap mcp serve",
 		mode: "screenshot" as const,
 	},
@@ -75,7 +75,7 @@ const MCP_TAB: Tab = {
 		"  }",
 		"}",
 	],
-	note: "Point any MCP client at the Cap server and it gets 76 tools for listing, reading, commenting on, and sharing Caps. Capture and upload stay in the CLI.",
+	note: "Point any MCP client at the usio server and it gets 76 tools for listing, reading, commenting on, and sharing videos. Capture and upload stay in the CLI.",
 };
 
 const TABS: Tab[] = [CLI_TAB, MCP_TAB];
@@ -93,16 +93,16 @@ export const Agents = () => {
 		<section className="px-5 py-20 lg:py-28">
 			<div className="mx-auto max-w-[1200px]">
 				<div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
-					<Eyebrow accent={MODE_THEME.studio.accent}>Cap for Agents</Eyebrow>
+					<Eyebrow accent={MODE_THEME.studio.accent}>usio for Agents</Eyebrow>
 					<h2
 						className={`${H_SECTION} mt-6 text-balance text-[clamp(38px,5vw,56px)]`}
 					>
-						Your agent can record, share, and read Caps
+						Your agent can record, share, and read videos
 					</h2>
 					<p
 						className={`${BODY_TEXT} mt-6 max-w-[640px] text-balance text-[16.5px] leading-[1.5] text-[rgba(17,17,17,0.78)] sm:text-[17.5px]`}
 					>
-						Cap ships a CLI and a local MCP server, so Claude Code, Cursor,
+						usio ships a CLI and a local MCP server, so Claude Code, Cursor,
 						Codex, OpenCode, or any shell capable agent can record your screen,
 						upload the result, and read back the transcript and summary. One
 						pasted prompt installs everything, and the agent asks before
@@ -240,7 +240,7 @@ export const Agents = () => {
 							href="/agents"
 							className={classNames(BTN_SECONDARY, "self-start")}
 						>
-							Explore Cap for Agents
+							Explore usio for Agents
 						</Link>
 					</div>
 				</div>

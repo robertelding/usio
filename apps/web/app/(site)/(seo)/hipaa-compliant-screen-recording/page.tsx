@@ -1,8 +1,10 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	HipaaCompliantScreenRecordingPage,
 	hipaaCompliantScreenRecordingContent,
 } from "@/components/pages/seo/HipaaCompliantScreenRecordingPage";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { ogImageUrl } from "@/lib/og/url";
 import { createFAQSchema } from "@/utils/web-schema";
 
@@ -17,15 +19,15 @@ export const metadata: Metadata = {
 	description:
 		"Cap is a HIPAA-compliant screen recorder for healthcare teams. Sign a BAA in minutes on the Pro plan, SOC 2 Type II and ISO 27001 certified, plus self-hosting to keep PHI on your own storage.",
 	alternates: {
-		canonical: "https://cap.so/hipaa-compliant-screen-recording",
+		canonical: `${BRAND.url}/hipaa-compliant-screen-recording`,
 	},
 	openGraph: {
 		title:
 			"HIPAA-Compliant Screen Recording — Secure Healthcare Recordings | Cap",
 		description:
 			"Cap is a HIPAA-compliant screen recorder for healthcare teams. Sign a BAA in minutes on the Pro plan, SOC 2 Type II and ISO 27001 certified, plus self-hosting to keep PHI on your own storage.",
-		url: "https://cap.so/hipaa-compliant-screen-recording",
-		siteName: "Cap",
+		url: `${BRAND.url}/hipaa-compliant-screen-recording`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
@@ -48,6 +50,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+	hideMarketingPage("/hipaa-compliant-screen-recording");
 	return (
 		<>
 			<script type="application/ld+json">

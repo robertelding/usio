@@ -145,7 +145,7 @@ describe("generateMessengerAgentReply", () => {
 
 		expect(JSON.stringify(firstCall?.prompt)).toContain("Support email tool");
 		expect(JSON.stringify(model.doGenerateCalls[1]?.prompt)).toContain(
-			"Support email sent to hello@cap.so from the user's account email. Remaining sends today: 1.",
+			"Support email sent to hello@usio.co.uk from the user's account email. Remaining sends today: 1.",
 		);
 	});
 
@@ -154,7 +154,7 @@ describe("generateMessengerAgentReply", () => {
 			doGenerate: [
 				toolCallResult([supportEmailInput]),
 				textResult(
-					"I couldn't send that to the team right now. Please email hello@cap.so directly.",
+					"I couldn't send that to the team right now. Please email hello@usio.co.uk directly.",
 				),
 			],
 		});
@@ -171,7 +171,7 @@ describe("generateMessengerAgentReply", () => {
 		});
 
 		expect(result).toBe(
-			"I couldn't send that to the team right now. Please email hello@cap.so directly.",
+			"I couldn't send that to the team right now. Please email hello@usio.co.uk directly.",
 		);
 		expect(JSON.stringify(model.doGenerateCalls[1]?.prompt)).toContain(
 			"Failed to send support email.",
@@ -299,7 +299,7 @@ describe("generateMessengerAgentReply", () => {
 		});
 
 		expect(result).toBe(
-			"I couldn't send another support email from your account today. You're limited to 2 per day, but you can still email hello@cap.so directly.",
+			"I couldn't send another support email from your account today. You're limited to 2 per day, but you can still email hello@usio.co.uk directly.",
 		);
 	});
 

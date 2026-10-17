@@ -4,13 +4,13 @@ import { SeoPageTemplate } from "@/components/seo/SeoPageTemplate";
 import type { SeoPageContent } from "@/components/seo/types";
 
 export const onlineClassroomToolsContent: SeoPageContent = {
-	title: "Online Classroom Tools: Empower Remote Teaching with Cap",
+	title: "Online Classroom Tools: Empower Remote Teaching with usio",
 	description:
-		"Searching for online classroom tools? Learn how Cap's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
+		"Searching for online classroom tools? Learn how usio's screen recorder helps educators create engaging lessons, manage student feedback, and streamline remote learning.",
 
-	featuresTitle: "Why Cap is Essential for Modern Online Classrooms",
+	featuresTitle: "Why usio is Essential for Modern Online Classrooms",
 	featuresDescription:
-		"Cap provides educators with powerful tools for creating engaging, accessible asynchronous learning experiences",
+		"usio provides educators with powerful tools for creating engaging, accessible asynchronous learning experiences",
 
 	features: [
 		{
@@ -26,7 +26,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 		{
 			title: "Privacy & Data Ownership",
 			description:
-				"Maintain complete control over sensitive student data with Cap's open-source approach and custom S3 storage options. Create a branded classroom experience with custom domain integration for institutional cohesion.",
+				"Maintain complete control over sensitive student data with usio's open-source approach and custom S3 storage options. Create a branded classroom experience with custom domain integration for institutional cohesion.",
 		},
 		{
 			title: "Cross-Platform Compatibility",
@@ -36,7 +36,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 		{
 			title: "Time-Saving Lesson Creation",
 			description:
-				"Record, edit and share lessons in minutes rather than hours. Educators report saving 3-5 hours weekly by replacing traditional content creation methods with Cap's streamlined recording process.",
+				"Record, edit and share lessons in minutes rather than hours. Educators report saving 3-5 hours weekly by replacing traditional content creation methods with usio's streamlined recording process.",
 		},
 		{
 			title: "Student-Paced Learning",
@@ -48,7 +48,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 	recordingModes: {
 		title: "Two Recording Modes for Educational Content",
 		description:
-			"Cap adapts to different teaching scenarios with flexible recording options",
+			"usio adapts to different teaching scenarios with flexible recording options",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -71,7 +71,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 		],
 	},
 
-	useCasesTitle: "How Educators Use Cap in Virtual Classrooms",
+	useCasesTitle: "How Educators Use usio in Virtual Classrooms",
 	useCasesDescription: "Real solutions for common online teaching challenges",
 
 	useCases: [
@@ -102,33 +102,33 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 		{
 			question: "Can students record their own videos or presentations?",
 			answer:
-				"Yes, students can use Cap to record project presentations, assignments, and peer teaching materials. This is particularly valuable for speech, language, performance, and demonstration-based assessments where text submission doesn't capture the student's full capabilities.",
+				"Yes, students can use usio to record project presentations, assignments, and peer teaching materials. This is particularly valuable for speech, language, performance, and demonstration-based assessments where text submission doesn't capture the student's full capabilities.",
 		},
 		{
 			question: "How many recordings can I store?",
 			answer:
-				"Cap's free plan includes generous storage for individual educators. For departmental or institution-wide implementation, our paid plans offer expanded storage options, and you can connect your own S3 storage for unlimited self-managed content retention and complete data ownership.",
+				"usio's free plan includes generous storage for individual educators. For departmental or institution-wide implementation, our paid plans offer expanded storage options, and you can connect your own S3 storage for unlimited self-managed content retention and complete data ownership.",
 		},
 		{
-			question: "Is Cap suitable for K-12 vs. university-level teaching?",
+			question: "Is usio suitable for K-12 vs. university-level teaching?",
 			answer:
-				"Cap is designed for versatility across all educational levels. K-12 educators appreciate the simplicity and privacy controls, while university instructors leverage the professional-quality recording capabilities for complex subject matter. The platform scales with the complexity of your content needs.",
+				"usio is designed for versatility across all educational levels. K-12 educators appreciate the simplicity and privacy controls, while university instructors leverage the professional-quality recording capabilities for complex subject matter. The platform scales with the complexity of your content needs.",
 		},
 		{
-			question: "Does Cap integrate with existing LMS platforms?",
+			question: "Does usio integrate with existing LMS platforms?",
 			answer:
-				"Cap provides easy-to-share links and embed codes that work seamlessly with all major Learning Management Systems including Canvas, Blackboard, Moodle, Google Classroom, and more. Simply copy the link to your recording and paste it into your course materials.",
+				"usio provides easy-to-share links and embed codes that work seamlessly with all major Learning Management Systems including Canvas, Blackboard, Moodle, Google Classroom, and more. Simply copy the link to your recording and paste it into your course materials.",
 		},
 		{
-			question: "How does Cap improve accessibility for diverse learners?",
+			question: "How does usio improve accessibility for diverse learners?",
 			answer:
-				"Cap supports diverse learning needs by allowing students to control playback speed, pause and review content as needed, and access materials at times that accommodate their individual circumstances. For institutions with specific accessibility requirements, Cap's open-source nature allows for custom adaptations.",
+				"usio supports diverse learning needs by allowing students to control playback speed, pause and review content as needed, and access materials at times that accommodate their individual circumstances. For institutions with specific accessibility requirements, usio's open-source nature allows for custom adaptations.",
 		},
 	],
 
 	comparisonTable: {
-		title: "Cap vs. Traditional Online Teaching Methods",
-		headers: ["Feature", "Cap", "Video Meetings", "Text & Slide Materials"],
+		title: "usio vs. Traditional Online Teaching Methods",
+		headers: ["Feature", "usio", "Video Meetings", "Text & Slide Materials"],
 		rows: [
 			[
 				"Student-Paced Learning",
@@ -179,9 +179,9 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 	},
 
 	migrationGuide: {
-		title: "How to Implement Cap in Your Classroom",
+		title: "How to Implement usio in Your Classroom",
 		steps: [
-			"Download Cap for your operating system (Mac and Windows)",
+			"Download usio for your operating system (Mac and Windows)",
 			"Create a sample lecture to understand the workflow and features",
 			"Set up shared S3 storage (optional) for complete data ownership",
 			"Develop guidelines for video length and format (3-10 minutes recommended per topic)",
@@ -190,16 +190,9 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 		],
 	},
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title: "Cap screen recording demo",
-		},
-	},
-
 	cta: {
 		title: "Ready to Transform Your Online Teaching Experience?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download usio Free",
 	},
 };
 

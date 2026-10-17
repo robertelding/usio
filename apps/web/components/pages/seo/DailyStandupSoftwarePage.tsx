@@ -4,13 +4,13 @@ import { SeoPageTemplate } from "@/components/seo/SeoPageTemplate";
 import type { SeoPageContent } from "@/components/seo/types";
 
 export const dailyStandupSoftwareContent: SeoPageContent = {
-	title: "Daily Standup Software: Streamline Your Agile Meetings with Cap",
+	title: "Daily Standup Software: Streamline Your Agile Meetings with usio",
 	description:
-		"Looking for daily standup software? Discover how Cap helps remote or hybrid teams run async standups efficiently. No more timezone conflicts!",
+		"Looking for daily standup software? Discover how usio helps remote or hybrid teams run async standups efficiently. No more timezone conflicts!",
 
-	featuresTitle: "Why Cap is the Ideal Daily Standup Software",
+	featuresTitle: "Why usio is the Ideal Daily Standup Software",
 	featuresDescription:
-		"Cap provides everything Agile teams need for efficient, asynchronous daily standups",
+		"usio provides everything Agile teams need for efficient, asynchronous daily standups",
 
 	features: [
 		{
@@ -26,7 +26,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 		{
 			title: "Security & Privacy",
 			description:
-				"Ensure sensitive project discussions remain confidential with Cap's open-source approach and custom S3 storage options for complete data ownership and NDA compliance.",
+				"Ensure sensitive project discussions remain confidential with usio's open-source approach and custom S3 storage options for complete data ownership and NDA compliance.",
 		},
 		{
 			title: "Time-Saving Daily Updates",
@@ -48,7 +48,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 	recordingModes: {
 		title: "Two Recording Modes for Efficient Standups",
 		description:
-			"Cap adapts to your team's Agile workflow with flexible recording options",
+			"usio adapts to your team's Agile workflow with flexible recording options",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -71,7 +71,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 		],
 	},
 
-	useCasesTitle: "How Agile Teams Use Cap for Daily Standups",
+	useCasesTitle: "How Agile Teams Use usio for Daily Standups",
 	useCasesDescription: "Real solutions for common standup meeting challenges",
 
 	useCases: [
@@ -107,17 +107,17 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 		{
 			question: "How long should each standup recording be?",
 			answer:
-				"We recommend keeping recordings under 3 minutes per person, focusing on the classic standup format: what was accomplished, what's planned for today, and any blockers. Cap's Instant Mode is perfectly optimized for these quick updates, while Studio Mode offers more flexibility for complex situations.",
+				"We recommend keeping recordings under 3 minutes per person, focusing on the classic standup format: what was accomplished, what's planned for today, and any blockers. usio's Instant Mode is perfectly optimized for these quick updates, while Studio Mode offers more flexibility for complex situations.",
 		},
 		{
-			question: "Can we integrate Cap with our project management tools?",
+			question: "Can we integrate usio with our project management tools?",
 			answer:
-				"Cap provides easy-to-share links that work seamlessly with all major project management and communication platforms including Jira, Trello, Slack, Microsoft Teams, and more. Simply copy the link to your standup recording and paste it into your team's preferred tools.",
+				"usio provides easy-to-share links that work seamlessly with all major project management and communication platforms including Jira, Trello, Slack, Microsoft Teams, and more. Simply copy the link to your standup recording and paste it into your team's preferred tools.",
 		},
 		{
 			question: "What if someone misses recording their standup?",
 			answer:
-				"Cap's flexibility is perfect for occasional missed standups. Team members can record updates when they're available, and others can easily access the recording later. This is actually an advantage over traditional standups, where missing the meeting means missing the information completely.",
+				"usio's flexibility is perfect for occasional missed standups. Team members can record updates when they're available, and others can easily access the recording later. This is actually an advantage over traditional standups, where missing the meeting means missing the information completely.",
 		},
 		{
 			question: "How do async standups help with meeting fatigue?",
@@ -127,8 +127,8 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 	],
 
 	comparisonTable: {
-		title: "Cap vs. Traditional Standup Methods",
-		headers: ["Feature", "Cap", "Video Meetings", "Text-Based Standup Tools"],
+		title: "usio vs. Traditional Standup Methods",
+		headers: ["Feature", "usio", "Video Meetings", "Text-Based Standup Tools"],
 		rows: [
 			[
 				"Time Zone Flexibility",
@@ -179,9 +179,9 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 	},
 
 	migrationGuide: {
-		title: "How to Implement Cap for Your Daily Standups",
+		title: "How to Implement usio for Your Daily Standups",
 		steps: [
-			"Download Cap for all team members (available on Mac and Windows)",
+			"Download usio for all team members (available on Mac and Windows)",
 			"Set up shared S3 storage (optional) for secure standup content",
 			"Create standup guidelines (recommended length, format, etc.)",
 			"Decide on a consistent time window for recording daily updates",
@@ -190,16 +190,9 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 		],
 	},
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title: "Cap screen recording demo",
-		},
-	},
-
 	cta: {
 		title: "Ready to Transform Your Daily Standups?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download usio Free",
 	},
 };
 

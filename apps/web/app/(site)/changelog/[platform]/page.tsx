@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { CHANGELOG_PLATFORMS, type ChangelogPlatform } from "@/utils/changelog";
 import { ChangelogView } from "../_components/ChangelogView";
@@ -40,6 +41,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 }
 
 export default async function Page(props: PageProps) {
+	hideMarketingPage("/changelog");
 	const params = await props.params;
 	const platform = resolvePlatform(params.platform);
 	if (!platform) notFound();

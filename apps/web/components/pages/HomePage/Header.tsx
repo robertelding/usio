@@ -14,7 +14,6 @@ import { Fragment, useEffect, useState, useTransition } from "react";
 import { sendDownloadLink } from "@/actions/send-download-link";
 import { ChromeExtensionButton } from "@/components/ChromeExtensionButton";
 import { LoomMark } from "@/components/icons/LoomMark";
-import { LogoMarquee } from "@/components/ui/LogoMarquee";
 import {
 	CAP_CHROME_EXTENSION_URL,
 	CHROME_EXTENSION_BUTTON_CLASS,
@@ -220,22 +219,6 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 			<div className="flex flex-col justify-center lg:justify-start xl:flex-row relative z-10 px-5 w-full mb-0">
 				<div className="w-full max-w-2xl xl:max-w-[530px] 2xl:mt-12 mx-auto xl:ml-[100px] 2xl:ml-[150px]">
 					<div className="flex flex-col text-center md:text-left w-full max-w-[650px]">
-						<div className="flex justify-center mb-4 md:justify-start">
-							<Link
-								href="/hipaa-compliant-screen-recording"
-								className="inline-flex gap-2 items-center px-3.5 py-1.5 rounded-full border transition-colors group bg-gray-2 border-gray-4 hover:bg-gray-3 hover:border-gray-5"
-							>
-								<span className="text-xs font-medium text-gray-12">
-									<span className="font-semibold text-blue-500">New</span>
-									<span className="mx-1.5 text-gray-7">·</span>
-									Cap is now HIPAA compliant
-								</span>
-								<FontAwesomeIcon
-									icon={faArrowRight}
-									className="size-2.5 text-gray-10 transition-transform group-hover:translate-x-0.5"
-								/>
-							</Link>
-						</div>
 						<div className="flex justify-center mb-5 md:justify-start">
 							<div className="inline-flex gap-1 p-1 rounded-full border border-gray-4 bg-gray-2">
 								{heroModes.map((mode, index) => {
@@ -355,7 +338,7 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 							<div className="flex gap-2 items-center">
 								{upgradeButton}
 								<span className="max-w-[240px] text-sm leading-snug text-gray-10">
-									Cap Pro gives you unlimited cloud sharing, AI summaries &amp;
+									usio Pro gives you unlimited cloud sharing, AI summaries &amp;
 									team features
 								</span>
 							</div>
@@ -412,7 +395,7 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 								}
 							/>
 							<span className="text-xs text-center text-gray-10">
-								Cap Pro gives you unlimited cloud sharing, AI summaries &amp;
+								usio Pro gives you unlimited cloud sharing, AI summaries &amp;
 								team features
 							</span>
 						</div>
@@ -454,13 +437,6 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 						>
 							{homepageCopy.header.cta.seeOtherOptionsText}
 						</Link>
-					</div>
-
-					<div className="mt-14">
-						<p className="mb-4 text-sm italic text-gray-10 text-center md:text-left">
-							Trusted by <strong>50,000+</strong> teams, builders and creators
-						</p>
-						<LogoMarquee />
 					</div>
 				</div>
 

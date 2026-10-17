@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { toast } from "sonner";
 import {
@@ -98,7 +99,7 @@ function MigrationBanner() {
 						Switch
 					</span>
 					<p className="text-sm font-semibold text-gray-900 sm:text-base">
-						Switch from Loom to Cap — save 20%
+						Switch from Loom to usio — save 20%
 					</p>
 				</div>
 				<p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
@@ -106,7 +107,7 @@ function MigrationBanner() {
 					<span className="font-mono font-semibold text-blue-700">
 						{MIGRATE_PROMO_CODE}
 					</span>{" "}
-					at checkout for 20% off Cap Pro.
+					at checkout for 20% off usio Pro.
 				</p>
 			</div>
 			<div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3">
@@ -117,7 +118,7 @@ function MigrationBanner() {
 					href={MIGRATE_CHECKOUT_HREF}
 					className="whitespace-nowrap"
 				>
-					Switch to Cap
+					Switch to usio
 				</Button>
 			</div>
 		</div>
@@ -190,11 +191,11 @@ function MigrationSuccessState({
 						Next step
 					</span>
 					<h3 className="text-lg font-semibold text-gray-900 sm:text-xl">
-						Bring your whole Loom library to Cap
+						Bring your whole Loom library to usio
 					</h3>
 					<p className="text-sm leading-relaxed text-gray-700 sm:text-base">
-						Skip the one-by-one downloads. Cap Pro's built-in Loom importer
-						transfers your entire Loom workspace to Cap in a single click —
+						Skip the one-by-one downloads. usio Pro's built-in Loom importer
+						transfers your entire Loom workspace to usio in a single click —
 						titles, transcripts, and all. Use{" "}
 						<span className="font-mono font-semibold text-blue-700">
 							{MIGRATE_PROMO_CODE}
@@ -211,16 +212,18 @@ function MigrationSuccessState({
 							href={MIGRATE_CHECKOUT_HREF}
 							className="w-full sm:w-auto"
 						>
-							Migrate with Cap Pro — save 20%
+							Migrate with usio Pro — save 20%
 						</Button>
-						<Button
-							variant="white"
-							size="lg"
-							href="/download"
-							className="w-full sm:w-auto"
-						>
-							Download Cap free
-						</Button>
+						{BRAND.desktopAppAvailable && (
+							<Button
+								variant="white"
+								size="lg"
+								href="/download"
+								className="w-full sm:w-auto"
+							>
+								Download usio free
+							</Button>
+						)}
 					</div>
 					<div className="flex items-center gap-2">
 						<PromoCodeChip />
@@ -561,7 +564,7 @@ export function LoomDownloader() {
 					href={MIGRATE_CHECKOUT_HREF}
 					className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
 				>
-					Import Loom videos with Cap Pro
+					Import Loom videos with usio Pro
 					<svg
 						className="w-3 h-3"
 						fill="none"

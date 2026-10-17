@@ -25,7 +25,7 @@ export const LoomBridge = () => (
 				<p
 					className={`${BODY_TEXT} mt-4 max-w-[500px] text-[16px] leading-[1.5] text-[rgba(17,17,17,0.78)]`}
 				>
-					Paste a Loom link or upload a CSV of your library and Cap re-hosts
+					Paste a Loom link or upload a CSV of your library and usio re-hosts
 					every video with its title, a transcript and chapters. Your recordings
 					land in storage you own, on a plan that stays free.
 				</p>

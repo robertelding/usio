@@ -1,6 +1,7 @@
 import { format, parseISO } from "date-fns";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import {
 	LAST_TAURI_VERSION,
@@ -247,6 +248,7 @@ function ReleaseRow({
 }
 
 export default async function VersionsPage() {
+	hideMarketingPage("/download");
 	let releases: Release[] = [];
 	let error: string | null = null;
 

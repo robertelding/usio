@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { AgenciesPage } from "@/components/pages/seo/AgenciesPage";
@@ -8,9 +9,9 @@ import { ogImageUrl } from "@/lib/og/url";
 const createFaqStructuredData = () => {
 	const faqs = [
 		{
-			question: "Does Cap work on both macOS and Windows?",
+			question: "Does usio work on both macOS and Windows?",
 			answer:
-				"Yes. Cap supports both macOS and Windows with desktop apps, so your entire team can use the same workflow regardless of their platform preference.",
+				"Yes. usio supports both macOS and Windows with desktop apps, so your entire team can use the same workflow regardless of their platform preference.",
 		},
 		{
 			question: "Can clients view videos without installing anything?",
@@ -24,21 +25,21 @@ const createFaqStructuredData = () => {
 		},
 		{
 			question: "How long can we record on the free version?",
-			answer: `The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to Cap Pro at $${PRICING.pro.annualPerMonth}/month (billed annually).`,
+			answer: `The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to usio Pro at $${PRICING.pro.annualPerMonth}/month (billed annually).`,
 		},
 		{
-			question: "Is Cap secure enough for confidential client work?",
+			question: "Is usio secure enough for confidential client work?",
 			answer:
-				"Yes. Cap is open-source and privacy-first. You can connect your own S3 storage, use a custom domain for share links, and password-protect sensitive videos. This gives you complete control over client data.",
+				"Yes. usio is open-source and privacy-first. You can connect your own S3 storage, use a custom domain for share links, and password-protect sensitive videos. This gives you complete control over client data.",
 		},
 		{
-			question: "Can we use our own branding with Cap?",
+			question: "Can we use our own branding with usio?",
 			answer:
-				"Yes. Cap Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
+				"Yes. usio Pro includes custom domain support (videos.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
 		},
 		{
-			question: "How does Cap pricing work for agency teams?",
-			answer: `Cap Pro is $${PRICING.pro.annualPerMonth}/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.`,
+			question: "How does usio pricing work for agency teams?",
+			answer: `usio Pro is $${PRICING.pro.annualPerMonth}/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.`,
 		},
 	];
 
@@ -63,14 +64,14 @@ const createSoftwareStructuredData = () => {
 	const softwareStructuredData = {
 		"@context": "https://schema.org",
 		"@type": "SoftwareApplication",
-		name: "Cap — Screen Recorder",
+		name: "usio — Screen Recorder",
 		operatingSystem: ["macOS", "Windows"],
 		applicationCategory: "BusinessApplication",
 		description:
 			"Open-source, privacy-first screen recorder for agencies. Instant share links and studio-quality local recording with editing.",
 		publisher: {
 			"@type": "Organization",
-			name: "Cap",
+			name: "usio",
 		},
 		offers: {
 			"@type": "Offer",
@@ -84,26 +85,26 @@ const createSoftwareStructuredData = () => {
 };
 
 const ogImage = ogImageUrl({
-	title: "Cap for agencies",
+	title: `${BRAND.name} for agencies`,
 	tag: "Solutions",
 });
 
 export const metadata: Metadata = {
-	title: "Cap for Agencies — Faster Client Updates with Instant Video Links",
+	title: `${BRAND.name} for Agencies — Faster Client Updates with Instant Video Links`,
 	description:
-		"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. Cap for Agencies on macOS & Windows.",
+		"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. usio for Agencies on macOS & Windows.",
 	openGraph: {
-		title: "Cap for Agencies — Faster Client Updates with Instant Video Links",
+		title: `${BRAND.name} for Agencies — Faster Client Updates with Instant Video Links`,
 		description:
-			"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. Cap for Agencies on macOS & Windows.",
-		url: "https://cap.so/solutions/agencies",
-		siteName: "Cap",
+			"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. usio for Agencies on macOS & Windows.",
+		url: `${BRAND.url}/solutions/agencies`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap for Agencies",
+				alt: "usio for Agencies",
 			},
 		],
 		locale: "en_US",
@@ -111,13 +112,13 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Cap for Agencies — Faster Client Updates with Instant Video Links",
+		title: `${BRAND.name} for Agencies — Faster Client Updates with Instant Video Links`,
 		description:
-			"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. Cap for Agencies on macOS & Windows.",
+			"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. usio for Agencies on macOS & Windows.",
 		images: [ogImage],
 	},
 	alternates: {
-		canonical: "https://cap.so/solutions/agencies",
+		canonical: `${BRAND.url}/solutions/agencies`,
 	},
 };
 

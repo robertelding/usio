@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { GoogleDriveScreenRecorderPage } from "@/components/pages/seo/GoogleDriveScreenRecorderPage";
 import { googleDriveScreenRecorderFaqs } from "@/components/pages/seo/google-drive-screen-recorder-faqs";
@@ -13,10 +14,9 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title:
-		"Google Drive Screen Recorder: Save Recordings to Your Own Drive | Cap",
+	title: `Google Drive Screen Recorder: Save Recordings to Your Own Drive | ${BRAND.name}`,
 	description:
-		"Connect Google Drive to Cap and store every shareable screen recording in your own Drive. Works for individual users and entire organizations. Open source, instant share links, served from your Drive.",
+		"Connect Google Drive to usio and store every shareable screen recording in your own Drive. Works for individual users and entire organizations. Open source, instant share links, served from your Drive.",
 	keywords: [
 		"google drive screen recorder",
 		"screen recording to google drive",
@@ -26,21 +26,20 @@ export const metadata: Metadata = {
 		"connect google drive to cap",
 	],
 	alternates: {
-		canonical: "https://cap.so/google-drive-screen-recorder",
+		canonical: `${BRAND.url}/google-drive-screen-recorder`,
 	},
 	openGraph: {
-		title:
-			"Google Drive Screen Recorder: Save Recordings to Your Own Drive | Cap",
+		title: `Google Drive Screen Recorder: Save Recordings to Your Own Drive | ${BRAND.name}`,
 		description:
-			"Connect Google Drive to Cap and store every shareable screen recording in your own Drive. For individuals and whole organizations. Open source, instant share links, served from your Drive.",
-		url: "https://cap.so/google-drive-screen-recorder",
-		siteName: "Cap",
+			"Connect Google Drive to usio and store every shareable screen recording in your own Drive. For individuals and whole organizations. Open source, instant share links, served from your Drive.",
+		url: `${BRAND.url}/google-drive-screen-recorder`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Google Drive Screen Recorder",
+				alt: "usio: Google Drive Screen Recorder",
 			},
 		],
 		locale: "en_US",
@@ -48,9 +47,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Google Drive Screen Recorder | Cap",
+		title: `Google Drive Screen Recorder | ${BRAND.name}`,
 		description:
-			"Connect Google Drive to Cap and store every shareable screen recording in your own Drive, for individuals or whole organizations.",
+			"Connect Google Drive to usio and store every shareable screen recording in your own Drive, for individuals or whole organizations.",
 		images: [ogImage],
 	},
 };

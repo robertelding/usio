@@ -1,10 +1,11 @@
+import { BRAND } from "@cap/utils";
 import { PRICING } from "@/data/pricing";
 
 export const homepageSeo = {
-	url: "https://cap.so/",
-	title: "Cap — Free Screen Recorder & Open Source Loom Alternative",
+	url: `${BRAND.url}/`,
+	title: "usio — Async Video Messages & Open Source Loom Alternative",
 	description:
-		"Cap is the free, open source screen recorder for Mac, Windows, and Linux. Record, edit, take screenshots, and share videos with a link.",
+		"usio is the open source Loom alternative. Record your screen and camera in the browser, then share a video link the moment you stop.",
 } as const;
 
 export const homepageSchema = {
@@ -12,88 +13,85 @@ export const homepageSchema = {
 	"@graph": [
 		{
 			"@type": "Organization",
-			"@id": "https://cap.so/#organization",
-			name: "Cap",
+			"@id": `${BRAND.url}/#organization`,
+			name: "usio",
 			url: homepageSeo.url,
 			logo: {
 				"@type": "ImageObject",
-				url: "https://cap.so/cap-logo.png",
-				width: 1459,
-				height: 480,
+				url: `${BRAND.url}/android-chrome-512x512.png`,
+				width: 512,
+				height: 512,
 			},
-			sameAs: [
-				"https://github.com/CapSoftware/Cap",
-				"https://x.com/cap",
-				"https://www.linkedin.com/company/caprecorder/",
-			],
+			sameAs: [BRAND.githubUrl],
 			contactPoint: {
 				"@type": "ContactPoint",
-				email: "hello@cap.so",
+				email: BRAND.contactEmail,
 				contactType: "customer support",
 			},
 		},
 		{
 			"@type": "WebSite",
-			"@id": "https://cap.so/#website",
-			name: "Cap",
+			"@id": `${BRAND.url}/#website`,
+			name: "usio",
 			url: homepageSeo.url,
-			publisher: { "@id": "https://cap.so/#organization" },
+			publisher: { "@id": `${BRAND.url}/#organization` },
 			inLanguage: "en",
 		},
 		{
 			"@type": "WebPage",
-			"@id": "https://cap.so/#webpage",
+			"@id": `${BRAND.url}/#webpage`,
 			url: homepageSeo.url,
 			name: homepageSeo.title,
 			description: homepageSeo.description,
-			isPartOf: { "@id": "https://cap.so/#website" },
-			mainEntity: { "@id": "https://cap.so/#software" },
+			isPartOf: { "@id": `${BRAND.url}/#website` },
+			mainEntity: { "@id": `${BRAND.url}/#software` },
 			inLanguage: "en",
 		},
 		{
 			"@type": "SoftwareApplication",
-			"@id": "https://cap.so/#software",
-			name: "Cap",
+			"@id": `${BRAND.url}/#software`,
+			name: "usio",
 			url: homepageSeo.url,
 			description: homepageSeo.description,
 			applicationCategory: "MultimediaApplication",
-			operatingSystem: ["macOS", "Windows", "Linux"],
-			downloadUrl: "https://cap.so/download",
-			publisher: { "@id": "https://cap.so/#organization" },
-			mainEntityOfPage: { "@id": "https://cap.so/#webpage" },
+			operatingSystem: "Web browser",
+			publisher: { "@id": `${BRAND.url}/#organization` },
+			mainEntityOfPage: { "@id": `${BRAND.url}/#webpage` },
 			featureList: [
-				"Screen, webcam, and audio recording",
+				"Screen, webcam, and audio recording in the browser",
 				"Instant video sharing",
-				"Local recording with a built-in video editor",
-				"Screenshot capture and annotation",
+				"Comments, reactions, transcripts and AI summaries",
 				"Loom video importer for single videos and CSV libraries",
-				"Custom backgrounds and automatic zoom",
 				"Google Drive and S3 storage integrations",
 				"Open source and self-hostable",
 			],
 			offers: [
 				{
 					"@type": "Offer",
-					name: "Cap Free",
+					name: "usio Free",
 					price: 0,
 					priceCurrency: "USD",
-					url: "https://cap.so/download",
+					url: `${BRAND.url}/download`,
 					description: "Free local recording and editing for personal use.",
 				},
+				...(BRAND.desktopAppAvailable
+					? [
+							{
+								"@type": "Offer",
+								name: "Desktop License",
+								price: PRICING.commercial.lifetime,
+								priceCurrency: "USD",
+								url: `${BRAND.url}/pricing`,
+								description: "One-time desktop license for commercial use.",
+							},
+						]
+					: []),
 				{
 					"@type": "Offer",
-					name: "Desktop License",
-					price: PRICING.commercial.lifetime,
-					priceCurrency: "USD",
-					url: "https://cap.so/pricing",
-					description: "One-time desktop license for commercial use.",
-				},
-				{
-					"@type": "Offer",
-					name: "Cap Pro",
+					name: "usio Pro",
 					price: PRICING.pro.monthly,
 					priceCurrency: "USD",
-					url: "https://cap.so/pricing",
+					url: `${BRAND.url}/pricing`,
 					description:
 						"Per user, billed monthly. Annual billing is also available.",
 				},

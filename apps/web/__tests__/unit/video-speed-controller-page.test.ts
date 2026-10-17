@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema, createHowToSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/tools/video-speed-controller/page.tsx"),
 	"utf-8",
@@ -11,7 +13,7 @@ const pageSource = readFileSync(
 describe("Video Speed Controller page metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/tools/video-speed-controller"',
+			`canonical: \`${BRAND_URL}/tools/video-speed-controller\``,
 		);
 	});
 
@@ -22,12 +24,12 @@ describe("Video Speed Controller page metadata", () => {
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/tools/video-speed-controller"',
+			`url: \`${BRAND_URL}/tools/video-speed-controller\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {

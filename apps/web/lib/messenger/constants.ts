@@ -1,4 +1,5 @@
 import type { MessengerAgent } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 
 export const MESSENGER_ADMIN_EMAIL = "richie@cap.so";
 export const MESSENGER_ANON_COOKIE = "cap-messenger-anon-id";
@@ -45,7 +46,7 @@ IMPORTANT URLS:
 - Privacy Policy: https://cap.so/privacy
 - GitHub (open source): https://github.com/CapSoftware/Cap
 - Call booking (optional): https://calendar.app.google/BrQRrAeCzVR8Fd136
-- Support email: hello@cap.so
+- Support email: ${BRAND.contactEmail}
 - Loom importer (dashboard): https://cap.so/dashboard/import/loom
 - Loom downloader tool: https://cap.so/tools/loom-downloader
 - Referral program: https://cap.so/dashboard/refer

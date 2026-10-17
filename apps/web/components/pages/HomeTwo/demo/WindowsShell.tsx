@@ -192,7 +192,7 @@ export const WinTaskbar = ({
 			<TaskbarApp label="Microsoft Edge">
 				<EdgeGlyph />
 			</TaskbarApp>
-			<TaskbarApp label="Cap" running>
+			<TaskbarApp label="usio" running>
 				<CapLogoMark className="size-[21px]" />
 			</TaskbarApp>
 		</div>

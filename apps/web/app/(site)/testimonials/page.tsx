@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TestimonialsPage } from "@/components/pages/TestimonialsPage";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 
 export const metadata: Metadata = buildMarketingMetadata({
@@ -12,5 +13,6 @@ export const metadata: Metadata = buildMarketingMetadata({
 });
 
 export default function App() {
+	hideMarketingPage("/testimonials");
 	return <TestimonialsPage />;
 }

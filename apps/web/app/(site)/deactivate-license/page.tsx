@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LicenseDeactivationPage } from "@/components/pages/LicenseDeactivationPage";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 
 export const metadata: Metadata = {
 	title: "Deactivate License — Cap",
@@ -8,5 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function App() {
+	hideMarketingPage("/deactivate-license");
 	return <LicenseDeactivationPage />;
 }

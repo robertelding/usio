@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import Link from "next/link";
 import { Eyebrow } from "./Eyebrow";
 import { Fit, SCENES, STAGE } from "./scenes";
@@ -33,11 +34,13 @@ export const FinalCta = () => (
 			</p>
 			<div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
 				<Link href="/pricing" className={BTN_PRIMARY}>
-					Upgrade to Cap Pro
+					Upgrade to usio Pro
 				</Link>
-				<Link href="/download" className={BTN_SECONDARY}>
-					Download for free
-				</Link>
+				{BRAND.desktopAppAvailable && (
+					<Link href="/download" className={BTN_SECONDARY}>
+						Download for free
+					</Link>
+				)}
 			</div>
 		</div>
 

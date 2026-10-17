@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(
 		process.cwd(),
@@ -22,18 +24,18 @@ const componentSource = readFileSync(
 describe("HipaaCompliantScreenRecordingPage metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/hipaa-compliant-screen-recording"',
+			`canonical: \`${BRAND_URL}/hipaa-compliant-screen-recording\``,
 		);
 	});
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/hipaa-compliant-screen-recording"',
+			`url: \`${BRAND_URL}/hipaa-compliant-screen-recording\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {

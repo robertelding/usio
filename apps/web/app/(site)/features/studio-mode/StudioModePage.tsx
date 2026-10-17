@@ -12,7 +12,7 @@ const studioModeConfig: FeaturePageConfig = {
 			subtitle: "Professional screen recording for creators",
 			description:
 				"Local recording with studio-quality output and precision editing tools. Perfect for content creators, educators, and professionals who need the highest quality recordings.",
-			primaryCta: "Download Cap Free",
+			primaryCta: "Download usio Free",
 			secondaryCta: "Watch Demo",
 			features: [
 				"4K 60fps recording",
@@ -254,12 +254,12 @@ const studioModeConfig: FeaturePageConfig = {
 				{
 					question: "Is Studio Mode available on both Mac and Windows?",
 					answer:
-						"Yes, Studio Mode is available as part of the Cap desktop application for both macOS (Intel and Apple Silicon) and Windows.",
+						"Yes, Studio Mode is available as part of the usio desktop application for both macOS (Intel and Apple Silicon) and Windows.",
 				},
 				{
 					question: "How does pricing work for Studio Mode?",
 					answer:
-						"Studio Mode is completely free for personal usage. For commercial usage, you need the Desktop License, which is included with Cap Pro or can be purchased separately.",
+						"Studio Mode is completely free for personal usage. For commercial usage, you need the Desktop License, which is included with usio Pro or can be purchased separately.",
 				},
 			],
 		},
@@ -267,15 +267,15 @@ const studioModeConfig: FeaturePageConfig = {
 			title: "See Studio Mode in Action",
 			iframe: {
 				src: "https://cap.so/embed/qk8gt56e1q1r735",
-				title: "Studio Mode Demo - Cap Screen Recording",
+				title: "Studio Mode Demo - usio Screen Recording",
 			},
 		},
 		cta: {
 			title: "Start Creating Professional Content Today",
 			description:
-				"Download Cap and experience the power of Studio Mode for yourself. Create stunning, professional-quality recordings that engage your audience.",
-			primaryButton: "Download Cap Free",
-			secondaryButton: "Upgrade to Cap Pro",
+				"Download usio and experience the power of Studio Mode for yourself. Create stunning, professional-quality recordings that engage your audience.",
+			primaryButton: "Download usio Free",
+			secondaryButton: "Upgrade to usio Pro",
 		},
 	},
 	customSections: {

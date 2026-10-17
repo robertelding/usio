@@ -10,11 +10,12 @@ import {
 	messengerSupportEmails,
 	users,
 } from "@cap/database/schema";
+import { BRAND } from "@cap/utils";
 import type { User, Video } from "@cap/web-domain";
 import { and, eq, or } from "drizzle-orm";
 
-const ACCOUNT_DELETION_EMAIL_TO = "hello@cap.so";
-const ACCOUNT_DELETION_EMAIL_FROM = "Cap Support <richie@send.cap.so>";
+const ACCOUNT_DELETION_EMAIL_TO = BRAND.contactEmail;
+const ACCOUNT_DELETION_EMAIL_FROM = `${BRAND.emailFromName} Support <no-reply@${BRAND.domain}>`;
 export const ACCOUNT_DELETION_PENDING_SUBJECT =
 	"[PENDING] Account deletion request";
 export const MOBILE_CONTENT_REPORT_PENDING_SUBJECT =
@@ -198,14 +199,14 @@ export const createMobileContentReport = async ({
 		"",
 		`Reporter user ID: ${normalizedReporter.id}`,
 		`Reporter email: ${normalizedReporter.email}`,
-		`Cap ID: ${content.id}`,
-		`Cap title: ${content.title}`,
-		`Cap owner ID: ${content.ownerId}`,
+		`Video ID: ${content.id}`,
+		`Video title: ${content.title}`,
+		`Video owner ID: ${content.ownerId}`,
 		`Reason: ${reason}`,
 		`Reported at: ${now.toISOString()}`,
-		`Cap URL: https://cap.so/s/${content.id}`,
+		`Video URL: ${BRAND.url}/s/${content.id}`,
 		"",
-		"Review the content promptly, remove it if it violates Cap policies, respond to the reporter when appropriate, and change this request subject from [PENDING] to [COMPLETED].",
+		"Review the content promptly, remove it if it violates usio policies, respond to the reporter when appropriate, and change this request subject from [PENDING] to [COMPLETED].",
 	].join("\n");
 	const request = await db().transaction(async (tx) => {
 		const [lockedUser] = await tx

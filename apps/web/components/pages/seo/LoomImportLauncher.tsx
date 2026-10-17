@@ -101,7 +101,7 @@ export const LoomImportLauncher = ({ signedIn }: { signedIn: boolean }) => {
 					disabled={submitting}
 					className={classNames(BTN_PRIMARY, "shrink-0 disabled:opacity-80")}
 				>
-					Import to Cap
+					Import to usio
 					<ArrowRight className="ml-2 size-4" />
 				</button>
 			</div>
@@ -115,7 +115,7 @@ export const LoomImportLauncher = ({ signedIn }: { signedIn: boolean }) => {
 				</p>
 			) : null}
 			<div className="mt-4 flex flex-col gap-2 text-[14px] leading-[1.5] text-[rgba(17,17,17,0.6)] sm:flex-row sm:items-center sm:justify-between">
-				<span>Paste one link now, or skip it and add videos inside Cap.</span>
+				<span>Paste one link now, or skip it and add videos inside usio.</span>
 				<LoomImportLink
 					signedIn={signedIn}
 					mode="csv"

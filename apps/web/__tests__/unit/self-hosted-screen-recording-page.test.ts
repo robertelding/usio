@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/(seo)/self-hosted-screen-recording/page.tsx"),
 	"utf-8",
@@ -16,18 +18,18 @@ const componentSource = readFileSync(
 describe("SelfHostedScreenRecordingPage metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/self-hosted-screen-recording"',
+			`canonical: \`${BRAND_URL}/self-hosted-screen-recording\``,
 		);
 	});
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/self-hosted-screen-recording"',
+			`url: \`${BRAND_URL}/self-hosted-screen-recording\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {
@@ -36,7 +38,7 @@ describe("SelfHostedScreenRecordingPage metadata", () => {
 
 	it("uses the dynamic OG image", () => {
 		expect(pageSource).toContain("ogImageUrl(");
-		expect(pageSource).not.toContain("https://cap.so/og.png");
+		expect(pageSource).not.toContain("https://usio.co.uk/og.png");
 	});
 
 	it("title targets self-hosted screen recording keyword", () => {
@@ -86,8 +88,8 @@ describe("SelfHostedScreenRecordingPage component content", () => {
 		expect(componentSource).toContain("/loom-alternative");
 	});
 
-	it("references the hipaa-compliant-screen-recording internal link", () => {
-		expect(componentSource).toContain("/hipaa-compliant-screen-recording");
+	it("does not link to the hidden HIPAA page", () => {
+		expect(componentSource).not.toContain("/hipaa-compliant-screen-recording");
 	});
 });
 

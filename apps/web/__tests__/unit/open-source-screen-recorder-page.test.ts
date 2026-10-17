@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { createFAQSchema } from "@/utils/web-schema";
 
+const BRAND_URL = ["$", "{BRAND.url}"].join("");
+
 const pageSource = readFileSync(
 	join(process.cwd(), "app/(site)/(seo)/open-source-screen-recorder/page.tsx"),
 	"utf-8",
@@ -16,18 +18,18 @@ const componentSource = readFileSync(
 describe("OpenSourceScreenRecorderPage metadata", () => {
 	it("contains canonical URL", () => {
 		expect(pageSource).toContain(
-			'canonical: "https://cap.so/open-source-screen-recorder"',
+			`canonical: \`${BRAND_URL}/open-source-screen-recorder\``,
 		);
 	});
 
 	it("contains OG url field", () => {
 		expect(pageSource).toContain(
-			'url: "https://cap.so/open-source-screen-recorder"',
+			`url: \`${BRAND_URL}/open-source-screen-recorder\``,
 		);
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain("siteName: BRAND.name");
 	});
 
 	it("contains OG locale field", () => {
@@ -36,7 +38,7 @@ describe("OpenSourceScreenRecorderPage metadata", () => {
 
 	it("uses the dynamic OG image", () => {
 		expect(pageSource).toContain("ogImageUrl(");
-		expect(pageSource).not.toContain("https://cap.so/og.png");
+		expect(pageSource).not.toContain("https://usio.co.uk/og.png");
 	});
 
 	it("title targets open-source-screen-recorder keyword", () => {

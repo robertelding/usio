@@ -1,9 +1,10 @@
+import { BRAND } from "@cap/utils";
 import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import { buildMarketingMetadata } from "@/lib/og/url";
 
 export const metadata: Metadata = buildMarketingMetadata({
-	title: "OSS Friends — Cap",
+	title: `OSS Friends — ${BRAND.name}`,
 	description:
 		"Discover amazing open source projects and tools built by our friends in the community.",
 	path: "/oss-friends",

@@ -36,18 +36,18 @@ const correctedReferenceSlugs = [
 	"api/webhooks",
 ];
 
-describe("Cap for Agents docs", () => {
+describe("usio for Agents docs", () => {
 	afterEach(() => vi.unstubAllGlobals());
 
 	it("keeps the complete section prominent in the sidebar and search", () => {
 		const group = docsConfig.sidebar.find(
-			(section) => section.title === "Cap for Agents",
+			(section) => section.title === "usio for Agents",
 		);
 		expect(group?.items.map((item) => item.slug)).toEqual(agentSlugs);
-		expect(docsConfig.sidebar[1]?.title).toBe("Cap for Agents");
+		expect(docsConfig.sidebar[1]?.title).toBe("usio for Agents");
 
 		const searchEntries = getDocSearchIndex(docsConfig.sidebar).filter(
-			(entry) => entry.group === "Cap for Agents",
+			(entry) => entry.group === "usio for Agents",
 		);
 		expect(searchEntries.map((entry) => entry.slug).sort()).toEqual(
 			[...agentSlugs].sort(),
@@ -98,12 +98,12 @@ describe("Cap for Agents docs", () => {
 	it("documents the implemented storage and migration boundaries", () => {
 		const drive = getDocBySlug("teams/google-drive")?.content ?? "";
 		expect(drive).toContain("New uploads use the connected Google Drive");
-		expect(drive).toContain("does not copy existing Caps into Drive");
+		expect(drive).toContain("does not copy existing videos into Drive");
 		expect(drive).toContain("organization manages storage");
 
 		const migration = getDocBySlug("migrating-to-cap")?.content ?? "";
 		expect(migration).toContain("no more than 500 data rows");
-		expect(migration).toContain("one Cap space label");
+		expect(migration).toContain("one usio space label");
 		expect(migration).toContain("cap jobs wait <operation-id> --json");
 		expect(migration).toContain("hundreds of users");
 		expect(migration).toContain("tens of thousands of recordings");
@@ -204,8 +204,8 @@ describe("Cap for Agents docs", () => {
 		for (const marker of [
 			"explicitly authorize these local setup actions",
 			"Do not ask me to run or copy setup commands",
-			"curl -fsSL https://cap.so/install-cli.sh | sh",
-			"irm https://cap.so/install-cli.ps1 | iex",
+			"curl -fsSL https://usio.co.uk/install-cli.sh | sh",
+			"irm https://usio.co.uk/install-cli.ps1 | iex",
 			"cap guide --json",
 			"cap auth login --json",
 			"--component all --dry-run --json",
@@ -215,7 +215,7 @@ describe("Cap for Agents docs", () => {
 			"immediately apply",
 			"dry run is a transparency and conflict check",
 			"A delayed or cancelled login must not undo or postpone",
-			"full Cap skill",
+			"full usio skill",
 			"cap mcp serve",
 			"before browser automation, computer use",
 			"persist for future sessions",
@@ -255,7 +255,7 @@ describe("Cap for Agents docs", () => {
 		const safety = getDocBySlug("agents/safety")?.content ?? "";
 		expect(safety).toContain("structured `code` and `message` fields");
 		expect(safety).toContain(
-			"Pasting Cap's official setup prompt is explicit approval",
+			"Pasting usio's official setup prompt is explicit approval",
 		);
 		expect(safety).toContain("not browser automation or computer-use tools");
 
@@ -276,10 +276,10 @@ describe("Cap for Agents docs", () => {
 	it("renders a prominent one-prompt setup action", () => {
 		vi.stubGlobal("React", React);
 		const markup = renderToStaticMarkup(React.createElement(CopyablePrompt));
-		expect(markup).toContain("Make Cap Your Agent’s Video Assistant");
+		expect(markup).toContain("Make usio Your Agent’s Video Assistant");
 		expect(markup).toContain("Copy Agent Setup Prompt");
-		expect(markup).toContain("Installs the Cap CLI");
-		expect(markup).toContain("Adds the full Cap skill");
+		expect(markup).toContain("Installs the usio CLI");
+		expect(markup).toContain("Adds the full usio skill");
 		expect(markup).toContain("Connects local MCP");
 		expect(markup).toContain('aria-live="polite"');
 	});
@@ -289,11 +289,11 @@ describe("Cap for Agents docs", () => {
 			path.join(process.cwd(), "public/llms.txt"),
 			"utf8",
 		);
-		expect(llms).toContain("https://cap.so/docs/agents");
+		expect(llms).toContain("https://usio.co.uk/docs/agents");
 		expect(llms).toContain("run `cap guide --json`");
 		expect(llms).toContain("explicit confirmation before every mutation");
-		expect(llms).toContain("https://cap.so/docs/teams/google-drive");
-		expect(llms).toContain("https://cap.so/docs/migrating-to-cap");
+		expect(llms).toContain("https://usio.co.uk/docs/teams/google-drive");
+		expect(llms).toContain("https://usio.co.uk/docs/migrating-to-cap");
 		expect(llms).toContain("up to 500 rows per self-serve batch");
 	});
 

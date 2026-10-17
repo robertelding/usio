@@ -4,11 +4,11 @@ import { SeoPageTemplate } from "../../seo/SeoPageTemplate";
 import type { SeoPageContent } from "../../seo/types";
 
 export const videoRecordingSoftwareContent: SeoPageContent = {
-	title: "Video Recording Software — Free, HD Quality, Instant Sharing | Cap",
+	title: "Video Recording Software — Free, HD Quality, Instant Sharing | usio",
 	description:
-		"Cap is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
+		"usio is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
 
-	featuresTitle: "Why Cap is the Best Video Recording Software",
+	featuresTitle: "Why usio is the Best Video Recording Software",
 	featuresDescription:
 		"Everything you need to capture, share, and collaborate on video recordings — completely free and open-source",
 
@@ -16,7 +16,7 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			title: "HD Video Capture Up to 4K at 60fps",
 			description:
-				"Record crystal-clear video at up to 4K resolution and 60 frames per second. Cap captures every detail of your screen with smooth motion and sharp text, delivering professional output without professional pricing.",
+				"Record crystal-clear video at up to 4K resolution and 60 frames per second. usio captures every detail of your screen with smooth motion and sharp text, delivering professional output without professional pricing.",
 		},
 		{
 			title: "Screen, Webcam, and Audio Together",
@@ -26,17 +26,17 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			title: "Instant Shareable Links",
 			description:
-				"Stop recording and Cap generates a shareable link in seconds. No uploading, no waiting, no file transfers. Paste the link in Slack, email, or Notion and your viewers get instant access. <a href='/screen-recording'>Learn more about screen recording with Cap</a>.",
+				"Stop recording and usio generates a shareable link in seconds. No uploading, no waiting, no file transfers. Paste the link in Slack, email, or Notion and your viewers get instant access. <a href='/screen-recording'>Learn more about screen recording with usio</a>.",
 		},
 		{
 			title: "Completely Free, No Watermarks",
 			description:
-				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most video recording software, Cap never adds branding overlays to your recordings. <a href='/free-screen-recorder'>Download Cap's free recorder</a> today.",
+				"usio's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most video recording software, usio never adds branding overlays to your recordings. <a href='/free-screen-recorder'>Download usio's free recorder</a> today.",
 		},
 		{
 			title: "Open Source and Auditable",
 			description:
-				"Cap is fully open-source on GitHub and MIT-licensed. Inspect every line of code, verify how your recordings are handled, and contribute features back to the community. No black boxes, no vendor lock-in. <a href='/open-source-screen-recorder'>Learn more about Cap as open-source software</a>.",
+				"usio is fully open-source on GitHub and AGPLv3-licensed. Inspect every line of code, verify how your recordings are handled, and contribute features back to the community. No black boxes, no vendor lock-in. <a href='/open-source-screen-recorder'>Learn more about usio as open-source software</a>.",
 		},
 		{
 			title: "Separate Screen and Webcam Tracks",
@@ -46,19 +46,19 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			title: "AI-Powered Captions",
 			description:
-				"Automatically generate accurate captions from your video recordings with zero manual effort. Cap's built-in transcription makes content accessible, searchable, and more engaging without requiring a separate transcription service.",
+				"Automatically generate accurate captions from your video recordings with zero manual effort. usio's built-in transcription makes content accessible, searchable, and more engaging without requiring a separate transcription service.",
 		},
 		{
 			title: "Built-In Thread Commenting",
 			description:
-				"Viewers can leave timestamped comments directly on your video recordings. Collect structured feedback without long email threads or follow-up calls — collaboration is built into every recording Cap shares.",
+				"Viewers can leave timestamped comments directly on your video recordings. Collect structured feedback without long email threads or follow-up calls — collaboration is built into every recording usio shares.",
 		},
 	],
 
 	recordingModes: {
 		title: "Two Video Recording Modes for Every Workflow",
 		description:
-			"Cap adapts to whether you need a quick share or a polished professional video",
+			"usio adapts to whether you need a quick share or a polished professional video",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -83,7 +83,7 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 
 	comparisonTable: {
 		title: "Video Recording Software Compared",
-		headers: ["Feature", "Cap", "Loom", "Camtasia", "OBS Studio"],
+		headers: ["Feature", "usio", "Loom", "Camtasia", "OBS Studio"],
 		rows: [
 			[
 				"Price",
@@ -147,66 +147,66 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		],
 	},
 
-	comparisonTitle: "How Cap Compares to Other Video Recording Software",
+	comparisonTitle: "How usio Compares to Other Video Recording Software",
 	comparisonDescription:
-		"The best video recording software for your workflow depends on what you need — here's how Cap stacks up",
+		"The best video recording software for your workflow depends on what you need — here's how usio stacks up",
 
 	comparison: [
 		{
-			title: "Cap vs Loom",
-			description: `Cap starts at $${PRICING.pro.annualPerMonth}/month versus Loom's $18/month, and Cap's Studio Mode is completely free with no watermarks. Cap records at up to 4K, is open-source, and supports custom S3 storage — quality and flexibility that Loom's free and paid plans don't match. <a href='/loom-alternative'>See the full Cap vs Loom comparison</a>.`,
+			title: "usio vs Loom",
+			description: `usio starts at $${PRICING.pro.annualPerMonth}/month versus Loom's $18/month, and usio's Studio Mode is completely free with no watermarks. usio records at up to 4K, is open-source, and supports custom S3 storage — quality and flexibility that Loom's free and paid plans don't match. <a href='/loom-alternative'>See the full usio vs Loom comparison</a>.`,
 		},
 		{
-			title: "Cap vs Camtasia",
+			title: "usio vs Camtasia",
 			description:
-				"Camtasia costs $299.99 and is built around editing rather than instant sharing. Cap is free and covers the full workflow from video recording to sharing — making it the better choice for users who want professional results without enterprise pricing.",
+				"Camtasia costs $299.99 and is built around editing rather than instant sharing. usio is free and covers the full workflow from video recording to sharing — making it the better choice for users who want professional results without enterprise pricing.",
 		},
 		{
-			title: "Cap vs OBS Studio",
+			title: "usio vs OBS Studio",
 			description:
-				"OBS is also open-source and free, but it requires significant configuration and is designed for live streaming rather than async video sharing. Cap delivers instant shareable links, built-in commenting, and a clean interface with no setup overhead. <a href='/screen-recording-software'>Compare screen recording software in detail</a>.",
+				"OBS is also open-source and free, but it requires significant configuration and is designed for live streaming rather than async video sharing. usio delivers instant shareable links, built-in commenting, and a clean interface with no setup overhead. <a href='/screen-recording-software'>Compare screen recording software in detail</a>.",
 		},
 		{
-			title: "Cap vs Built-in OS Recorders",
+			title: "usio vs Built-in OS Recorders",
 			description:
-				"macOS and Windows built-in recorders lack system audio, webcam overlay, and instant sharing. Cap adds all of these natively with no extra plugins required. <a href='/screen-recorder-mac'>Learn more about video recording on Mac</a> or <a href='/screen-recorder-windows'>Windows</a>.",
+				"macOS and Windows built-in recorders lack system audio, webcam overlay, and instant sharing. usio adds all of these natively with no extra plugins required. <a href='/screen-recorder-mac'>Learn more about video recording on Mac</a> or <a href='/screen-recorder-windows'>Windows</a>.",
 		},
 	],
 
-	useCasesTitle: "Who Uses Cap as Their Video Recording Software",
+	useCasesTitle: "Who Uses usio as Their Video Recording Software",
 	useCasesDescription:
-		"From solo developers to enterprise teams — Cap fits every workflow that needs fast, professional video recordings",
+		"From solo developers to enterprise teams — usio fits every workflow that needs fast, professional video recordings",
 
 	useCases: [
 		{
 			title: "Software Tutorials and Documentation",
 			description:
-				"Developers and product teams record step-by-step tutorials and feature walkthroughs with Cap. HD quality and instant shareable links make it easy to publish documentation or share onboarding guides without any video hosting setup.",
+				"Developers and product teams record step-by-step tutorials and feature walkthroughs with usio. HD quality and instant shareable links make it easy to publish documentation or share onboarding guides without any video hosting setup.",
 		},
 		{
 			title: "Async Team Communication",
 			description:
-				"Replace synchronous meetings with short video recordings. Record a walkthrough, share the link in Slack, and let your team watch asynchronously. <a href='/solutions/remote-team-collaboration'>Learn how Cap supports remote teams</a>.",
+				"Replace synchronous meetings with short video recordings. Record a walkthrough, share the link in Slack, and let your team watch asynchronously. <a href='/solutions/remote-team-collaboration'>Learn how usio supports remote teams</a>.",
 		},
 		{
 			title: "Bug Reports and QA",
 			description:
-				"Recording a bug is faster and clearer than writing a description. Cap's Instant Mode captures exactly what went wrong and delivers a shareable link in seconds so engineers can reproduce and fix issues immediately.",
+				"Recording a bug is faster and clearer than writing a description. usio's Instant Mode captures exactly what went wrong and delivers a shareable link in seconds so engineers can reproduce and fix issues immediately.",
 		},
 		{
 			title: "Client Demos and Presentations",
 			description:
-				"Record polished product demos and share them as links without scheduling a live call. Cap's built-in thread commenting lets clients leave structured feedback directly on the recording.",
+				"Record polished product demos and share them as links without scheduling a live call. usio's built-in thread commenting lets clients leave structured feedback directly on the recording.",
 		},
 		{
 			title: "Employee Training and Onboarding",
 			description:
-				"Build a library of training videos that new hires can access on-demand. AI-powered captions make every recording searchable and accessible. <a href='/solutions/employee-onboarding-platform'>Learn how Cap supports employee onboarding</a>.",
+				"Build a library of training videos that new hires can access on-demand. AI-powered captions make every recording searchable and accessible. <a href='/solutions/employee-onboarding-platform'>Learn how usio supports employee onboarding</a>.",
 		},
 		{
 			title: "Education and Course Content",
 			description:
-				"Educators record lectures, screen walkthroughs, and instructional content with Studio Mode at no cost. <a href='/solutions/online-classroom-tools'>Learn how Cap supports online classrooms</a>.",
+				"Educators record lectures, screen walkthroughs, and instructional content with Studio Mode at no cost. <a href='/solutions/online-classroom-tools'>Learn how usio supports online classrooms</a>.",
 		},
 	],
 
@@ -215,55 +215,47 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			question: "What is video recording software?",
 			answer:
-				"Video recording software captures the visual and audio output from your computer as a video file. This includes screen recording software that records your display, as well as tools that capture webcam footage, system audio, and microphone input simultaneously. Cap is video recording software that records your screen and webcam in up to 4K, generates instant shareable links, and stores recordings in the cloud.",
+				"Video recording software captures the visual and audio output from your computer as a video file. This includes screen recording software that records your display, as well as tools that capture webcam footage, system audio, and microphone input simultaneously. usio is video recording software that records your screen and webcam in up to 4K, generates instant shareable links, and stores recordings in the cloud.",
 		},
 		{
 			question: "What is the best free video recording software?",
 			answer:
-				"Cap is the best free video recording software for most users. Studio Mode is 100% free for personal use with no watermarks, no time limits, and up to 4K recording quality. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Cap's free recorder</a> to get started.",
+				"usio is the best free video recording software for most users. Studio Mode is 100% free for personal use with no watermarks, no time limits, and up to 4K recording quality. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download usio's free recorder</a> to get started.",
 		},
 		{
-			question: "Is Cap video recording software free?",
-			answer: `Yes. Cap's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees. Instant Mode is free for recordings up to 5 minutes. Cap Pro at $${PRICING.pro.annualPerMonth}/month removes Instant Mode limits and adds team features — but the core video recording software is free to use forever.`,
+			question: "Is usio video recording software free?",
+			answer: `Yes. usio's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees. Instant Mode is free for recordings up to 5 minutes. usio Pro at $${PRICING.pro.annualPerMonth}/month removes Instant Mode limits and adds team features — but the core video recording software is free to use forever.`,
 		},
 		{
-			question: "Does Cap video recording software work on Mac and Windows?",
+			question: "Does usio video recording software work on Mac and Windows?",
 			answer:
-				"Yes. Cap is available as a native desktop app for both macOS and Windows. Both versions support up to 4K recording, system audio capture, webcam overlay, and instant sharing. <a href='/screen-recorder-mac'>Learn more about video recording on Mac</a> or <a href='/screen-recorder-windows'>video recording on Windows</a>.",
+				"Yes. usio is available as a native desktop app for both macOS and Windows. Both versions support up to 4K recording, system audio capture, webcam overlay, and instant sharing. <a href='/screen-recorder-mac'>Learn more about video recording on Mac</a> or <a href='/screen-recorder-windows'>video recording on Windows</a>.",
 		},
 		{
 			question: "Can video recording software capture system audio?",
 			answer:
-				"Yes. Cap captures both system audio and microphone input simultaneously in every recording. You can narrate live while application sounds and system audio play through, creating a complete and synchronized video recording without any additional setup.",
+				"Yes. usio captures both system audio and microphone input simultaneously in every recording. You can narrate live while application sounds and system audio play through, creating a complete and synchronized video recording without any additional setup.",
 		},
 		{
 			question: "What video recording software has no watermark?",
 			answer:
-				"Cap has no watermark on any recording, including the free plan. Every video recording produced by Cap is completely clean with no branding overlays or watermarks. This makes Cap the best free video recording software without watermarks on Mac and Windows.",
+				"usio has no watermark on any recording, including the free plan. Every video recording produced by usio is completely clean with no branding overlays or watermarks. This makes usio the best free video recording software without watermarks on Mac and Windows.",
 		},
 		{
-			question: "Can I self-host my video recordings with Cap?",
+			question: "Can I self-host my video recordings with usio?",
 			answer:
-				"Yes. Cap supports any S3-compatible storage provider including AWS S3, Cloudflare R2, and self-hosted MinIO. Configure your own storage bucket and your video recordings are stored entirely within your own infrastructure. Cap's servers never see your content unless you choose the default cloud storage option.",
+				"Yes. usio supports any S3-compatible storage provider including AWS S3, Cloudflare R2, and self-hosted MinIO. Configure your own storage bucket and your video recordings are stored entirely within your own infrastructure. usio's servers never see your content unless you choose the default cloud storage option.",
 		},
 		{
-			question: "Is Cap open-source video recording software?",
+			question: "Is usio open-source video recording software?",
 			answer:
-				"Yes. Cap is fully open-source and MIT-licensed. The complete codebase — desktop app, web app, and media processing pipeline — is publicly available on GitHub. You can audit every line of code, fork the project, and contribute back to the community. <a href='/open-source-screen-recorder'>Learn more about Cap as open-source software</a>.",
+				"Yes. usio is fully open-source and AGPLv3-licensed. The complete codebase — desktop app, web app, and media processing pipeline — is publicly available on GitHub. You can audit every line of code, fork the project, and contribute back to the community. <a href='/open-source-screen-recorder'>Learn more about usio as open-source software</a>.",
 		},
 	],
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title:
-				"Cap video recording software demo showing HD screen capture, webcam overlay, and instant sharing",
-		},
-	},
-
 	cta: {
-		title: "Start Recording Video for Free with Cap",
-		buttonText: "Download Cap Free",
+		title: "Start Recording Video for Free with usio",
+		buttonText: "Download usio Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

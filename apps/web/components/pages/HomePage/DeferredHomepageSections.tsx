@@ -12,7 +12,6 @@ import InstantModeDetail from "./InstantModeDetail";
 import RecordingModePicker from "./RecordingModePicker";
 import ScreenshotModeDetail from "./ScreenshotModeDetail";
 import StudioModeDetail from "./StudioModeDetail";
-import Testimonials from "./Testimonials";
 
 export function DeferredHomepageSections({ plans }: { plans: StripePlans }) {
 	return (
@@ -22,7 +21,6 @@ export function DeferredHomepageSections({ plans }: { plans: StripePlans }) {
 			<StudioModeDetail />
 			<ScreenshotModeDetail />
 			<Features />
-			<Testimonials />
 			<HomepagePricingIsland plans={plans} />
 		</div>
 	);

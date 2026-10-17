@@ -1,4 +1,5 @@
 "use client";
+import { BRAND } from "@cap/utils";
 
 import Script from "next/script";
 import { recordScreenMacContent } from "../../content/blog-content/record-screen-mac-system-audio";
@@ -19,7 +20,7 @@ const createArticleStructuredData = () => {
 		keywords: recordScreenMacContent.tags.join(","),
 		mainEntityOfPage: {
 			"@type": "WebPage",
-			"@id": "https://cap.so/blog/record-screen-mac-system-audio",
+			"@id": `${BRAND.url}/blog/record-screen-mac-system-audio`,
 		},
 	};
 

@@ -1,4 +1,5 @@
 import { getCurrentUser } from "@cap/database/auth/session";
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { MigrateFromLoomPage } from "@/components/pages/seo/MigrateFromLoomPage";
 import {
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
 		title: migrateFromLoomSeo.title,
 		description: migrateFromLoomSeo.description,
 		path: migrateFromLoomSeo.path,
-		ogTitle: "Import your Loom videos into Cap",
-		ogDescription: "Paste a link or upload a CSV. Cap does the rest.",
+		ogTitle: `Import your Loom videos into ${BRAND.name}`,
+		ogDescription: "Paste a link or upload a CSV. usio does the rest.",
 		ogTag: "Migrate",
 	}),
 	keywords: [...migrateFromLoomSeo.keywords],
@@ -37,13 +38,13 @@ export const metadata: Metadata = {
 
 const schemas = [
 	createBreadcrumbSchema([
-		{ name: "Home", url: "https://cap.so" },
+		{ name: "Home", url: BRAND.url },
 		{ name: "Migrate from Loom", url: migrateFromLoomSeo.url },
 	]),
 	createHowToSchema({
-		name: "How to import Loom videos into Cap",
+		name: "How to import Loom videos into usio",
 		description:
-			"Move a single Loom video or your whole Loom library into Cap with the built-in importer.",
+			"Move a single Loom video or your whole Loom library into usio with the built-in importer.",
 		totalTime: "PT5M",
 		steps: importSteps.map((step) => ({ name: step.name, text: step.text })),
 	}),

@@ -8,6 +8,7 @@ import {
 	CardTitle,
 	Input,
 } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { useCurrency } from "hooks/useCurrency";
 import { Copy, ExternalLink, RefreshCw, ShieldCheck } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -256,8 +257,8 @@ export function SsoCard({
 				{!settings.ssoAvailable && (
 					<p className="rounded-xl border border-gray-4 bg-gray-2 p-3 text-sm text-gray-11">
 						SSO setup is currently unavailable. Contact{" "}
-						<a className="underline" href="mailto:hello@cap.so">
-							hello@cap.so
+						<a className="underline" href={`mailto:${BRAND.contactEmail}`}>
+							{BRAND.contactEmail}
 						</a>{" "}
 						for help.
 					</p>
@@ -361,8 +362,8 @@ export function SsoCard({
 							<p className="text-sm text-gray-11">
 								Your SSO subscription needs attention before setup is available.
 								Contact{" "}
-								<a className="underline" href="mailto:hello@cap.so">
-									hello@cap.so
+								<a className="underline" href={`mailto:${BRAND.contactEmail}`}>
+									{BRAND.contactEmail}
 								</a>{" "}
 								for help with the existing subscription; you don't need to
 								purchase it again.
@@ -505,8 +506,11 @@ export function SsoCard({
 								{invoiceHistory.hasMore && (
 									<p className="mt-3 text-sm text-gray-11">
 										Showing the latest 100 invoices. Contact{" "}
-										<a href="mailto:hello@cap.so" className="underline">
-											hello@cap.so
+										<a
+											href={`mailto:${BRAND.contactEmail}`}
+											className="underline"
+										>
+											{BRAND.contactEmail}
 										</a>{" "}
 										for older invoices.
 									</p>

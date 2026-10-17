@@ -1,36 +1,36 @@
 ---
 title: "Set Up Your Agent"
-summary: "Install Cap, authenticate with least privilege, and connect your preferred agent"
+summary: "Install usio, authenticate with least privilege, and connect your preferred agent"
 tags: "Agents"
 ---
 
-> **Agent-readable page:** You can send this URL to your agent. Pasting the setup prompt authorizes the official CLI install and the Cap skill and MCP configuration for the current agent only. It should perform those local setup steps itself, preserve unrelated configuration, and stop for you only when a browser or secure terminal handoff is required.
+> **Agent-readable page:** You can send this URL to your agent. Pasting the setup prompt authorizes the official CLI install and the usio skill and MCP configuration for the current agent only. It should perform those local setup steps itself, preserve unrelated configuration, and stop for you only when a browser or secure terminal handoff is required.
 
 <CopyablePrompt />
 
 The prompt above performs the setup itself. You should not need to copy an installer command or approve the same local setup twice. It installs the persistent skill and MCP configuration before starting browser login, so a delayed login does not leave the agent unconfigured. The rest of this page documents the underlying steps for manual installation and troubleshooting.
 
-## Install the Cap CLI
+## Install the usio CLI
 
-The CLI ships with Cap Desktop, so both stay on the same version.
+The CLI ships with usio Desktop, so both stay on the same version.
 
-### From Cap Desktop
+### From usio Desktop
 
 Open **Settings → Command Line → Install CLI**.
 
 ### macOS or Linux
 
 ```sh
-curl -fsSL https://cap.so/install-cli.sh | sh
+curl -fsSL https://usio.co.uk/install-cli.sh | sh
 ```
 
 ### Windows PowerShell
 
 ```powershell
-irm https://cap.so/install-cli.ps1 | iex
+irm https://usio.co.uk/install-cli.ps1 | iex
 ```
 
-The installer adds `cap` to your PATH and installs Cap Desktop when it is missing. Open a new terminal after installation, then verify the binary:
+The installer adds `cap` to your PATH and installs usio Desktop when it is missing. Open a new terminal after installation, then verify the binary:
 
 ```sh
 cap version --json
@@ -45,7 +45,7 @@ First inspect the current state:
 cap auth status --json
 ```
 
-If authentication is required, authorize Cap in your browser:
+If authentication is required, authorize usio in your browser:
 
 ```sh
 cap auth login --json
@@ -55,7 +55,7 @@ Login uses the `creator` profile by default. Request a broader profile only when
 
 | Profile | Use it for |
 | --- | --- |
-| `creator` | Caps, uploads, comments, library, analytics, notifications, and profile tasks |
+| `creator` | Videos, uploads, comments, library, analytics, notifications, and profile tasks |
 | `admin` | Creator access plus organization members, settings, billing, and storage integrations |
 | `full` | Admin access plus developer apps, credentials, videos, and credits |
 
@@ -64,15 +64,15 @@ cap auth login --profile admin --json
 cap auth login --profile full --json
 ```
 
-Cap CLI credentials are stored by the operating system when available. For machines without a browser, see [Headless environments](#headless-environments-ci-containers-and-remote-sandboxes) below.
+usio CLI credentials are stored by the operating system when available. For machines without a browser, see [Headless environments](#headless-environments-ci-containers-and-remote-sandboxes) below.
 
 ## Headless environments (CI, containers, and remote sandboxes)
 
-`cap auth login` opens a browser on the same machine, so it does not work on headless runners. Mint an API key from the Cap dashboard instead:
+`cap auth login` opens a browser on the same machine, so it does not work on headless runners. Mint an API key from the usio dashboard instead:
 
-1. Open [Settings, then Account](https://cap.so/dashboard/settings/account) in the Cap dashboard and find **Cap CLI access**.
+1. Open [Settings, then Account](/dashboard/settings/account) in the usio dashboard and find **usio CLI access**.
 2. Choose **Create API key**, then pick a name, an access profile (`creator`, `admin`, or `full`, the same profiles as `cap auth login`), and an expiry.
-3. Copy the key when it is shown. Cap stores only a hash, so it cannot be displayed again.
+3. Copy the key when it is shown. usio stores only a hash, so it cannot be displayed again.
 4. Inject the key into the headless environment as `CAP_API_KEY` or `CAP_AGENT_TOKEN` (both are honored), then verify:
 
 ```sh
@@ -86,7 +86,7 @@ Follow least privilege here as well: prefer the `creator` profile and the shorte
 
 ## Codex
 
-Preview exactly what Cap will change:
+Preview exactly what usio will change:
 
 ```sh
 cap agents install --target codex --component all --dry-run --json
@@ -98,7 +98,7 @@ When using the copied setup prompt, the agent inspects the paths and values and 
 cap agents install --target codex --component all --yes --json
 ```
 
-This installs the Cap skill and adds a local `cap mcp serve` entry to Codex's configuration. Restart Codex so it reloads the integration.
+This installs the usio skill and adds a local `cap mcp serve` entry to Codex's configuration. Restart Codex so it reloads the integration.
 
 ## Claude Code
 
@@ -120,9 +120,9 @@ The copied setup prompt treats the preview as a conflict check and applies it wi
 
 ## OpenCode
 
-OpenCode can use Cap immediately through its shell tools: paste the [agent prompt](/docs/agents#the-fastest-way-to-start) and let it call `cap guide --json`.
+OpenCode can use usio immediately through its shell tools: paste the [agent prompt](/docs/agents#the-fastest-way-to-start) and let it call `cap guide --json`.
 
-To use Cap as a local MCP server too, merge this entry into your `opencode.json` configuration:
+To use usio as a local MCP server too, merge this entry into your `opencode.json` configuration:
 
 ```json
 {
@@ -175,10 +175,10 @@ A correct setup has:
 
 - valid JSON on stdout;
 - a successful authenticated status before account-backed work;
-- either a Cap result or an empty list from the library check, not a guessed answer;
+- either a video result or an empty list from the library check, not a guessed answer;
 - no secret value printed by `cap auth status`;
 - no changes made during verification.
 
-If MCP is installed, also ask the agent to list the available Cap tools. It should find read tools such as `caps_list` and `caps_context`. Passwords and storage credentials should not appear as MCP inputs.
+If MCP is installed, also ask the agent to list the available usio tools. It should find read tools such as `caps_list` and `caps_context`. Passwords and storage credentials should not appear as MCP inputs.
 
 Continue with [Agent Workflows](/docs/agents/workflows).

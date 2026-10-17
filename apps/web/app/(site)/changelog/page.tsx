@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { ChangelogView } from "./_components/ChangelogView";
 
@@ -12,5 +13,6 @@ export const metadata: Metadata = buildMarketingMetadata({
 });
 
 export default function Page() {
+	hideMarketingPage("/changelog");
 	return <ChangelogView />;
 }

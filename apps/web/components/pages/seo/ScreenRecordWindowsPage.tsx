@@ -1,4 +1,5 @@
 "use client";
+import { BRAND } from "@cap/utils";
 
 import { Clapperboard, Zap } from "lucide-react";
 import Script from "next/script";
@@ -9,9 +10,9 @@ export const screenRecordWindowsContent: SeoPageContent = {
 	title:
 		"Free Screen Recorder for Windows 10 & 11 — Record Your Screen Instantly",
 	description:
-		"Cap is the best free screen recorder for Windows. Record your screen in HD with audio, webcam overlay, and instant sharing on Windows 10 and Windows 11. No watermarks, and no time limit in Studio Mode — a lightweight alternative to OBS and Windows Game Bar.",
+		"usio is the best free screen recorder for Windows. Record your screen in HD with audio, webcam overlay, and instant sharing on Windows 10 and Windows 11. No watermarks, and no time limit in Studio Mode — a lightweight alternative to OBS and Windows Game Bar.",
 
-	featuresTitle: "Why Cap Is the Best Screen Recorder for Windows",
+	featuresTitle: "Why usio Is the Best Screen Recorder for Windows",
 	featuresDescription:
 		"Everything Windows users need to record, edit, and share screen recordings — without the bloat of traditional screen recording software for PC",
 
@@ -29,65 +30,65 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			title: "Instant Link Sharing",
 			description:
-				"Finish recording and get a shareable link in seconds. No waiting for uploads or renders — Cap generates a link the moment you stop recording so you can paste it into Slack, email, or a support ticket immediately.",
+				"Finish recording and get a shareable link in seconds. No waiting for uploads or renders — usio generates a link the moment you stop recording so you can paste it into Slack, email, or a support ticket immediately.",
 		},
 		{
 			title: "Free with No Watermarks",
 			description:
-				"Cap is open source and completely free to use locally on Windows. There are no watermarks, no hidden paywalls, and no time limit on Studio Mode recordings. Looking for a <a href='/free-screen-recorder'>free screen recorder</a> that actually delivers? Cap is it.",
+				"usio is open source and completely free to use locally on Windows. There are no watermarks, no hidden paywalls, and no time limit on Studio Mode recordings. Looking for a <a href='/free-screen-recorder'>free screen recorder</a> that actually delivers? usio is it.",
 		},
 		{
 			title: "Lightweight & Fast on Any Windows PC",
 			description:
-				"Cap is built with native performance in mind. It uses minimal CPU and RAM so you can record smoothly even on older Windows 10 laptops. No lag, no dropped frames, no fan noise — just clean recordings every time.",
+				"usio is built with native performance in mind. It uses minimal CPU and RAM so you can record smoothly even on older Windows 10 laptops. No lag, no dropped frames, no fan noise — just clean recordings every time.",
 		},
 		{
 			title: "Built-In Studio Editor",
 			description:
-				"Trim, crop, and add backgrounds to your recordings without leaving Cap. The studio editor lets you polish your screen recordings before sharing — no need to export to a separate video editor.",
+				"Trim, crop, and add backgrounds to your recordings without leaving usio. The studio editor lets you polish your screen recordings before sharing — no need to export to a separate video editor.",
 		},
 		{
 			title: "System Audio + Microphone Recording",
 			description:
-				"Record system audio, microphone input, or both simultaneously. Whether you are walking through a presentation with voiceover or capturing gameplay audio, Cap handles multi-track audio recording on Windows natively. Stuck without Stereo Mix on Windows 11? Our <a href='/blog/windows-11-record-screen-system-audio-no-stereo-mix'>Windows system audio guide</a> shows you how.",
+				"Record system audio, microphone input, or both simultaneously. Whether you are walking through a presentation with voiceover or capturing gameplay audio, usio handles multi-track audio recording on Windows natively. Stuck without Stereo Mix on Windows 11? Our <a href='/blog/windows-11-record-screen-system-audio-no-stereo-mix'>Windows system audio guide</a> shows you how.",
 		},
 		{
 			title: "Open Source & Privacy-First",
 			description:
-				"Cap is fully <a href='https://github.com/CapSoftware/Cap'>open source</a>. Your recordings stay on your machine unless you choose to share them. No telemetry, no tracking, no data harvesting — a transparent <a href='/loom-alternative'>Loom alternative</a> you can trust.",
+				"usio is fully <a href='https://github.com/robertelding/usio'>open source</a>. Your recordings stay on your machine unless you choose to share them. No telemetry, no tracking, no data harvesting — a transparent <a href='/loom-alternative'>Loom alternative</a> you can trust.",
 		},
 	],
 
-	comparisonTitle: "Cap vs Windows Game Bar: Why Upgrade?",
+	comparisonTitle: "usio vs Windows Game Bar: Why Upgrade?",
 	comparisonDescription:
-		"Windows Game Bar (Win + G) ships with Windows 10 and 11, but it was designed for gaming clips — not professional screen recording. Here is how Cap compares",
+		"Windows Game Bar (Win + G) ships with Windows 10 and 11, but it was designed for gaming clips — not professional screen recording. Here is how usio compares",
 
 	comparison: [
 		{
 			title: "Record Any Window or Region",
 			description:
-				"Windows Game Bar can only record a single application window and cannot capture the desktop or File Explorer. Cap lets you record your full screen, any window, or a custom-drawn region — perfect for multi-app workflows and tutorials.",
+				"Windows Game Bar can only record a single application window and cannot capture the desktop or File Explorer. usio lets you record your full screen, any window, or a custom-drawn region — perfect for multi-app workflows and tutorials.",
 		},
 		{
 			title: "Webcam Overlay Built In",
 			description:
-				"Game Bar has no webcam overlay support. Cap adds a resizable facecam bubble so your viewers can see you while you present, explain, or demo on screen.",
+				"Game Bar has no webcam overlay support. usio adds a resizable facecam bubble so your viewers can see you while you present, explain, or demo on screen.",
 		},
 		{
 			title: "Instant Shareable Links",
 			description:
-				"Game Bar saves an MP4 to your Videos folder and that is it. Cap generates a shareable link the moment you stop recording — no manual upload required.",
+				"Game Bar saves an MP4 to your Videos folder and that is it. usio generates a shareable link the moment you stop recording — no manual upload required.",
 		},
 		{
 			title: "No Time Limit in Studio Mode",
 			description:
-				"Windows Game Bar limits recordings to 4 hours and stops automatically if you minimize the target window. Cap's Studio Mode records locally for as long as you need.",
+				"Windows Game Bar limits recordings to 4 hours and stops automatically if you minimize the target window. usio's Studio Mode records locally for as long as you need.",
 		},
 	],
 
 	comparisonTable: {
-		title: "Feature Comparison: Cap vs Game Bar vs OBS",
-		headers: ["Feature", "Cap", "Game Bar", "OBS"],
+		title: "Feature Comparison: usio vs Game Bar vs OBS",
+		headers: ["Feature", "usio", "Game Bar", "OBS"],
 		rows: [
 			[
 				"Price",
@@ -155,7 +156,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 	recordingModes: {
 		title: "Two Ways to Record on Windows",
 		description:
-			"Cap gives you flexible recording options to match your workflow — whether you need a quick screen capture or a polished studio recording",
+			"usio gives you flexible recording options to match your workflow — whether you need a quick screen capture or a polished studio recording",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -178,9 +179,9 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		],
 	},
 
-	useCasesTitle: "How Windows Users Record Their Screen with Cap",
+	useCasesTitle: "How Windows Users Record Their Screen with usio",
 	useCasesDescription:
-		"From quick captures to polished productions, Cap covers every Windows screen recording use case",
+		"From quick captures to polished productions, usio covers every Windows screen recording use case",
 
 	useCases: [
 		{
@@ -191,7 +192,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			title: "Product Demos & Sales Videos",
 			description:
-				"Show prospects exactly how your product works on their Windows PC. Cap lets you record polished demo videos with facecam and share them instantly — no editing software needed.",
+				"Show prospects exactly how your product works on their Windows PC. usio lets you record polished demo videos with facecam and share them instantly — no editing software needed.",
 		},
 		{
 			title: "Bug Reports & QA Feedback",
@@ -206,7 +207,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			title: "Educational Lectures & Training",
 			description:
-				"Teachers and corporate trainers use Cap on Windows to record lectures, onboarding walkthroughs, and training modules that students and new hires can replay at their own pace.",
+				"Teachers and corporate trainers use usio on Windows to record lectures, onboarding walkthroughs, and training modules that students and new hires can replay at their own pace.",
 		},
 		{
 			title: "Client Presentations & Reports",
@@ -220,71 +221,64 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			question: "How do I screen record on Windows 10?",
 			answer:
-				"Download Cap from cap.so/download, install it on your Windows 10 PC, and click the record button. Choose full screen, a single window, or a custom region, toggle your microphone and system audio on or off, and hit start. When you are done, Cap gives you a shareable link instantly. It is the easiest way to screen record on Windows 10 without fiddling with Game Bar or OBS settings.",
+				"Download usio from usio.co.uk/download, install it on your Windows 10 PC, and click the record button. Choose full screen, a single window, or a custom region, toggle your microphone and system audio on or off, and hit start. When you are done, usio gives you a shareable link instantly. It is the easiest way to screen record on Windows 10 without fiddling with Game Bar or OBS settings.",
 		},
 		{
 			question: "How do I screen record on Windows 11?",
 			answer:
-				"Cap works identically on Windows 11. Download and install Cap, pick your capture area, enable audio sources, and record. Windows 11 users get the same HD quality, webcam overlay, and instant sharing features. Cap is fully optimized for Windows 11's latest APIs.",
+				"usio works identically on Windows 11. Download and install usio, pick your capture area, enable audio sources, and record. Windows 11 users get the same HD quality, webcam overlay, and instant sharing features. usio is fully optimized for Windows 11's latest APIs.",
 		},
 		{
-			question: "Is Cap really a free screen recorder for Windows?",
+			question: "Is usio really a free screen recorder for Windows?",
 			answer:
-				"Yes. Cap is free to use locally on Windows with no watermarks, no feature gates, and no time limit on Studio Mode recordings. It is open source so you can inspect the code yourself. Cap Pro is available for teams that want cloud storage and advanced sharing, but the core <a href='/free-screen-recorder'>free screen recorder</a> is fully functional. (The free plan's instantly shareable Instant Mode links are capped at 5 minutes.)",
+				"Yes. usio is free to use locally on Windows with no watermarks, no feature gates, and no time limit on Studio Mode recordings. It is open source so you can inspect the code yourself. usio Pro is available for teams that want cloud storage and advanced sharing, but the core <a href='/free-screen-recorder'>free screen recorder</a> is fully functional. (The free plan's instantly shareable Instant Mode links are capped at 5 minutes.)",
 		},
 		{
 			question: "Can I record my screen with audio on Windows?",
 			answer:
-				"Absolutely. Cap records system audio (everything you hear through your speakers or headphones) and microphone input simultaneously. You can toggle each source independently before or during recording. This makes Cap ideal for tutorials, gameplay, and presentations where both audio tracks matter. If Windows 11 removed your Stereo Mix device, our <a href='/blog/windows-11-record-screen-system-audio-no-stereo-mix'>guide to recording Windows system audio</a> walks through it step by step.",
+				"Absolutely. usio records system audio (everything you hear through your speakers or headphones) and microphone input simultaneously. You can toggle each source independently before or during recording. This makes usio ideal for tutorials, gameplay, and presentations where both audio tracks matter. If Windows 11 removed your Stereo Mix device, our <a href='/blog/windows-11-record-screen-system-audio-no-stereo-mix'>guide to recording Windows system audio</a> walks through it step by step.",
 		},
 		{
 			question: "What is the best free screen recording software for Windows?",
 			answer:
-				"Cap is the best free screen recording software for Windows if you want a balance of simplicity, quality, and sharing speed. Unlike OBS, Cap requires zero configuration. Unlike Windows Game Bar, Cap can record your full desktop, custom regions, and add a webcam overlay. Microsoft's built-in Clipchamp records and edits too, but it steers you toward an account and a web editor — Cap keeps recordings local and shareable in a single click. And unlike Loom, Cap is fully <a href='/loom-alternative'>open source</a> with no per-seat pricing.",
+				"usio is the best free screen recording software for Windows if you want a balance of simplicity, quality, and sharing speed. Unlike OBS, usio requires zero configuration. Unlike Windows Game Bar, usio can record your full desktop, custom regions, and add a webcam overlay. Microsoft's built-in Clipchamp records and edits too, but it steers you toward an account and a web editor — usio keeps recordings local and shareable in a single click. And unlike Loom, usio is fully <a href='/loom-alternative'>open source</a> with no per-seat pricing.",
 		},
 		{
-			question: "How does Cap compare to OBS for Windows screen recording?",
+			question: "How does usio compare to OBS for Windows screen recording?",
 			answer:
-				"OBS is a powerful streaming and recording tool, but it is designed for broadcasters and has a steep learning curve. Cap is built for fast screen recording and sharing — you can go from zero to a shareable recording in under two minutes. If you need streaming overlays and multi-scene switching, use OBS. If you need quick, polished screen recordings with instant links, Cap is the better choice.",
+				"OBS is a powerful streaming and recording tool, but it is designed for broadcasters and has a steep learning curve. usio is built for fast screen recording and sharing — you can go from zero to a shareable recording in under two minutes. If you need streaming overlays and multi-scene switching, use OBS. If you need quick, polished screen recordings with instant links, usio is the better choice.",
 		},
 		{
 			question: "Can I record a specific window or region on Windows?",
 			answer:
-				"Yes. Cap supports three capture modes on Windows: full screen, single window, and custom region. Select your mode before recording, and Cap captures exactly what you need — nothing more, nothing less.",
+				"Yes. usio supports three capture modes on Windows: full screen, single window, and custom region. Select your mode before recording, and usio captures exactly what you need — nothing more, nothing less.",
 		},
 		{
-			question: "Does Cap add a watermark to recordings?",
+			question: "Does usio add a watermark to recordings?",
 			answer:
-				"No. Cap never adds watermarks to your recordings, even on the free plan. Your screen recordings are clean and professional, ready to share with clients, teammates, or your audience.",
+				"No. usio never adds watermarks to your recordings, even on the free plan. Your screen recordings are clean and professional, ready to share with clients, teammates, or your audience.",
 		},
 		{
-			question: "Can I use Cap for recording gameplay on Windows?",
+			question: "Can I use usio for recording gameplay on Windows?",
 			answer:
-				"Yes. Cap can record full-screen applications including games. While Windows Game Bar is limited to a single app window and has a 4-hour cap, Cap records for as long as you want with system audio captured natively. For dedicated streamers, OBS may offer more broadcast features, but for quick gameplay clips and highlights, Cap is the simpler choice.",
+				"Yes. usio can record full-screen applications including games. While Windows Game Bar is limited to a single app window and has a 4-hour cap, usio records for as long as you want with system audio captured natively. For dedicated streamers, OBS may offer more broadcast features, but for quick gameplay clips and highlights, usio is the simpler choice.",
 		},
 		{
 			question: "What are the limitations of the Windows Game Bar?",
 			answer:
-				"Xbox Game Bar (Win + G) is handy for quick clips, but it has real limits. It records only a single app window — not the desktop or File Explorer — and stops if you switch windows. It caps recordings at 4 hours, has no webcam overlay, no custom-region capture, and no instant share link. Cap covers all of those, which is why most people outgrow Game Bar quickly. For a full walkthrough, see <a href='/how-to-screen-record'>how to screen record</a>.",
+				"Xbox Game Bar (Win + G) is handy for quick clips, but it has real limits. It records only a single app window — not the desktop or File Explorer — and stops if you switch windows. It caps recordings at 4 hours, has no webcam overlay, no custom-region capture, and no instant share link. usio covers all of those, which is why most people outgrow Game Bar quickly. For a full walkthrough, see <a href='/how-to-screen-record'>how to screen record</a>.",
 		},
 		{
 			question:
-				"Is Cap better than Windows Snipping Tool for screen recording?",
+				"Is usio better than Windows Snipping Tool for screen recording?",
 			answer:
-				"Windows Snipping Tool (available on Windows 11) can record your screen but offers no audio recording, no webcam overlay, no editing, and no sharing features. Cap records with audio, adds facecam, includes a built-in editor, and generates instant share links — making it a far more complete <a href='/screen-recording-software'>screen recording solution</a> for Windows.",
+				"Windows Snipping Tool (available on Windows 11) can record your screen but offers no audio recording, no webcam overlay, no editing, and no sharing features. usio records with audio, adds facecam, includes a built-in editor, and generates instant share links — making it a far more complete <a href='/screen-recording-software'>screen recording solution</a> for Windows.",
 		},
 	],
 
-	video: {
-		iframe: {
-			src: "https://www.rend.so/embed/10512af0-b922-4efa-8974-f8f14fc1886a?accent=3e63dd",
-			title: "Cap screen recording demo",
-		},
-	},
-
 	cta: {
 		title: "Start Recording Your Windows Screen in Seconds",
-		buttonText: "Download Cap Free for Windows",
+		buttonText: "Download usio Free for Windows",
 	},
 };
 
@@ -309,7 +303,7 @@ const createSoftwareAppStructuredData = () => {
 	const softwareApp = {
 		"@context": "https://schema.org",
 		"@type": "SoftwareApplication",
-		name: "Cap",
+		name: "usio",
 		operatingSystem: "Windows 10, Windows 11",
 		applicationCategory: "MultimediaApplication",
 		offers: {
@@ -319,8 +313,8 @@ const createSoftwareAppStructuredData = () => {
 		},
 		description:
 			"Free, open-source screen recorder for Windows with HD recording, webcam overlay, and instant link sharing.",
-		url: "https://cap.so/screen-recorder-windows",
-		downloadUrl: "https://cap.so/download",
+		url: `${BRAND.url}/screen-recorder-windows`,
+		downloadUrl: `${BRAND.url}/download`,
 	};
 
 	return JSON.stringify(softwareApp);

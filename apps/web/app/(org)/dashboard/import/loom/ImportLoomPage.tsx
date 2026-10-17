@@ -21,6 +21,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import { Folder } from "@cap/web-domain";
 import {
 	faArrowLeft,
@@ -956,7 +957,10 @@ export const ImportLoomPage = ({
 												</p>
 												<p className="mt-1 text-red-10">
 													Split this file into smaller batches or{" "}
-													<a className="underline" href="mailto:hello@cap.so">
+													<a
+														className="underline"
+														href={`mailto:${BRAND.contactEmail}`}
+													>
 														contact support
 													</a>{" "}
 													to raise the limit.

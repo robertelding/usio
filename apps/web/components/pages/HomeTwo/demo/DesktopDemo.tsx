@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { useDetectPlatform } from "hooks/useDetectPlatform";
 import { MousePointerClick, RotateCcw } from "lucide-react";
@@ -15,6 +16,7 @@ import {
 	useRef,
 	useState,
 } from "react";
+import { SIGNUP_CTA } from "@/lib/download-cta";
 import { PlatformCursor } from "../cursors";
 import {
 	BTN_PRIMARY,
@@ -381,14 +383,14 @@ const TOUR: TourStep[] = [
 	},
 	{ text: "Click Start Recording.", anchor: "overlay-start", bx: 360, by: 645 },
 	{
-		text: "Cap uploads while you record. Click Stop to finish.",
+		text: "usio uploads while you record. Click Stop to finish.",
 		anchor: "toolbar-stop",
 		dim: false,
 		bx: 400,
 		by: 550,
 	},
 	{
-		text: "Cap copies a share link when you stop. Click the notification to open the video.",
+		text: "usio copies a share link when you stop. Click the notification to open the video.",
 		anchor: "notification",
 		bx: 800,
 		by: 170,
@@ -439,7 +441,7 @@ const TOUR: TourStep[] = [
 		by: 620,
 	},
 	{
-		text: "Click Export to finish the demo. In Cap, you can save a video file or share a link.",
+		text: "Click Export to finish the demo. In usio, you can save a video file or share a link.",
 		anchor: "editor-export",
 		bx: 860,
 		by: 230,
@@ -1394,16 +1396,23 @@ export const DesktopDemo = ({
 												Demo complete
 											</span>
 											<h3 className="mt-5 text-[40px] font-normal leading-[1.04] tracking-[-0.03em] text-[#111111]">
-												Try Cap for yourself
+												Try usio for yourself
 											</h3>
 											<p className="mx-auto mt-3 max-w-[380px] text-[16px] leading-normal text-[rgba(17,17,17,0.7)]">
-												Download Cap for macOS or Windows to record, edit, and
-												share your screen.
+												{BRAND.desktopAppAvailable
+													? "Download usio for macOS or Windows to record, edit, and share your screen."
+													: "Sign up free to record and share your screen from the browser."}
 											</p>
 											<div className="mt-7 flex items-center justify-center gap-3">
-												<Link href="/download" className={BTN_PRIMARY}>
-													Download Cap free
-												</Link>
+												{BRAND.desktopAppAvailable ? (
+													<Link href="/download" className={BTN_PRIMARY}>
+														Download usio free
+													</Link>
+												) : (
+													<Link href={SIGNUP_CTA.href} className={BTN_PRIMARY}>
+														{SIGNUP_CTA.text}
+													</Link>
+												)}
 												<button
 													type="button"
 													onClick={() => send({ type: "replay" })}

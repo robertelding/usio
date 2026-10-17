@@ -8,6 +8,9 @@ export type Brand = {
 	readonly color: string;
 	readonly domain: string;
 	readonly url: string;
+	readonly contactEmail: string;
+	readonly githubRepo: string;
+	readonly githubUrl: string;
 	readonly emailFromName: string;
 	readonly desktopAppAvailable: boolean;
 	readonly chromeExtensionUrl: string | null;
@@ -25,6 +28,9 @@ export const BRAND: Brand = {
 	color: "#F2542D",
 	domain: "usio.co.uk",
 	url: "https://usio.co.uk",
+	contactEmail: "hello@usio.co.uk",
+	githubRepo: "robertelding/usio",
+	githubUrl: "https://github.com/robertelding/usio",
 	emailFromName: "usio",
 	desktopAppAvailable: false,
 	chromeExtensionUrl: null,

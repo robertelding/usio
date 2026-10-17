@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import { ScreenRecordingSoftwarePage } from "@/components/pages/seo/ScreenRecordingSoftwarePage";
 import { ogImageUrl } from "@/lib/og/url";
@@ -8,24 +9,24 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title: "Screen Recording Software — Free HD Screen Capture | Cap",
+	title: `Screen Recording Software — Free HD Screen Capture | ${BRAND.name}`,
 	description:
-		"Free, open-source screen recording software for Mac and Windows. Capture HD video with audio, share instantly, and own your data. Download Cap today.",
+		"Free, open-source screen recording software for Mac and Windows. Capture HD video with audio, share instantly, and own your data. Download usio today.",
 	alternates: {
-		canonical: "https://cap.so/screen-recording-software",
+		canonical: `${BRAND.url}/screen-recording-software`,
 	},
 	openGraph: {
-		title: "Screen Recording Software — Free HD Screen Capture | Cap",
+		title: `Screen Recording Software — Free HD Screen Capture | ${BRAND.name}`,
 		description:
 			"Free, open-source screen recording software for Mac and Windows. Capture HD video with audio, share instantly, and own your data.",
-		url: "https://cap.so/screen-recording-software",
-		siteName: "Cap",
+		url: `${BRAND.url}/screen-recording-software`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Screen Recording Software",
+				alt: "usio: Screen Recording Software",
 			},
 		],
 		locale: "en_US",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Screen Recording Software — Free HD Screen Capture | Cap",
+		title: `Screen Recording Software — Free HD Screen Capture | ${BRAND.name}`,
 		description:
 			"Free, open-source screen recording software for Mac and Windows. Capture HD video with audio, share instantly, and own your data.",
 		images: [ogImage],

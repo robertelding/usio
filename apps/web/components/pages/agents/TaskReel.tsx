@@ -54,13 +54,13 @@ const TASKS: readonly Task[] = [
 			},
 			{
 				type: "ask",
-				text: "Recorded 0:20 and validated the project. Upload it to Cap as “Checkout bug repro”?",
+				text: "Recorded 0:20 and validated the project. Upload it to usio as “Checkout bug repro”?",
 				reply: "Yes, upload it",
 			},
 			{
 				type: "tool",
 				cmd: 'cap upload ./recording.cap --export --name "Checkout bug repro" --json',
-				out: '{ "type": "uploaded", "id": "x7f2k9", "link": "https://cap.so/s/x7f2k9" }',
+				out: '{ "type": "uploaded", "id": "x7f2k9", "link": "https://usio.co.uk/s/x7f2k9" }',
 				ms: 1200,
 			},
 			{
@@ -75,7 +75,7 @@ const TASKS: readonly Task[] = [
 				card: {
 					kind: "link",
 					title: "Checkout bug repro",
-					meta: "cap.so/s/x7f2k9 · 0:20 · AI summary ready",
+					meta: "usio.co.uk/s/x7f2k9 · 0:20 · AI summary ready",
 				},
 			},
 		],
@@ -86,7 +86,7 @@ const TASKS: readonly Task[] = [
 		beats: [
 			{
 				type: "prompt",
-				text: "Summarize cap.so/s/x7f2k9 and list the action items with timestamps",
+				text: "Summarize usio.co.uk/s/x7f2k9 and list the action items with timestamps",
 			},
 			{
 				type: "plan",
@@ -118,7 +118,7 @@ const TASKS: readonly Task[] = [
 		beats: [
 			{
 				type: "prompt",
-				text: "Find my Caps about onboarding from the last month and brief me",
+				text: "Find my videos about onboarding from the last month and brief me",
 			},
 			{
 				type: "plan",
@@ -138,7 +138,7 @@ const TASKS: readonly Task[] = [
 			},
 			{
 				type: "result",
-				text: "Four Caps. The v3 flow removed the org step, but the invite email still mentions it.",
+				text: "Four videos. The v3 flow removed the org step, but the invite email still mentions it.",
 				card: {
 					kind: "rows",
 					rows: [
@@ -175,7 +175,7 @@ const TASKS: readonly Task[] = [
 			},
 			{
 				type: "result",
-				text: "Posted at 04:32. I re-read the Cap and the comment is there.",
+				text: "Posted at 04:32. I re-read the video and the comment is there.",
 			},
 		],
 	},
@@ -185,7 +185,7 @@ const TASKS: readonly Task[] = [
 		beats: [
 			{
 				type: "prompt",
-				text: "Move this Cap into the Product space's Releases folder",
+				text: "Move this video into the Product space's Releases folder",
 			},
 			{
 				type: "plan",
@@ -218,7 +218,7 @@ const TASKS: readonly Task[] = [
 			},
 			{
 				type: "result",
-				text: "Moved and verified. The Cap now sits in Product / Releases.",
+				text: "Moved and verified. The usio now sits in Product / Releases.",
 			},
 		],
 	},
@@ -255,11 +255,11 @@ const TASKS: readonly Task[] = [
 			},
 			{
 				type: "result",
-				text: "Imported and verified. The Cap has its title, a transcript, and chapters.",
+				text: "Imported and verified. The usio has its title, a transcript, and chapters.",
 				card: {
 					kind: "link",
 					title: "Q3 roadmap walkthrough",
-					meta: "cap.so/s/m4p2q8 · imported from Loom",
+					meta: "usio.co.uk/s/m4p2q8 · imported from Loom",
 				},
 			},
 		],

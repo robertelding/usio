@@ -95,7 +95,7 @@ const STUDIO: DiveConfig = {
 		},
 		{
 			title: "Automatic zoom and cursor effects",
-			body: "Cap smooths the cursor, adds click effects and natural motion blur, and zooms in where the action is.",
+			body: "usio smooths the cursor, adds click effects and natural motion blur, and zooms in where the action is.",
 		},
 	],
 	chips: [
@@ -142,7 +142,7 @@ const SCREENSHOT: DiveConfig = {
 	items: [
 		{
 			title: "Capture and beautify in one hotkey",
-			body: "Grab any window or area and Cap drops it on a background with padding, rounded corners, and a shadow.",
+			body: "Grab any window or area and usio drops it on a background with padding, rounded corners, and a shadow.",
 		},
 		{
 			title: "Annotate, then copy",
@@ -185,7 +185,7 @@ const SCREENSHOT: DiveConfig = {
 
 const UNDERSTAND: DiveConfig = {
 	mode: "share",
-	eyebrow: "Cap AI · On every recording",
+	eyebrow: "usio AI · On every recording",
 	heading: "Every recording, understood",
 	intro:
 		"Titles, summaries, chapters, and a searchable transcript arrive with the recording, so the work after the recording is already done.",

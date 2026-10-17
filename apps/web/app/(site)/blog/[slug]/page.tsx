@@ -8,6 +8,7 @@ import { AuthorByline } from "@/components/blog/AuthorByline";
 import { BlogTemplate } from "@/components/blog/BlogTemplate";
 import { getPostComponents } from "@/components/blog/post-components";
 import { ReadyToGetStarted } from "@/components/ReadyToGetStarted";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { ogImageUrl } from "@/lib/og/url";
 import { getBlogPosts } from "@/utils/blog";
 import {
@@ -75,6 +76,7 @@ export async function generateMetadata(
 }
 
 export default async function PostPage(props: PostProps) {
+	hideMarketingPage("/blog");
 	const params = await props.params;
 	const post = getBlogPosts().find((post) => post.slug === params.slug);
 

@@ -1,11 +1,12 @@
+import { BRAND } from "@cap/utils";
 import type { ModeKey } from "@/components/pages/HomeTwo/theme";
 
 export const agentsSeo = {
 	path: "/agents",
-	url: "https://cap.so/agents",
-	title: "Screen Recorder for AI Agents | Cap for Agents",
+	url: `${BRAND.url}/agents`,
+	title: "Screen Recorder for AI Agents | usio for Agents",
 	description:
-		"Cap is the open source screen recorder built for AI agents. Record, upload, transcribe, and share from Claude Code, Codex, Cursor, or OpenCode through a CLI and MCP server. No app or dashboard needed.",
+		"usio is the open source screen recorder built for AI agents. Record, upload, transcribe, and share from Claude Code, Codex, Cursor, or OpenCode through a CLI and MCP server. No app or dashboard needed.",
 	keywords: [
 		"screen recorder for AI agents",
 		"AI agent screen recording",
@@ -25,7 +26,7 @@ export const agentsSeo = {
 	],
 } as const;
 
-export const POINTER_URL = "https://cap.so/agents";
+export const POINTER_URL = `${BRAND.url}/agents`;
 
 export const ANCHORS = {
 	setup: "setup",
@@ -33,7 +34,7 @@ export const ANCHORS = {
 } as const;
 
 export const POINTER_PROMPT =
-	"Read https://cap.so/agents and follow it to set up Cap for me, then ask what I want to record or review.";
+	"Read https://usio.co.uk/agents and follow it to set up usio for me, then ask what I want to record or review.";
 
 export const HARNESS_NAMES = [
 	"Claude Code",
@@ -44,8 +45,8 @@ export const HARNESS_NAMES = [
 ] as const;
 
 export const INSTALLERS = {
-	unix: "curl -fsSL https://cap.so/install-cli.sh | sh",
-	windows: "irm https://cap.so/install-cli.ps1 | iex",
+	unix: "curl -fsSL https://usio.co.uk/install-cli.sh | sh",
+	windows: "irm https://usio.co.uk/install-cli.ps1 | iex",
 } as const;
 
 export type HarnessKey = "claude" | "codex" | "cursor" | "opencode" | "mcp";
@@ -70,7 +71,7 @@ export const harnesses: readonly Harness[] = [
 		key: "claude",
 		label: "Claude Code",
 		tagline:
-			"One command installs the Cap skill and registers the local MCP server. The dry run shows every path it will touch first.",
+			"One command installs the usio skill and registers the local MCP server. The dry run shows every path it will touch first.",
 		snippets: [
 			{
 				label: "Preview the changes",
@@ -98,7 +99,7 @@ export const harnesses: readonly Harness[] = [
 		key: "codex",
 		label: "Codex",
 		tagline:
-			"The same installer writes the Cap skill and MCP entry into your Codex home, and leaves the rest of your config alone.",
+			"The same installer writes the usio skill and MCP entry into your Codex home, and leaves the rest of your config alone.",
 		snippets: [
 			{
 				label: "Preview the changes",
@@ -126,7 +127,7 @@ export const harnesses: readonly Harness[] = [
 		key: "cursor",
 		label: "Cursor",
 		tagline:
-			"Cursor gets the Cap skill for routing plus a local MCP entry, so its agent reaches for Cap before the browser.",
+			"Cursor gets the usio skill for routing plus a local MCP entry, so its agent reaches for usio before the browser.",
 		snippets: [
 			{
 				label: "Preview the changes",
@@ -153,7 +154,7 @@ export const harnesses: readonly Harness[] = [
 		key: "opencode",
 		label: "OpenCode",
 		tagline:
-			"OpenCode can drive Cap through its shell tools straight away. Merge one entry into opencode.json to add the MCP tools too.",
+			"OpenCode can drive usio through its shell tools straight away. Merge one entry into opencode.json to add the MCP tools too.",
 		snippets: [
 			{
 				label: "Merge into opencode.json",
@@ -188,7 +189,7 @@ export const harnesses: readonly Harness[] = [
 		key: "mcp",
 		label: "Any MCP client",
 		tagline:
-			"Anything that speaks MCP over local stdio can load Cap's tools, and anything that can run a shell gets a screen recorder with no integration at all.",
+			"Anything that speaks MCP over local stdio can load usio's tools, and anything that can run a shell gets a screen recorder with no integration at all.",
 		snippets: [
 			{
 				label: "Local stdio server",
@@ -219,15 +220,15 @@ export const VERIFY_LINES = [
 export const setupSteps = [
 	{
 		name: "Copy the prompt into your agent",
-		text: "Paste the Cap setup prompt into Claude Code, Codex, Cursor, OpenCode, or any agent that can run shell commands. Or send it this page and let it read the prompt itself.",
+		text: "Paste the usio setup prompt into Claude Code, Codex, Cursor, OpenCode, or any agent that can run shell commands. Or send it this page and let it read the prompt itself.",
 	},
 	{
-		name: "Let the agent set Cap up",
-		text: "It installs the Cap CLI, adds the Cap skill and a local MCP server for the agent you are using, then opens a browser tab for a one-time sign in with the least privilege it needs.",
+		name: "Let the agent set usio up",
+		text: "It installs the usio CLI, adds the usio skill and a local MCP server for the agent you are using, then opens a browser tab for a one-time sign in with the least privilege it needs.",
 	},
 	{
 		name: "Ask for what you want",
-		text: "Record a repro, summarize a Cap, search your library, post a comment, move a video, or run a Loom import. The agent reads first and asks before anything records, uploads, or costs money.",
+		text: "Record a repro, summarize a video, search your library, post a comment, move a video, or run a Loom import. The agent reads first and asks before anything records, uploads, or costs money.",
 	},
 ] as const;
 
@@ -257,7 +258,7 @@ export const capabilities: readonly Capability[] = [
 	{
 		key: "search",
 		title: "Search your library",
-		body: "Owned or shared Caps, filtered by organization, folder, or date, then read only the ones that matter.",
+		body: "Owned or shared videos, filtered by organization, folder, or date, then read only the ones that matter.",
 		command: "cap caps list --search",
 		mode: "screenshot",
 	},
@@ -294,12 +295,12 @@ export const examplePrompts: readonly ExamplePrompt[] = [
 	},
 	{
 		category: "Summarize",
-		text: "Summarize this Cap, list every decision and action item, and cite the relevant timestamps: <Cap URL>",
+		text: "Summarize this video, list every decision and action item, and cite the relevant timestamps: <video URL>",
 		mode: "studio",
 	},
 	{
 		category: "Search",
-		text: "Find my Caps about onboarding from the last month and give me a concise project brief.",
+		text: "Find my videos about onboarding from the last month and give me a concise project brief.",
 		mode: "screenshot",
 	},
 	{
@@ -322,13 +323,13 @@ export const examplePrompts: readonly ExamplePrompt[] = [
 export const safetyPrinciples = [
 	{
 		title: "Read first, then propose",
-		body: "Reads and waits never start transcription, AI, or any paid work. Before a change the agent shows the exact Cap, the current state, the proposed change, and how it will verify the result. Only then does it pass --yes.",
+		body: "Reads and waits never start transcription, AI, or any paid work. Before a change the agent shows the exact video, the current state, the proposed change, and how it will verify the result. Only then does it pass --yes.",
 		command: "cap caps context <id> --json",
 		mode: "instant" as const,
 	},
 	{
 		title: "Secrets stay out of chat",
-		body: "Passwords, API keys, S3 credentials, and newly issued developer secrets never pass through MCP or the conversation. Secure prompts happen in your terminal, and a locked Cap is opened with a single command.",
+		body: "Passwords, API keys, S3 credentials, and newly issued developer secrets never pass through MCP or the conversation. Secure prompts happen in your terminal, and a locked usio is opened with a single command.",
 		command: "cap caps unlock <id-or-url>",
 		mode: "studio" as const,
 	},
@@ -354,86 +355,86 @@ export const headlessNote = {
 
 export const agentFaqs = [
 	{
-		question: "Can an AI agent record my screen with Cap?",
+		question: "Can an AI agent record my screen with usio?",
 		answer:
-			"Yes. The Cap CLI is a complete screen recorder for the terminal. It records displays and windows in Instant or Studio Mode from any shell, so Claude Code, Codex, Cursor, OpenCode, or any agent that can run commands can start and stop a recording, validate it, export it, and upload it for a share link. The agent checks capture readiness first and asks before recording starts.",
+			"Yes. The usio CLI is a complete screen recorder for the terminal. It records displays and windows in Instant or Studio Mode from any shell, so Claude Code, Codex, Cursor, OpenCode, or any agent that can run commands can start and stop a recording, validate it, export it, and upload it for a share link. The agent checks capture readiness first and asks before recording starts.",
 	},
 	{
-		question: "Which AI agents and coding tools work with Cap?",
+		question: "Which AI agents and coding tools work with usio?",
 		answer:
-			"Claude Code, Codex, and Cursor get a one-command install that adds the Cap skill and a local MCP server. OpenCode and any other MCP client connect by adding the documented cap mcp serve entry. Anything that can run shell commands can use the CLI directly with no integration at all.",
+			"Claude Code, Codex, and Cursor get a one-command install that adds the usio skill and a local MCP server. OpenCode and any other MCP client connect by adding the documented cap mcp serve entry. Anything that can run shell commands can use the CLI directly with no integration at all.",
 	},
 	{
-		question: "Do I need to open the Cap app or the dashboard?",
+		question: "Do I need to open the usio app or the dashboard?",
 		answer:
-			"No. The installer puts cap on your PATH and brings Cap Desktop along with it, but you never have to open it. The only browser step is a one-time sign in. From then on your agent records, uploads, reads transcripts, posts comments, and manages folders, spaces, members, storage, billing, and analytics through the CLI and MCP. The app and the dashboard stay available whenever you want them.",
+			"No. The installer puts cap on your PATH and brings usio Desktop along with it, but you never have to open it. The only browser step is a one-time sign in. From then on your agent records, uploads, reads transcripts, posts comments, and manages folders, spaces, members, storage, billing, and analytics through the CLI and MCP. The app and the dashboard stay available whenever you want them.",
 	},
 	{
-		question: "What is the Cap MCP server?",
+		question: "What is the usio MCP server?",
 		answer:
-			"cap mcp serve exposes 76 Cap tools over local stdio: listing and reading Caps, transcripts, comments, reactions, sharing, folders, spaces, organizations, notifications, analytics, storage, billing, and developer resources. Screen capture, uploads, passwords, and credentials deliberately stay in the CLI, so no secret ever passes through the model.",
+			"cap mcp serve exposes 76 usio tools over local stdio: listing and reading videos, transcripts, comments, reactions, sharing, folders, spaces, organizations, notifications, analytics, storage, billing, and developer resources. Screen capture, uploads, passwords, and credentials deliberately stay in the CLI, so no secret ever passes through the model.",
 	},
 	{
 		question: "Is it safe to give an AI agent access to my recordings?",
 		answer:
-			"Cap's agent surface is built around explicit boundaries. Reads and waits never start paid work. Before any change the agent shows the exact Cap, the current state, the proposed change, and how it will verify the result, and only then passes --yes. Passwords, API keys, and storage credentials never enter the chat or MCP. Login uses the least-privileged creator profile by default, and permissions are enforced on the server, so installing the integration grants nothing by itself.",
+			"usio's agent surface is built around explicit boundaries. Reads and waits never start paid work. Before any change the agent shows the exact video, the current state, the proposed change, and how it will verify the result, and only then passes --yes. Passwords, API keys, and storage credentials never enter the chat or MCP. Login uses the least-privileged creator profile by default, and permissions are enforced on the server, so installing the integration grants nothing by itself.",
 	},
 	{
-		question: "Does Cap work in headless environments like CI or containers?",
+		question: "Does usio work in headless environments like CI or containers?",
 		answer:
-			"Yes, for everything except capture. Mint an API key from your Cap account settings, inject it as CAP_API_KEY, and the CLI and MCP server authenticate with that key's profile. Uploads, transcripts, comments, library management, and analytics all work headless. Recording a screen needs a machine with a display.",
+			"Yes, for everything except capture. Mint an API key from your usio account settings, inject it as CAP_API_KEY, and the CLI and MCP server authenticate with that key's profile. Uploads, transcripts, comments, library management, and analytics all work headless. Recording a screen needs a machine with a display.",
 	},
 	{
-		question: "Does my agent need to know Cap's commands in advance?",
+		question: "Does my agent need to know usio's commands in advance?",
 		answer:
-			"No. The installed binary is self-describing. cap guide --json returns the current command and schema contract, every command accepts --json, and recording and export stream newline-delimited JSON events. The Cap skill tells the agent to discover the contract this way instead of guessing flags, so it stays correct as Cap updates.",
+			"No. The installed binary is self-describing. cap guide --json returns the current command and schema contract, every command accepts --json, and recording and export stream newline-delimited JSON events. The usio skill tells the agent to discover the contract this way instead of guessing flags, so it stays correct as usio updates.",
 	},
 	{
-		question: "Is Cap for Agents free?",
+		question: "Is usio for Agents free?",
 		answer:
-			"The CLI and MCP server are part of Cap's open source codebase and free to use. Local recording, editing, and export are free on Mac, Windows, and Linux. Shareable links, transcripts, AI summaries, and team features follow your Cap plan, so the free plan is enough to try everything on this page and Cap Pro removes the limits.",
+			"The CLI and MCP server are part of usio's open source codebase and free to use. Local recording, editing, and export are free on Mac, Windows, and Linux. Shareable links, transcripts, AI summaries, and team features follow your usio plan, so the free plan is enough to try everything on this page and usio Pro removes the limits.",
 	},
 	{
 		question: "How do I point my agent at this page?",
 		answer:
-			"Paste a one-line prompt such as “Read https://cap.so/agents and set up Cap for me” into your agent. This page is written to be read by agents as well as people: it carries the full setup prompt, the per-agent install steps, and links to the operating instructions at cap.so/docs/agents, so an agent that fetches it has everything it needs.",
+			"Paste a one-line prompt such as “Read https://usio.co.uk/agents and set up usio for me” into your agent. This page is written to be read by agents as well as people: it carries the full setup prompt, the per-agent install steps, and links to the operating instructions at usio.co.uk/docs/agents, so an agent that fetches it has everything it needs.",
 	},
 ] as const;
 
 export const agentsSoftwareSchema = {
 	"@context": "https://schema.org",
 	"@type": "SoftwareApplication",
-	"@id": "https://cap.so/agents#software",
-	name: "Cap CLI and MCP server",
-	alternateName: "Cap for Agents",
+	"@id": `${BRAND.url}/agents#software`,
+	name: "usio CLI and MCP server",
+	alternateName: "usio for Agents",
 	url: agentsSeo.url,
 	description:
-		"A command line interface and local MCP server that let AI agents such as Claude Code, Codex, Cursor, and OpenCode record the screen, upload recordings, read transcripts and summaries, comment, and manage a Cap library without opening the app or dashboard.",
+		"A command line interface and local MCP server that let AI agents such as Claude Code, Codex, Cursor, and OpenCode record the screen, upload recordings, read transcripts and summaries, comment, and manage a usio library without opening the app or dashboard.",
 	applicationCategory: "MultimediaApplication",
 	applicationSubCategory: "Screen recorder for AI agents",
 	operatingSystem: ["macOS", "Windows", "Linux"],
-	downloadUrl: "https://cap.so/download",
-	installUrl: "https://cap.so/docs/agents/setup",
+	downloadUrl: `${BRAND.url}/download`,
+	installUrl: `${BRAND.url}/docs/agents/setup`,
 	softwareHelp: {
 		"@type": "CreativeWork",
-		url: "https://cap.so/docs/agents",
+		url: `${BRAND.url}/docs/agents`,
 	},
 	isAccessibleForFree: true,
 	offers: {
 		"@type": "Offer",
 		price: 0,
 		priceCurrency: "USD",
-		url: "https://cap.so/download",
+		url: `${BRAND.url}/download`,
 	},
 	publisher: {
 		"@type": "Organization",
-		name: "Cap",
-		url: "https://cap.so",
+		name: "usio",
+		url: BRAND.url,
 	},
 	featureList: [
 		"Screen and window recording from the command line",
 		"Local MCP server with 76 tools for Claude Code, Codex, Cursor, OpenCode, and other MCP clients",
-		"One-command install of the Cap skill and MCP configuration",
+		"One-command install of the usio skill and MCP configuration",
 		"JSON output on every command and NDJSON events for recording and export",
 		"Upload recordings and return share links",
 		"Read transcripts, AI summaries, chapters, comments, and analytics",

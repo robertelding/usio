@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DownloadPage } from "@/components/pages/DownloadPage";
+import { hideMarketingPage } from "@/lib/hidden-marketing-pages";
 import { buildMarketingMetadata } from "@/lib/og/url";
 import { nativeDesktopReleaseIsLive } from "@/utils/native-release";
 import { getGitHubReleases } from "@/utils/releases";
@@ -14,6 +15,7 @@ export const metadata: Metadata = buildMarketingMetadata({
 export const revalidate = 60;
 
 export default async function App() {
+	hideMarketingPage("/download");
 	const releases = await getGitHubReleases().catch(() => []);
 	return (
 		<DownloadPage nativeReleaseLive={nativeDesktopReleaseIsLive(releases)} />

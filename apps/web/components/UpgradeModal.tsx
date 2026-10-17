@@ -135,8 +135,8 @@ const PRO_FEATURES = [
 	},
 	{
 		icon: <ShieldCheck className={iconStyling} />,
-		title: "SOC 2, ISO 27001 & HIPAA",
-		description: "Independently audited security & compliance",
+		title: "Bring your own storage",
+		description: "Store recordings in your own S3-compatible bucket",
 	},
 	{
 		icon: <Headphones className={iconStyling} />,

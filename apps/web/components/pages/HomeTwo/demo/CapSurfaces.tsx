@@ -381,7 +381,7 @@ export const LinkNotification = ({
 			{isWindows ? (
 				<button
 					type="button"
-					aria-label="Open the shared Cap"
+					aria-label="Open the shared video"
 					onClick={onOpen}
 					className="flex w-full cursor-pointer flex-col gap-1.5 p-4 text-left transition-colors duration-200 hover:bg-[#fbfbfb]"
 					style={{
@@ -395,7 +395,7 @@ export const LinkNotification = ({
 					<span className="flex items-center gap-2">
 						<CapLogoMark className="size-4 shrink-0" />
 						<span className="text-[12px]" style={{ color: "#5c5c5c" }}>
-							Cap
+							usio
 						</span>
 						<span className="flex-1" />
 						<span className="text-[12px]" style={{ color: "#5c5c5c" }}>
@@ -415,7 +415,7 @@ export const LinkNotification = ({
 			) : (
 				<button
 					type="button"
-					aria-label="Open the shared Cap"
+					aria-label="Open the shared video"
 					onClick={onOpen}
 					className="flex w-full cursor-pointer items-center gap-3 rounded-2xl p-3 text-left backdrop-blur-xl transition-transform duration-200 hover:scale-[1.02]"
 					style={{

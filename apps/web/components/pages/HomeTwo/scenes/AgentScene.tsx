@@ -364,7 +364,7 @@ export const AgentScene = (props: SceneProps) => {
 							<Json>
 								{"{"} <Key>"type"</Key>: <Str>"uploaded"</Str>, <Key>"id"</Key>:{" "}
 								<Str>"x7f2k9"</Str>, <Key>"link"</Key>:{" "}
-								<Str>"https://cap.so/s/x7f2k9"</Str> {"}"}
+								<Str>"https://usio.co.uk/s/x7f2k9"</Str> {"}"}
 							</Json>
 						</Tool>
 						<Tool
@@ -396,7 +396,7 @@ export const AgentScene = (props: SceneProps) => {
 									Checkout bug repro
 								</span>
 								<span className="block text-[12px] text-[rgba(17,17,17,0.55)]">
-									cap.so/s/x7f2k9 · 0:20 · AI summary ready
+									usio.co.uk/s/x7f2k9 · 0:20 · AI summary ready
 								</span>
 							</span>
 						</div>
@@ -429,7 +429,7 @@ export const AgentScene = (props: SceneProps) => {
 								commentVisible={ui.comment}
 								videoRef={shareVideoRef}
 								title="Checkout bug repro"
-								url="cap.so/s/x7f2k9"
+								url="usio.co.uk/s/x7f2k9"
 								duration="0:20"
 							/>
 						</div>

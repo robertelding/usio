@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@cap/ui";
+import { BRAND } from "@cap/utils";
 import {
 	faBookOpen,
 	faCopy,
@@ -85,8 +86,9 @@ export const StudentDiscountPage = () => {
 						variants={fadeIn}
 						custom={2}
 					>
-						Level up your presentations and portfolio with 30% off Cap's premium
-						features. Perfect for students, researchers, and future creators.
+						Level up your presentations and portfolio with 30% off usio's
+						premium features. Perfect for students, researchers, and future
+						creators.
 					</motion.p>
 
 					{/* Clean Discount Badge */}
@@ -184,14 +186,16 @@ export const StudentDiscountPage = () => {
 						>
 							View Plans & Pricing
 						</Button>
-						<Button
-							variant="white"
-							href="/download"
-							size="lg"
-							className="flex justify-center items-center font-medium"
-						>
-							Download Cap Free
-						</Button>
+						{BRAND.desktopAppAvailable && (
+							<Button
+								variant="white"
+								href="/download"
+								size="lg"
+								className="flex justify-center items-center font-medium"
+							>
+								Download usio Free
+							</Button>
+						)}
 					</motion.div>
 				</motion.div>
 				<img
@@ -221,7 +225,7 @@ export const StudentDiscountPage = () => {
 						</h2>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">
 							Whether you're presenting, building your portfolio, or
-							collaborating with classmates, Cap helps you create professional
+							collaborating with classmates, usio helps you create professional
 							content that stands out.
 						</p>
 					</div>
@@ -297,8 +301,7 @@ export const StudentDiscountPage = () => {
 								Ready to elevate your student projects?
 							</h2>
 							<p className="text-lg text-gray-10">
-								Join thousands of students already using Cap to create amazing
-								content
+								Use usio to create and share amazing content
 							</p>
 						</div>
 						<div className="flex flex-col justify-center items-center space-y-4 w-full sm:flex-row sm:space-y-0 sm:space-x-4">
@@ -310,14 +313,16 @@ export const StudentDiscountPage = () => {
 							>
 								Get Started with 30% Off
 							</Button>
-							<Button
-								variant="white"
-								href="/download"
-								size="lg"
-								className="font-medium transform hover:-translate-y-[2px] transition-all duration-300"
-							>
-								Try Cap Free First
-							</Button>
+							{BRAND.desktopAppAvailable && (
+								<Button
+									variant="white"
+									href="/download"
+									size="lg"
+									className="font-medium transform hover:-translate-y-[2px] transition-all duration-300"
+								>
+									Try usio Free First
+								</Button>
+							)}
 						</div>
 					</div>
 				</motion.div>

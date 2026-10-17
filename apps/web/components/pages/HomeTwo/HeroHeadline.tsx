@@ -305,7 +305,7 @@ export const HeroHeadline = () => {
 
 			<h1 className={`${H_HERO} text-[clamp(36px,5.6vw,74px)]`}>
 				<span className="sr-only">
-					Record. Edit. Share. Cap has three recording modes: Instant, Studio,
+					Record. Edit. Share. usio has three recording modes: Instant, Studio,
 					and Screenshot.
 				</span>
 				<span

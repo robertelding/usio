@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import type { Metadata } from "next";
 import {
 	DeveloperDocumentationVideosPage,
@@ -12,26 +13,24 @@ const ogImage = ogImageUrl({
 });
 
 export const metadata: Metadata = {
-	title:
-		"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+	title: `Developer Documentation Videos — Record API Demos and SDK Walkthroughs | ${BRAND.name}`,
 	description:
-		"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Cap is free, open-source, 4K quality, and built for developers.",
+		"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. usio is free, open-source, 4K quality, and built for developers.",
 	alternates: {
-		canonical: "https://cap.so/developer-documentation-videos",
+		canonical: `${BRAND.url}/developer-documentation-videos`,
 	},
 	openGraph: {
-		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+		title: `Developer Documentation Videos — Record API Demos and SDK Walkthroughs | ${BRAND.name}`,
 		description:
 			"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Free, open-source, and built for developers.",
-		url: "https://cap.so/developer-documentation-videos",
-		siteName: "Cap",
+		url: `${BRAND.url}/developer-documentation-videos`,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: ogImage,
 				width: 1200,
 				height: 630,
-				alt: "Cap: Developer Documentation Videos",
+				alt: "usio: Developer Documentation Videos",
 			},
 		],
 		locale: "en_US",
@@ -39,8 +38,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+		title: `Developer Documentation Videos — Record API Demos and SDK Walkthroughs | ${BRAND.name}`,
 		description:
 			"Record API demos, SDK walkthroughs, and changelog videos instantly. Share a link, embed in your docs, get AI transcripts. Free and open-source.",
 		images: [ogImage],

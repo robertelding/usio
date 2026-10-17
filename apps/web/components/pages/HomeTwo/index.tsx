@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { Agents } from "@/components/pages/HomeTwo/Agents";
 import { DeepDives } from "@/components/pages/HomeTwo/DeepDives";
 import { Faq } from "@/components/pages/HomeTwo/Faq";
@@ -10,7 +11,6 @@ import { ModeWalkthrough } from "@/components/pages/HomeTwo/ModeWalkthrough";
 import { Ownership } from "@/components/pages/HomeTwo/Ownership";
 import { Platforms } from "@/components/pages/HomeTwo/Platforms";
 import { Pricing } from "@/components/pages/HomeTwo/Pricing";
-import { Testimonials } from "@/components/pages/HomeTwo/Testimonials";
 import { BAND, CREAM, grainBg, SHELL } from "@/components/pages/HomeTwo/theme";
 import { Workflow } from "@/components/pages/HomeTwo/Workflow";
 import { HomeTwoSchema } from "./Schema";
@@ -44,9 +44,8 @@ export function HomeTwoPage() {
 					<DeepDives />
 					<Features />
 					<Ownership />
-					<Platforms />
+					{BRAND.desktopAppAvailable && <Platforms />}
 					<Agents />
-					<Testimonials />
 					<Pricing />
 					<Faq />
 					<LoomBridge />

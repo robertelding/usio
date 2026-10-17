@@ -10,7 +10,7 @@ import { PRICING } from "@/data/pricing";
 
 describe("homepage SEO", () => {
 	it("uses the public root as the crawlable canonical", async () => {
-		expect(homePageMetadata.alternates?.canonical).toBe("https://cap.so/");
+		expect(homePageMetadata.alternates?.canonical).toBe("https://usio.co.uk/");
 		expect(homePageMetadata.robots).toMatchObject({
 			index: true,
 			follow: true,
@@ -47,15 +47,14 @@ describe("homepage SEO", () => {
 		expect(serialized).not.toContain("priceValidUntil");
 	});
 
-	it("uses the displayed plan prices and supported desktop platforms", () => {
+	it("uses the displayed plan prices and the web platform", () => {
 		const software = homepageSchema["@graph"].find(
 			(entity) => entity["@type"] === "SoftwareApplication",
 		);
-		expect(software?.operatingSystem).toEqual(["macOS", "Windows", "Linux"]);
+		expect(software?.operatingSystem).toBe("Web browser");
 		expect(software?.offers).toMatchObject([
-			{ name: "Cap Free", price: 0 },
-			{ name: "Desktop License", price: PRICING.commercial.lifetime },
-			{ name: "Cap Pro", price: PRICING.pro.monthly },
+			{ name: "usio Free", price: 0 },
+			{ name: "usio Pro", price: PRICING.pro.monthly },
 		]);
 	});
 
@@ -64,7 +63,7 @@ describe("homepage SEO", () => {
 			(entity) => entity["@type"] === "Organization",
 		)?.logo;
 		const image = readFileSync(
-			new URL("../../public/cap-logo.png", import.meta.url),
+			new URL("../../public/android-chrome-512x512.png", import.meta.url),
 		);
 		expect(logo).toMatchObject({
 			width: image.readUInt32BE(16),

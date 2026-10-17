@@ -4,6 +4,7 @@ import { Button } from "@cap/ui";
 import Link from "next/link";
 import { type ReactNode, useEffect } from "react";
 import type { ToolPageContent } from "@/components/tools/types";
+import { isHiddenDownloadHref, resolveDownloadCta } from "@/lib/download-cta";
 
 const renderHTML = (content: string) => {
 	const styledContent = content.replace(
@@ -76,6 +77,10 @@ export const ToolsPageTemplate = ({
 	content: ToolPageContent;
 	toolComponent: ReactNode;
 }) => {
+	const primaryCta = resolveDownloadCta(
+		content.cta.buttonText,
+		content.cta.buttonHref,
+	);
 	useEffect(() => {
 		const animateClouds = () => {
 			const cloud4 = document.getElementById("cloud-4");
@@ -236,14 +241,15 @@ export const ToolsPageTemplate = ({
 							<div className="flex flex-col justify-center items-center space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
 								<Button
 									variant={content.cta.secondaryButtonText ? "blue" : "gray"}
-									href={content.cta.buttonHref ?? "/download"}
+									href={primaryCta.href}
 									size="lg"
 									className="px-8 w-full font-medium transition-all duration-200 sm:w-auto"
 								>
-									{content.cta.buttonText}
+									{primaryCta.text}
 								</Button>
 								{content.cta.secondaryButtonText &&
-									content.cta.secondaryButtonHref && (
+									content.cta.secondaryButtonHref &&
+									!isHiddenDownloadHref(content.cta.secondaryButtonHref) && (
 										<Button
 											variant="gray"
 											href={content.cta.secondaryButtonHref}
