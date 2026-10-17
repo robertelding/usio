@@ -40,7 +40,7 @@ export function HomeTwoPage() {
 						<Hero />
 						<ModeWalkthrough />
 					</div>
-					<Workflow />
+					{BRAND.desktopAppAvailable && <Workflow />}
 					<DeepDives />
 					<Features />
 					<Ownership />

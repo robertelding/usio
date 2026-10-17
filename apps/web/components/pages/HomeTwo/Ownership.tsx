@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { Server } from "lucide-react";
 import Image from "next/image";
@@ -206,10 +207,12 @@ const StorageRoute = ({
 					<CapLogoMark className="size-4 shrink-0" />
 					<span className="min-w-0 flex-1 leading-tight">
 						<span className="block truncate text-[12px] font-medium text-[#111111]">
-							team-update.cap
+							{BRAND.desktopAppAvailable
+								? "team-update.cap"
+								: "team-update.mp4"}
 						</span>
 						<span className="block text-[10.5px] text-[rgba(17,17,17,0.5)]">
-							4K · 1.2 GB
+							{BRAND.desktopAppAvailable ? "4K · 1.2 GB" : "1080p · 86 MB"}
 						</span>
 					</span>
 				</div>

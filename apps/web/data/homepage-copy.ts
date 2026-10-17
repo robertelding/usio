@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { PRICING } from "./pricing";
 
 export interface HeaderCopyVariants {
@@ -299,8 +300,7 @@ export const homepageCopy: HomePageCopy = {
 	},
 	pricing: {
 		title: "Simple, Honest Pricing",
-		subtitle:
-			"Start free, upgrade when you need more. Early adopter pricing locked in forever.",
+		subtitle: "Start free, upgrade when you need more.",
 		lovedBy: "Open source and self-hostable",
 		commercial: {
 			title: "Desktop License",
@@ -358,21 +358,27 @@ export const homepageCopy: HomePageCopy = {
 	faq: {
 		title: "Questions? We've Got Answers.",
 		items: [
-			{
-				question:
-					"What is the difference between usio Pro and Desktop License?",
-				answer:
-					"usio Pro is a paid plan that includes all the features of the Desktop License plus cloud features for seamless sharing and collaboration. Desktop License grants you commercial usage rights for a single user.",
-			},
+			...(BRAND.desktopAppAvailable
+				? [
+						{
+							question:
+								"What is the difference between usio Pro and Desktop License?",
+							answer:
+								"usio Pro is a paid plan that includes all the features of the Desktop License plus cloud features for seamless sharing and collaboration. Desktop License grants you commercial usage rights for a single user.",
+						},
+					]
+				: []),
 			{
 				question: "Is there a free version?",
-				answer:
-					"Yes! usio is 100% free for personal use. You can record and share locally with Studio Mode. A paid plan is required for commercial usage.",
+				answer: BRAND.desktopAppAvailable
+					? "Yes! usio is 100% free for personal use. You can record and share locally with Studio Mode. A paid plan is required for commercial usage."
+					: "Yes! usio is free for personal use. Record in your browser and share a link, no install needed. A paid plan is required for commercial usage.",
 			},
 			{
 				question: "How long can I record for on the free version?",
-				answer:
-					"Studio Mode lets you record locally without a time limit. Free cloud shareable links are limited to 5 minutes each.",
+				answer: BRAND.desktopAppAvailable
+					? "Studio Mode lets you record locally without a time limit. Free cloud shareable links are limited to 5 minutes each."
+					: "Free recordings and shareable links have a time limit. usio Pro removes it, so you can record and share videos of any length.",
 			},
 			{
 				question: "How does usio AI work?",
@@ -381,13 +387,15 @@ export const homepageCopy: HomePageCopy = {
 			},
 			{
 				question: "How is usio different from Loom?",
-				answer:
-					"usio gives you the best of both worlds: the simplicity of Loom with the power of professional tools. We're open source, support custom storage, offer better pricing, and our desktop app works offline. Plus, you actually own your content. Already using Loom? Our built-in Loom video importer makes switching effortless.",
+				answer: BRAND.desktopAppAvailable
+					? "usio gives you the best of both worlds: the simplicity of Loom with the power of professional tools. We're open source, support custom storage, offer better pricing, and our desktop app works offline. Plus, you actually own your content. Already using Loom? Our built-in Loom video importer makes switching effortless."
+					: "usio gives you the simplicity of Loom in a tool you can own. We're open source, support your own storage, and can be fully self-hosted, so you actually own your content. Already using Loom? Our built-in Loom video importer makes switching effortless.",
 			},
 			{
 				question: "What happens to my recordings if I cancel?",
-				answer:
-					"Your recordings are yours forever. If you cancel Pro, existing shares remain active and you can always export everything. Downgrade to our free plan to keep recording locally, or self-host to maintain all features.",
+				answer: BRAND.desktopAppAvailable
+					? "Your recordings are yours forever. If you cancel Pro, existing shares remain active and you can always export everything. Downgrade to our free plan to keep recording locally, or self-host to maintain all features."
+					: "Your recordings are yours forever. If you cancel Pro, existing shares remain active and you can always download your videos. Keep recording on the free plan, or self-host to keep every feature.",
 			},
 			{
 				question: "Do you offer team plans?",
@@ -396,13 +404,15 @@ export const homepageCopy: HomePageCopy = {
 			},
 			{
 				question: "Which platforms do you support?",
-				answer:
-					"Native desktop apps for macOS (Apple Silicon & Intel), Windows, and Linux, plus a Chrome extension. View your shareable links from anywhere.",
+				answer: BRAND.desktopAppAvailable
+					? "Native desktop apps for macOS (Apple Silicon & Intel), Windows, and Linux, plus a Chrome extension. View your shareable links from anywhere."
+					: "usio works in any modern browser on Mac, Windows, Linux or a Chromebook, with nothing to install. Shared videos play anywhere, including on phones.",
 			},
 			{
 				question: "Can I use usio for commercial purposes?",
-				answer:
-					"Absolutely! Any paid plan (Desktop License or usio Pro) includes full commercial usage rights. Use usio for client work, sell courses, or embed recordings anywhere. The free version is for personal use only.",
+				answer: BRAND.desktopAppAvailable
+					? "Absolutely! Any paid plan (Desktop License or usio Pro) includes full commercial usage rights. Use usio for client work, sell courses, or embed recordings anywhere. The free version is for personal use only."
+					: "Absolutely! usio Pro includes full commercial usage rights. Use usio for client work, sell courses, or embed recordings anywhere. The free version is for personal use only.",
 			},
 			{
 				question: "Is my data secure?",

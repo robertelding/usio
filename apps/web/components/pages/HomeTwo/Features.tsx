@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import {
 	ArrowDownToLine,
@@ -32,13 +33,17 @@ type Feature = {
 const FEATURES: Feature[] = [
 	{
 		title: "Your storage, your rules",
-		body: "Connect your own Google Drive or S3 bucket, use usio Cloud, or keep everything local. You are never locked into our infrastructure.",
+		body: BRAND.desktopAppAvailable
+			? "Connect your own Google Drive or S3 bucket, use usio Cloud, or keep everything local. You are never locked into our infrastructure."
+			: "Connect your own Google Drive or S3 bucket, use usio Cloud, or self-host the whole platform. You are never locked into our infrastructure.",
 		accent: "instant",
 		Icon: HardDrive,
 	},
 	{
 		title: "Privacy by default, sharing by choice",
-		body: "Share publicly or privately, password protect the sensitive ones, or keep a recording on your machine and never upload it at all.",
+		body: BRAND.desktopAppAvailable
+			? "Share publicly or privately, password protect the sensitive ones, or keep a recording on your machine and never upload it at all."
+			: "Share publicly or privately, password protect the sensitive ones, or limit a video to your team or invited viewers.",
 		accent: "studio",
 		Icon: Lock,
 	},
@@ -50,13 +55,17 @@ const FEATURES: Feature[] = [
 	},
 	{
 		title: "Cross platform for your whole team",
-		body: "Native apps for macOS and Windows that feel at home on each, plus a Chrome extension when recording in the browser is the right call.",
+		body: BRAND.desktopAppAvailable
+			? "Native apps for macOS and Windows that feel at home on each, plus a Chrome extension when recording in the browser is the right call."
+			: "Works in any modern browser on Mac, Windows, Linux or a Chromebook, so your whole team can record without installing anything.",
 		accent: "share",
 		Icon: MonitorSmartphone,
 	},
 	{
 		title: "Quality that makes you look good",
-		body: "4K recording, 60fps capture, and compression smart enough to keep the file sizes sane.",
+		body: BRAND.desktopAppAvailable
+			? "4K recording, 60fps capture, and compression smart enough to keep the file sizes sane."
+			: "Crisp recordings straight from the browser, uploaded while you record so the link is ready the moment you stop.",
 		accent: "studio",
 		Icon: Gauge,
 	},

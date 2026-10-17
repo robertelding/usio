@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { useDetectPlatform } from "hooks/useDetectPlatform";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
@@ -192,7 +193,39 @@ const Slot = ({
 	);
 };
 
-export const HeroHeadline = () => {
+const BROWSER_WORDS = ["Record.", "Stop.", "Share."] as const;
+
+const BrowserHeadline = () => (
+	<div className="flex w-full flex-col items-center">
+		<h1 className={`${H_HERO} text-[clamp(36px,5.6vw,74px)]`}>
+			<span className="sr-only">
+				Record. Stop. Share. Record your screen in the browser and share a link
+				the moment you stop.
+			</span>
+			<span
+				aria-hidden="true"
+				className="flex flex-col items-center sm:flex-row sm:justify-center sm:gap-[0.26em]"
+			>
+				{BROWSER_WORDS.map((word, i) => (
+					<span
+						key={word}
+						style={{
+							lineHeight: 0.98,
+							color: i === 2 ? MODE_THEME.instant.glyph : INK,
+						}}
+					>
+						{word}
+					</span>
+				))}
+			</span>
+		</h1>
+	</div>
+);
+
+export const HeroHeadline = () =>
+	BRAND.desktopAppAvailable ? <ModeHeadline /> : <BrowserHeadline />;
+
+const ModeHeadline = () => {
 	const { platform } = useDetectPlatform();
 	const [index, setIndex] = useState(0);
 	const [typed, setTyped] = useState(0);

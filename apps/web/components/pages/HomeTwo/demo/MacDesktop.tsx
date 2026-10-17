@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import type { RefObject } from "react";
 import { AppleGlyph } from "../glyphs";
@@ -39,7 +40,9 @@ export const MenuBar = ({
 		>
 			<AppleGlyph className="size-[13px]" />
 		</OsSwitchButton>
-		<span className="-ml-2.5 font-semibold">usio</span>
+		<span className="-ml-2.5 font-semibold">
+			{BRAND.desktopAppAvailable ? BRAND.name : "Chrome"}
+		</span>
 		{["File", "Edit", "View", "Window", "Help"].map((item) => (
 			<span key={item} className="hidden opacity-90 lg:inline">
 				{item}

@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import { classNames } from "@cap/utils/helpers";
 import { Link2 } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -86,13 +87,34 @@ const STEPS: Step[] = [
 	},
 ];
 
+const BROWSER_STEPS: Step[] = [
+	{
+		key: "instant",
+		label: "Record",
+		heading: "Record right in your browser",
+		body: "Pick a screen, window, tab or just your camera and hit record. usio uploads as you go, so there is nothing to install and nothing to wait for.",
+		href: "/features/instant-mode",
+		Icon: InstantIcon,
+	},
+	{
+		key: "share",
+		label: "Share",
+		heading: "Stop, and the link is ready",
+		body: "Every recording gets a usio page with comments, reactions, a transcript and chapters. Viewers watch in the browser. No download, no account.",
+		href: "/features",
+		Icon: Link2,
+	},
+];
+
+const VISIBLE_STEPS = BRAND.desktopAppAvailable ? STEPS : BROWSER_STEPS;
+
 const LEARN_MORE =
 	"mt-7 inline-flex items-center gap-1.5 rounded-sm text-[15.5px] font-normal text-[#111111] underline decoration-[rgba(17,17,17,0.3)] underline-offset-[6px] transition-colors duration-200 hover:decoration-[#111111] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F8FAFC]";
 
 const StackedSteps = ({ className }: { className?: string }) => (
 	<div className={classNames("px-3 pb-12 pt-2 sm:px-4", className)}>
 		<div className="mx-auto flex max-w-[720px] flex-col gap-5">
-			{STEPS.map((step) => {
+			{VISIBLE_STEPS.map((step) => {
 				const theme = MODE_THEME[step.key];
 				const scene = SCENES[step.key];
 				return (
@@ -193,29 +215,38 @@ export const ModeWalkthrough = () => {
 			aria-labelledby="modes-heading"
 			className={`${htGeist.variable} scroll-mt-[68px] lg:scroll-mt-[76px]`}
 		>
-			<link
-				rel="preload"
-				as="image"
-				href={wallpaper.srcSet ? undefined : wallpaper.src}
-				fetchPriority="high"
-				imageSrcSet={wallpaper.srcSet}
-				imageSizes={wallpaper.sizes}
-				media="(min-width: 768px) and (prefers-reduced-motion: no-preference)"
-			/>
+			{BRAND.desktopAppAvailable && (
+				<link
+					rel="preload"
+					as="image"
+					href={wallpaper.srcSet ? undefined : wallpaper.src}
+					fetchPriority="high"
+					imageSrcSet={wallpaper.srcSet}
+					imageSizes={wallpaper.sizes}
+					media="(min-width: 768px) and (prefers-reduced-motion: no-preference)"
+				/>
+			)}
 			{/* biome-ignore lint/correctness/useUniqueElementIds: paired with the section's aria-labelledby above */}
 			<h2 id="modes-heading" className="sr-only">
-				How usio works: Instant Mode, Studio Mode, and the editor
+				{BRAND.desktopAppAvailable
+					? "How usio works: Instant Mode, Studio Mode, and the editor"
+					: "How usio works: record in your browser and share a link"}
 			</h2>
 
-			<div className={forceStacked ? "hidden" : "hidden md:block"}>
-				{desktop ? (
-					<DesktopDemo startRequested={startRequested} />
-				) : (
-					<div className="h-[100svh] max-h-[860px] min-h-[660px]" />
-				)}
-			</div>
-
-			<StackedSteps className={forceStacked ? "block" : "md:hidden"} />
+			{BRAND.desktopAppAvailable ? (
+				<>
+					<div className={forceStacked ? "hidden" : "hidden md:block"}>
+						{desktop ? (
+							<DesktopDemo startRequested={startRequested} />
+						) : (
+							<div className="h-[100svh] max-h-[860px] min-h-[660px]" />
+						)}
+					</div>
+					<StackedSteps className={forceStacked ? "block" : "md:hidden"} />
+				</>
+			) : (
+				<StackedSteps className="block" />
+			)}
 		</section>
 	);
 };
