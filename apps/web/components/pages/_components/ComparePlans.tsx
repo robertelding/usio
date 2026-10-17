@@ -73,7 +73,7 @@ const sections: FeatureSection[] = [
 				pro: true,
 			},
 			{
-				label: "Custom domain (cap.yourdomain.com)",
+				label: "Custom domain (videos.yourdomain.com)",
 				free: false,
 				desktop: false,
 				pro: true,

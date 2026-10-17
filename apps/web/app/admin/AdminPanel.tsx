@@ -10,6 +10,7 @@ import {
 	fetchAdminConversation,
 	fetchAdminConversations,
 } from "@/actions/messenger";
+import { MESSENGER_AGENT_NAME } from "@/lib/messenger/constants";
 
 interface AdminConversation {
 	id: string;
@@ -118,7 +119,7 @@ function RoleBadge({ role }: { role: "user" | "agent" | "admin" }) {
 	return (
 		<span className="inline-flex items-center gap-1 text-[11px] font-medium text-violet-500">
 			<span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-400" />
-			Millie (AI)
+			{MESSENGER_AGENT_NAME} (AI)
 		</span>
 	);
 }
@@ -205,7 +206,7 @@ function ConversationList({
 													? "User"
 													: conv.latestMessage.role === "admin"
 														? "You"
-														: "Millie"}
+														: MESSENGER_AGENT_NAME}
 												:
 											</span>{" "}
 											{conv.latestMessage.content}
@@ -339,7 +340,7 @@ function ChatPane({
 							<ModeBadge mode={conv.mode} />
 						</div>
 						<div className="mt-1 flex items-center gap-2 text-[12px] text-gray-500">
-							<span>Agent: Millie</span>
+							<span>Agent: {MESSENGER_AGENT_NAME}</span>
 							<span className="text-gray-300">|</span>
 							<span className="font-mono text-[11px]">{conv.id}</span>
 						</div>

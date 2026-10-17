@@ -335,7 +335,7 @@ export const homepageCopy: HomePageCopy = {
 				"Unlimited cloud storage & bandwidth",
 				"Auto-generated titles, summaries, clickable chapters, and transcriptions for every recording",
 				"Bring your own S3-compatible storage",
-				"Custom domain (cap.yourdomain.com)",
+				"Custom domain (videos.yourdomain.com)",
 				"Password protected shares",
 				"Viewer analytics & engagement",
 				"Team workspaces",

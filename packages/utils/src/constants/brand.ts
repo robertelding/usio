@@ -15,6 +15,7 @@ export type Brand = {
 	readonly desktopAppAvailable: boolean;
 	readonly chromeExtensionUrl: string | null;
 	readonly supportUrl: string | null;
+	readonly supportAssistantEnabled: boolean;
 };
 
 export const BRAND: Brand = {
@@ -35,4 +36,5 @@ export const BRAND: Brand = {
 	desktopAppAvailable: false,
 	chromeExtensionUrl: null,
 	supportUrl: null,
+	supportAssistantEnabled: true,
 };

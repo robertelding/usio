@@ -53,6 +53,6 @@ describe("docs ask", () => {
 		expect(prompt).toContain("- Cap for Agents: /docs/agents");
 		expect(prompt).toContain("Never invent features");
 		expect(prompt).toContain("hello@usio.co.uk");
-		expect(prompt).toContain("[Cap for Agents](/docs/agents)");
+		expect(prompt).toContain("[usio for Agents](/docs/agents)");
 	});
 });

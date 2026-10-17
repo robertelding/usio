@@ -6,7 +6,6 @@ import {
 	messengerConversations,
 	messengerMessages,
 } from "@cap/database/schema";
-import { buildEnv } from "@cap/env";
 import { asc, desc, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { generateMessengerAgentReply } from "@/lib/messenger/agent";
@@ -20,6 +19,7 @@ import {
 	listViewerMessengerConversations,
 	requireAdminViewer,
 } from "@/lib/messenger/data";
+import { isSupportAssistantEnabled } from "@/lib/messenger/enabled";
 import {
 	getIdentityTag,
 	storeConversationInSupermemory,
@@ -30,7 +30,7 @@ import { sendMessengerSupportEmail } from "@/lib/messenger/support-email";
 const normalizeContent = (content: string) => content.trim().slice(0, 6000);
 
 const assertMessengerEnabled = () => {
-	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") {
+	if (!isSupportAssistantEnabled()) {
 		throw new Error("Messenger is disabled");
 	}
 };

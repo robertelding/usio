@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND } from "@cap/utils";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import ReactMarkdown from "react-markdown";
@@ -8,7 +9,11 @@ import {
 	fetchMessengerConversation,
 	sendMessengerUserMessage,
 } from "@/actions/messenger";
-import { MESSENGER_SUGGESTED_PROMPTS } from "@/lib/messenger/constants";
+import {
+	MESSENGER_AGENT_NAME,
+	MESSENGER_ASSISTANT_TITLE,
+	MESSENGER_SUGGESTED_PROMPTS,
+} from "@/lib/messenger/constants";
 
 interface ChatMessage {
 	id: string;
@@ -83,7 +88,7 @@ function MessageBubble({
 	}
 
 	const isAdmin = message.role === "admin";
-	const label = isAdmin ? "Cap Team" : agentName;
+	const label = isAdmin ? `${BRAND.name} Team` : agentName;
 
 	return (
 		<div className="flex items-end gap-2 pr-12">
@@ -273,13 +278,15 @@ export function ChatWindow({
 							/>
 						</svg>
 					</Link>
-					<AgentAvatar name="Millie" size="md" />
+					<AgentAvatar name={MESSENGER_AGENT_NAME} size="md" />
 					<div className="flex-1">
 						<div className="text-sm font-semibold text-gray-12">
-							Cap Support
+							{MESSENGER_ASSISTANT_TITLE}
 						</div>
 						<div className="text-[11px] text-gray-9">
-							{conversation.mode === "human" ? "Cap Team" : "Millie"}
+							{conversation.mode === "human"
+								? `${BRAND.name} Team`
+								: MESSENGER_AGENT_NAME}
 						</div>
 					</div>
 					{conversation.mode === "human" && (
@@ -302,13 +309,13 @@ export function ChatWindow({
 				{messages.length === 0 ? (
 					<div className="flex h-full flex-col items-center justify-center pb-10">
 						<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lens-tint ring-1 ring-lens">
-							<AgentAvatar name="Millie" size="md" />
+							<AgentAvatar name={MESSENGER_AGENT_NAME} size="md" />
 						</div>
 						<p className="mt-4 text-sm font-medium text-gray-12">
-							Chat with Millie
+							{MESSENGER_ASSISTANT_TITLE}
 						</p>
 						<p className="mt-1 max-w-[240px] text-center text-xs leading-relaxed text-gray-9">
-							Ask anything about Cap
+							Ask anything about {BRAND.name}
 						</p>
 						<div className="mt-5 flex flex-wrap justify-center gap-2 px-4">
 							{MESSENGER_SUGGESTED_PROMPTS.map((prompt) => (
@@ -335,14 +342,14 @@ export function ChatWindow({
 								<MessageBubble
 									key={message.id}
 									message={message}
-									agentName="Millie"
+									agentName={MESSENGER_AGENT_NAME}
 									showAvatar={showAvatar}
 								/>
 							);
 						})}
 						{showTyping && (
 							<div className="flex items-end gap-2 pr-12">
-								<AgentAvatar name="Millie" />
+								<AgentAvatar name={MESSENGER_AGENT_NAME} />
 								<div className="rounded-2xl rounded-bl-md bg-gray-3 px-4 py-3">
 									<TypingDots />
 								</div>

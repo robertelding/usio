@@ -35,7 +35,7 @@ const createFaqStructuredData = () => {
 		{
 			question: "Can we use our own branding with usio?",
 			answer:
-				"Yes. usio Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
+				"Yes. usio Pro includes custom domain support (videos.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
 		},
 		{
 			question: "How does usio pricing work for agency teams?",
