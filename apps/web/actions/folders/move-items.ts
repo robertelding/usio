@@ -179,7 +179,7 @@ export async function getOwnedVideoMoveDestinations(
 	return [
 		{
 			location: { type: "personal" },
-			name: "My Caps",
+			name: "My Videos",
 			folders: organizationFolders.filter((folder) => folder.spaceId === null),
 		},
 		{

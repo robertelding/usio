@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import { buildEnv } from "@cap/env";
+import { BRAND } from "@cap/utils";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -42,32 +43,32 @@ const defaultFont = localFont({
 	preload: false,
 });
 
+const siteTitle = `${BRAND.name} — ${BRAND.tagline}`;
+
 export const metadata: Metadata = {
-	metadataBase: new URL("https://cap.so"),
-	title: "Cap — Beautiful screen recordings, owned by you.",
-	description:
-		"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+	metadataBase: new URL(buildEnv.NEXT_PUBLIC_WEB_URL),
+	title: siteTitle,
+	description: BRAND.description,
+	applicationName: BRAND.name,
 	openGraph: {
-		title: "Cap — Beautiful screen recordings, owned by you.",
-		description:
-			"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+		title: siteTitle,
+		description: BRAND.description,
 		type: "website",
-		url: "https://cap.so",
-		siteName: "Cap",
+		url: buildEnv.NEXT_PUBLIC_WEB_URL,
+		siteName: BRAND.name,
 		images: [
 			{
 				url: "/api/og",
 				width: 1200,
 				height: 630,
-				alt: "Cap — Beautiful screen recordings, owned by you.",
+				alt: siteTitle,
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Cap — Beautiful screen recordings, owned by you.",
-		description:
-			"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+		title: siteTitle,
+		description: BRAND.description,
 		images: ["/api/og"],
 	},
 };
@@ -97,7 +98,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
 					href="/favicon-16x16.png"
 				/>
 				<link rel="manifest" href="/site.webmanifest" />
-				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+				<link rel="icon" type="image/svg+xml" href="/usio-icon.svg" />
+				<link rel="mask-icon" href="/usio-icon.svg" color={BRAND.color} />
 				<link rel="shortcut icon" href="/favicon.ico" />
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />

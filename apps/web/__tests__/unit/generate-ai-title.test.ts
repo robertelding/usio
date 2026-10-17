@@ -90,6 +90,18 @@ describe("shouldReplaceVideoTitle", () => {
 		).toBe(true);
 		expect(
 			shouldReplaceVideoTitle({
+				currentTitle: "usio Upload - 15 May 2026",
+				nextAiTitle: "Quarterly Roadmap Review",
+			}),
+		).toBe(true);
+		expect(
+			shouldReplaceVideoTitle({
+				currentTitle: "usio Recording - 15 May 2026",
+				nextAiTitle: "Quarterly Roadmap Review",
+			}),
+		).toBe(true);
+		expect(
+			shouldReplaceVideoTitle({
 				currentTitle: "Untitled",
 				nextAiTitle: "Quarterly Roadmap Review",
 			}),

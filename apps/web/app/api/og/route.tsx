@@ -1,3 +1,4 @@
+import { BRAND } from "@cap/utils";
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
 import { PRICING } from "@/data/pricing";
@@ -16,9 +17,9 @@ import {
 	titleFontSize,
 } from "@/lib/og/template";
 
-const DEFAULT_TITLE = "Beautiful screen recordings, owned by you";
+const DEFAULT_TITLE = BRAND.tagline;
 const DEFAULT_DESCRIPTION =
-	"The open source Loom alternative. Record and share in seconds.";
+	"Record your screen and camera, then share a link the moment you stop.";
 
 // Strip control characters and collapse whitespace so arbitrary query input
 // can't distort the layout.

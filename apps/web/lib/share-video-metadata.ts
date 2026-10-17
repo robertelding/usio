@@ -86,8 +86,8 @@ export const buildShareVideoMetadata = ({
 		webUrl,
 		canonicalWebUrl,
 	});
-	const title = `${name} | Cap Recording`;
-	const description = "Watch this video on Cap";
+	const title = `${name} | usio`;
+	const description = "Watch this video on usio";
 
 	return {
 		title,

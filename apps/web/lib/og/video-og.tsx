@@ -374,8 +374,9 @@ export async function renderVideoOg(variant: VideoOgVariant) {
 			case "locked":
 				return statusLayout(
 					{
-						heading: "This Cap is private",
-						subline: "Ask the owner for access, or sign in to watch it on Cap.",
+						heading: "This video is private",
+						subline:
+							"Ask the owner for access, or sign in to watch it on usio.",
 						icon: "lock",
 					},
 					assets,
@@ -383,8 +384,8 @@ export async function renderVideoOg(variant: VideoOgVariant) {
 			case "password":
 				return statusLayout(
 					{
-						heading: "This Cap is password protected",
-						subline: "Enter the password on Cap to watch this recording.",
+						heading: "This video is password protected",
+						subline: "Enter the password on usio to watch this recording.",
 						icon: "lock",
 					},
 					assets,
@@ -392,7 +393,7 @@ export async function renderVideoOg(variant: VideoOgVariant) {
 			case "not-found":
 				return statusLayout(
 					{
-						heading: "This Cap doesn't exist",
+						heading: "This video doesn't exist",
 						subline:
 							"The recording you're looking for has moved or was deleted.",
 						icon: "search",
